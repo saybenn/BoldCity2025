@@ -6,6 +6,7 @@ import Link from "next/link";
 import { adLandingPageData } from "@/lib/adLandingPage";
 import LeadForm from "@/components/LeadForm";
 import { callClickEvent } from "@/lib/gtm";
+import { useRouter } from "next/router";
 
 /** ----------------------------
  *  DATA (can be moved to /data/adLandingPageData.js)
