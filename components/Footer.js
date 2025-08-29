@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-navy-dark text-white py-12 px-6 md:px-12">
@@ -26,35 +28,38 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
           <ul className="space-y-1 text-md">
             <li>
-              <a
+              <Link
                 href="/services/water-damage-restoration"
                 className="hover:text-aqua"
               >
                 Water Damage
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/services/mold-remediation" className="hover:text-aqua">
+              <Link
+                href="/services/mold-remediation"
+                className="hover:text-aqua"
+              >
                 Mold Remediation
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/services/emergency-services"
                 className="hover:text-aqua"
               >
                 Emergency Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-aqua">
+              <Link href="/about" className="hover:text-aqua">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-aqua">
+              <Link href="/contact" className="hover:text-aqua">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

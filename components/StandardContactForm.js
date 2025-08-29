@@ -46,7 +46,7 @@ export default function StandardContactForm() {
   if (submitted) {
     return (
       <div className="p-6 bg-green-100 text-green-800 rounded-xl shadow-md">
-        Thanks! We'll be in touch shortly.
+        Thanks! We&apos;ll be in touch shortly.
       </div>
     );
   }

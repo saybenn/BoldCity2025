@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { adLandingPageData } from "@/lib/adLandingPage";
 import LeadForm from "@/components/LeadForm";
+import { callClickEvent } from "@/lib/gtm";
 
 /** ----------------------------
  *  DATA (can be moved to /data/adLandingPageData.js)
@@ -324,20 +325,28 @@ export default function EmergencyAdsPage() {
   const d = adLandingPageData;
 
   // Capture UTM params into form state
+
+  const trackUTM = Boolean(d?.settings?.trackUTM); // stable primitive
+  const router = useRouter();
   const [utm, setUtm] = useState({
     utm_source: "",
     utm_campaign: "",
     utm_term: "",
   });
+
   useEffect(() => {
-    if (!d?.settings?.trackUTM) return;
-    const search = new URLSearchParams(window.location.search);
+    if (!trackUTM) return;
+
+    // Pull query from router (SSR-safe; doesn't touch window)
+    const queryString = router.asPath.split("?")[1] || "";
+    const search = new URLSearchParams(queryString);
+
     setUtm({
       utm_source: search.get("utm_source") || "",
       utm_campaign: search.get("utm_campaign") || "",
       utm_term: search.get("utm_term") || "",
     });
-  }, []);
+  }, [trackUTM, router.asPath]); // ✅ satisfies exhaustive-deps and updates on client nav
 
   // Sticky CTA visible only on small screens (CSS hides on md+)
   const StickyCTA = () =>
@@ -513,7 +522,11 @@ export default function EmergencyAdsPage() {
               {d.urgency.heading}
             </h2>
             <div className="mt-4">
-              <Button href={d.urgency.miniCTA.href} variant="primary">
+              <Button
+                href={d.urgency.miniCTA.href}
+                variant="primary"
+                onClick={() => callClickEvent("19044346318")}
+              >
                 {d.urgency.miniCTA.label}
               </Button>
             </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -35,13 +36,13 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <a
+        <Link
           href="/contact"
           aria-label="Get Help Now"
           className="mt-6 inline-block bg-aqua hover:bg-aqua-dark transition px-6 py-3 rounded-md font-semibold text-white focus:outline-none focus:ring-2 focus:ring-white"
         >
           Get Help Now
-        </a>
+        </Link>
       </div>
     </header>
   );
