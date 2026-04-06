@@ -9,6 +9,7 @@ import ContactSection from "@/components/ContactSection";
 import Layout from "@/components/Layout";
 import TrustSection from "@/components/TrustSection";
 import FinalCTA from "@/components/FinalCTA";
+import EarlyTrustBand from "@/components/EarlyTrustBand";
 
 export default function HomePage() {
   return (
@@ -49,12 +50,13 @@ export default function HomePage() {
     >
       <Hero />
       <ValueProps />
+      <EarlyTrustBand />
       <FinancingHighlights />
       <ServicesOverview />
-      <WhyChooseUs />
-      <BeforeAfterSlider />
-      <ContactSection />
       <TrustSection />
+      <BeforeAfterSlider />
+      <WhyChooseUs />
+      <ContactSection />
       <FinalCTA />
     </Layout>
   );
