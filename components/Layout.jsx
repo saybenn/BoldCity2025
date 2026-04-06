@@ -26,7 +26,7 @@ export default function Layout({
       {showNavbar ? <Navbar /> : null}
 
       <main
-        className={`font-sans bg-background text-darkText dark:text-lightText ${mainClassName}`}
+        className={`font-sans bg-background text-lightText ${mainClassName}`}
       >
         {children}
       </main>

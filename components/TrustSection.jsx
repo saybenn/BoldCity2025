@@ -3,7 +3,7 @@ import StaticTestimonials from "./StaticTestimonials";
 
 export default function TrustSection() {
   return (
-    <section className="w-full bg-lightGray dark:bg-foreground py-16 px-4 text-white md:px-8">
+    <section className="w-full bg-foreground py-16 px-4 text-white md:px-8">
       <div className="mx-auto max-w-7xl space-y-12">
         <div className="text-center">
           <h2 className="text-4xl font-heading font-bold text-white lg:text-5xl">
