@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function TrustBadges() {
   return (
-    <section className="py-16 bg-lightGray dark:bg-darkText">
+    <section className="py-16 bg-darkText">
       <div className="max-w-5xl mx-auto px-4 text-center">
-        <h2 className="text-4xl lg:text-5xl font-heading text-darkText dark:text-lightText mb-8">
+        <h2 className="text-4xl lg:text-5xl font-heading text-lightText mb-8">
           Certified & Trusted by Industry Leaders
         </h2>
 
