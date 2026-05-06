@@ -1,4 +1,5 @@
 import EarlyTrustBand from "@/components/EarlyTrustBand";
+import AcornFinanceBanner from "@/components/financing/AcornFinanceBanner";
 import FinancingCTA from "@/components/financing/FinancingCTA";
 import FinancingExpectations from "@/components/financing/FinancingExpectations";
 import FinancingFAQ from "@/components/financing/FinancingFAQ";
@@ -94,6 +95,7 @@ export default function FinancingPage() {
         ]}
       />
       <FinancingOptions />
+      <AcornFinanceBanner />
       <FinancingProcess />
       <FinancingExpectations />
       <FinancingFAQ />

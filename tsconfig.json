@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-     "baseUrl": ".",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@/components/*": ["components/*"],
-      "@/styles/*": ["styles/*"],
-      "@/pages/*": ["pages/*"]
+      "@/*": [
+        "*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ]
     },
     "target": "ES2017",
     "lib": [
@@ -20,17 +28,17 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "lib/utm.js"  ],
-  
+    "**/*.tsx",
+    "lib/utm.js"
+  ],
   "exclude": [
     "node_modules"
   ]
