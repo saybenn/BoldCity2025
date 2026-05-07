@@ -7,7 +7,7 @@ type BreadcrumbsProps = {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <section className="bg-[#f7f3eb] px-5 pt-6">
+    <section className="bg-stone-50 px-5 pt-6">
       <div className="mx-auto max-w-7xl">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-sm text-[#667085]">

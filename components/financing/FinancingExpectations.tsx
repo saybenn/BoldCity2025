@@ -87,8 +87,8 @@ export default function FinancingExpectations({
                 </ul>
               ) : (
                 <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-700 sm:text-base">
-                  Financing details vary by project, and we’ll help explain what
-                  applies to your situation.
+                  Financing details vary by project, and we&apos;ll help explain
+                  what applies to your situation.
                 </div>
               )}
             </div>

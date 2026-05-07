@@ -17,9 +17,9 @@ export default function BottomCtaBand({
   pagePath,
 }: BottomCtaBandProps) {
   return (
-    <section className="bg-[#0f2724] px-5 py-14 text-white md:py-20">
+    <section className="bg-navy-dark px-5 py-14 text-white md:py-20">
       <div className="mx-auto max-w-5xl text-center">
-        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#99f6e4]">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-aqua">
           Get help now
         </p>
 

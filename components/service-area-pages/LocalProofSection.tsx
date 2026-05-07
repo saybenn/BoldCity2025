@@ -28,7 +28,7 @@ export default function LocalProofSection({
           {cards.map((card) => (
             <article
               key={card.title}
-              className="rounded-[1.75rem] border border-[#d7ded9] bg-[#f7f3eb] p-6 shadow-sm md:p-8"
+              className="rounded-[1.75rem] border border-[#d7ded9] bg-stone-50 p-6 shadow-sm md:p-8"
             >
               {card.meta ? (
                 <p className="mb-4 inline-flex rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#0f766e]">

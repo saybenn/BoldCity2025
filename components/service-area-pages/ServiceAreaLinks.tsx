@@ -15,7 +15,7 @@ export default function ServiceAreaLinks({
   return (
     <section className="bg-white px-5 py-14 md:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-[2rem] border border-[#d7ded9] bg-[#f7f3eb] p-6 md:p-8">
+        <div className="rounded-[2rem] border border-[#d7ded9] bg-stone-50 p-6 md:p-8">
           <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0f766e]">

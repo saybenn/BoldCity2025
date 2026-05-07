@@ -27,7 +27,7 @@ export default function ServiceAreaHero({
   pagePath,
 }: ServiceAreaHeroProps) {
   return (
-    <section className="bg-[#f7f3eb] px-5 py-10 md:py-16">
+    <section className="bg-stone-50 px-5 py-10 md:py-16">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0f766e]">
@@ -81,7 +81,7 @@ export default function ServiceAreaHero({
                 className="h-[320px] w-full rounded-[1.45rem] object-cover md:h-[440px]"
               />
             ) : (
-              <div className="flex h-[320px] flex-col justify-end rounded-[1.45rem] bg-gradient-to-br from-[#d9eee8] via-[#f7f3eb] to-[#fff7ed] p-6 md:h-[440px]">
+              <div className="flex h-[320px] flex-col justify-end rounded-[1.45rem] bg-gradient-to-br from-[#d9eee8] via-stone-50 to-[#fff7ed] p-6 md:h-[440px]">
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0f766e]">
                   Bold City IAQ
                 </p>

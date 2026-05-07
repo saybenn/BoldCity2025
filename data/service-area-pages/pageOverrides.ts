@@ -19,7 +19,7 @@ export const PAGE_OVERRIDES: ServiceAreaPageOverride[] = [
         "Water extraction, drying, and cleanup",
       ],
       image: {
-        src: "/images/service-areas/jacksonville/water-restoration-hero.webp",
+        src: "/images/waterHero.webp",
         alt: "Water damage restoration technician working in Jacksonville property",
       },
     },

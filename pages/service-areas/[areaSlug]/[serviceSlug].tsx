@@ -70,7 +70,7 @@ export default function ServiceAreaServicePage({
         schemaOverrides: pageData.seo.schemaOverrides || {},
         faq: pageData.faqs.items,
       }}
-      mainClassName="bg-[#f7f3eb] text-[#1f2933]"
+      mainClassName="bg-stone-50 text-[#1f2933]"
     >
       <ServiceAreaServicePageTemplate pageData={pageData} />
     </Layout>

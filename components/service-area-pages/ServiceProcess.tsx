@@ -12,7 +12,7 @@ export default function ServiceProcess({
   if (!steps.length) return null;
 
   return (
-    <section className="bg-[#f7f3eb] px-5 py-14 md:py-20">
+    <section className="bg-stone-50 px-5 py-14 md:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0f766e]">
