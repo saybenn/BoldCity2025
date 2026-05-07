@@ -5,6 +5,7 @@ import { TRUST_ITEMS } from "@/data/service-area-pages/trustItems";
 import type {
   AreaLinkItem,
   AreaSlug,
+  BreadcrumbItem,
   BuiltServiceAreaPage,
   CtaLink,
   ServiceAreaPageOverride,
@@ -15,7 +16,6 @@ const SITE_NAME = "Bold City IAQ";
 const PHONE_DISPLAY = "(904) 434-6318";
 const PHONE_HREF = "tel:+19044346318";
 const CONTACT_HREF = "/contact";
-
 const DEFAULT_SCHEMA_TYPE = "LocalBusiness";
 
 function isAreaSlug(value: string): value is AreaSlug {
@@ -26,12 +26,14 @@ function isServiceSlug(value: string): value is ServiceSlug {
   return Object.prototype.hasOwnProperty.call(SERVICES, value);
 }
 
-function findOverride(
-  areaSlug: AreaSlug,
-  serviceSlug: ServiceSlug
+function findPageOverride(
+  selectedAreaSlug: AreaSlug,
+  selectedServiceSlug: ServiceSlug
 ): ServiceAreaPageOverride | undefined {
   return PAGE_OVERRIDES.find(
-    (entry) => entry.areaSlug === areaSlug && entry.serviceSlug === serviceSlug
+    (entry) =>
+      entry.areaSlug === selectedAreaSlug &&
+      entry.serviceSlug === selectedServiceSlug
   );
 }
 
@@ -45,39 +47,50 @@ function createPhoneCta(location: string): CtaLink {
   };
 }
 
-function createRequestCta(serviceSlug: ServiceSlug, location: string): CtaLink {
-  const isMold = serviceSlug === "mold-remediation";
+function createRequestCta(
+  selectedServiceSlug: ServiceSlug,
+  location: string
+): CtaLink {
+  const isMoldService = selectedServiceSlug === "mold-remediation";
 
   return {
-    label: isMold ? "Request Mold Inspection" : "Request Inspection",
+    label: isMoldService ? "Request Mold Inspection" : "Request Inspection",
     href: CONTACT_HREF,
-    analyticsLabel: isMold ? "Request Mold Inspection" : "Request Inspection",
+    analyticsLabel: isMoldService
+      ? "Request Mold Inspection"
+      : "Request Inspection",
     analyticsLocation: location,
-    analyticsIntent: isMold ? "inspection_request" : "service_request",
+    analyticsIntent: isMoldService ? "inspection_request" : "service_request",
   };
 }
 
-function createBreadcrumbs(areaSlug: AreaSlug, serviceSlug: ServiceSlug) {
-  const area = AREAS[areaSlug];
-  const service = SERVICES[serviceSlug];
+function createBreadcrumbs(
+  selectedAreaSlug: AreaSlug,
+  selectedServiceSlug: ServiceSlug
+): BreadcrumbItem[] {
+  const selectedArea = AREAS[selectedAreaSlug];
+  const selectedService = SERVICES[selectedServiceSlug];
 
   return [
     { label: "Home", href: "/" },
     { label: "Service Areas", href: "/service-areas" },
-    { label: area.name, href: `/service-areas/${areaSlug}` },
-    { label: service.name },
+    {
+      label: selectedArea.name,
+      href: `/service-areas/${selectedArea.slug}`,
+    },
+    { label: selectedService.name },
   ];
 }
 
 function createAreaSiblingLinks(
   currentAreaSlug: AreaSlug,
-  serviceSlug: ServiceSlug
+  selectedServiceSlug: ServiceSlug
 ): AreaLinkItem[] {
   return Object.values(AREAS)
     .sort((a, b) => a.rolloutPriority - b.rolloutPriority)
     .map((area) => ({
       label: area.name,
-      href: `/service-areas/${area.slug}/${serviceSlug}`,
+      href: `/service-areas/${area.slug}/${selectedServiceSlug}`,
       areaSlug: area.slug,
       isCurrent: area.slug === currentAreaSlug,
     }));
@@ -88,7 +101,7 @@ function createKeywordString(args: {
   areaFullLabel: string;
   primaryKeywords?: string[];
   overrideKeywords?: string;
-}) {
+}): string {
   if (args.overrideKeywords) return args.overrideKeywords;
 
   const keywords = [
@@ -104,68 +117,38 @@ function createKeywordString(args: {
 }
 
 function createSchemaOverrides(args: {
-  areaSlug: AreaSlug;
-  serviceSlug: ServiceSlug;
+  selectedAreaSlug: AreaSlug;
+  selectedServiceSlug: ServiceSlug;
   override?: ServiceAreaPageOverride;
-}) {
-  const area = AREAS[args.areaSlug];
-  const service = SERVICES[args.serviceSlug];
+}): Record<string, unknown> {
+  if (args.override?.seo?.schemaOverrides) {
+    return args.override.seo.schemaOverrides;
+  }
 
-  return (
-    args.override?.seo?.schemaOverrides ?? {
-      areaServed: {
-        "@type": "Place",
-        name: area.fullLabel,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: area.name,
-          addressRegion: area.state,
-          addressCountry: "US",
-        },
-      },
-      makesOffer: {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: `${service.name} in ${area.fullLabel}`,
-          serviceType: service.schemaServiceType ?? service.name,
-          areaServed: area.fullLabel,
-        },
-      },
-    }
-  );
-}
-
-function createSeoObject(args: {
-  areaSlug: AreaSlug;
-  serviceSlug: ServiceSlug;
-  override?: ServiceAreaPageOverride;
-}) {
-  const area = AREAS[args.areaSlug];
-  const service = SERVICES[args.serviceSlug];
-  const canonicalPath = `/service-areas/${args.areaSlug}/${args.serviceSlug}`;
-
-  const title =
-    args.override?.seo?.title ??
-    `${service.name} in ${area.fullLabel} | ${SITE_NAME}`;
-
-  const description =
-    args.override?.seo?.description ??
-    `${service.name} in ${area.fullLabel}. Fast local response from ${SITE_NAME} for homes and businesses.`;
+  const selectedArea = AREAS[args.selectedAreaSlug];
+  const selectedService = SERVICES[args.selectedServiceSlug];
 
   return {
-    title,
-    description,
-    canonicalPath,
-    image: args.override?.seo?.image ?? service.image?.src,
-    keywords: createKeywordString({
-      serviceName: service.name,
-      areaFullLabel: area.fullLabel,
-      primaryKeywords: service.keywords?.primary,
-      overrideKeywords: args.override?.seo?.keywords,
-    }),
-    schemaType: args.override?.seo?.schemaType ?? DEFAULT_SCHEMA_TYPE,
-    schemaOverrides: createSchemaOverrides(args),
+    areaServed: {
+      "@type": "Place",
+      name: selectedArea.fullLabel,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: selectedArea.name,
+        addressRegion: selectedArea.state,
+        addressCountry: "US",
+      },
+    },
+    makesOffer: {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: `${selectedService.name} in ${selectedArea.fullLabel}`,
+        serviceType:
+          selectedService.schemaServiceType ?? selectedService.name,
+        areaServed: selectedArea.fullLabel,
+      },
+    },
   };
 }
 
@@ -176,61 +159,91 @@ export function buildServiceAreaPageData(
   if (!isAreaSlug(areaSlugInput)) return null;
   if (!isServiceSlug(serviceSlugInput)) return null;
 
-  const areaSlug = areaSlugInput;
-  const serviceSlug = serviceSlugInput;
+  const selectedAreaSlug: AreaSlug = areaSlugInput;
+  const selectedServiceSlug: ServiceSlug = serviceSlugInput;
 
-  const area = AREAS[areaSlug];
-  const service = SERVICES[serviceSlug];
-  const override = findOverride(areaSlug, serviceSlug);
+  const selectedArea = AREAS[selectedAreaSlug];
+  const selectedService = SERVICES[selectedServiceSlug];
+
+  if (!selectedArea || !selectedService) return null;
+
+  const override = findPageOverride(selectedAreaSlug, selectedServiceSlug);
+
+  const canonicalPath = `/service-areas/${selectedArea.slug}/${selectedService.slug}`;
+
+  const seoTitle =
+    override?.seo?.title ??
+    `${selectedService.name} in ${selectedArea.fullLabel} | ${SITE_NAME}`;
+
+  const seoDescription =
+    override?.seo?.description ??
+    `${selectedService.name} in ${selectedArea.fullLabel}. Fast local response from ${SITE_NAME} for homes and businesses.`;
 
   const heroPrimaryCta =
     override?.hero?.primaryCta ?? createPhoneCta("hero");
 
   const heroSecondaryCta =
-    override?.hero?.secondaryCta ?? createRequestCta(serviceSlug, "hero");
+    override?.hero?.secondaryCta ??
+    createRequestCta(selectedServiceSlug, "hero");
 
   const bottomPrimaryCta =
     override?.bottomCta?.primaryCta ?? createPhoneCta("bottom_cta");
 
   const bottomSecondaryCta =
     override?.bottomCta?.secondaryCta ??
-    createRequestCta(serviceSlug, "bottom_cta");
+    createRequestCta(selectedServiceSlug, "bottom_cta");
 
   return {
-    area,
-    service,
+    area: selectedArea,
+    service: selectedService,
 
-    seo: createSeoObject({
-      areaSlug,
-      serviceSlug,
-      override,
-    }),
+    seo: {
+      title: seoTitle,
+      description: seoDescription,
+      canonicalPath,
+      image: override?.seo?.image ?? selectedService.image?.src,
+      keywords: createKeywordString({
+        serviceName: selectedService.name,
+        areaFullLabel: selectedArea.fullLabel,
+        primaryKeywords: selectedService.keywords?.primary,
+        overrideKeywords: override?.seo?.keywords,
+      }),
+      schemaType: override?.seo?.schemaType ?? DEFAULT_SCHEMA_TYPE,
+      schemaOverrides: createSchemaOverrides({
+        selectedAreaSlug,
+        selectedServiceSlug,
+        override,
+      }),
+    },
 
-    breadcrumbs: createBreadcrumbs(areaSlug, serviceSlug),
+    breadcrumbs: createBreadcrumbs(selectedAreaSlug, selectedServiceSlug),
 
     hero: {
-      title: override?.hero?.title ?? `${service.name} in ${area.fullLabel}`,
-      description: override?.hero?.description ?? service.heroSummary,
+      title:
+        override?.hero?.title ??
+        `${selectedService.name} in ${selectedArea.fullLabel}`,
+      description:
+        override?.hero?.description ?? selectedService.heroSummary,
       primaryCta: heroPrimaryCta,
       secondaryCta: heroSecondaryCta,
       reassuranceItems:
         override?.hero?.reassuranceItems ?? [
           "24/7 Emergency Response",
-          `Serving ${area.name}`,
+          `Serving ${selectedArea.name}`,
           "Residential & Commercial Service",
         ],
-      image: override?.hero?.image ?? service.image,
+      image: override?.hero?.image ?? selectedService.image,
     },
 
     trustItems: TRUST_ITEMS,
 
     whyLocalMatters: {
-      heading: `Why Local Response Matters in ${area.name}`,
+      heading: `Why Local Response Matters in ${selectedArea.name}`,
       cards:
         override?.whyLocalMatters ?? [
           {
             title: "Local Response",
-            description: `Fast response in ${area.name} helps reduce delay and uncertainty when damage is active.`,
+            description: `Fast response in ${selectedArea.name} helps reduce delay and uncertainty when damage is active.`,
           },
           {
             title: "Clear Next Steps",
@@ -246,13 +259,14 @@ export function buildServiceAreaPageData(
     },
 
     serviceIntro: {
-      heading: override?.serviceIntro?.heading ?? service.introHeading,
-      body: override?.serviceIntro?.body ?? service.introBody,
+      heading:
+        override?.serviceIntro?.heading ?? selectedService.introHeading,
+      body: override?.serviceIntro?.body ?? selectedService.introBody,
     },
 
     process: {
-      heading: service.processHeading,
-      steps: service.processSteps,
+      heading: selectedService.processHeading,
+      steps: selectedService.processSteps,
     },
 
     localProof: {
@@ -262,29 +276,29 @@ export function buildServiceAreaPageData(
 
     relatedServices: {
       heading:
-        serviceSlug === "water-damage-restoration"
+        selectedServiceSlug === "water-damage-restoration"
           ? "Related Water Damage Services"
           : "Related Mold Services",
-      items: service.relatedServices,
+      items: selectedService.relatedServices,
     },
 
     areaLinks: {
       heading: "Proudly Serving Northeast Florida",
-      items: createAreaSiblingLinks(areaSlug, serviceSlug),
+      items: createAreaSiblingLinks(selectedAreaSlug, selectedServiceSlug),
     },
 
     faqs: {
       heading: "Frequently Asked Questions",
-      items: override?.faqs ?? service.baseFaqs,
+      items: override?.faqs ?? selectedService.baseFaqs,
     },
 
     bottomCta: {
       heading:
         override?.bottomCta?.heading ??
-        `Need ${service.name.toLowerCase()} in ${area.name}?`,
+        `Need ${selectedService.name.toLowerCase()} in ${selectedArea.name}?`,
       body:
         override?.bottomCta?.body ??
-        `Contact ${SITE_NAME} for help in ${area.fullLabel}.`,
+        `Contact ${SITE_NAME} for help in ${selectedArea.fullLabel}.`,
       primaryCta: bottomPrimaryCta,
       secondaryCta: bottomSecondaryCta,
     },
