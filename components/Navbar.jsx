@@ -26,9 +26,11 @@ const serviceLinks = [
 const serviceAreaLinks = [
   { href: "/service-areas/jacksonville", label: "Jacksonville" },
   { href: "/service-areas/orange-park", label: "Orange Park" },
-  { href: "/service-areas/fleming-island", label: "Fleming Island" },
+  { href: "/service-areas/ponte-vedra-beach", label: "Ponte Vedra Beach" },
   { href: "/service-areas/jacksonville-beach", label: "Jacksonville Beach" },
-  { href: "/service-areas/ponte-vedra", label: "Ponte Vedra" },
+  { href: "/service-areas/neptune-beach", label: "Neptune Beach" },
+  { href: "/service-areas/atlantic-beach", label: "Atlantic Beach" },
+  { href: "/service-areas/jacksonville-beach", label: "Jacksonville Beach" },
 ];
 
 export default function Navbar() {

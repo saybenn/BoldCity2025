@@ -222,3 +222,61 @@ export type ServiceAreaPageOverride = {
     secondaryCta: CtaLink;
   }>;
 };
+
+/**
+ * Service-area hub page types.
+ * Used for /service-areas/[areaSlug].
+ */
+
+export type ServiceAreaHubServiceLink = {
+  title: string;
+  description: string;
+  href: string;
+  serviceSlug: ServiceSlug;
+};
+
+export type BuiltServiceAreaHubPage = {
+  area: AreaData;
+
+  seo: ServiceAreaSeoData;
+
+  breadcrumbs: BreadcrumbItem[];
+
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    primaryCta: CtaLink;
+    secondaryCta: CtaLink;
+    reassuranceItems: string[];
+  };
+
+  localContext: {
+    heading: string;
+    body: string;
+    items: string[];
+  };
+
+  commonIssues: {
+    heading: string;
+    items: string[];
+  };
+
+  services: {
+    heading: string;
+    body: string;
+    items: ServiceAreaHubServiceLink[];
+  };
+
+  nearbyAreas: {
+    heading: string;
+    items: string[];
+  };
+
+  bottomCta: {
+    heading: string;
+    body: string;
+    primaryCta: CtaLink;
+    secondaryCta?: CtaLink;
+  };
+};
