@@ -54,7 +54,7 @@ export default function StaticTestimonials({
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="w-full px-4 sm:px-6 lg:px-8"
+      className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-foreground"
     >
       <div className="mx-auto max-w-6xl">
         <h3

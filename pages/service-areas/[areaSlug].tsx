@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps<ServiceAreaHubPageProps> = async (
 export default function ServiceAreaHubPage({
   pageData,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const canonical = `https://www.boldcityiaq.com${pageData.seo.canonicalPath}`;
+  const canonical = `https://boldcityiaq.com${pageData.seo.canonicalPath}`;
 
   return (
     <Layout

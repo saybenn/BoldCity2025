@@ -18,21 +18,21 @@ export default function AboutPage() {
         "About Bold City IAQ | Jacksonville Restoration Experts (IICRC & NORMI Certified)",
       description:
         "Locally owned restoration company serving Jacksonville & NE Florida. IICRC & NORMI certified technicians. 24/7 emergency response for water, fire, smoke, mold, and sanitization.",
-      canonical: "https://www.boldcityiaq.com/about",
+      canonical: "https://boldcityiaq.com/about",
       og: {
         title: "About Bold City IAQ",
         description:
           "Jacksonville’s 24/7 certified restoration pros. IICRC & NORMI certified. Locally owned & operated.",
-        image: "https://www.boldcityiaq.com/images/team-or-vehicle-hero.webp",
+        image: "https://boldcityiaq.com/images/team-or-vehicle-hero.webp",
       },
     },
     schema: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Bold City Indoor Air Quality and Emergency Services",
-      image: "https://www.boldcityiaq.com/images/logo.webp",
-      "@id": "https://www.boldcityiaq.com/#about",
-      url: "https://www.boldcityiaq.com/about",
+      image: "https://boldcityiaq.com/images/logo.webp",
+      "@id": "https://boldcityiaq.com/#about",
+      url: "https://boldcityiaq.com/about",
       telephone: "+19044346318",
       address: {
         "@type": "PostalAddress",

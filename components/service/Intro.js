@@ -1,7 +1,7 @@
 export default function Intro({ heading, content }) {
   return (
     <section
-      className="bg-foreground text-darkText dark:text-zinc-100 py-16 px-6 sm:px-8 lg:px-16"
+      className="bg-foreground  text-zinc-100 py-16 px-6 sm:px-8 lg:px-16"
       aria-label="Introduction"
     >
       <div className="max-w-3xl mx-auto text-center">

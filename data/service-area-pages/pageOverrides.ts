@@ -176,7 +176,7 @@ export const PAGE_OVERRIDES: ServiceAreaPageOverride[] = [
         "Serving Ponte Vedra Beach properties",
       ],
       image: {
-        src: "/images/service-areas/ponte-vedra-beach/mold-remediation-hero.webp",
+        src: "/images/grid/extra.webp",
         alt: "Mold remediation containment setup in Ponte Vedra Beach property",
       },
     },
@@ -229,7 +229,7 @@ export const PAGE_OVERRIDES: ServiceAreaPageOverride[] = [
         "Serving St. Augustine and nearby areas",
       ],
       image: {
-        src: "/images/service-areas/st-augustine/water-restoration-hero.webp",
+        src: "/images/grid/bathroom-after.webp",
         alt: "Water damage restoration equipment in St. Augustine property",
       },
     },
@@ -282,7 +282,7 @@ export const PAGE_OVERRIDES: ServiceAreaPageOverride[] = [
         "Residential and commercial support",
       ],
       image: {
-        src: "/images/service-areas/jacksonville-beach/mold-remediation-hero.webp",
+        src: "/images/grid/kitchenafter.webp",
         alt: "Mold remediation work in Jacksonville Beach property",
       },
     },
@@ -327,7 +327,7 @@ export const PAGE_OVERRIDES: ServiceAreaPageOverride[] = [
         "Moisture inspection and drying",
       ],
       image: {
-        src: "/images/service-areas/neptune-beach/water-restoration-hero.webp",
+        src: "/images/grid/carousel2.webp",
         alt: "Water damage restoration equipment in Neptune Beach property",
       },
     },
@@ -372,7 +372,7 @@ export const PAGE_OVERRIDES: ServiceAreaPageOverride[] = [
         "Serving Atlantic Beach properties",
       ],
       image: {
-        src: "/images/service-areas/atlantic-beach/mold-remediation-hero.webp",
+        src: "/images/grid/mold-hero.webp",
         alt: "Mold remediation work in Atlantic Beach property",
       },
     },

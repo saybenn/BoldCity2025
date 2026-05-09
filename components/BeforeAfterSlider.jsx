@@ -12,26 +12,26 @@ const CompareImage = dynamic(() => import("react-compare-image"), {
 const proofImages = [
   {
     src: "/images/proof1.webp",
-    alt: "Water restoration equipment set up inside a property",
-    title: "Water Extraction Setup",
+    alt: "Exposed framing during structural drying work",
+    title: "Structural Drying Procedure",
   },
   {
     src: "/images/moldprocess.webp",
-    alt: "Exposed framing during structural drying work",
-    title: "Structural Drying in Progress",
-  },
-  {
-    src: "/images/grid/mold-hero.webp",
-    alt: "Containment area during mold remediation work",
+    alt: "Air Purification equipment set up inside a property",
     title: "Containment During Remediation",
   },
   {
-    src: "/images/sanitizationHero.webp",
+    src: "/images/grid/mold-hero.webp",
+    alt: "Extraction of mold-contaminated materials inside a project site",
+    title: "Extraction of Mold-Contaminated Materials",
+  },
+  {
+    src: "/images/grid/emergencyGrid.webp",
     alt: "Damaged material removal inside a project site",
     title: "Removal of Damaged Materials",
   },
   {
-    src: "/images/grid/emergencyGrid.webp",
+    src: "/images/sanitizationHero.webp",
     alt: "Restoration cleanup and rebuild preparation",
     title: "Cleanup and Rebuild Preparation",
   },

@@ -30,7 +30,6 @@ const serviceAreaLinks = [
   { href: "/service-areas/jacksonville-beach", label: "Jacksonville Beach" },
   { href: "/service-areas/neptune-beach", label: "Neptune Beach" },
   { href: "/service-areas/atlantic-beach", label: "Atlantic Beach" },
-  { href: "/service-areas/jacksonville-beach", label: "Jacksonville Beach" },
 ];
 
 export default function Navbar() {
@@ -159,6 +158,12 @@ export default function Navbar() {
             >
               Contact
             </Link>
+            <Link
+              href="/financing"
+              className="text-white/95 transition hover:text-aqua"
+            >
+              Financing
+            </Link>
 
             <a
               href="tel:+19044346318"
@@ -236,6 +241,13 @@ export default function Navbar() {
               onClick={closeMenu}
             >
               Contact
+            </Link>
+            <Link
+              href="/financing"
+              className="block rounded-lg px-4 py-3"
+              onClick={closeMenu}
+            >
+              Financing
             </Link>
 
             <a

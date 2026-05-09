@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps<
 export default function ServiceAreaServicePage({
   pageData,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const canonical = `https://www.boldcityiaq.com${pageData.seo.canonicalPath}`;
+  const canonical = `https://boldcityiaq.com${pageData.seo.canonicalPath}`;
 
   return (
     <Layout
