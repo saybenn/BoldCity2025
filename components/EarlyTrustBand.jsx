@@ -39,7 +39,7 @@ const trustLogos = [
 
 export default function EarlyTrustBand() {
   return (
-    <section className="bg-white py-10 text-darkText sm:py-12">
+    <section className="bg-white py-24 text-darkText lg:pt-32 lg:pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-slate-200 bg-white px-5 py-8 shadow-[0_12px_40px_rgba(15,23,42,0.08)] sm:px-8">
           <div className="mx-auto max-w-3xl text-center">
