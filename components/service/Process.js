@@ -17,7 +17,7 @@ export default function Process({ heading, steps, note, image }) {
 
         {/* Content Section */}
         <div>
-          <h2 className="text-4xl font-bold mb-6">{heading}</h2>
+          <h2 className="text-4xl font-bold mb-6 text-white">{heading}</h2>
 
           <ol className="list-decimal list-inside space-y-4 text-xl">
             {steps.map((step, index) => (

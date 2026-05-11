@@ -27,6 +27,7 @@ const serviceAreaLinks = [
   { href: "/service-areas/jacksonville", label: "Jacksonville" },
   { href: "/service-areas/orange-park", label: "Orange Park" },
   { href: "/service-areas/ponte-vedra-beach", label: "Ponte Vedra Beach" },
+  { href: "/service-areas/st-augustine", label: "St. Augustine" },
   { href: "/service-areas/jacksonville-beach", label: "Jacksonville Beach" },
   { href: "/service-areas/neptune-beach", label: "Neptune Beach" },
   { href: "/service-areas/atlantic-beach", label: "Atlantic Beach" },
@@ -37,6 +38,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hideOnScroll, setHideOnScroll] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
     function handleScroll() {
@@ -44,7 +46,12 @@ export default function Navbar() {
 
       setIsScrolled(currentScrollY > 10);
 
-      if (currentScrollY > 120 && currentScrollY > lastScrollY && !isOpen) {
+      if (
+        currentScrollY > 120 &&
+        currentScrollY > lastScrollY &&
+        !isOpen &&
+        !activeDropdown
+      ) {
         setHideOnScroll(true);
       } else {
         setHideOnScroll(false);
@@ -55,7 +62,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, isOpen]);
+  }, [lastScrollY, isOpen, activeDropdown]);
 
   useEffect(() => {
     if (isOpen) {
@@ -71,14 +78,79 @@ export default function Navbar() {
 
   function closeMenu() {
     setIsOpen(false);
+    setActiveDropdown(null);
+  }
+
+  function openDropdown(name) {
+    setActiveDropdown(name);
+  }
+
+  function closeDropdown() {
+    setActiveDropdown(null);
+  }
+
+  function toggleDropdown(name) {
+    setActiveDropdown((current) => (current === name ? null : name));
+  }
+
+  function DesktopDropdown({ id, label, links, widthClass = "w-72" }) {
+    const isActive = activeDropdown === id;
+
+    return (
+      <div
+        className="relative"
+        onMouseEnter={() => openDropdown(id)}
+        onMouseLeave={closeDropdown}
+        onFocus={() => openDropdown(id)}
+      >
+        <button
+          type="button"
+          aria-expanded={isActive}
+          aria-haspopup="true"
+          onClick={() => toggleDropdown(id)}
+          className="flex items-center gap-1 text-white/95 transition hover:text-aqua focus:outline-none focus-visible:text-aqua"
+        >
+          {label}
+          <IoChevronDown
+            size={14}
+            className={`transition-transform duration-200 ${
+              isActive ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        <div
+          className={`absolute left-0 top-full z-50 pt-3 ${widthClass} ${
+            isActive ? "pointer-events-auto" : "pointer-events-none"
+          }`}
+        >
+          <div
+            className={`rounded-xl border border-slate-200 bg-white p-2 text-navy shadow-xl transition-all duration-200 ${
+              isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+            }`}
+          >
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={closeDropdown}
+                className="block rounded-lg px-4 py-3 text-[13px] font-medium normal-case tracking-normal transition hover:bg-slate-100 focus:bg-slate-100 focus:outline-none"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 w-full transition-transform duration-300 ${
+      className={`fixed left-0 top-0 z-50 w-full transition-transform duration-300 ${
         hideOnScroll ? "-translate-y-full" : "translate-y-0"
       } ${
-        isScrolled || isOpen
+        isScrolled || isOpen || activeDropdown
           ? "bg-black/90 shadow-md backdrop-blur-md"
           : "bg-gradient-to-b from-black/70 to-transparent"
       }`}
@@ -103,51 +175,24 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-6 font-heading text-[13px] uppercase tracking-[0.08em] text-white lg:flex">
-            <div className="group relative">
-              <button
-                type="button"
-                className="flex items-center gap-1 text-white/95 transition hover:text-aqua"
-              >
-                Services <IoChevronDown size={14} />
-              </button>
+            <DesktopDropdown
+              id="services"
+              label="Services"
+              links={serviceLinks}
+              widthClass="w-72"
+            />
 
-              <div className="pointer-events-none absolute left-0 top-full mt-3 w-72 translate-y-2 rounded-xl border border-slate-200 bg-white p-2 text-navy opacity-0 shadow-xl transition-all duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-                {serviceLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block rounded-lg px-4 py-3 text-[13px] font-medium normal-case tracking-normal transition hover:bg-slate-100"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="group relative">
-              <button
-                type="button"
-                className="flex items-center gap-1 text-white/95 transition hover:text-aqua"
-              >
-                Service Areas <IoChevronDown size={14} />
-              </button>
-
-              <div className="pointer-events-none absolute left-0 top-full mt-3 w-64 translate-y-2 rounded-xl border border-slate-200 bg-white p-2 text-navy opacity-0 shadow-xl transition-all duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-                {serviceAreaLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block rounded-lg px-4 py-3 text-[13px] font-medium normal-case tracking-normal transition hover:bg-slate-100"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <DesktopDropdown
+              id="service-areas"
+              label="Service Areas"
+              links={serviceAreaLinks}
+              widthClass="w-64"
+            />
 
             <Link
               href="/about"
               className="text-white/95 transition hover:text-aqua"
+              onClick={closeDropdown}
             >
               About
             </Link>
@@ -155,12 +200,15 @@ export default function Navbar() {
             <Link
               href="/contact"
               className="text-white/95 transition hover:text-aqua"
+              onClick={closeDropdown}
             >
               Contact
             </Link>
+
             <Link
               href="/financing"
               className="text-white/95 transition hover:text-aqua"
+              onClick={closeDropdown}
             >
               Financing
             </Link>
@@ -168,6 +216,7 @@ export default function Navbar() {
             <a
               href="tel:+19044346318"
               className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-white hover:text-navy"
+              onClick={closeDropdown}
             >
               Call Now
             </a>
@@ -178,7 +227,7 @@ export default function Navbar() {
               onClick={() => setIsOpen((prev) => !prev)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
-              className="text-white text-2xl"
+              className="text-2xl text-white"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -194,6 +243,7 @@ export default function Navbar() {
                 Services
                 <IoChevronDown className="transition group-open:rotate-180" />
               </summary>
+
               <div className="space-y-1 px-4 pb-4 text-xs normal-case tracking-normal text-white/80">
                 {serviceLinks.map((link) => (
                   <Link
@@ -213,6 +263,7 @@ export default function Navbar() {
                 Service Areas
                 <IoChevronDown className="transition group-open:rotate-180" />
               </summary>
+
               <div className="space-y-1 px-4 pb-4 text-xs normal-case tracking-normal text-white/80">
                 {serviceAreaLinks.map((link) => (
                   <Link
@@ -242,6 +293,7 @@ export default function Navbar() {
             >
               Contact
             </Link>
+
             <Link
               href="/financing"
               className="block rounded-lg px-4 py-3"
