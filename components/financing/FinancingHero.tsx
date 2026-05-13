@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { trackCta } from "@/lib/analytics";
+import { trackPhoneClick } from "@/lib/trackPhoneClick";
 
 type TrustChip = {
   id: string;
@@ -39,6 +41,11 @@ function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
 
+function getPagePath() {
+  if (typeof window === "undefined") return "/financing";
+  return window.location.pathname;
+}
+
 export default function FinancingHero({
   eyebrow = "Financing Options",
   title = "Practical financing options for qualifying projects",
@@ -61,6 +68,27 @@ export default function FinancingHero({
       intent: "financing inquiry",
       href,
     });
+
+    if (href.startsWith("tel:")) {
+      trackPhoneClick({
+        ctaLabel,
+        ctaLocation: "FinancingHero",
+        page: getPagePath(),
+        href,
+        phoneNumber: "+19044346318",
+        intent: "financing inquiry",
+      });
+
+      return;
+    }
+
+    trackCta({
+      cta_label: ctaLabel,
+      cta_location: "FinancingHero",
+      intent: "financing inquiry",
+      page: getPagePath(),
+      href,
+    });
   };
 
   const isSecondaryPhone = secondaryCtaHref.startsWith("tel:");
@@ -70,7 +98,7 @@ export default function FinancingHero({
       className={cx("relative overflow-hidden bg-stone-50", className)}
       aria-labelledby="financing-hero-title"
     >
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-0 top-0 h-56 w-56 rounded-full bg-emerald-100/40 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-sky-100/40 blur-3xl" />
       </div>

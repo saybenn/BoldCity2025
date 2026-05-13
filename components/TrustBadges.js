@@ -16,7 +16,7 @@ export default function TrustBadges() {
               alt="Google Verified Reviews"
               height={48}
               width={160}
-              priority
+              quality={75}
               className="object-contain"
             />
           </div>
@@ -28,7 +28,7 @@ export default function TrustBadges() {
               alt="IICRC Certified"
               height={72}
               width={240}
-              priority
+              quality={75}
               className="object-contain"
             />
           </div>
@@ -40,7 +40,7 @@ export default function TrustBadges() {
               alt="NORMI Certified - National Organization of Remediators & Microbial Inspectors"
               height={72}
               width={240}
-              priority
+              quality={75}
               className="object-contain"
             />
           </div>

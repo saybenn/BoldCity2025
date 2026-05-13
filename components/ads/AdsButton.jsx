@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { trackCta, trackCallClick } from "@/lib/analytics";
+import { trackCta } from "@/lib/analytics";
+import { trackPhoneClick } from "@/lib/trackPhoneClick";
 
 export default function AdsButton({
   href = "#",
@@ -25,25 +26,31 @@ export default function AdsButton({
   const base =
     "inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
+  const label = typeof children === "string" ? children : "CTA";
+  const location = ctaLocation || "AdsButton";
+  const isPhone = href.startsWith("tel:");
+
   const handleClick = () => {
-    const label = typeof children === "string" ? children : "CTA";
+    if (isPhone) {
+      trackPhoneClick({
+        ctaLabel: label,
+        ctaLocation: location,
+        page,
+        href,
+        phoneNumber,
+        intent,
+      });
+
+      return;
+    }
 
     trackCta({
       cta_label: label,
-      cta_location: ctaLocation || "unknown",
+      cta_location: location,
       intent,
       page,
       href,
     });
-
-    if (href.startsWith("tel:")) {
-      trackCallClick({
-        cta_location: ctaLocation || "unknown",
-        page,
-        phone_number: phoneNumber,
-        intent,
-      });
-    }
   };
 
   const content = (
@@ -52,13 +59,9 @@ export default function AdsButton({
     </span>
   );
 
-  if (href.startsWith("tel:") || href.startsWith("#")) {
+  if (isPhone || href.startsWith("#")) {
     return (
-      <a
-        href={href}
-        onClick={handleClick}
-        aria-label={typeof children === "string" ? children : "CTA"}
-      >
+      <a href={href} onClick={handleClick} aria-label={label}>
         {content}
       </a>
     );

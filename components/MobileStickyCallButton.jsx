@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { Phone, X, PhoneCall } from "lucide-react";
+import TrackedPhoneLink from "@/components/TrackedPhoneLink";
 
 export default function MobileStickyCallButton() {
-  const [visible, setVisible] = useState(true); // is call button visible
-  const [hide, setHide] = useState(false); // controls exit animation
+  const [visible, setVisible] = useState(true);
+  const [hide, setHide] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-  // read localStorage on mount
   useEffect(() => {
     setIsClient(true);
     const stored = localStorage.getItem("callButtonHidden");
@@ -34,41 +34,47 @@ export default function MobileStickyCallButton() {
 
   return (
     <>
-      {/* Sticky Call Now Button */}
       {visible && (
         <div
-          className={`md:hidden fixed bottom-4 right-4 z-50 transition-all duration-300 ease-in-out ${
+          className={`fixed bottom-4 right-4 z-50 transition-all duration-300 ease-in-out md:hidden ${
             hide ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"
           }`}
         >
-          <div className="flex items-center justify-between bg-navy text-white rounded-full shadow-lg px-4 py-3 space-x-4">
-            <a
+          <div className="flex items-center justify-between space-x-4 rounded-full bg-navy px-4 py-3 text-white shadow-lg">
+            <TrackedPhoneLink
               href="tel:+19044346318"
-              className="flex items-center gap-2 font-semibold hover:text-aqua transition"
-              aria-label="Call Bold City IAQ"
+              phoneNumber="+19044346318"
+              ctaLabel="Mobile Sticky Call Now"
+              ctaLocation="MobileStickyCallButton"
+              page={
+                typeof window !== "undefined" ? window.location.pathname : "/"
+              }
+              intent="call emergency restoration"
+              className="flex items-center gap-2 font-semibold transition hover:text-aqua"
+              ariaLabel="Call Bold City IAQ"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="h-5 w-5" />
               Call Now
-            </a>
+            </TrackedPhoneLink>
+
             <button
               onClick={handleDismiss}
-              className="text-white hover:text-gray-300 transition"
+              className="text-white transition hover:text-gray-300"
               aria-label="Dismiss call CTA"
             >
-              <X className="w-5 h-5" />
+              <X className="h-5 w-5" />
             </button>
           </div>
         </div>
       )}
 
-      {/* Recall Button */}
       {!visible && (
         <button
           onClick={handleRecall}
-          className="md:hidden fixed bottom-4 right-4 bg-navy text-white p-3 rounded-full shadow-lg z-40 hover:bg-navy-dark transition"
+          className="fixed bottom-4 right-4 z-40 rounded-full bg-navy p-3 text-white shadow-lg transition hover:bg-navy-dark md:hidden"
           aria-label="Recall call button"
         >
-          <PhoneCall className="w-5 h-5" />
+          <PhoneCall className="h-5 w-5" />
         </button>
       )}
     </>

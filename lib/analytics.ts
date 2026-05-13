@@ -166,6 +166,7 @@ export function trackCallClick(payload: {
   page?: string;
   phone_number?: string;
   intent?: string;
+  cta_label?: string;
 }) {
   track("click call", payload);
 }

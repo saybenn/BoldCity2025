@@ -95,6 +95,7 @@ export default function BeforeAfterSlider() {
                     src={image.src}
                     alt={image.alt}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition duration-300 group-hover:scale-[1.03]"
                   />
                 </div>
@@ -130,6 +131,7 @@ export default function BeforeAfterSlider() {
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
                 className="object-contain"
               />
             </div>

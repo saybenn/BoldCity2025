@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedPhoneLink from "@/components/TrackedPhoneLink";
 
 const serviceLinks = [
   { href: "/services/water-damage-restoration", label: "Water Damage" },
@@ -13,10 +14,12 @@ const serviceLinks = [
 
 const serviceAreaLinks = [
   { href: "/service-areas/jacksonville", label: "Jacksonville" },
+  { href: "/service-areas/ponte-vedra-beach", label: "Ponte Vedra Beach" },
+  { href: "/service-areas/st-augustine", label: "St. Augustine" },
   { href: "/service-areas/orange-park", label: "Orange Park" },
-  { href: "/service-areas/fleming-island", label: "Fleming Island" },
   { href: "/service-areas/jacksonville-beach", label: "Jacksonville Beach" },
-  { href: "/service-areas/ponte-vedra", label: "Ponte Vedra" },
+  { href: "/service-areas/neptune-beach", label: "Neptune Beach" },
+  { href: "/service-areas/atlantic-beach", label: "Atlantic Beach" },
 ];
 
 export default function Footer() {
@@ -25,7 +28,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 md:px-12">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
           <div>
-            <h3 className="text-3xl font-heading font-bold">Bold City IAQ</h3>
+            <h3 className="font-heading text-3xl font-bold">Bold City IAQ</h3>
             <p className="mt-4 text-base leading-7 text-lightText/80">
               Emergency restoration and indoor air quality support for
               Jacksonville-area homes and businesses.
@@ -38,23 +41,39 @@ export default function Footer() {
                 Jacksonville, FL 32210
               </p>
               <p>
-                <a
+                <TrackedPhoneLink
                   href="tel:+19044346318"
+                  phoneNumber="+19044346318"
+                  ctaLabel="Footer Phone Number"
+                  ctaLocation="Footer"
+                  page={
+                    typeof window !== "undefined"
+                      ? window.location.pathname
+                      : "/"
+                  }
+                  intent="call emergency restoration"
                   className="transition hover:text-aqua"
                 >
                   (904) 434-6318
-                </a>
+                </TrackedPhoneLink>
               </p>
               <p>Available 24/7 for emergency service</p>
             </div>
 
             <div className="mt-5">
-              <a
+              <TrackedPhoneLink
                 href="tel:+19044346318"
+                phoneNumber="+19044346318"
+                ctaLabel="Footer Call Now"
+                ctaLocation="Footer"
+                page={
+                  typeof window !== "undefined" ? window.location.pathname : "/"
+                }
+                intent="call emergency restoration"
                 className="inline-flex rounded-full bg-aqua px-5 py-3 font-semibold text-navy transition hover:bg-aqua-dark"
               >
                 Call Now
-              </a>
+              </TrackedPhoneLink>
             </div>
           </div>
 

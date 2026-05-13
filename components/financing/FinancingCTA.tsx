@@ -1,6 +1,8 @@
 // /components/financing/FinancingCTA.tsx
 
 import Link from "next/link";
+import { trackCta } from "@/lib/analytics";
+import { trackPhoneClick } from "@/lib/trackPhoneClick";
 
 type FinancingCTAProps = {
   eyebrow?: string;
@@ -23,6 +25,11 @@ function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
 
+function getPagePath() {
+  if (typeof window === "undefined") return "/financing";
+  return window.location.pathname;
+}
+
 export type { FinancingCTAProps };
 
 export default function FinancingCTA({
@@ -32,7 +39,7 @@ export default function FinancingCTA({
   primaryCtaLabel = "Discuss Your Options",
   primaryCtaHref = "/contact",
   secondaryCtaLabel = "Call Bold City IAQ",
-  secondaryCtaHref = "tel:+19040000000",
+  secondaryCtaHref = "tel:+19044346318",
   className,
   onCtaClick,
 }: FinancingCTAProps) {
@@ -43,6 +50,27 @@ export default function FinancingCTA({
       ctaLabel,
       ctaLocation: "FinancingCTA",
       intent: "financing inquiry",
+      href,
+    });
+
+    if (href.startsWith("tel:")) {
+      trackPhoneClick({
+        ctaLabel,
+        ctaLocation: "FinancingCTA",
+        page: getPagePath(),
+        href,
+        phoneNumber: "+19044346318",
+        intent: "financing inquiry",
+      });
+
+      return;
+    }
+
+    trackCta({
+      cta_label: ctaLabel,
+      cta_location: "FinancingCTA",
+      intent: "financing inquiry",
+      page: getPagePath(),
       href,
     });
   };

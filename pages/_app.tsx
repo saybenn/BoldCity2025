@@ -2,39 +2,33 @@
 
 import "@/styles/globals.css";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 import Script from "next/script";
-import { track } from "@/lib/analytics";
 import { captureUTMs } from "@/lib/utm";
+import { Inter, Poppins } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-head",
+});
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-55RZQMX7";
 
 export default function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
   useEffect(() => {
     captureUTMs?.();
   }, []);
 
-  useEffect(() => {
-    const sendPageView = (url) => {
-      track("view page", {
-        page_path: url.split("?")[0],
-        page_url: url,
-      });
-    };
-
-    sendPageView(window.location.pathname + window.location.search);
-
-    router.events.on("routeChangeComplete", sendPageView);
-    return () => {
-      router.events.off("routeChangeComplete", sendPageView);
-    };
-  }, [router.events]);
-
   return (
-    <>
-      {GTM_ID && (
+    <main className={`${inter.variable} ${poppins.variable} font-sans`}>
+      {GTM_ID ? (
         <Script id="gtm-base" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -44,9 +38,10 @@ export default function MyApp({ Component, pageProps }) {
             })(window,document,'script','dataLayer','${GTM_ID}');
           `}
         </Script>
-      )}
+      ) : null}
 
       <Component {...pageProps} />
-    </>
+    </main>
   );
 }
+

@@ -1,11 +1,23 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import TrackedPhoneLink from "@/components/TrackedPhoneLink";
+import { trackCta } from "@/lib/analytics";
 
 export default function FinalCTA() {
+  function handleRequestServiceClick() {
+    trackCta({
+      cta_label: "Request Service",
+      cta_location: "FinalCTA",
+      intent: "request service",
+      page: "/",
+      href: "/contact",
+    });
+  }
+
   return (
     <section className="border-y border-white/10 bg-gradient-to-b from-navy to-navy-dark px-6 py-16 text-center text-white sm:px-12 lg:px-24">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-4xl font-heading font-bold lg:text-5xl">
+        <h2 className="font-heading text-4xl font-bold lg:text-5xl">
           Don&apos;t Wait. Water Damage Gets Worse.
         </h2>
 
@@ -15,21 +27,22 @@ export default function FinalCTA() {
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
+          <TrackedPhoneLink
             href="tel:+19044346318"
-            onClick={() => {
-              if (typeof window !== "undefined" && window.dataLayer) {
-                window.dataLayer.push({ event: "final_cta_click" });
-              }
-            }}
+            phoneNumber="+19044346318"
+            ctaLabel="Call Now"
+            ctaLocation="FinalCTA"
+            page="/"
+            intent="call emergency restoration"
             className="inline-flex items-center gap-2 rounded-full bg-aqua px-6 py-3 text-lg font-semibold text-navy shadow-md transition hover:bg-aqua-dark"
           >
             <Phone className="h-5 w-5" />
             Call Now
-          </Link>
+          </TrackedPhoneLink>
 
           <Link
             href="/contact"
+            onClick={handleRequestServiceClick}
             className="inline-flex items-center rounded-full border border-white/15 bg-white px-6 py-3 text-lg font-semibold text-navy shadow transition hover:bg-white/90"
           >
             Request Service

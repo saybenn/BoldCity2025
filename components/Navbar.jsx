@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoChevronDown } from "react-icons/io5";
+import TrackedPhoneLink from "@/components/TrackedPhoneLink";
 
 const serviceLinks = [
   { href: "/services/mold-remediation", label: "Mold Remediation" },
@@ -32,6 +33,11 @@ const serviceAreaLinks = [
   { href: "/service-areas/neptune-beach", label: "Neptune Beach" },
   { href: "/service-areas/atlantic-beach", label: "Atlantic Beach" },
 ];
+
+function getCurrentPagePath() {
+  if (typeof window === "undefined") return "/";
+  return window.location.pathname;
+}
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -213,13 +219,18 @@ export default function Navbar() {
               Financing
             </Link>
 
-            <a
+            <TrackedPhoneLink
               href="tel:+19044346318"
+              phoneNumber="+19044346318"
+              ctaLabel="Navbar Call Now"
+              ctaLocation="NavbarDesktop"
+              page={getCurrentPagePath()}
+              intent="call emergency restoration"
               className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-white hover:text-navy"
               onClick={closeDropdown}
             >
               Call Now
-            </a>
+            </TrackedPhoneLink>
           </div>
 
           <div className="lg:hidden">
@@ -302,13 +313,18 @@ export default function Navbar() {
               Financing
             </Link>
 
-            <a
+            <TrackedPhoneLink
               href="tel:+19044346318"
+              phoneNumber="+19044346318"
+              ctaLabel="Mobile Navbar Call Now"
+              ctaLocation="NavbarMobile"
+              page={getCurrentPagePath()}
+              intent="call emergency restoration"
               className="mt-3 block rounded-full bg-aqua px-4 py-3 text-center font-semibold text-navy"
               onClick={closeMenu}
             >
               Call Now
-            </a>
+            </TrackedPhoneLink>
           </div>
         </div>
       )}

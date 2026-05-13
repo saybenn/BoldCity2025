@@ -38,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/utm.js"
-  ],
+, "components/TrackedPhoneLink.jsx"  ],
   "exclude": [
     "node_modules"
   ]

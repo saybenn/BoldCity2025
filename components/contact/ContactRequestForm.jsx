@@ -17,6 +17,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
     const get = (key) => utm?.[key] ?? url?.get(key) ?? "";
 
     let ls = {};
+
     if (typeof window !== "undefined") {
       try {
         ls = JSON.parse(localStorage.getItem("bc_attribution") || "{}");
@@ -24,6 +25,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
     }
 
     const base = {
+      formType: "standard",
       utm_source: get("utm_source") || ls.utm_source || "",
       utm_medium: get("utm_medium") || ls.utm_medium || "",
       utm_campaign: get("utm_campaign") || ls.utm_campaign || "",
@@ -37,6 +39,8 @@ export default function ContactRequestForm({ data, utm = {} }) {
         (typeof window !== "undefined" ? window.location.href : "") ||
         ls.landing_page_url ||
         "",
+      page:
+        typeof window !== "undefined" ? window.location.pathname : "/contact",
       device: /Mobi|Android/i.test(
         typeof navigator !== "undefined" ? navigator.userAgent : "",
       )
@@ -47,7 +51,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
         typeof Intl !== "undefined"
           ? Intl.DateTimeFormat().resolvedOptions().timeZone
           : "",
-      page_variant: "contact_rebuild_v1",
+      page_variant: "contact_request_form_v1",
     };
 
     if (typeof window !== "undefined") {
@@ -67,17 +71,12 @@ export default function ContactRequestForm({ data, utm = {} }) {
       const payload = Object.fromEntries(fd.entries());
 
       const phone = String(payload.phone || "");
-      const zip = String(payload.zip || "");
 
       if (!/^\D?(\d\D*){7,}$/.test(phone)) {
         throw new Error("Please enter a valid phone number.");
       }
 
-      if (!/^\d{5}$/.test(zip)) {
-        throw new Error("Please enter a valid 5-digit ZIP code.");
-      }
-
-      const res = await fetch("/api/lead", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -92,7 +91,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
       trackFormSubmit({
         form_name: "Contact Request Form",
         form_location: "ContactRequestForm",
-        page: "/contact",
+        page: String(payload.page || "/contact"),
         intent: "request service",
       });
 
@@ -140,6 +139,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
       <h2 className="text-4xl font-semibold text-zinc-900 sm:text-5xl">
         Request Service Now
       </h2>
+
       <p className="mt-2 text-zinc-700">
         Tell us what happened. We’ll call you right away to dispatch help.
       </p>
@@ -156,6 +156,16 @@ export default function ContactRequestForm({ data, utm = {} }) {
             <input
               type="text"
               name="honeypot"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+          </label>
+
+          <label>
+            Company website:
+            <input
+              type="text"
+              name="companyWebsite"
               tabIndex="-1"
               autoComplete="off"
             />
@@ -200,27 +210,13 @@ export default function ContactRequestForm({ data, utm = {} }) {
 
         <div>
           <label className="block text-sm font-medium text-zinc-800">
-            ZIP Code
-          </label>
-          <input
-            name="zip"
-            type="text"
-            required
-            autoComplete="postal-code"
-            inputMode="numeric"
-            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-blue-600"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-zinc-800">
             Service Needed
           </label>
           <select
             name="service"
             required
             defaultValue=""
-            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm outline-none text-zinc-800 focus:border-blue-600"
+            className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm text-zinc-800 outline-none focus:border-blue-600"
           >
             <option value="" disabled>
               Select...
@@ -236,12 +232,16 @@ export default function ContactRequestForm({ data, utm = {} }) {
               Cleaning & Sanitization
             </option>
             <option value="Emergency Services">Emergency Services</option>
+            <option value="Storm & Flood Cleanup">Storm & Flood Cleanup</option>
+            <option value="General Restoration Request">
+              General Restoration Request
+            </option>
           </select>
         </div>
 
         <div>
           <label className="block text-sm font-medium text-zinc-800">
-            Email (optional)
+            Email <span className="font-normal text-zinc-500">(optional)</span>
           </label>
           <input
             name="email"
@@ -253,7 +253,8 @@ export default function ContactRequestForm({ data, utm = {} }) {
 
         <div className="md:col-span-2">
           <label className="block text-sm font-medium text-zinc-800">
-            Details (optional)
+            Details{" "}
+            <span className="font-normal text-zinc-500">(optional)</span>
           </label>
           <textarea
             name="notes"
