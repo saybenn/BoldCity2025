@@ -3,7 +3,7 @@ import SchemaMarkup from "./SchemaMarkup.js";
 import Footer from "./Footer.jsx";
 import MetaHead from "./MetaHead.js";
 import Navbar from "./Navbar.jsx";
-import MobileStickyCallButton from "./MobileStickyCallButton.js";
+import MobileStickyCallButton from "./MobileStickyCallButton.jsx";
 
 export default function Layout({
   children,
