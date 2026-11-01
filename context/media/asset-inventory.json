@@ -1,0 +1,2114 @@
+{
+  "auditedAt": "2026-11-01",
+  "assets": [
+    {
+      "id": "BC-IMG-001",
+      "originalFilename": "5-star-google.png",
+      "finalPath": "/images/5-star-google.png",
+      "path": "/images/5-star-google.png",
+      "bytes": 104886,
+      "width": 2797,
+      "height": 1244,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "dbdc2ad2da6e8712711ff5b9c9a61de77792f0372804d90680e89efe93218828",
+      "references": [
+        {
+          "file": "components/contact/ContactTrustStrip.jsx",
+          "line": 17,
+          "commented": false
+        },
+        {
+          "file": "components/EarlyTrustBand.jsx",
+          "line": 21,
+          "commented": false
+        },
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 67,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Graphic does not verify a current five-star average or review count. Display metrics only from verified review source.",
+      "visualSubject": "Google wordmark and five star graphic",
+      "serviceAssociation": [
+        "review source branding"
+      ],
+      "altText": "Google reviews",
+      "approvedDisplayContexts": [
+        "review source branding only"
+      ]
+    },
+    {
+      "id": "BC-IMG-002",
+      "originalFilename": "ChatGPT Image Aug 23, 2025, 03_40_08 PM.png",
+      "finalPath": "/images/ChatGPT Image Aug 23, 2025, 03_40_08 PM.png",
+      "path": "/images/ChatGPT Image Aug 23, 2025, 03_40_08 PM.png",
+      "bytes": 1308385,
+      "width": 1024,
+      "height": 1024,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "7c305c5d3cdaf2431970e55bf965f88d830e778c652e68799ca74e41db492691",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-generated-illustration",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Filename explicitly identifies AI-generated source for duplicate map. Not a precise coverage boundary or geographic proof. Text includes Flagler County; verify coverage separately.",
+      "visualSubject": "Stylized service-area map graphic with labels",
+      "serviceAssociation": [
+        "service-area illustration"
+      ],
+      "altText": "Illustrated Bold City IAQ service-area map",
+      "approvedDisplayContexts": [
+        "existing service-area illustration subject to coverage confirmation"
+      ]
+    },
+    {
+      "id": "BC-IMG-003",
+      "originalFilename": "about-hero.webp",
+      "finalPath": "/images/about-hero.webp",
+      "path": "/images/about-hero.webp",
+      "bytes": 626598,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "85e0f38e83687a1e1d8335a833c08fbb2bc525320f3c7819dfe5173267572555",
+      "references": [
+        {
+          "file": "components/Layout.jsx",
+          "line": 25,
+          "commented": false
+        },
+        {
+          "file": "pages/about/index.js",
+          "line": 27,
+          "commented": false
+        },
+        {
+          "file": "pages/about/index.js",
+          "line": 149,
+          "commented": false
+        },
+        {
+          "file": "pages/ads/emergency-restoration/index.jsx",
+          "line": 44,
+          "commented": false
+        },
+        {
+          "file": "pages/ads/emergency-restoration/success.jsx",
+          "line": 84,
+          "commented": false
+        },
+        {
+          "file": "pages/contact/index.js",
+          "line": 84,
+          "commented": false
+        },
+        {
+          "file": "pages/contact/success.js",
+          "line": 58,
+          "commented": false
+        },
+        {
+          "file": "pages/financing.js",
+          "line": 21,
+          "commented": false
+        },
+        {
+          "file": "pages/service-areas/[areaSlug]/[serviceSlug].tsx",
+          "line": 62,
+          "commented": false
+        },
+        {
+          "file": "pages/service-areas/[areaSlug].tsx",
+          "line": 61,
+          "commented": false
+        },
+        {
+          "file": "lib/seo.js",
+          "line": 6,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 67,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 74,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 80,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 85,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Branded Bold City pickup and trailer, close side view",
+      "serviceAssociation": [
+        "company",
+        "emergency"
+      ],
+      "altText": "Bold City IAQ branded pickup and trailer",
+      "approvedDisplayContexts": [
+        "about",
+        "contact",
+        "company proof",
+        "emergency process"
+      ]
+    },
+    {
+      "id": "BC-IMG-004",
+      "originalFilename": "avatar.png",
+      "finalPath": "/images/ads/avatar.png",
+      "path": "/images/ads/avatar.png",
+      "bytes": 3543,
+      "width": 36,
+      "height": 36,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "76d69ba8658e0c072a9fb90c664ec276cc7d8bbfbbd0e17ff9f847ad8fdff968",
+      "references": [
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 78,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "reviewer-avatar-existing",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Use only with verified matching review record. Empty alt when reviewer name is adjacent.",
+      "visualSubject": "Reviewer headshot thumbnail",
+      "serviceAssociation": [
+        "reviews"
+      ],
+      "altText": "",
+      "approvedDisplayContexts": [
+        "associated existing review record only"
+      ]
+    },
+    {
+      "id": "BC-IMG-005",
+      "originalFilename": "emergencyHero.webp",
+      "finalPath": "/images/ads/emergencyHero.webp",
+      "path": "/images/ads/emergencyHero.webp",
+      "bytes": 3603544,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "e8268814117affc50842e33e35cc28411bf069e7213d279a6e4fe16a77dce943",
+      "references": [
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 14,
+          "commented": false
+        },
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 57,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Close view of person wearing branded Bold City work shirt",
+      "serviceAssociation": [
+        "company",
+        "emergency"
+      ],
+      "altText": "Bold City IAQ work shirt with company branding",
+      "approvedDisplayContexts": [
+        "emergency service",
+        "team detail",
+        "company proof"
+      ]
+    },
+    {
+      "id": "BC-IMG-006",
+      "originalFilename": "finance.png",
+      "finalPath": "/images/ads/finance.png",
+      "path": "/images/ads/finance.png",
+      "bytes": 2298816,
+      "width": 1536,
+      "height": 1024,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "f571d502b42a4b43de8b7cb697e41cdabdde95ab37cbf843f469114b9e302bde",
+      "references": [
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 141,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-illustration",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Decorative; use empty alt when adjacent financing text conveys meaning.",
+      "visualSubject": "Illustration of wallet and cards",
+      "serviceAssociation": [
+        "financing"
+      ],
+      "altText": "",
+      "approvedDisplayContexts": [
+        "financing illustration"
+      ]
+    },
+    {
+      "id": "BC-IMG-007",
+      "originalFilename": "map.png",
+      "finalPath": "/images/ads/map.png",
+      "path": "/images/ads/map.png",
+      "bytes": 1308385,
+      "width": 1024,
+      "height": 1024,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "7c305c5d3cdaf2431970e55bf965f88d830e778c652e68799ca74e41db492691",
+      "references": [
+        {
+          "file": "pages/about/index.js",
+          "line": 300,
+          "commented": false
+        },
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 212,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-generated-illustration",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Filename explicitly identifies AI-generated source for duplicate map. Not a precise coverage boundary or geographic proof. Text includes Flagler County; verify coverage separately.",
+      "visualSubject": "Stylized service-area map graphic with labels",
+      "serviceAssociation": [
+        "service-area illustration"
+      ],
+      "altText": "Illustrated Bold City IAQ service-area map",
+      "approvedDisplayContexts": [
+        "existing service-area illustration subject to coverage confirmation"
+      ]
+    },
+    {
+      "id": "BC-IMG-008",
+      "originalFilename": "after.png",
+      "finalPath": "/images/after.png",
+      "path": "/images/after.png",
+      "bytes": 1456016,
+      "width": 1024,
+      "height": 1024,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "bd59efeaaee9e273259438ea7afebfd6eb9c8eb6b5293c826989d8f0a3c2b9c5",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "unverified-image",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Not referenced. Origin not established. Similar composition to before.png is insufficient to prove a real completed company project.",
+      "visualSubject": "Interior wall and wood floor in apparently finished room",
+      "serviceAssociation": [
+        "illustrative repair"
+      ],
+      "altText": "Illustrative repaired interior wall",
+      "approvedDisplayContexts": []
+    },
+    {
+      "id": "BC-IMG-009",
+      "originalFilename": "google5.png",
+      "finalPath": "/images/badges/google5.png",
+      "path": "/images/badges/google5.png",
+      "bytes": 104886,
+      "width": 2797,
+      "height": 1244,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "dbdc2ad2da6e8712711ff5b9c9a61de77792f0372804d90680e89efe93218828",
+      "references": [
+        {
+          "file": "pages/about/index.js",
+          "line": 118,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Graphic does not verify a current five-star average or review count. Display metrics only from verified review source.",
+      "visualSubject": "Google wordmark and five star graphic",
+      "serviceAssociation": [
+        "review source branding"
+      ],
+      "altText": "Google reviews",
+      "approvedDisplayContexts": [
+        "review source branding only"
+      ]
+    },
+    {
+      "id": "BC-IMG-010",
+      "originalFilename": "iicrc.webp",
+      "finalPath": "/images/badges/iicrc.webp",
+      "path": "/images/badges/iicrc.webp",
+      "bytes": 12546,
+      "width": 533,
+      "height": 224,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "30e3755634bebfc53af2cb00dc2002b1f1b4968733296e8b215ca1cbe65e856e",
+      "references": [
+        {
+          "file": "pages/about/index.js",
+          "line": 100,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Logo file is not independent evidence of current company certification.",
+      "visualSubject": "IICRC Certified logo",
+      "serviceAssociation": [
+        "credential brand mark"
+      ],
+      "altText": "IICRC Certified logo",
+      "approvedDisplayContexts": [
+        "existing trust section subject to credential confirmation"
+      ]
+    },
+    {
+      "id": "BC-IMG-011",
+      "originalFilename": "normi.png",
+      "finalPath": "/images/badges/normi.png",
+      "path": "/images/badges/normi.png",
+      "bytes": 20459,
+      "width": 250,
+      "height": 84,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "0283e4a2d152359329b8b725e65522b7096238dbc7faef2b3af34c8b57a5bc8d",
+      "references": [
+        {
+          "file": "pages/about/index.js",
+          "line": 109,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Logo file is not independent evidence of current membership or certification.",
+      "visualSubject": "NORMI organization logo",
+      "serviceAssociation": [
+        "credential brand mark"
+      ],
+      "altText": "NORMI logo",
+      "approvedDisplayContexts": [
+        "existing trust section subject to credential confirmation"
+      ]
+    },
+    {
+      "id": "BC-IMG-012",
+      "originalFilename": "before.png",
+      "finalPath": "/images/before.png",
+      "path": "/images/before.png",
+      "bytes": 1589201,
+      "width": 1024,
+      "height": 1024,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "340b937d0672a692502ac4226d7d1e85b478721b3de8c6af07c85045a5f631b2",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "unverified-image",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Not referenced. Origin and reality as a company photograph not established. Do not publish as project proof or verified before/after pair.",
+      "visualSubject": "Interior lower wall with dark staining and surface damage",
+      "serviceAssociation": [
+        "illustrative moisture damage"
+      ],
+      "altText": "Illustrative lower wall damage",
+      "approvedDisplayContexts": []
+    },
+    {
+      "id": "BC-IMG-013",
+      "originalFilename": "carousel2-min.webp",
+      "finalPath": "/images/carousel2-min.webp",
+      "path": "/images/carousel2-min.webp",
+      "bytes": 1021830,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
+      "references": [
+        {
+          "file": "components/financing/FinancingHero.tsx",
+          "line": 59,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Red air-handling equipment in room with exposed wall framing and protection sheeting",
+      "serviceAssociation": [
+        "water damage",
+        "drying",
+        "mold"
+      ],
+      "altText": "Restoration equipment beside exposed wall framing and protection sheeting",
+      "approvedDisplayContexts": [
+        "homepage project proof",
+        "water service",
+        "drying process",
+        "gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-014",
+      "originalFilename": "chavis-review.png",
+      "finalPath": "/images/chavis-review.png",
+      "path": "/images/chavis-review.png",
+      "bytes": 9636,
+      "width": 72,
+      "height": 72,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "cd4201f3a78f60d739fc9161b196e40d1d9fb33832f918ed131792ef65adab80",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "reviewer-avatar-existing",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Use only with verified matching review record. Empty alt when reviewer name is adjacent.",
+      "visualSubject": "Reviewer headshot thumbnail",
+      "serviceAssociation": [
+        "reviews"
+      ],
+      "altText": "",
+      "approvedDisplayContexts": [
+        "associated existing review record only"
+      ]
+    },
+    {
+      "id": "BC-IMG-015",
+      "originalFilename": "emergencyProcess.webp",
+      "finalPath": "/images/emergencyProcess.webp",
+      "path": "/images/emergencyProcess.webp",
+      "bytes": 626598,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "85e0f38e83687a1e1d8335a833c08fbb2bc525320f3c7819dfe5173267572555",
+      "references": [
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 173,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Branded Bold City pickup and trailer, close side view",
+      "serviceAssociation": [
+        "company",
+        "emergency"
+      ],
+      "altText": "Bold City IAQ branded pickup and trailer",
+      "approvedDisplayContexts": [
+        "about",
+        "contact",
+        "company proof",
+        "emergency process"
+      ]
+    },
+    {
+      "id": "BC-IMG-016",
+      "originalFilename": "extra-min.webp",
+      "finalPath": "/images/extra-min.webp",
+      "path": "/images/extra-min.webp",
+      "bytes": 913800,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "ecb267a731b59b13fa9835385bceff16165b1666fb1690a51af65dabafdaa95d",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Worker using hose or tool beside exposed wall framing",
+      "serviceAssociation": [
+        "restoration process",
+        "mold",
+        "cleanup"
+      ],
+      "altText": "Worker with a hose beside exposed interior wall framing",
+      "approvedDisplayContexts": [
+        "company process gallery",
+        "water service supporting photo"
+      ]
+    },
+    {
+      "id": "BC-IMG-017",
+      "originalFilename": "fireHero.webp",
+      "finalPath": "/images/fireHero.webp",
+      "path": "/images/fireHero.webp",
+      "bytes": 1286208,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "fb25ba58cf10275dce803b6485d616b6920211b0eb8defb5c746ee9988fd9aad",
+      "references": [
+        {
+          "file": "lib/serviceData.js",
+          "line": 41,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 48,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "No fire or smoke damage is visually established. Do not label as a completed fire-restoration job.",
+      "visualSubject": "Dumpster containing removed timber and building materials",
+      "serviceAssociation": [
+        "cleanup",
+        "fire service illustrative only"
+      ],
+      "altText": "Removed timber and building materials in a dumpster",
+      "approvedDisplayContexts": [
+        "material removal gallery",
+        "fire service with descriptive caption"
+      ]
+    },
+    {
+      "id": "BC-IMG-018",
+      "originalFilename": "fireProcess.webp",
+      "finalPath": "/images/fireProcess.webp",
+      "path": "/images/fireProcess.webp",
+      "bytes": 3603544,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "e8268814117affc50842e33e35cc28411bf069e7213d279a6e4fe16a77dce943",
+      "references": [
+        {
+          "file": "components/ads/AdsHero.jsx",
+          "line": 91,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Close view of person wearing branded Bold City work shirt",
+      "serviceAssociation": [
+        "company",
+        "emergency"
+      ],
+      "altText": "Bold City IAQ work shirt with company branding",
+      "approvedDisplayContexts": [
+        "emergency service",
+        "team detail",
+        "company proof"
+      ]
+    },
+    {
+      "id": "BC-IMG-019",
+      "originalFilename": "fireSigue-min.webp",
+      "finalPath": "/images/fireSigue-min.webp",
+      "path": "/images/fireSigue-min.webp",
+      "bytes": 1182100,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "5063be9c40cfa7b2821fb8a724639d2c8ebb06b9d2121c0eee0981d88a5969ae",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Branded pickup beside outdoor debris and discarded material",
+      "serviceAssociation": [
+        "company",
+        "cleanup"
+      ],
+      "altText": "Bold City IAQ pickup beside removed materials",
+      "approvedDisplayContexts": [
+        "company gallery",
+        "cleanup process"
+      ]
+    },
+    {
+      "id": "BC-IMG-020",
+      "originalFilename": "googlelogo.png",
+      "finalPath": "/images/googlelogo.png",
+      "path": "/images/googlelogo.png",
+      "bytes": 110441,
+      "width": 1080,
+      "height": 1080,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "61a827812acb533c195ae7d8d4d1365f142a0a650c85ef6410e4f5e777308837",
+      "references": [
+        {
+          "file": "components/service/TrustBar.jsx",
+          "line": 34,
+          "commented": false
+        },
+        {
+          "file": "components/TrustBadges.js",
+          "line": 15,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Google G logo",
+      "serviceAssociation": [
+        "review source branding"
+      ],
+      "altText": "Google",
+      "approvedDisplayContexts": [
+        "review source attribution"
+      ]
+    },
+    {
+      "id": "BC-IMG-021",
+      "originalFilename": "bathroom-after.webp",
+      "finalPath": "/images/grid/bathroom-after.webp",
+      "path": "/images/grid/bathroom-after.webp",
+      "bytes": 1156324,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "979b7a197b1d2216583266d3b03bcc9b02dd4e370a4151a7a46621e43023c3f6",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": {
+        "group": "bathroom-sequence",
+        "phase": "preparation",
+        "otherPath": "/images/grid/bathroom-before.webp",
+        "status": "Visually corresponding room. This is work in progress, not a completed restored bathroom."
+      },
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Same-looking bathroom after fixtures and wall surfaces removed, exposed framing remains",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Bathroom with exposed wall framing during restoration preparation",
+      "approvedDisplayContexts": [
+        "process comparison",
+        "water service gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-022",
+      "originalFilename": "bathroom-before.webp",
+      "finalPath": "/images/grid/bathroom-before.webp",
+      "path": "/images/grid/bathroom-before.webp",
+      "bytes": 1080024,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "3cdd3a8ef53e64979cd24d96d9b290d0cb4dcc35448c0f8603e3aae91fda07db",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": {
+        "group": "bathroom-sequence",
+        "phase": "before",
+        "otherPath": "/images/grid/bathroom-after.webp",
+        "status": "Visually corresponding room; chronological labels inherited from filenames. No documented job outcome."
+      },
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Bathroom vanity and bathtub before wall materials are removed",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Bathroom vanity and bathtub before restoration preparation",
+      "approvedDisplayContexts": [
+        "process comparison",
+        "water service gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-023",
+      "originalFilename": "beforeSloan.webp",
+      "finalPath": "/images/grid/beforeSloan.webp",
+      "path": "/images/grid/beforeSloan.webp",
+      "bytes": 6056220,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "676e625d6c3526795eaaa1aee7bbaec8e66784e4248efe8eec5f342f92c43e40",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Ceiling with removed drywall area and plastic protection in interior",
+      "serviceAssociation": [
+        "water damage",
+        "material removal"
+      ],
+      "altText": "Partly opened ceiling with plastic protection in a work area",
+      "approvedDisplayContexts": [
+        "water process gallery",
+        "material removal"
+      ]
+    },
+    {
+      "id": "BC-IMG-024",
+      "originalFilename": "carousel1.webp",
+      "finalPath": "/images/grid/carousel1.webp",
+      "path": "/images/grid/carousel1.webp",
+      "bytes": 809496,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "49b20db34038c429adc5e70d00035fe7248b0d2c7d812f4a88d1c86cc64e3299",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Back of branded Bold City work shirt in work area",
+      "serviceAssociation": [
+        "company",
+        "mold"
+      ],
+      "altText": "Bold City IAQ work shirt inside a work area",
+      "approvedDisplayContexts": [
+        "mold service",
+        "company gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-025",
+      "originalFilename": "carousel2.webp",
+      "finalPath": "/images/grid/carousel2.webp",
+      "path": "/images/grid/carousel2.webp",
+      "bytes": 1021830,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 10,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 18,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 72,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 74,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Red air-handling equipment in room with exposed wall framing and protection sheeting",
+      "serviceAssociation": [
+        "water damage",
+        "drying",
+        "mold"
+      ],
+      "altText": "Restoration equipment beside exposed wall framing and protection sheeting",
+      "approvedDisplayContexts": [
+        "homepage project proof",
+        "water service",
+        "drying process",
+        "gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-026",
+      "originalFilename": "carousel3.webp",
+      "finalPath": "/images/grid/carousel3.webp",
+      "path": "/images/grid/carousel3.webp",
+      "bytes": 1118350,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "3dd10217e39adca9d2c4fac7c7fc68004937e950f564850a7dce35eb0781aeb5",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Worker kneeling by exposed lower kitchen walls and protected cabinets",
+      "serviceAssociation": [
+        "water damage",
+        "mold",
+        "restoration process"
+      ],
+      "altText": "Worker beside exposed lower kitchen walls and protected cabinets",
+      "approvedDisplayContexts": [
+        "homepage project proof",
+        "water service",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-027",
+      "originalFilename": "emergencyGrid.webp",
+      "finalPath": "/images/grid/emergencyGrid.webp",
+      "path": "/images/grid/emergencyGrid.webp",
+      "bytes": 600924,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "9e3deb8d4e34fcad0511d5bd5833467fcb9987795b9ad19ed6d0e579cf3a4a37",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 25,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 46,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 48,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Discarded cabinets, wallboard, and other materials outdoors",
+      "serviceAssociation": [
+        "cleanup",
+        "damaged material removal"
+      ],
+      "altText": "Removed cabinets and building materials collected outdoors",
+      "approvedDisplayContexts": [
+        "cleanup service",
+        "material removal process"
+      ]
+    },
+    {
+      "id": "BC-IMG-028",
+      "originalFilename": "extra.webp",
+      "finalPath": "/images/grid/extra.webp",
+      "path": "/images/grid/extra.webp",
+      "bytes": 913800,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "ecb267a731b59b13fa9835385bceff16165b1666fb1690a51af65dabafdaa95d",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Worker using hose or tool beside exposed wall framing",
+      "serviceAssociation": [
+        "restoration process",
+        "mold",
+        "cleanup"
+      ],
+      "altText": "Worker with a hose beside exposed interior wall framing",
+      "approvedDisplayContexts": [
+        "company process gallery",
+        "water service supporting photo"
+      ]
+    },
+    {
+      "id": "BC-IMG-029",
+      "originalFilename": "kitchenafter.webp",
+      "finalPath": "/images/grid/kitchenafter.webp",
+      "path": "/images/grid/kitchenafter.webp",
+      "bytes": 1099484,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "09d16f344f2706dd5f3af6c0c5b98bc50c50dca813a31d3bd1b6f12f177a13c5",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": {
+        "group": "kitchen-sequence",
+        "phase": "preparation",
+        "otherPath": "/images/grid/kitchenbefore.webp",
+        "status": "Work in progress, not a finished rebuilt kitchen."
+      },
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Kitchen with lower cabinets or wall surfaces removed, protected upper cabinets",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Kitchen with exposed lower wall framing and protected upper cabinets",
+      "approvedDisplayContexts": [
+        "process comparison",
+        "water service gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-030",
+      "originalFilename": "kitchenbefore.webp",
+      "finalPath": "/images/grid/kitchenbefore.webp",
+      "path": "/images/grid/kitchenbefore.webp",
+      "bytes": 959036,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "4bb3bcd1c8691e0f504fa511f63135ad90af24ffc94a52d47cd38da6b2148f80",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": {
+        "group": "kitchen-sequence",
+        "phase": "before",
+        "otherPath": "/images/grid/kitchenafter.webp",
+        "status": "Visually corresponding window/cabinet layout; no documented case study."
+      },
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Kitchen cabinets and tiled floor before wall removal",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Kitchen cabinets and tiled floor before restoration preparation",
+      "approvedDisplayContexts": [
+        "process comparison",
+        "water service gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-031",
+      "originalFilename": "mold-hero.webp",
+      "finalPath": "/images/grid/mold-hero.webp",
+      "path": "/images/grid/mold-hero.webp",
+      "bytes": 5055914,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "07003766ea38d3a86ca443b175c1eb128a097a3fa33d286a749bdc95008a8cd3",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 20,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 35,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visible spotting is descriptive. Do not identify mold species, safety level, test results, or project location from this photo.",
+      "visualSubject": "Gloved hand holding visibly spotted removed building material",
+      "serviceAssociation": [
+        "mold",
+        "material removal"
+      ],
+      "altText": "Gloved hand holding removed building material with visible dark spotting",
+      "approvedDisplayContexts": [
+        "mold service",
+        "material removal process"
+      ]
+    },
+    {
+      "id": "BC-IMG-032",
+      "originalFilename": "sanitizationHero.webp",
+      "finalPath": "/images/grid/sanitizationHero.webp",
+      "path": "/images/grid/sanitizationHero.webp",
+      "bytes": 1052632,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "22d23ce26113b55b07d08bc964c3cd1e36b732ef33675a334c5a85ecd0b3cf28",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Clean tiled floor in interior with exposed wall framing",
+      "serviceAssociation": [
+        "cleanup",
+        "restoration process"
+      ],
+      "altText": "Tiled floor and exposed wall framing during restoration preparation",
+      "approvedDisplayContexts": [
+        "homepage supporting photo",
+        "cleanup service",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-033",
+      "originalFilename": "hallafter.webp",
+      "finalPath": "/images/hallafter.webp",
+      "path": "/images/hallafter.webp",
+      "bytes": 8346,
+      "width": 353,
+      "height": 235,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "6a1b62dffb502263879b3b009cb67228f3130f885981940d5119432885c59dd3",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 54,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": {
+        "group": "hall-sequence",
+        "phase": "preparation",
+        "otherPath": "/images/hallbefore.webp",
+        "status": "Work in progress, not a completed restoration. Small 353px source."
+      },
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Hallway after wall surfaces removed, exposed framing and protected adjoining areas",
+      "serviceAssociation": [
+        "restoration process"
+      ],
+      "altText": "Hallway with exposed framing during restoration preparation",
+      "approvedDisplayContexts": [
+        "small process comparison"
+      ]
+    },
+    {
+      "id": "BC-IMG-034",
+      "originalFilename": "hallbefore.webp",
+      "finalPath": "/images/hallbefore.webp",
+      "path": "/images/hallbefore.webp",
+      "bytes": 2538,
+      "width": 353,
+      "height": 235,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "a6a9390336fdab6fccbd88ebc6b30ab0e81c7e453c02dd54b521ad32b72de0b5",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 53,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": {
+        "group": "hall-sequence",
+        "phase": "before",
+        "otherPath": "/images/hallafter.webp",
+        "status": "Visually compatible hallway sequence inherited from filenames; no independent project record. Small 353px source."
+      },
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Hallway with wall surfaces intact and bare floor",
+      "serviceAssociation": [
+        "restoration process"
+      ],
+      "altText": "Hallway before wall materials are removed",
+      "approvedDisplayContexts": [
+        "small process comparison"
+      ]
+    },
+    {
+      "id": "BC-IMG-035",
+      "originalFilename": "hero-water-floor.png",
+      "finalPath": "/images/hero-water-floor.png",
+      "path": "/images/hero-water-floor.png",
+      "bytes": 2575660,
+      "width": 1024,
+      "height": 1536,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "c609b3e39a61490ba60989c7faaa2db61b34a52465bdd77fab12fc7a67db1195",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "unverified-image",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Not referenced. Synthetic-looking composition; origin not established. Do not publish as company project evidence.",
+      "visualSubject": "Dark image of wet floor and cleaning machine",
+      "serviceAssociation": [
+        "illustrative water damage"
+      ],
+      "altText": "Illustrative wet floor and cleaning equipment",
+      "approvedDisplayContexts": []
+    },
+    {
+      "id": "BC-IMG-036",
+      "originalFilename": "hero.png",
+      "finalPath": "/images/hero.png",
+      "path": "/images/hero.png",
+      "bytes": 1956930,
+      "width": 1024,
+      "height": 1536,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "87fbe73728949c02b1a66389ece37bca160deb6a39d0019fc2c73a6e9904d58a",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "unverified-image",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Not referenced. Origin not established. Do not publish as company project evidence.",
+      "visualSubject": "Dark interior with standing water on floor",
+      "serviceAssociation": [
+        "illustrative water damage"
+      ],
+      "altText": "Illustrative standing water in an interior",
+      "approvedDisplayContexts": []
+    },
+    {
+      "id": "BC-IMG-037",
+      "originalFilename": "iicrc-certified.webp",
+      "finalPath": "/images/iicrc-certified.webp",
+      "path": "/images/iicrc-certified.webp",
+      "bytes": 12546,
+      "width": 533,
+      "height": 224,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "30e3755634bebfc53af2cb00dc2002b1f1b4968733296e8b215ca1cbe65e856e",
+      "references": [
+        {
+          "file": "components/contact/ContactTrustStrip.jsx",
+          "line": 5,
+          "commented": false
+        },
+        {
+          "file": "components/EarlyTrustBand.jsx",
+          "line": 27,
+          "commented": false
+        },
+        {
+          "file": "components/service/TrustBar.jsx",
+          "line": 20,
+          "commented": false
+        },
+        {
+          "file": "components/TrustBadges.js",
+          "line": 27,
+          "commented": false
+        },
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 63,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Logo file is not independent evidence of current company certification.",
+      "visualSubject": "IICRC Certified logo",
+      "serviceAssociation": [
+        "credential brand mark"
+      ],
+      "altText": "IICRC Certified logo",
+      "approvedDisplayContexts": [
+        "existing trust section subject to credential confirmation"
+      ]
+    },
+    {
+      "id": "BC-IMG-056",
+      "originalFilename": "jacksonville-skyline.webp",
+      "finalPath": "/images/jacksonville-skyline.webp",
+      "path": "/images/jacksonville-skyline.webp",
+      "bytes": 454726,
+      "width": 1920,
+      "height": 1236,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "e9fffa26cc60f964661a15faf0908e7c9d770bb69402795187ec309a1e3b8811",
+      "references": [
+        {
+          "file": "components/Hero.jsx",
+          "line": 10,
+          "commented": false
+        },
+        {
+          "file": "pages/index.js",
+          "line": 15,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Jacksonville, Florida; regional context only, not a Bold City project",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "licensed-external-photo",
+      "rightsProvenanceStatus": "CC BY 4.0. Quintin Soloviev; Wikimedia Commons; downloaded and verified 2026-11-01.",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Resized from 7823×5035 JPEG to 1920×1236 WebP. May be cropped in responsive hero. Visible attribution with source/license links and change notice required.",
+      "visualSubject": "Downtown Jacksonville skyline, Main Street Bridge, and St. Johns River from elevated viewpoint",
+      "serviceAssociation": [
+        "Jacksonville service area"
+      ],
+      "altText": "Downtown Jacksonville and the Main Street Bridge above the St. Johns River",
+      "approvedDisplayContexts": [
+        "reversible homepage skyline hero trial"
+      ],
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacksonville_skyline.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Jacksonville_skyline.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "originalLocalPath": "context/media/originals/jacksonville-skyline.jpg"
+    },
+    {
+      "id": "BC-IMG-038",
+      "originalFilename": "jon-review.png",
+      "finalPath": "/images/jon-review.png",
+      "path": "/images/jon-review.png",
+      "bytes": 11558,
+      "width": 72,
+      "height": 72,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "936ca22cc0dec92b5d1f11c3dcfc2258ff50cc6d4fac2d9d07c83bbef1cc0b14",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "reviewer-avatar-existing",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Use only with verified matching review record. Empty alt when reviewer name is adjacent.",
+      "visualSubject": "Reviewer headshot thumbnail",
+      "serviceAssociation": [
+        "reviews"
+      ],
+      "altText": "",
+      "approvedDisplayContexts": [
+        "associated existing review record only"
+      ]
+    },
+    {
+      "id": "BC-IMG-039",
+      "originalFilename": "landing-min.webp",
+      "finalPath": "/images/landing-min.webp",
+      "path": "/images/landing-min.webp",
+      "bytes": 1540022,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "b4a72fee0aa0cc831599c7145f2194f0323df1ae450897da7e8745cdd131af3f",
+      "references": [
+        {
+          "file": "components/Hero.jsx",
+          "line": 10,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Branded Bold City pickup parked outside",
+      "serviceAssociation": [
+        "company",
+        "emergency"
+      ],
+      "altText": "Bold City IAQ branded service pickup",
+      "approvedDisplayContexts": [
+        "homepage fallback hero",
+        "about",
+        "contact"
+      ]
+    },
+    {
+      "id": "BC-IMG-040",
+      "originalFilename": "logo.webp",
+      "finalPath": "/images/logo.webp",
+      "path": "/images/logo.webp",
+      "bytes": 12046,
+      "width": 525,
+      "height": 200,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "cb8f2d583efe4481ff9145d5da5a10e2010f43a525c24fe7119bfc1e660fb2e4",
+      "references": [
+        {
+          "file": "components/Navbar.jsx",
+          "line": 179,
+          "commented": false
+        },
+        {
+          "file": "pages/about/index.js",
+          "line": 34,
+          "commented": false
+        },
+        {
+          "file": "lib/seo.js",
+          "line": 6,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-brand-asset",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Bold City IAQ logo with skyline graphic",
+      "serviceAssociation": [
+        "brand"
+      ],
+      "altText": "Bold City Indoor Air Quality and Emergency Services",
+      "approvedDisplayContexts": [
+        "navigation",
+        "footer",
+        "business schema logo",
+        "social fallback"
+      ]
+    },
+    {
+      "id": "BC-IMG-041",
+      "originalFilename": "moldHero.webp",
+      "finalPath": "/images/moldHero.webp",
+      "path": "/images/moldHero.webp",
+      "bytes": 809496,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "49b20db34038c429adc5e70d00035fe7248b0d2c7d812f4a88d1c86cc64e3299",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Back of branded Bold City work shirt in work area",
+      "serviceAssociation": [
+        "company",
+        "mold"
+      ],
+      "altText": "Bold City IAQ work shirt inside a work area",
+      "approvedDisplayContexts": [
+        "mold service",
+        "company gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-042",
+      "originalFilename": "moldMid.png",
+      "finalPath": "/images/moldMid.png",
+      "path": "/images/moldMid.png",
+      "bytes": 2487009,
+      "width": 1024,
+      "height": 1536,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "9cdba03acc8d45760c9ef806845b8a630f8a62ff87aaedeedf9ee2cde523e798",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "unverified-image",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Not referenced. Origin not established. Do not publish as company project evidence or a mold-testing capability.",
+      "visualSubject": "Person inspecting dark staining below window",
+      "serviceAssociation": [
+        "illustrative mold concern"
+      ],
+      "altText": "Illustrative inspection of wall staining below a window",
+      "approvedDisplayContexts": []
+    },
+    {
+      "id": "BC-IMG-043",
+      "originalFilename": "moldSigue.webp",
+      "finalPath": "/images/moldSigue.webp",
+      "path": "/images/moldSigue.webp",
+      "bytes": 1190080,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Phantom 2000 air-handling equipment near exposed lower wall framing",
+      "serviceAssociation": [
+        "mold",
+        "air handling",
+        "restoration process"
+      ],
+      "altText": "Air-handling equipment beside exposed lower wall framing",
+      "approvedDisplayContexts": [
+        "mold service",
+        "equipment detail",
+        "gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-044",
+      "originalFilename": "moldprocess.webp",
+      "finalPath": "/images/moldprocess.webp",
+      "path": "/images/moldprocess.webp",
+      "bytes": 1391374,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "01817c32ad72bccce9dae1527ec47980cd2b0a6f5c256916b3d3708c553df690",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 15,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 28,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 33,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 35,
+          "commented": false
+        },
+        {
+          "file": "data/service-area-pages/pageOverrides.ts",
+          "line": 15,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Phantom 2000 EC air-handling equipment near plastic containment and exposed lower walls",
+      "serviceAssociation": [
+        "mold",
+        "containment",
+        "air handling"
+      ],
+      "altText": "Air-handling equipment beside plastic containment and exposed wall framing",
+      "approvedDisplayContexts": [
+        "homepage supporting project proof",
+        "mold service",
+        "containment process"
+      ]
+    },
+    {
+      "id": "BC-IMG-045",
+      "originalFilename": "normilogo.png",
+      "finalPath": "/images/normilogo.png",
+      "path": "/images/normilogo.png",
+      "bytes": 20459,
+      "width": 250,
+      "height": 84,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "0283e4a2d152359329b8b725e65522b7096238dbc7faef2b3af34c8b57a5bc8d",
+      "references": [
+        {
+          "file": "components/contact/ContactTrustStrip.jsx",
+          "line": 11,
+          "commented": false
+        },
+        {
+          "file": "components/EarlyTrustBand.jsx",
+          "line": 33,
+          "commented": false
+        },
+        {
+          "file": "components/service/TrustBar.jsx",
+          "line": 27,
+          "commented": false
+        },
+        {
+          "file": "components/TrustBadges.js",
+          "line": 39,
+          "commented": false
+        },
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 64,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "third-party-brand-mark",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Logo file is not independent evidence of current membership or certification.",
+      "visualSubject": "NORMI organization logo",
+      "serviceAssociation": [
+        "credential brand mark"
+      ],
+      "altText": "NORMI logo",
+      "approvedDisplayContexts": [
+        "existing trust section subject to credential confirmation"
+      ]
+    },
+    {
+      "id": "BC-IMG-046",
+      "originalFilename": "proof1.webp",
+      "finalPath": "/images/proof1.webp",
+      "path": "/images/proof1.webp",
+      "bytes": 1118350,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "3dd10217e39adca9d2c4fac7c7fc68004937e950f564850a7dce35eb0781aeb5",
+      "references": [
+        {
+          "file": "lib/serviceData.js",
+          "line": 18,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 59,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 61,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Worker kneeling by exposed lower kitchen walls and protected cabinets",
+      "serviceAssociation": [
+        "water damage",
+        "mold",
+        "restoration process"
+      ],
+      "altText": "Worker beside exposed lower kitchen walls and protected cabinets",
+      "approvedDisplayContexts": [
+        "homepage project proof",
+        "water service",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-047",
+      "originalFilename": "rebecca-review.png",
+      "finalPath": "/images/rebecca-review.png",
+      "path": "/images/rebecca-review.png",
+      "bytes": 2301,
+      "width": 72,
+      "height": 72,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "85f2ac44df7e9cb18a93009f6edcb658b02f62f54f904ffe8133ad59125342ad",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "reviewer-avatar-existing",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Decorative avatar should use empty alt when reviewer name is adjacent; avatar does not verify review text or rating.",
+      "visualSubject": "Purple Google-style R avatar",
+      "serviceAssociation": [
+        "reviews"
+      ],
+      "altText": "",
+      "approvedDisplayContexts": [
+        "associated existing review record only"
+      ]
+    },
+    {
+      "id": "BC-IMG-048",
+      "originalFilename": "sanitizationHero.webp",
+      "finalPath": "/images/sanitizationHero.webp",
+      "path": "/images/sanitizationHero.webp",
+      "bytes": 1052632,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "22d23ce26113b55b07d08bc964c3cd1e36b732ef33675a334c5a85ecd0b3cf28",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 30,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 54,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 61,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Clean tiled floor in interior with exposed wall framing",
+      "serviceAssociation": [
+        "cleanup",
+        "restoration process"
+      ],
+      "altText": "Tiled floor and exposed wall framing during restoration preparation",
+      "approvedDisplayContexts": [
+        "homepage supporting photo",
+        "cleanup service",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-049",
+      "originalFilename": "sanitizationProcess.webp",
+      "finalPath": "/images/sanitizationProcess.webp",
+      "path": "/images/sanitizationProcess.webp",
+      "bytes": 910856,
+      "width": 5388,
+      "height": 3592,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "a72bac4b976aa5f3b0a15da6677ab1a102e1ea74b3233576408020523204c2ac",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Removed cabinets, furniture, and other contents outside garage",
+      "serviceAssociation": [
+        "contents cleaning",
+        "cleanup"
+      ],
+      "altText": "Cabinets and other contents collected outside a garage",
+      "approvedDisplayContexts": [
+        "cleanup service",
+        "contents handling illustration"
+      ]
+    },
+    {
+      "id": "BC-IMG-050",
+      "originalFilename": "waaterSigue-min.webp",
+      "finalPath": "/images/waaterSigue-min.webp",
+      "path": "/images/waaterSigue-min.webp",
+      "bytes": 1148840,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "e20dd2ee4ada4a2499bf5022ea2e650bc403584d5af9619e48b2116af8c57c88",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Kitchen with exposed lower wall framing and protected cabinets",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Exposed lower kitchen wall framing beneath protected cabinets",
+      "approvedDisplayContexts": [
+        "water service hero",
+        "local service illustrative photo",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-051",
+      "originalFilename": "water-min.webp",
+      "finalPath": "/images/water-min.webp",
+      "path": "/images/water-min.webp",
+      "bytes": 1190080,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Phantom 2000 air-handling equipment near exposed lower wall framing",
+      "serviceAssociation": [
+        "mold",
+        "air handling",
+        "restoration process"
+      ],
+      "altText": "Air-handling equipment beside exposed lower wall framing",
+      "approvedDisplayContexts": [
+        "mold service",
+        "equipment detail",
+        "gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-052",
+      "originalFilename": "waterHero-min.webp",
+      "finalPath": "/images/waterHero-min.webp",
+      "path": "/images/waterHero-min.webp",
+      "bytes": 1263734,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "762c35d150f2c2206c69e5ca8fad3b75a78ac9d21bf6630a6cb8a047b7c94b8b",
+      "references": [],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Unused; retained without forcing placement",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Open interior wall framing with remaining upper drywall and tiled floor",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Open interior wall framing during restoration preparation",
+      "approvedDisplayContexts": [
+        "water service social preview",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-053",
+      "originalFilename": "waterHero.webp",
+      "finalPath": "/images/waterHero.webp",
+      "path": "/images/waterHero.webp",
+      "bytes": 1148840,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "e20dd2ee4ada4a2499bf5022ea2e650bc403584d5af9619e48b2116af8c57c88",
+      "references": [
+        {
+          "file": "lib/serviceData.js",
+          "line": 6,
+          "commented": false
+        },
+        {
+          "file": "data/service-area-pages/pageOverrides.ts",
+          "line": 15,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Kitchen with exposed lower wall framing and protected cabinets",
+      "serviceAssociation": [
+        "water damage",
+        "restoration process"
+      ],
+      "altText": "Exposed lower kitchen wall framing beneath protected cabinets",
+      "approvedDisplayContexts": [
+        "water service hero",
+        "local service illustrative photo",
+        "process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-054",
+      "originalFilename": "waterProcess.webp",
+      "finalPath": "/images/waterProcess.webp",
+      "path": "/images/waterProcess.webp",
+      "bytes": 1435952,
+      "width": 6000,
+      "height": 4000,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "11b52ec9414b4fc90e1889b898dd9c4e47526765d264b1f10864b7987f0f5add",
+      "references": [
+        {
+          "file": "lib/serviceData.js",
+          "line": 16,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "existing-repository-project-photo",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
+      "visualSubject": "Red restoration equipment inside unfinished block-wall room",
+      "serviceAssociation": [
+        "water damage",
+        "drying"
+      ],
+      "altText": "Restoration equipment inside a room with exposed block walls",
+      "approvedDisplayContexts": [
+        "water service",
+        "equipment/process gallery"
+      ]
+    },
+    {
+      "id": "BC-IMG-055",
+      "originalFilename": "why-us.png",
+      "finalPath": "/images/why-us.png",
+      "path": "/images/why-us.png",
+      "bytes": 2016285,
+      "width": 1536,
+      "height": 1024,
+      "actualFormat": "png",
+      "extensionMatchesFormat": true,
+      "sha256": "d55340b77dda2107969a77c669af65a74e03b5521ff942af6cda91734cf0410a",
+      "references": [
+        {
+          "file": "components/WhyChooseUs.jsx",
+          "line": 29,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "unverified-decorative-image",
+      "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Not Jacksonville geography or company project evidence.",
+      "visualSubject": "Dark storm clouds over distant mountain silhouette",
+      "serviceAssociation": [
+        "decorative weather image"
+      ],
+      "altText": "",
+      "approvedDisplayContexts": [
+        "existing decorative background only"
+      ]
+    }
+  ],
+  "missing": [
+    {
+      "path": "/images/badges/local-award.webp",
+      "references": [
+        {
+          "file": "lib/adLandingPage.js",
+          "line": 71,
+          "commented": true
+        }
+      ],
+      "activeReference": false
+    }
+  ],
+  "duplicates": [
+    {
+      "path": "/images/ads/map.png",
+      "duplicateOf": "/images/ChatGPT Image Aug 23, 2025, 03_40_08 PM.png"
+    },
+    {
+      "path": "/images/badges/google5.png",
+      "duplicateOf": "/images/5-star-google.png"
+    },
+    {
+      "path": "/images/emergencyProcess.webp",
+      "duplicateOf": "/images/about-hero.webp"
+    },
+    {
+      "path": "/images/fireProcess.webp",
+      "duplicateOf": "/images/ads/emergencyHero.webp"
+    },
+    {
+      "path": "/images/grid/carousel2.webp",
+      "duplicateOf": "/images/carousel2-min.webp"
+    },
+    {
+      "path": "/images/grid/extra.webp",
+      "duplicateOf": "/images/extra-min.webp"
+    },
+    {
+      "path": "/images/iicrc-certified.webp",
+      "duplicateOf": "/images/badges/iicrc.webp"
+    },
+    {
+      "path": "/images/moldHero.webp",
+      "duplicateOf": "/images/grid/carousel1.webp"
+    },
+    {
+      "path": "/images/normilogo.png",
+      "duplicateOf": "/images/badges/normi.png"
+    },
+    {
+      "path": "/images/proof1.webp",
+      "duplicateOf": "/images/grid/carousel3.webp"
+    },
+    {
+      "path": "/images/sanitizationHero.webp",
+      "duplicateOf": "/images/grid/sanitizationHero.webp"
+    },
+    {
+      "path": "/images/water-min.webp",
+      "duplicateOf": "/images/moldSigue.webp"
+    },
+    {
+      "path": "/images/waterHero.webp",
+      "duplicateOf": "/images/waaterSigue-min.webp"
+    }
+  ]
+}

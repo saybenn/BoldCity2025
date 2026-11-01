@@ -36,9 +36,9 @@ export default function Footer() {
 
             <div className="mt-5 space-y-2 text-sm leading-6 text-lightText/85">
               <p>
-                10066 103rd St #206
+                14440 Normandy Blvd
                 <br />
-                Jacksonville, FL 32210
+                Jacksonville, FL 32234
               </p>
               <p>
                 <TrackedPhoneLink
@@ -82,6 +82,7 @@ export default function Footer() {
               Services
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-lightText/85">
+<li><Link href="/services/air-duct-cleaning" className="transition hover:text-aqua">Air Duct Cleaning</Link></li>
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="transition hover:text-aqua">
@@ -112,7 +113,7 @@ export default function Footer() {
               Free Emergency Checklist
             </h4>
             <p className="mt-4 text-sm leading-7 text-lightText/80">
-              Download a quick checklist to help you take the right first steps
+              Read a quick checklist to help you take the right first steps
               before damage gets worse.
             </p>
 
@@ -154,34 +155,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-sm text-lightText/70">
+          <p className="mb-3 text-xs">Jacksonville photo: <a className="underline" href="https://commons.wikimedia.org/wiki/File:Jacksonville_skyline.jpg">Quintin Soloviev / Wikimedia Commons</a>, <a className="underline" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Resized and cropped.</p>
           &copy; {new Date().getFullYear()} Bold City IAQ. All rights reserved.
         </div>
       </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Bold City IAQ",
-            image: "https://boldcityiaq.com/images/logo.png",
-            url: "https://boldcityiaq.com",
-            telephone: "+19044346318",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "10066 103rd St #206",
-              addressLocality: "Jacksonville",
-              addressRegion: "FL",
-              postalCode: "32210",
-              addressCountry: "US",
-            },
-            openingHours: "Mo-Su 00:00-23:59",
-            priceRange: "$$",
-            sameAs: [],
-          }),
-        }}
-      />
+
     </footer>
   );
 }

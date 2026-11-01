@@ -57,10 +57,12 @@ export default function ServiceAreaServicePageTemplate({
 
       <TrustProofRow items={pageData.trustItems} />
 
+      <p className="bg-white px-5 pt-8 text-center leading-7 text-navy">{pageData.area.intro}</p>
       <WhyLocalMatters
         heading={pageData.whyLocalMatters.heading}
         cards={pageData.whyLocalMatters.cards}
       />
+      {pageData.area.source && <p className="bg-white px-5 pb-8 text-center text-sm text-navy">Regional context: <a href={pageData.area.source.url} className="underline">{pageData.area.source.label}</a>. Company photographs illustrate restoration work.</p>}
 
       <ServiceIntro
         heading={pageData.serviceIntro.heading}

@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local QA captures and original licensed media
+/context/media/originals/
+/context/media/contact-sheet*.png
+/test-results/
+/playwright-report/
+/context/qa/screenshots/
+/context/qa/*.html
+
+/.qa-lock/

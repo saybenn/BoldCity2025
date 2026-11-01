@@ -4,6 +4,7 @@ import type {
   ImageAsset,
 } from "@/lib/service-area-pages/types";
 import TrackedCtaLink from "./TrackedCtaLink";
+import Image from "next/image";
 
 type ServiceAreaHeroProps = {
   area: AreaData;
@@ -75,9 +76,13 @@ export default function ServiceAreaHero({
 
           <div className="relative overflow-hidden rounded-[2rem] border border-[#d7ded9] bg-white p-3 shadow-[0_24px_70px_rgba(15,23,42,0.12)]">
             {image ? (
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
+                width={1200}
+                height={800}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
                 className="h-[320px] w-full rounded-[1.45rem] object-cover md:h-[440px]"
               />
             ) : (

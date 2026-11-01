@@ -1,107 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, MapPin, BadgeDollarSign } from "lucide-react";
 import TrackedPhoneLink from "@/components/TrackedPhoneLink";
 import { trackCta } from "@/lib/analytics";
 
+// Set to "original" to reverse the skyline trial at build time.
+export const HERO_VARIANT = process.env.NEXT_PUBLIC_HOME_HERO_VARIANT === "original" ? "original" : "skyline";
 export default function Hero() {
-  function handleFinancingClick() {
-    trackCta({
-      cta_label: "Get Restored Now, Pay Later",
-      cta_location: "HomeHero",
-      intent: "view financing",
-      page: "/",
-      href: "/financing",
-    });
-  }
-
-  function handleRequestClick() {
-    trackCta({
-      cta_label: "Request Emergency Service",
-      cta_location: "HomeHero",
-      intent: "request emergency service",
-      page: "/",
-      href: "/contact",
-    });
-  }
-
-  return (
-    <header className="relative min-h-[92svh] overflow-hidden text-white lg:pb-32">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/landing-min.webp"
-          alt="Water damage restoration scene inside a residential property"
-          fetchPriority="high"
-          fill
-          priority
-          quality={75}
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/75" />
-      </div>
-
-      <div className="relative z-10 mx-auto flex min-h-[92svh] max-w-6xl items-center px-4 pb-16 pt-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <Link
-            href="/financing"
-            onClick={handleFinancingClick}
-            className="inline-flex max-w-[320px] flex-col items-center justify-center rounded-2xl bg-green px-5 py-3 text-center text-white shadow-md transition hover:opacity-95"
-          >
-            <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/85 sm:text-xs">
-              <BadgeDollarSign className="h-5 w-5" />
-              Financing Available
-            </span>
-            <span className="mt-1 text-sm font-semibold leading-5 sm:text-base">
-              Get Restored Now, Pay Later
-            </span>
-          </Link>
-
-          <h1 className="mt-6 font-heading text-4xl font-bold leading-tight text-lightText sm:text-5xl lg:text-6xl">
-            24/7 Emergency Water Damage Cleanup & Mold Remediation in
-            Jacksonville
-          </h1>
-
-          <p className="mx-auto mt-5 max-w-2xl text-base text-lightText/90 sm:text-lg lg:text-xl">
-            Fast local response for water intrusion, mold issues, storm damage,
-            and urgent cleanup. Call now or request immediate service.
-          </p>
-
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-sm text-white/90 sm:text-base">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 backdrop-blur-sm">
-              <MapPin className="h-4 w-4 text-aqua" />
-              Jacksonville & Northeast Florida
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 backdrop-blur-sm">
-              <Phone className="h-4 w-4 text-aqua" />
-              Available 24/7 for emergency response
-            </div>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <TrackedPhoneLink
-              href="tel:+19044346318"
-              phoneNumber="+19044346318"
-              ctaLabel="Call Now"
-              ctaLocation="HomeHero"
-              page="/"
-              intent="call emergency restoration"
-              className="inline-flex min-w-[220px] items-center justify-center rounded-md bg-aqua px-6 py-3 text-base font-semibold text-white transition hover:scale-[1.02] hover:bg-aqua-dark focus:outline-none focus:ring-2 focus:ring-white"
-              ariaLabel="Call now for emergency service"
-            >
-              Call Now
-            </TrackedPhoneLink>
-
-            <Link
-              href="/contact"
-              onClick={handleRequestClick}
-              className="inline-flex min-w-[220px] items-center justify-center rounded-md border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition hover:scale-[1.02] hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white"
-              aria-label="Request emergency service"
-            >
-              Request Emergency Service
-            </Link>
-          </div>
+  return <header data-hero-variant={HERO_VARIANT} className="relative overflow-hidden bg-navy text-white">
+    <Image src={HERO_VARIANT === "skyline" ? "/images/jacksonville-skyline.webp" : "/images/landing-min.webp"}
+      alt={HERO_VARIANT === "skyline" ? "Downtown Jacksonville and the Main Street Bridge above the St. Johns River" : "Bold City IAQ branded service pickup"}
+      fill priority fetchPriority="high" sizes="100vw" quality={75} className="object-cover object-center" />
+    <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/50" />
+    <div className="relative mx-auto max-w-6xl px-5 pb-6 pt-20 sm:px-6 sm:pb-12 sm:pt-28 lg:pb-16 lg:pt-36">
+      <div className="max-w-2xl">
+        <p className="text-xs font-semibold uppercase tracking-widest text-aqua sm:text-sm">24/7 emergency service</p>
+        <h1 className="mt-2 font-heading text-[clamp(1.875rem,7.5vw,3.5rem)] font-bold leading-[1.1]">Water Damage Cleanup in Jacksonville, FL</h1>
+        <p className="mt-4 max-w-xl text-sm leading-5 text-white/90 sm:text-lg sm:leading-7">24/7 emergency water removal, structural drying, and restoration for Jacksonville homes and businesses. From burst pipes to storm damage, we’re ready when you need us.</p>
+        <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+          <TrackedPhoneLink ctaLabel="Call Now" ctaLocation="HomeHero" page="/" href="tel:+19044346318" className="inline-flex min-h-12 items-center justify-center rounded-md bg-aqua px-5 py-3 font-semibold text-navy hover:bg-aqua-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Call Now: (904) 434-6318</TrackedPhoneLink>
+          <Link href="/contact" onClick={() => trackCta({ cta_label: "Request Emergency Service", cta_location: "HomeHero", href: "/contact", page: "/", hero_variant: HERO_VARIANT })} className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/50 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Request Emergency Service</Link>
         </div>
+        <Link href="/financing" onClick={() => trackCta({ cta_label: "Financing options", cta_location: "HomeHero", href: "/financing", page: "/" })} className="mt-4 inline-block text-xs text-white/90 underline underline-offset-4 sm:text-sm">Financing options for qualified customers</Link>
       </div>
-    </header>
-  );
+
+    </div>
+  </header>;
 }

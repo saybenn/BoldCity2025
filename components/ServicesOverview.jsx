@@ -11,19 +11,20 @@ import {
 import Link from "next/link";
 
 const services = [
-  {
-    title: "Mold Remediation",
-    icon: <Droplets className="h-12 w-12 text-aqua" />,
-    description:
-      "Identify the affected areas, contain the spread, remove unsafe materials, and treat impacted spaces to help restore a healthier environment.",
-    href: "/services/mold-remediation",
-  },
+  { title: "Air Duct Cleaning", icon: <Wind className="h-12 w-12 text-aqua" />, description: "Discuss dust, debris, access and the cleaning scope for residential or commercial ductwork.", href: "/services/air-duct-cleaning" },
   {
     title: "Water Damage Restoration",
     icon: <Wind className="h-12 w-12 text-aqua" />,
     description:
       "Emergency extraction, structural drying, moisture control, and restoration support for floods, leaks, burst pipes, and storm damage.",
     href: "/services/water-damage-restoration",
+  },
+  {
+    title: "Mold Remediation",
+    icon: <Droplets className="h-12 w-12 text-aqua" />,
+    description:
+      "Identify the affected areas, contain the spread, remove unsafe materials, and treat impacted spaces to help restore a healthier environment.",
+    href: "/services/mold-remediation",
   },
   {
     title: "Fire & Smoke Restoration",
@@ -62,7 +63,7 @@ export default function ServicesOverview() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {[...services.slice(1), services[0]].map((service) => (
             <div
               key={service.title}
               className="flex h-full flex-col rounded-2xl border border-slate-200 bg-navy p-6 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg"

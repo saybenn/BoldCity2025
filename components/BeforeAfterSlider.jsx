@@ -1,76 +1,65 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
+import { useState } from "react";
 import Image from "next/image";
+import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { X } from "lucide-react";
-
-const CompareImage = dynamic(() => import("react-compare-image"), {
-  ssr: false,
-});
 
 const proofImages = [
   {
-    src: "/images/proof1.webp",
-    alt: "Exposed framing during structural drying work",
-    title: "Structural Drying Procedure",
+    src: "/images/grid/carousel2.webp",
+    alt: "Restoration equipment beside exposed wall framing and protection sheeting",
+    title: "Equipment and exposed wall framing",
   },
   {
     src: "/images/moldprocess.webp",
-    alt: "Air Purification equipment set up inside a property",
-    title: "Containment During Remediation",
+    alt: "Air-handling equipment beside plastic containment and exposed framing",
+    title: "Containment and air-handling equipment",
   },
   {
     src: "/images/grid/mold-hero.webp",
-    alt: "Extraction of mold-contaminated materials inside a project site",
-    title: "Extraction of Mold-Contaminated Materials",
+    alt: "Gloved hand holding removed building material with dark spotting",
+    title: "Affected material removal",
   },
   {
     src: "/images/grid/emergencyGrid.webp",
-    alt: "Damaged material removal inside a project site",
+    alt: "Removed cabinets and building materials collected outdoors",
     title: "Removal of Damaged Materials",
   },
   {
     src: "/images/sanitizationHero.webp",
-    alt: "Restoration cleanup and rebuild preparation",
+    alt: "Tiled floor and exposed wall framing during restoration preparation",
     title: "Cleanup and Rebuild Preparation",
   },
 ];
 
 export default function BeforeAfterSlider() {
   const [selectedImage, setSelectedImage] = useState(null);
-
-  useEffect(() => {
-    function handleEscape(event) {
-      if (event.key === "Escape") {
-        setSelectedImage(null);
-      }
-    }
-
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
-  }, []);
+  const [position, setPosition] = useState(50);
 
   return (
     <section className="bg-lightGray py-20 px-4">
       <div className="mx-auto max-w-6xl text-center">
         <h2 className="text-4xl font-heading font-bold text-darkText lg:text-5xl">
-          Before & After Restoration
+          Real Work. Real Restoration.
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-base font-medium leading-7 text-gray-700 sm:text-lg">
-          See real project transformation, plus additional field photos that
-          show the process, care, and job-site execution behind the result.
+          Company project photos show equipment, containment, and material removal. The comparison shows preparation in progress, rather than a completed repair.
         </p>
 
-        <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-2xl shadow-xl">
-          <CompareImage
-            leftImage="/images/hallbefore.webp"
-            rightImage="/images/hallafter.webp"
-            alt="Before and after restoration"
-            sliderLineColor="#27AE60"
-          />
+        <div className="mx-auto mt-12 max-w-[353px] overflow-hidden rounded-2xl shadow-xl">
+          <div className="relative aspect-[353/235] bg-navy">
+            <Image src="/images/hallbefore.webp" alt="Hallway before preparation" fill sizes="(max-width: 393px) 90vw, 353px" className="object-cover" />
+            <div className="absolute inset-0" style={{clipPath:`inset(0 0 0 ${position}%)`}}><Image src="/images/hallafter.webp" alt="Hallway during restoration preparation" fill sizes="(max-width: 393px) 90vw, 353px" className="object-cover" /></div>
+            <div aria-hidden="true" className="absolute bottom-0 top-0 w-1 bg-white" style={{left:`${position}%`}} />
+          </div>
+          <label className="block bg-white p-4 text-sm font-semibold text-navy">Compare restoration preparation
+            <input type="range" min="0" max="100" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-label="Restoration preparation comparison" aria-valuetext={`${position}% before preparation visible`} className="mt-3 block w-full accent-green" />
+          </label>
         </div>
+
+        <p className="mt-3 text-sm text-gray-600">Before preparation / During restoration preparation. Move the slider or use arrow keys to compare.</p>
 
         <div className="mx-auto mt-14 max-w-5xl">
           <h3 className="text-2xl font-heading font-bold text-darkText">
@@ -109,14 +98,10 @@ export default function BeforeAfterSlider() {
       </div>
 
       {selectedImage && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div
-            className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-white shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <Dialog open={Boolean(selectedImage)} onClose={() => setSelectedImage(null)} className="fixed inset-0 z-[100]">
+        <div className="fixed inset-0 bg-black/80" aria-hidden="true" />
+        <div className="fixed inset-0 flex items-center justify-center p-4">
+          <DialogPanel className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-white shadow-2xl">
             <button
               type="button"
               onClick={() => setSelectedImage(null)}
@@ -137,15 +122,16 @@ export default function BeforeAfterSlider() {
             </div>
 
             <div className="p-4 text-left">
-              <p className="text-lg font-semibold text-darkText">
+              <DialogTitle className="text-lg font-semibold text-darkText">
                 {selectedImage.title}
-              </p>
+              </DialogTitle>
               <p className="mt-1 text-sm text-gray-600">
                 Real restoration project photo.
               </p>
             </div>
-          </div>
+          </DialogPanel>
         </div>
+        </Dialog>
       )}
     </section>
   );

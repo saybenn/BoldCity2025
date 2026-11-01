@@ -50,8 +50,8 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", ...fontFamily.sans],
-        heading: ["Poppins", ...fontFamily.sans],
+        sans: ["var(--font-body)", ...fontFamily.sans],
+        heading: ["var(--font-head)", ...fontFamily.sans],
       },
       colors: {
         darkText: "#171717",

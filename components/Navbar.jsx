@@ -8,6 +8,7 @@ import { IoChevronDown } from "react-icons/io5";
 import TrackedPhoneLink from "@/components/TrackedPhoneLink";
 
 const serviceLinks = [
+  { href: "/services/air-duct-cleaning", label: "Air Duct Cleaning" },
   { href: "/services/mold-remediation", label: "Mold Remediation" },
   {
     href: "/services/water-damage-restoration",
@@ -38,6 +39,61 @@ function getCurrentPagePath() {
   if (typeof window === "undefined") return "/";
   return window.location.pathname;
 }
+
+function DesktopDropdown({ id, label, links, widthClass = "w-72", activeDropdown, openDropdown, closeDropdown, toggleDropdown }) {
+    const isActive = activeDropdown === id;
+
+    return (
+      <div
+        className="relative"
+        onMouseEnter={() => openDropdown(id)}
+        onMouseLeave={closeDropdown}
+        onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) closeDropdown(); }}
+        onKeyDown={(event) => { if (event.key === "Escape") closeDropdown(); if (event.key === "ArrowDown") openDropdown(id); }}
+      >
+        <button
+          type="button"
+          aria-expanded={isActive}
+          aria-haspopup="true"
+          onClick={() => toggleDropdown(id)}
+          className="flex items-center gap-1 text-white/95 transition hover:text-aqua focus:outline-none focus-visible:text-aqua"
+        >
+          {label}
+          <IoChevronDown
+            size={14}
+            className={`transition-transform duration-200 ${
+              isActive ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        <div
+          hidden={!isActive}
+          className={`absolute left-0 top-full z-50 pt-3 ${widthClass} ${
+            isActive ? "pointer-events-auto" : "pointer-events-none"
+          }`}
+        >
+          <div
+            className={`rounded-xl border border-slate-200 bg-white p-2 text-navy shadow-xl transition-all duration-200 ${
+              isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+            }`}
+          >
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={closeDropdown}
+                className="block rounded-lg px-4 py-3 text-[13px] font-medium normal-case tracking-normal transition hover:bg-slate-100 focus:bg-slate-100 focus:outline-none"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,57 +155,6 @@ export default function Navbar() {
     setActiveDropdown((current) => (current === name ? null : name));
   }
 
-  function DesktopDropdown({ id, label, links, widthClass = "w-72" }) {
-    const isActive = activeDropdown === id;
-
-    return (
-      <div
-        className="relative"
-        onMouseEnter={() => openDropdown(id)}
-        onMouseLeave={closeDropdown}
-        onFocus={() => openDropdown(id)}
-      >
-        <button
-          type="button"
-          aria-expanded={isActive}
-          aria-haspopup="true"
-          onClick={() => toggleDropdown(id)}
-          className="flex items-center gap-1 text-white/95 transition hover:text-aqua focus:outline-none focus-visible:text-aqua"
-        >
-          {label}
-          <IoChevronDown
-            size={14}
-            className={`transition-transform duration-200 ${
-              isActive ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-
-        <div
-          className={`absolute left-0 top-full z-50 pt-3 ${widthClass} ${
-            isActive ? "pointer-events-auto" : "pointer-events-none"
-          }`}
-        >
-          <div
-            className={`rounded-xl border border-slate-200 bg-white p-2 text-navy shadow-xl transition-all duration-200 ${
-              isActive ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
-            }`}
-          >
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={closeDropdown}
-                className="block rounded-lg px-4 py-3 text-[13px] font-medium normal-case tracking-normal transition hover:bg-slate-100 focus:bg-slate-100 focus:outline-none"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <nav
@@ -182,6 +187,7 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-6 font-heading text-[13px] uppercase tracking-[0.08em] text-white lg:flex">
             <DesktopDropdown
+              activeDropdown={activeDropdown} openDropdown={openDropdown} closeDropdown={closeDropdown} toggleDropdown={toggleDropdown}
               id="services"
               label="Services"
               links={serviceLinks}
@@ -189,6 +195,7 @@ export default function Navbar() {
             />
 
             <DesktopDropdown
+              activeDropdown={activeDropdown} openDropdown={openDropdown} closeDropdown={closeDropdown} toggleDropdown={toggleDropdown}
               id="service-areas"
               label="Service Areas"
               links={serviceAreaLinks}

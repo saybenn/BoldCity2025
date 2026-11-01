@@ -97,7 +97,6 @@ export const TurnstileField = forwardRef<
         }}
         onSuccess={(token) => {
           onTokenChange(token);
-          onVerificationError?.("");
         }}
         onExpire={() => {
           clearToken();

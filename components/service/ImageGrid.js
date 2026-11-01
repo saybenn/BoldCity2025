@@ -14,7 +14,7 @@ export default function ImageGrid({ heading, images = [], crop = true }) {
     typeof img === "string" ? { src: img, alt: "Project photo" } : img
   );
 
-  const slides = normalized.map(({ src }) => ({ src }));
+  const slides = normalized.map(({ src, alt }) => ({ src: `/_next/image?url=${encodeURIComponent(src)}&w=1920&q=75`, alt }));
 
   const breakpointColumnsObj = {
     default: 3,
@@ -22,7 +22,7 @@ export default function ImageGrid({ heading, images = [], crop = true }) {
     700: 2,
     500: 1,
   };
-  console.log(images);
+
   return (
     images.length > 1 && (
       <section
@@ -67,7 +67,7 @@ export default function ImageGrid({ heading, images = [], crop = true }) {
                     width={1200}
                     height={800}
                     quality={75}
-                    loading={i < 3 ? "eager" : "lazy"}
+                    loading="lazy"
                     className={
                       crop
                         ? "object-cover object-center"

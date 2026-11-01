@@ -2,22 +2,12 @@
 
 import { Phone, CheckCircle } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import TrackedPhoneLink from "@/components/TrackedPhoneLink";
 
 export default function TrustBar() {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setShow(true), 200);
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <section
-      className={`w-full border-b border-zinc-200 bg-white shadow-sm transition-all duration-700 ease-out dark:border-zinc-800 dark:bg-dark ${
-        show ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-      }`}
+      className="w-full border-b border-zinc-200 bg-white shadow-sm"
       aria-label="Trust Information"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-8 text-center md:grid-cols-3 md:text-left">

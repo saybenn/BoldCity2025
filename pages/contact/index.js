@@ -22,7 +22,7 @@ const CONTACT_DATA = {
   officePhoneHref: "tel:+19046196043",
   email: "info@boldcityiaq.com",
   emailHref: "mailto:info@boldcityiaq.com",
-  address: "10066 103rd St. Unit #206, Jacksonville, FL 32210",
+  address: "14440 Normandy Blvd, Jacksonville, FL 32234",
   hours: "24/7 Emergency Response; Office Mon–Fri",
   areas: [
     "Jacksonville",
@@ -43,7 +43,7 @@ const CONTACT_DATA = {
     {
       question: "How fast can you arrive?",
       answer:
-        "In many cases we are on the way in 2 hours or less, depending on your location, conditions, and active demand.",
+        "Call for current availability. Arrival depends on your location, conditions and active demand; the team will discuss the response plan with you.",
     },
     {
       question: "Do you work with insurance?",
@@ -81,17 +81,17 @@ export default function ContactPage() {
         description:
           "Call now for 24/7 emergency restoration in Jacksonville or request service online. Water damage, mold, storm, and cleanup support.",
         canonical: "https://boldcityiaq.com/contact",
-        image: "/images/andre-truck.webp",
+        image: "/images/about-hero.webp",
       }}
       schema={{
         schemaType: "LocalBusiness",
         schemaOverrides: {
           telephone: "+19044346318",
           address: {
-            streetAddress: "10066 103rd St #206",
+            streetAddress: "14440 Normandy Blvd",
             addressLocality: "Jacksonville",
             addressRegion: "FL",
-            postalCode: "32210",
+            postalCode: "32234",
             addressCountry: "US",
           },
           name: "Bold City IAQ",

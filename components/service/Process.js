@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Process({ heading, steps, note, image }) {
+export default function Process({ heading, steps, note, image, imageAlt }) {
   return (
     <section className="bg-foreground text-darkText dark:text-zinc-100 py-16">
       <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -8,7 +8,7 @@ export default function Process({ heading, steps, note, image }) {
         <div className="relative w-full h-80 sm:h-96 lg:h-[28rem] rounded-lg overflow-hidden">
           <Image
             src={image}
-            alt={heading}
+            alt={imageAlt || "Restoration work in progress"}
             fill
             className="object-cover rounded-lg"
             sizes="(max-width: 768px) 100vw, 50vw"

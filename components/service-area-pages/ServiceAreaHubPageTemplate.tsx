@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Link from "next/link";
+import { AREAS } from "@/data/service-area-pages/areas";
 import { trackPageView } from "@/lib/analytics";
 import type { BuiltServiceAreaHubPage } from "@/lib/service-area-pages/types";
 import Breadcrumbs from "./Breadcrumbs";
@@ -107,6 +108,7 @@ export default function ServiceAreaHubPageTemplate({
             <p className="mt-5 text-lg leading-8 text-[#475467]">
               {pageData.localContext.body}
             </p>
+            {pageData.area.source && <p className="mt-4 text-sm text-navy">Source: <a className="underline" href={pageData.area.source.url}>{pageData.area.source.label}</a></p>}
           </div>
 
           <div className="grid gap-4">
@@ -201,12 +203,13 @@ export default function ServiceAreaHubPageTemplate({
 
               <div className="mt-6 flex flex-wrap gap-3">
                 {pageData.nearbyAreas.items.map((item) => (
-                  <span
+                  <Link
                     key={item}
+                    href={`/service-areas/${Object.values(AREAS).find((area) => area.name === item)?.slug}`}
                     className="rounded-full border border-[#d7ded9] bg-stone-50 px-5 py-3 text-sm font-bold text-[#344054]"
                   >
                     {item}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -1,9 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import postmark from "postmark";
+import { ALLOWED_SERVICES, normalizeService } from "../../lib/contact-services";
+import { allowContactAttempt, verifyContactToken } from "../../lib/contact-security";
 
 type ContactFormType = "standard" | "ad" | "modal" | "lead";
 
 type ContactPayload = {
+  turnstileToken?: string;
   formType?: ContactFormType;
 
   name?: string;
@@ -101,15 +104,6 @@ const FORM_TYPES = new Set<ContactFormType>([
   "ad",
   "modal",
   "lead",
-]);
-
-const ALLOWED_SERVICES = new Set([
-  "Water Damage Restoration",
-  "Mold Remediation",
-  "Emergency Extraction",
-  "Storm & Flood Cleanup",
-  "Fire & Smoke Restoration",
-  "Cleaning & Sanitization",
 ]);
 
 const MIN_FORM_COMPLETION_MS = 1_000;
@@ -226,7 +220,7 @@ function normalizePayload(body: ContactPayload) {
     email: cleanString(body.email, 254).toLowerCase(),
     phone: cleanString(body.phone, 30),
     zip: cleanString(body.zip, 10),
-    service: cleanString(body.service, 100),
+    service: normalizeService(cleanString(body.service, 100)),
     message: message || notes,
     financing: cleanBoolean(body.financing),
     page: cleanString(body.page, 300),
@@ -561,10 +555,7 @@ async function sendVisitorConfirmation(
      * Do not fail the submission after the business has
      * already received the lead notification.
      */
-    console.error(
-      "Visitor confirmation email failed:",
-      error,
-    );
+    console.error("Visitor confirmation delivery failed.");
   }
 }
 
@@ -603,21 +594,31 @@ export default async function handler(
 
   const payload = normalizePayload(requestBody);
 
-  /**
-   * Silent bot rejection.
-   *
-   * The frontend shows the ordinary thank-you state, but
-   * accepted:false prevents ad conversion tracking.
-   */
+  const origin = req.headers.origin;
+  if (origin) {
+    try {
+      if (new URL(origin).host !== req.headers.host) {
+        return res.status(403).json({ ok: false, error: "Request origin is not allowed." });
+      }
+    } catch {
+      return res.status(403).json({ ok: false, error: "Invalid request origin." });
+    }
+  }
+  // Only the deployment proxy may supply a client IP. Ignore arbitrary headers locally.
+  const forwarded = process.env.VERCEL === "1" ? req.headers["x-forwarded-for"] : undefined;
+  const ip = String(forwarded || req.socket?.remoteAddress || "unknown").split(",")[0].trim();
+  if (!allowContactAttempt(ip)) {
+    res.setHeader("Retry-After", "600");
+    return res.status(429).json({ ok: false, error: "Too many attempts. Please call us directly." });
+  }
+
+  // Rejected submissions must never show a success state or count as a lead.
   if (
     payload.honeypot ||
     payload.companyWebsite ||
     wasSubmittedTooQuickly(payload.formStartedAt)
   ) {
-    return res.status(200).json({
-      ok: true,
-      accepted: false,
-    });
+    return res.status(400).json({ ok: false, error: "Unable to accept this request. Please retry or call us." });
   }
 
   const validationError = validatePayload(payload);
@@ -626,6 +627,15 @@ export default async function handler(
     return res.status(400).json({
       ok: false,
       error: validationError,
+    });
+  }
+
+  const verification = await verifyContactToken(requestBody.turnstileToken, payload.formType);
+  if (!verification.ok) {
+    return res.status(verification.unavailable ? 503 : 400).json({
+      ok: false,
+      error: verification.unavailable ? "Verification is unavailable. Please retry or call us directly."
+        : "Verification failed or expired. Please try again.",
     });
   }
 
@@ -644,10 +654,7 @@ export default async function handler(
       accepted: true,
     });
   } catch (error) {
-    console.error(
-      "Contact form Postmark template send failed:",
-      error,
-    );
+    console.error("Contact form delivery failed.");
 
     return res.status(500).json({
       ok: false,

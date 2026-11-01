@@ -1,9 +1,8 @@
 // /pages/_app.js
 
 import "@/styles/globals.css";
-import { useEffect } from "react";
 import Script from "next/script";
-import { captureUTMs } from "@/lib/utm";
+import AnalyticsLifecycle from "@/components/AnalyticsLifecycle";
 import { Inter, Poppins } from "next/font/google";
 
 const inter = Inter({
@@ -22,12 +21,10 @@ const poppins = Poppins({
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-55RZQMX7";
 
 export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    captureUTMs?.();
-  }, []);
 
   return (
-    <main className={`${inter.variable} ${poppins.variable} font-sans`}>
+    <div className={`${inter.variable} ${poppins.variable} font-sans`}>
+      <AnalyticsLifecycle />
       {GTM_ID ? (
         <Script id="gtm-base" strategy="afterInteractive">
           {`
@@ -41,7 +38,7 @@ export default function MyApp({ Component, pageProps }) {
       ) : null}
 
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }
 

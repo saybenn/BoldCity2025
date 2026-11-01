@@ -55,17 +55,17 @@ export default function ContactSuccessPage() {
         description:
           "Your contact request was received. Call now for faster response.",
         canonical: "https://boldcityiaq.com/contact/success",
-        image: "/images/andre-truck.webp",
+        image: "/images/about-hero.webp",
       }}
       schema={{
         schemaType: "LocalBusiness",
         schemaOverrides: {
           telephone: "+19044346318",
           address: {
-            streetAddress: "10066 103rd St #206",
+            streetAddress: "14440 Normandy Blvd",
             addressLocality: "Jacksonville",
             addressRegion: "FL",
-            postalCode: "32210",
+            postalCode: "32234",
             addressCountry: "US",
           },
         },
