@@ -3,14 +3,20 @@
 @tailwind utilities;
 
 /* One semantic copy per review; mobile merges both desktop rows into a swipe track. */
-.review-viewport { display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:1rem; }
+.review-viewport { display:flex; gap:1rem; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; padding:4px 2px 6px; -webkit-mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent); mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent); }
 .review-row { display:contents; }
-.review-card { display:flex; flex-direction:column; width:min(78vw,360px); flex-shrink:0; scroll-snap-align:start; }
-.review-viewport:focus-visible, .review-row:focus-visible { outline:2px solid #0f766e; outline-offset:3px; }
+.review-viewport, .review-row { scrollbar-width:none; -ms-overflow-style:none; }
+.review-viewport::-webkit-scrollbar, .review-row::-webkit-scrollbar { display:none; width:0; height:0; }
+.review-card { display:grid; grid-template-columns:minmax(0,1fr); align-content:start; gap:12px; width:min(calc(100vw - 48px),410px); padding:18px; flex-shrink:0; scroll-snap-align:start; }
+.review-stars { align-self:center; }
+.review-quote { grid-column:1/-1; font-size:14px; line-height:22px; }
+.review-viewport:focus-visible, .review-row:focus-visible { outline:2px solid #0f766e; outline-offset:-2px; }
+@media (max-width:374px) { .review-card { width:calc(100vw - 40px); padding:14px; gap:8px; } }
 @media (min-width:768px) {
-  .review-viewport { display:block; overflow:visible; padding-bottom:0; }
-  .review-row { display:flex; gap:1rem; overflow-x:auto; padding:3px 2px 12px; margin-bottom:8px; scrollbar-width:thin; }
-  .review-card { width:350px; min-height:300px; }
+  .review-viewport { display:grid; gap:16px; overflow:hidden; padding:0; }
+  .review-row { display:flex; gap:20px; overflow-x:auto; overflow-y:hidden; padding:4px 2px 6px; }
+  .review-card { grid-template-columns:minmax(0,1fr) auto; gap:16px; width:clamp(420px,36vw,500px); min-height:208px; padding:24px; }
+  .review-quote { font-size:15px; line-height:26px; }
 }
 
 /* 🌙 Dark Mode via media query */
