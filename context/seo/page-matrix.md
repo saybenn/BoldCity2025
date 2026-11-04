@@ -1,6 +1,6 @@
 # SEO page matrix
 
-Generated from initial production-build HTML.
+Generated from initial build HTML at http://127.0.0.1:3001. Indexing values reflect the tested deployment context; previews intentionally use noindex.
 
 | Route | Page type / schema | Search intent | H1 | Title | Description | Canonical | Local content | Media / proof | Indexing |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

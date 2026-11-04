@@ -1,6 +1,6 @@
 # Structured data and technical validation
 
-Inspected initial HTML for 37 routes, including every existing page type; checked 25 local image paths and their optimized responses.
+Inspected initial HTML for 37 routes, including every existing page type; checked 26 local image paths and their optimized responses.
 
 All automated assertions passed.
 

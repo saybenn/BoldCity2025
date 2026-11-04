@@ -2,7 +2,6 @@ const {test,expect}=require('@playwright/test');
 const fs=require('node:fs/promises');
 async function isolate(page) {
  await page.addInitScript(()=>document.addEventListener('click',event=>{if(event.target.closest?.('a[href^="tel:"]'))event.preventDefault();},true));
- await page.route('https://www.googletagmanager.com/**',route=>route.abort());
  await page.route('https://challenges.cloudflare.com/turnstile/v0/api.js*',route=>route.fulfill({contentType:'application/javascript',body:`
   window.turnstile={render:(container,options)=>{window.__turnstileOptions=options;setTimeout(()=>options.callback('mock-token'),0);return 'mock-widget';},reset:()=>{setTimeout(()=>window.__turnstileOptions.callback('mock-token'),0);},remove:()=>{},getResponse:()=> 'mock-token',isExpired:()=>false,ready:fn=>fn(),execute:()=>{}};
   const cb=new URL(document.currentScript.src).searchParams.get('onload');if(cb&&window[cb])window[cb]();
@@ -15,10 +14,11 @@ for(const width of [375,430,768,1440]) {
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('/');await expect(page.locator('h1')).toHaveText('Water Damage Cleanup in Jacksonville, FL');
   await expect(page.locator('h1')).toHaveCount(1);
-  await expect(page.locator('header + section #google-reviews-heading')).toBeVisible();
+  await expect(page.locator('[data-google-reviews] h2').first()).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-  if(width<500){ const box=await page.locator('#google-reviews-heading').boundingBox();expect(box.y).toBeLessThan(740); }
+  if(width<500){ const box=await page.locator('[data-google-reviews] h2').first().boundingBox();expect(box.y).toBeLessThan(740); }
   await fs.mkdir('context/qa/screenshots',{recursive:true});
+  await page.screenshot({path:`context/qa/screenshots/home-top-${width}.png`});
   await page.screenshot({path:`context/qa/screenshots/home-${width}.png`,fullPage:true});
   await page.getByRole('button',{name:'Open image: Equipment and exposed wall framing'}).click();
   await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0);

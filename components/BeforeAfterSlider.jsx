@@ -7,19 +7,19 @@ import { X } from "lucide-react";
 
 const proofImages = [
   {
-    src: "/images/grid/carousel2.webp",
+    src: "/images/projects/equipment-beside-framing.webp",
     alt: "Restoration equipment beside exposed wall framing and protection sheeting",
     title: "Equipment and exposed wall framing",
   },
   {
-    src: "/images/moldprocess.webp",
-    alt: "Air-handling equipment beside plastic containment and exposed framing",
-    title: "Containment and air-handling equipment",
+    src: "/images/projects/protected-framing-work.webp",
+    alt: "Worker holding a tool beside protected exposed wall framing",
+    title: "Work beside protected framing",
   },
   {
-    src: "/images/grid/mold-hero.webp",
-    alt: "Gloved hand holding removed building material with dark spotting",
-    title: "Affected material removal",
+    src: "/images/projects/worker-at-protected-kitchen.webp",
+    alt: "Worker beside protected kitchen cabinets and exposed lower walls",
+    title: "Protected kitchen work area",
   },
   {
     src: "/images/grid/emergencyGrid.webp",
@@ -66,8 +66,7 @@ export default function BeforeAfterSlider() {
             More Project Photos
           </h3>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-gray-600 sm:text-base">
-            Additional restoration images to help show the work behind the
-            outcome.
+            These photos show different views of restoration work, including equipment, protection and exposed materials. Multiple views may show the same property.
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

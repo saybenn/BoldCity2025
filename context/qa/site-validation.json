@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-01T15:14:17.261Z",
-  "base": "http://127.0.0.1:3000",
+  "checkedAt": "2026-11-02T03:56:30.059Z",
+  "base": "http://127.0.0.1:3001",
   "routes": 37,
-  "assets": 25,
+  "assets": 26,
   "issues": [],
   "pages": [
     {

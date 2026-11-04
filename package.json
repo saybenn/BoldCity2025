@@ -15,6 +15,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.7",
     "@marsidev/react-turnstile": "^1.5.3",
+    "@netlify/functions": "6.0.3",
     "@sendgrid/mail": "^8.1.5",
     "lucide-react": "^0.534.0",
     "next": "^16.4.3",

@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import postmark from "postmark";
 import { ALLOWED_SERVICES, normalizeService } from "../../lib/contact-services";
-import { allowContactAttempt, verifyContactToken } from "../../lib/contact-security";
+import { allowContactAttempt, contactClientIP, verifyContactToken } from "../../lib/contact-security";
+import { deploymentContext } from "../../lib/deployment.mjs";
 
 type ContactFormType = "standard" | "ad" | "modal" | "lead";
 
@@ -67,6 +68,8 @@ export const config = {
 const POSTMARK_SERVER_TOKEN = process.env.POSTMARK_SERVER_TOKEN;
 const CONTACT_EMAIL_FROM = process.env.CONTACT_EMAIL_FROM;
 const CONTACT_EMAIL_TO = process.env.CONTACT_EMAIL_TO;
+const IS_PRODUCTION = deploymentContext(process.env) === "production";
+const CONTACT_TEST_RECIPIENT = process.env.CONTACT_TEST_RECIPIENT;
 const CONTACT_RECEIVER_BACKUP =
   process.env.CONTACT_RECEIVER_BACKUP;
 
@@ -90,7 +93,7 @@ const VISITOR_CONFIRMATION_TEMPLATE_ALIAS =
  * verification have been enabled.
  */
 const SEND_VISITOR_CONFIRMATION =
-  process.env.SEND_VISITOR_CONFIRMATION === "true";
+  IS_PRODUCTION && process.env.CONTACT_EDGE_VERIFIED === "true" && process.env.SEND_VISITOR_CONFIRMATION === "true";
 
 const COMPANY_NAME =
   process.env.NEXT_PUBLIC_COMPANY_NAME || "Bold City IAQ";
@@ -186,10 +189,13 @@ function isValidZip(value: string): boolean {
 }
 
 function assertEnv(): void {
+  if (!IS_PRODUCTION && (!CONTACT_TEST_RECIPIENT || !isValidEmail(CONTACT_TEST_RECIPIENT) || /[,;\s]/.test(CONTACT_TEST_RECIPIENT))) {
+    throw new Error("One valid CONTACT_TEST_RECIPIENT is required outside production.");
+  }
   const missing = [
     ["POSTMARK_SERVER_TOKEN", POSTMARK_SERVER_TOKEN],
     ["CONTACT_EMAIL_FROM", CONTACT_EMAIL_FROM],
-    ["CONTACT_EMAIL_TO", CONTACT_EMAIL_TO],
+    [IS_PRODUCTION ? "CONTACT_EMAIL_TO" : "CONTACT_TEST_RECIPIENT", IS_PRODUCTION ? CONTACT_EMAIL_TO : CONTACT_TEST_RECIPIENT],
   ].filter(([, value]) => !value);
 
   if (missing.length > 0) {
@@ -202,6 +208,7 @@ function assertEnv(): void {
 }
 
 function getRecipients(): string {
+  if (!IS_PRODUCTION) return CONTACT_TEST_RECIPIENT as string;
   if (CONTACT_RECEIVER_BACKUP) {
     return `${CONTACT_EMAIL_TO},${CONTACT_RECEIVER_BACKUP}`;
   }
@@ -604,9 +611,11 @@ export default async function handler(
       return res.status(403).json({ ok: false, error: "Invalid request origin." });
     }
   }
-  // Only the deployment proxy may supply a client IP. Ignore arbitrary headers locally.
-  const forwarded = process.env.VERCEL === "1" ? req.headers["x-forwarded-for"] : undefined;
-  const ip = String(forwarded || req.socket?.remoteAddress || "unknown").split(",")[0].trim();
+  const ip = contactClientIP(req);
+  if (!ip) {
+    console.error("contact_security: trusted_client_context_unavailable");
+    return res.status(503).json({ ok: false, error: "Form protection is unavailable. Please call (904) 434-6318." });
+  }
   if (!allowContactAttempt(ip)) {
     res.setHeader("Retry-After", "600");
     return res.status(429).json({ ok: false, error: "Too many attempts. Please call us directly." });
@@ -630,8 +639,9 @@ export default async function handler(
     });
   }
 
-  const verification = await verifyContactToken(requestBody.turnstileToken, payload.formType);
+  const verification = await verifyContactToken(requestBody.turnstileToken, payload.formType, req.headers.host);
   if (!verification.ok) {
+    console.error(`contact_security: ${verification.reason || "verification_unavailable"}`);
     return res.status(verification.unavailable ? 503 : 400).json({
       ok: false,
       error: verification.unavailable ? "Verification is unavailable. Please retry or call us directly."

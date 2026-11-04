@@ -145,17 +145,7 @@
         },
         {
           "file": "lib/serviceData.js",
-          "line": 74,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
           "line": 80,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 85,
           "commented": false
         }
       ],
@@ -620,11 +610,6 @@
           "file": "lib/serviceData.js",
           "line": 41,
           "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 48,
-          "commented": false
         }
       ],
       "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
@@ -884,33 +869,12 @@
       "actualFormat": "webp",
       "extensionMatchesFormat": true,
       "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
-      "references": [
-        {
-          "file": "components/BeforeAfterSlider.jsx",
-          "line": 10,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 18,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 72,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 74,
-          "commented": false
-        }
-      ],
+      "references": [],
       "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
       "beforeAfterRelationship": null,
       "provenanceClass": "existing-repository-project-photo",
       "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
-      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "usageStatus": "Unused; retained without forcing placement",
       "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
       "visualSubject": "Red air-handling equipment in room with exposed wall framing and protection sheeting",
       "serviceAssociation": [
@@ -972,11 +936,6 @@
         {
           "file": "components/BeforeAfterSlider.jsx",
           "line": 25,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 46,
           "commented": false
         },
         {
@@ -1113,13 +1072,13 @@
       "sha256": "07003766ea38d3a86ca443b175c1eb128a097a3fa33d286a749bdc95008a8cd3",
       "references": [
         {
-          "file": "components/BeforeAfterSlider.jsx",
-          "line": 20,
+          "file": "lib/serviceData.js",
+          "line": 35,
           "commented": false
         },
         {
-          "file": "lib/serviceData.js",
-          "line": 35,
+          "file": "data/service-area-pages/pageOverrides.ts",
+          "line": 16,
           "commented": false
         }
       ],
@@ -1598,28 +1557,13 @@
       "sha256": "01817c32ad72bccce9dae1527ec47980cd2b0a6f5c256916b3d3708c553df690",
       "references": [
         {
-          "file": "components/BeforeAfterSlider.jsx",
-          "line": 15,
-          "commented": false
-        },
-        {
           "file": "lib/serviceData.js",
           "line": 28,
           "commented": false
         },
         {
-          "file": "lib/serviceData.js",
-          "line": 33,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 35,
-          "commented": false
-        },
-        {
           "file": "data/service-area-pages/pageOverrides.ts",
-          "line": 15,
+          "line": 14,
           "commented": false
         }
       ],
@@ -1696,6 +1640,158 @@
       ]
     },
     {
+      "id": "BC-IMG-057",
+      "originalFilename": "carousel2-min.webp (Handoff #2)",
+      "finalPath": "/images/projects/equipment-beside-framing.webp",
+      "path": "/images/projects/equipment-beside-framing.webp",
+      "bytes": 133842,
+      "width": 2048,
+      "height": 1365,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "91f7ff8c8c6cc661f9e2117535cf09ed084daab04f29783c59a156a057a1aea5",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 10,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 18,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 74,
+          "commented": false
+        },
+        {
+          "file": "data/service-area-pages/pageOverrides.ts",
+          "line": 10,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "owner-supplied-optimized-project-photo",
+      "rightsProvenanceStatus": "Genuine company photograph supplied and approved by the owner in Handoff #2 on 2026-11-01",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected. Supplied 2048px version perceptually matches legacy 6000px image; this is a display variant, not a new job. No HEPA specification, water extraction, measured drying result or location inferred.",
+      "visualSubject": "Red restoration equipment beside exposed framing and masked wall finishes",
+      "serviceAssociation": [
+        "company process",
+        "equipment"
+      ],
+      "altText": "Red restoration equipment beside exposed framing and protection sheeting",
+      "approvedDisplayContexts": [
+        "company project proof",
+        "service process illustration"
+      ],
+      "displayVariantOf": [
+        "/images/carousel2-min.webp",
+        "/images/grid/carousel2.webp"
+      ]
+    },
+    {
+      "id": "BC-IMG-058",
+      "originalFilename": "extra-min.webp (Handoff #2)",
+      "finalPath": "/images/projects/protected-framing-work.webp",
+      "path": "/images/projects/protected-framing-work.webp",
+      "bytes": 109996,
+      "width": 2048,
+      "height": 1365,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "7d20ba658667c7c73236553a6d27b10c26bedb5aa6890fa3b8225e97c2b9b2ef",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 15,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 18,
+          "commented": false
+        },
+        {
+          "file": "data/service-area-pages/pageOverrides.ts",
+          "line": 15,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "owner-supplied-optimized-project-photo",
+      "rightsProvenanceStatus": "Genuine company photograph supplied and approved by the owner in Handoff #2 on 2026-11-01",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected. Supplied 2048px version perceptually matches legacy 6000px image; this is a display variant, not a new job. No tool contents, treatment, technical result or location inferred.",
+      "visualSubject": "Standing worker holding a wand/tool beside exposed framing and protection sheeting",
+      "serviceAssociation": [
+        "company process",
+        "cleanup"
+      ],
+      "altText": "Worker holding a tool beside exposed framing and protection sheeting",
+      "approvedDisplayContexts": [
+        "company project proof",
+        "service process illustration"
+      ],
+      "displayVariantOf": [
+        "/images/extra-min.webp",
+        "/images/grid/extra.webp"
+      ]
+    },
+    {
+      "id": "BC-IMG-059",
+      "originalFilename": "proof1.webp (Handoff #2)",
+      "finalPath": "/images/projects/worker-at-protected-kitchen.webp",
+      "path": "/images/projects/worker-at-protected-kitchen.webp",
+      "bytes": 144808,
+      "width": 2048,
+      "height": 1365,
+      "actualFormat": "webp",
+      "extensionMatchesFormat": true,
+      "sha256": "b2c06ac4fa26ed024fd95eccb2ffab4c78e669e7ac0af5dff92400d8bc77ac9a",
+      "references": [
+        {
+          "file": "components/BeforeAfterSlider.jsx",
+          "line": 20,
+          "commented": false
+        },
+        {
+          "file": "lib/serviceData.js",
+          "line": 61,
+          "commented": false
+        },
+        {
+          "file": "data/service-area-pages/pageOverrides.ts",
+          "line": 11,
+          "commented": false
+        }
+      ],
+      "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
+      "beforeAfterRelationship": null,
+      "provenanceClass": "owner-supplied-optimized-project-photo",
+      "rightsProvenanceStatus": "Genuine company photograph supplied and approved by the owner in Handoff #2 on 2026-11-01",
+      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "verificationNotes": "Visually inspected. Supplied 2048px version perceptually matches legacy 6000px image; this is a display variant, not a new job. No water extraction, drying result or project location inferred.",
+      "visualSubject": "Kneeling worker beside exposed lower kitchen walls, protected cabinets and equipment",
+      "serviceAssociation": [
+        "company process",
+        "water restoration context"
+      ],
+      "altText": "Worker beside exposed kitchen wall framing and protected cabinets",
+      "approvedDisplayContexts": [
+        "company project proof",
+        "service process illustration"
+      ],
+      "displayVariantOf": [
+        "/images/proof1.webp",
+        "/images/grid/carousel3.webp"
+      ]
+    },
+    {
       "id": "BC-IMG-046",
       "originalFilename": "proof1.webp",
       "finalPath": "/images/proof1.webp",
@@ -1706,28 +1802,12 @@
       "actualFormat": "webp",
       "extensionMatchesFormat": true,
       "sha256": "3dd10217e39adca9d2c4fac7c7fc68004937e950f564850a7dce35eb0781aeb5",
-      "references": [
-        {
-          "file": "lib/serviceData.js",
-          "line": 18,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 59,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 61,
-          "commented": false
-        }
-      ],
+      "references": [],
       "actualProjectLocation": "Unverified; no city, customer, job date, or result assigned",
       "beforeAfterRelationship": null,
       "provenanceClass": "existing-repository-project-photo",
       "rightsProvenanceStatus": "Existing company repository asset retained under approved scope; original photographer/release record unavailable",
-      "usageStatus": "Referenced in existing source; description/placement reviewed",
+      "usageStatus": "Unused; retained without forcing placement",
       "verificationNotes": "Visually inspected 2026-11-01. Describe only visible contents; no project history or outcome inferred.",
       "visualSubject": "Worker kneeling by exposed lower kitchen walls and protected cabinets",
       "serviceAssociation": [
@@ -1789,11 +1869,6 @@
         {
           "file": "lib/serviceData.js",
           "line": 54,
-          "commented": false
-        },
-        {
-          "file": "lib/serviceData.js",
-          "line": 61,
           "commented": false
         }
       ],
@@ -1953,7 +2028,7 @@
         },
         {
           "file": "data/service-area-pages/pageOverrides.ts",
-          "line": 15,
+          "line": 9,
           "commented": false
         }
       ],

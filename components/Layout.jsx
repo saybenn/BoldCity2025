@@ -23,7 +23,7 @@ export default function Layout({
     description: meta.description || "Water damage cleanup, mold remediation and emergency restoration for Jacksonville homes and businesses. Call (904) 434-6318.",
     canonical: canonicalUrl(meta.canonical || meta.canonicalUrl || router.asPath || "/"),
     image: meta.image || meta.og?.image || "/images/about-hero.webp",
-    noindex: meta.noindex || router.asPath.startsWith("/ads/") || router.asPath.split("?")[0].endsWith("/success"),
+    noindex: process.env.NEXT_PUBLIC_DEPLOY_CONTEXT !== "production" || meta.noindex || router.asPath.startsWith("/ads/") || router.asPath.split("?")[0].endsWith("/success"),
   };
   return (
     <>

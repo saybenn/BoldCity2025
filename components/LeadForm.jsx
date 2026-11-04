@@ -202,7 +202,7 @@ export default function LeadForm({ data, utm = {} }) {
       const json = await response.json().catch(() => ({}));
 
       if (!response.ok || json?.ok !== true || json?.accepted !== true) {
-        throw new Error(json?.error || "We couldn't submit the form.");
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "We couldn't submit the form."));
       }
 
       trackFormSubmit({ form_id: "LeadForm", form_location: "LeadForm", page: window.location.pathname, service_requested: payload.service });

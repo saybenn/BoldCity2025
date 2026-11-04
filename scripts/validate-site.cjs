@@ -70,13 +70,13 @@ const escape = (s) => String(s || '').replace(/\|/g, '\\|').replace(/\s+/g, ' ')
       if(optimized.status!==200) issues.push(`Optimized image ${asset}: HTTP ${optimized.status}`);
     }
     for(const key of ['title','description']) {
-      const values=results.filter(x=>!x.indexing.includes('noindex')).map(x=>x[key]);
+      const values=results.filter(x=>!x.route.startsWith('/ads/')&&!x.route.endsWith('/success')).map(x=>x[key]);
       if(new Set(values).size!==values.length) issues.push(`Duplicate indexable ${key}`);
     }
     const headers = '| Route | Page type / schema | Search intent | H1 | Title | Description | Canonical | Local content | Media / proof | Indexing |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n';
     const matrix = results.map(r=>`| ${[r.route,r.schemaTypes.join(', '),r.targetIntent,r.h1,r.title,r.description,r.canonical,r.localContent,r.imageStatus,r.indexing].map(escape).join(' | ')} |`).join('\n');
     await fs.mkdir('context/seo',{recursive:true});
-    await fs.writeFile('context/seo/page-matrix.md', '# SEO page matrix\n\nGenerated from initial production-build HTML.\n\n'+headers+matrix+'\n');
+    await fs.writeFile('context/seo/page-matrix.md', '# SEO page matrix\n\nGenerated from initial build HTML at '+base+'. Indexing values reflect the tested deployment context; previews intentionally use noindex.\n\n'+headers+matrix+'\n');
     await fs.writeFile('context/qa/site-validation.json',JSON.stringify({checkedAt:new Date().toISOString(),base,routes:results.length,assets:assets.size,issues,pages:results},null,2));
     await fs.writeFile('context/qa/schema-validation.md',`# Structured data and technical validation\n\nInspected initial HTML for ${results.length} routes, including every existing page type; checked ${assets.size} local image paths and their optimized responses.\n\n${issues.length?issues.map(x=>'- '+x).join('\n'):'All automated assertions passed.'}\n\nExternal schema.org and Google Rich Results tools were not run. A structural pass does not imply rich-result eligibility.\n`);
     console.log(JSON.stringify({routes:results.length,assets:assets.size,issues},null,2));

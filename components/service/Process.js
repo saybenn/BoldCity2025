@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Process({ heading, steps, note, image, imageAlt }) {
   return (
     <section className="bg-foreground text-darkText dark:text-zinc-100 py-16">
-      <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className={`container mx-auto px-6 lg:px-12 grid grid-cols-1 ${image ? "lg:grid-cols-2" : "max-w-5xl"} gap-12 items-center`}>
         {/* Image Section */}
-        <div className="relative w-full h-80 sm:h-96 lg:h-[28rem] rounded-lg overflow-hidden">
+        {image && <div className="relative w-full h-80 sm:h-96 lg:h-[28rem] rounded-lg overflow-hidden">
           <Image
             src={image}
             alt={imageAlt || "Restoration work in progress"}
@@ -13,13 +13,13 @@ export default function Process({ heading, steps, note, image, imageAlt }) {
             className="object-cover rounded-lg"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-        </div>
+        </div>}
 
         {/* Content Section */}
         <div>
           <h2 className="text-4xl font-bold mb-6 text-white">{heading}</h2>
 
-          <ol className="list-decimal list-inside space-y-4 text-xl">
+          <ol className={`list-decimal list-inside text-xl ${image ? "space-y-4" : "grid gap-6 sm:grid-cols-2"}`}>
             {steps.map((step, index) => (
               <li className="text-aqua font-semibold" key={index}>
                 {step.head}{" "}

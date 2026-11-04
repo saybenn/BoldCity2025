@@ -198,7 +198,7 @@ export default function AdContactForm({ successPath }) {
       const json = await response.json().catch(() => ({}));
 
       if (!response.ok || json?.ok !== true || json?.accepted !== true) {
-        throw new Error(json?.error || "Submission failed.");
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "Submission failed."));
       }
 
       if (json?.accepted === true) {

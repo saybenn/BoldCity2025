@@ -1,0 +1,395 @@
+{
+  "baselineCommit": "95496769f76fd267d36700df856058e947cc9efb",
+  "rows": [
+    {
+      "route": "/",
+      "role": "hero",
+      "image": "/images/jacksonville-skyline.webp",
+      "notes": "Licensed regional context; original-hero fallback uses landing-min.webp."
+    },
+    {
+      "route": "/",
+      "role": "comparison-before",
+      "image": "/images/hallbefore.webp",
+      "notes": ""
+    },
+    {
+      "route": "/",
+      "role": "comparison-during",
+      "image": "/images/hallafter.webp",
+      "notes": ""
+    },
+    {
+      "route": "/",
+      "role": "project-proof",
+      "image": "/images/grid/carousel2.webp",
+      "notes": "Restoration equipment beside exposed wall framing and protection sheeting"
+    },
+    {
+      "route": "/",
+      "role": "project-proof",
+      "image": "/images/moldprocess.webp",
+      "notes": "Air-handling equipment beside plastic containment and exposed framing"
+    },
+    {
+      "route": "/",
+      "role": "project-proof",
+      "image": "/images/grid/mold-hero.webp",
+      "notes": "Gloved hand holding removed building material with dark spotting"
+    },
+    {
+      "route": "/",
+      "role": "project-proof",
+      "image": "/images/grid/emergencyGrid.webp",
+      "notes": "Removed cabinets and building materials collected outdoors"
+    },
+    {
+      "route": "/",
+      "role": "project-proof",
+      "image": "/images/sanitizationHero.webp",
+      "notes": "Tiled floor and exposed wall framing during restoration preparation"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "Exposed lower kitchen wall framing beneath protected cabinets"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "role": "process",
+      "image": "/images/waterProcess.webp",
+      "notes": "Restoration equipment in a room with exposed block walls"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "role": "gallery",
+      "image": "/images/grid/carousel2.webp",
+      "notes": "Restoration equipment beside exposed wall framing"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "role": "gallery",
+      "image": "/images/proof1.webp",
+      "notes": "Worker beside exposed lower kitchen walls and protected cabinets"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "role": "social",
+      "image": "/images/waterHero.webp",
+      "notes": "Metadata reuse is intentional and is not a repeated page photo."
+    },
+    {
+      "route": "/services/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "Air-handling equipment beside plastic containment and exposed framing"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "role": "process",
+      "image": "/images/moldprocess.webp",
+      "notes": "Plastic containment and air-handling equipment beside exposed framing"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "role": "gallery",
+      "image": "/images/moldprocess.webp",
+      "notes": "Air-handling equipment beside containment sheeting"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "role": "gallery",
+      "image": "/images/grid/mold-hero.webp",
+      "notes": "Gloved hand holding removed building material with dark spotting"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "role": "social",
+      "image": "/images/moldprocess.webp",
+      "notes": "Metadata reuse is intentional and is not a repeated page photo."
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "role": "hero",
+      "image": "/images/fireHero.webp",
+      "notes": "Removed building materials and demolition debris in a dumpster"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "role": "process",
+      "image": "/images/grid/emergencyGrid.webp",
+      "notes": "Removed cabinets and building materials collected outdoors"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "role": "gallery",
+      "image": "/images/fireHero.webp",
+      "notes": "Demolition debris collected in a dumpster"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "role": "gallery",
+      "image": "/images/grid/emergencyGrid.webp",
+      "notes": "Removed cabinets and building materials outdoors"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "role": "social",
+      "image": "/images/fireHero.webp",
+      "notes": "Metadata reuse is intentional and is not a repeated page photo."
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "role": "hero",
+      "image": "/images/sanitizationHero.webp",
+      "notes": "Tiled floor and exposed wall framing during restoration preparation"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "role": "process",
+      "image": "/images/proof1.webp",
+      "notes": "Worker beside protected cabinets and exposed kitchen wall framing"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "role": "gallery",
+      "image": "/images/proof1.webp",
+      "notes": "Worker beside exposed lower kitchen walls"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "role": "gallery",
+      "image": "/images/sanitizationHero.webp",
+      "notes": "Tiled floor and exposed framing during preparation"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "role": "social",
+      "image": "/images/sanitizationHero.webp",
+      "notes": "Metadata reuse is intentional and is not a repeated page photo."
+    },
+    {
+      "route": "/services/emergency-services",
+      "role": "hero",
+      "image": "/images/about-hero.webp",
+      "notes": "Bold City IAQ branded pickup and service trailer"
+    },
+    {
+      "route": "/services/emergency-services",
+      "role": "process",
+      "image": "/images/grid/carousel2.webp",
+      "notes": "Restoration equipment set beside exposed wall framing"
+    },
+    {
+      "route": "/services/emergency-services",
+      "role": "gallery",
+      "image": "/images/grid/carousel2.webp",
+      "notes": "Restoration equipment beside exposed wall framing"
+    },
+    {
+      "route": "/services/emergency-services",
+      "role": "gallery",
+      "image": "/images/about-hero.webp",
+      "notes": "Bold City IAQ service pickup and trailer"
+    },
+    {
+      "route": "/services/emergency-services",
+      "role": "social",
+      "image": "/images/about-hero.webp",
+      "notes": "Metadata reuse is intentional and is not a repeated page photo."
+    },
+    {
+      "route": "/services/air-duct-cleaning",
+      "role": "hero",
+      "image": "/images/about-hero.webp",
+      "notes": "Bold City IAQ branded pickup and trailer; company photo, not duct cleaning equipment"
+    },
+    {
+      "route": "/services/air-duct-cleaning",
+      "role": "process",
+      "image": "/images/about-hero.webp",
+      "notes": "Bold City IAQ branded service pickup and trailer"
+    },
+    {
+      "route": "/services/air-duct-cleaning",
+      "role": "social",
+      "image": "/images/about-hero.webp",
+      "notes": "Metadata reuse is intentional and is not a repeated page photo."
+    },
+    {
+      "route": "/service-areas/jacksonville",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/jacksonville/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/jacksonville/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/orange-park",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/orange-park/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/orange-park/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/st-augustine",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/st-augustine/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/st-augustine/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/jacksonville-beach",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/jacksonville-beach/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/jacksonville-beach/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/neptune-beach",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/neptune-beach/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/neptune-beach/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/atlantic-beach",
+      "role": "none",
+      "image": null,
+      "notes": "Hub is typographic; no process/gallery photograph."
+    },
+    {
+      "route": "/service-areas/atlantic-beach/water-damage-restoration",
+      "role": "hero",
+      "image": "/images/waterHero.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/service-areas/atlantic-beach/mold-remediation",
+      "role": "hero",
+      "image": "/images/moldprocess.webp",
+      "notes": "One illustrative company process photograph; no city-specific project claim."
+    },
+    {
+      "route": "/ads/emergency-restoration",
+      "role": "hero",
+      "image": "/images/fireProcess.webp",
+      "notes": "Branded-shirt/technician image; same bytes as ads/emergencyHero.webp."
+    }
+  ],
+  "repeatedVisiblePathsWithinRoute": [
+    {
+      "route": "/services/mold-remediation",
+      "image": "/images/moldprocess.webp",
+      "occurrences": 3
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "image": "/images/fireHero.webp",
+      "occurrences": 2
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "image": "/images/grid/emergencyGrid.webp",
+      "occurrences": 2
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "image": "/images/sanitizationHero.webp",
+      "occurrences": 2
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "image": "/images/proof1.webp",
+      "occurrences": 2
+    },
+    {
+      "route": "/services/emergency-services",
+      "image": "/images/about-hero.webp",
+      "occurrences": 2
+    },
+    {
+      "route": "/services/emergency-services",
+      "image": "/images/grid/carousel2.webp",
+      "occurrences": 2
+    },
+    {
+      "route": "/services/air-duct-cleaning",
+      "image": "/images/about-hero.webp",
+      "occurrences": 2
+    }
+  ]
+}

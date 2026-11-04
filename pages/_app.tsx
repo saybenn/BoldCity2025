@@ -2,6 +2,8 @@
 
 import "@/styles/globals.css";
 import Script from "next/script";
+import { useSyncExternalStore } from "react";
+import { productionAnalyticsAllowed } from "@/lib/deployment.mjs";
 import AnalyticsLifecycle from "@/components/AnalyticsLifecycle";
 import { Inter, Poppins } from "next/font/google";
 
@@ -19,13 +21,16 @@ const poppins = Poppins({
 });
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-55RZQMX7";
+const subscribeToHost = () => () => {};
+const analyticsSnapshot = () => productionAnalyticsAllowed(process.env.NEXT_PUBLIC_DEPLOY_CONTEXT, window.location.hostname);
+const serverAnalyticsSnapshot = () => false;
 
 export default function MyApp({ Component, pageProps }) {
-
+  const analyticsEnabled = useSyncExternalStore(subscribeToHost, analyticsSnapshot, serverAnalyticsSnapshot);
   return (
     <div className={`${inter.variable} ${poppins.variable} font-sans`}>
       <AnalyticsLifecycle />
-      {GTM_ID ? (
+      {analyticsEnabled && GTM_ID ? (
         <Script id="gtm-base" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

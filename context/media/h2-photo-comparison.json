@@ -1,0 +1,221 @@
+{
+  "method": "SHA-256 exact comparison; 32x32 grayscale RMSE plus 64-bit difference hash after normalization. Visual confirmation required for same-scene conclusions.",
+  "results": [
+    {
+      "source": {
+        "path": ".qa-lock/phase2-handoff/Sources/extra-min.webp",
+        "bytes": 109996,
+        "width": 2048,
+        "height": 1365,
+        "format": "webp",
+        "sha256": "7d20ba658667c7c73236553a6d27b10c26bedb5aa6890fa3b8225e97c2b9b2ef"
+      },
+      "closest": [
+        {
+          "path": "public/images/extra-min.webp",
+          "bytes": 913800,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "ecb267a731b59b13fa9835385bceff16165b1666fb1690a51af65dabafdaa95d",
+          "identical": false,
+          "dhashDistance": 0,
+          "grayRmse": 0.5284854539152426
+        },
+        {
+          "path": "public/images/grid/extra.webp",
+          "bytes": 913800,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "ecb267a731b59b13fa9835385bceff16165b1666fb1690a51af65dabafdaa95d",
+          "identical": false,
+          "dhashDistance": 0,
+          "grayRmse": 0.5284854539152426
+        },
+        {
+          "path": "public/images/hallafter.webp",
+          "bytes": 8346,
+          "width": 353,
+          "height": 235,
+          "sha256": "6a1b62dffb502263879b3b009cb67228f3130f885981940d5119432885c59dd3",
+          "identical": false,
+          "dhashDistance": 32,
+          "grayRmse": 54.79163300062337
+        },
+        {
+          "path": "public/images/grid/kitchenbefore.webp",
+          "bytes": 959036,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "4bb3bcd1c8691e0f504fa511f63135ad90af24ffc94a52d47cd38da6b2148f80",
+          "identical": false,
+          "dhashDistance": 28,
+          "grayRmse": 57.870806746039925
+        },
+        {
+          "path": "public/images/grid/sanitizationHero.webp",
+          "bytes": 1052632,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "22d23ce26113b55b07d08bc964c3cd1e36b732ef33675a334c5a85ecd0b3cf28",
+          "identical": false,
+          "dhashDistance": 29,
+          "grayRmse": 58.616237351522315
+        },
+        {
+          "path": "public/images/sanitizationHero.webp",
+          "bytes": 1052632,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "22d23ce26113b55b07d08bc964c3cd1e36b732ef33675a334c5a85ecd0b3cf28",
+          "identical": false,
+          "dhashDistance": 29,
+          "grayRmse": 58.616237351522315
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": ".qa-lock/phase2-handoff/Sources/proof1.webp",
+        "bytes": 144808,
+        "width": 2048,
+        "height": 1365,
+        "format": "webp",
+        "sha256": "b2c06ac4fa26ed024fd95eccb2ffab4c78e669e7ac0af5dff92400d8bc77ac9a"
+      },
+      "closest": [
+        {
+          "path": "public/images/grid/carousel3.webp",
+          "bytes": 1118350,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "3dd10217e39adca9d2c4fac7c7fc68004937e950f564850a7dce35eb0781aeb5",
+          "identical": false,
+          "dhashDistance": 1,
+          "grayRmse": 0.5970304117044625
+        },
+        {
+          "path": "public/images/proof1.webp",
+          "bytes": 1118350,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "3dd10217e39adca9d2c4fac7c7fc68004937e950f564850a7dce35eb0781aeb5",
+          "identical": false,
+          "dhashDistance": 1,
+          "grayRmse": 0.5970304117044625
+        },
+        {
+          "path": "public/images/moldSigue.webp",
+          "bytes": 1190080,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d",
+          "identical": false,
+          "dhashDistance": 25,
+          "grayRmse": 64.696255446123
+        },
+        {
+          "path": "public/images/water-min.webp",
+          "bytes": 1190080,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d",
+          "identical": false,
+          "dhashDistance": 25,
+          "grayRmse": 64.696255446123
+        },
+        {
+          "path": "public/images/carousel2-min.webp",
+          "bytes": 1021830,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
+          "identical": false,
+          "dhashDistance": 29,
+          "grayRmse": 68.83653644686083
+        },
+        {
+          "path": "public/images/grid/carousel2.webp",
+          "bytes": 1021830,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
+          "identical": false,
+          "dhashDistance": 29,
+          "grayRmse": 68.83653644686083
+        }
+      ]
+    },
+    {
+      "source": {
+        "path": ".qa-lock/phase2-handoff/Sources/carousel2-min.webp",
+        "bytes": 133842,
+        "width": 2048,
+        "height": 1365,
+        "format": "webp",
+        "sha256": "91f7ff8c8c6cc661f9e2117535cf09ed084daab04f29783c59a156a057a1aea5"
+      },
+      "closest": [
+        {
+          "path": "public/images/carousel2-min.webp",
+          "bytes": 1021830,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
+          "identical": false,
+          "dhashDistance": 0,
+          "grayRmse": 0.5019493251315316
+        },
+        {
+          "path": "public/images/grid/carousel2.webp",
+          "bytes": 1021830,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "358a92ca4d13aa25ef95db2bcb112d192e9a12f37fc09a6c1c0dca4863c7ae8d",
+          "identical": false,
+          "dhashDistance": 0,
+          "grayRmse": 0.5019493251315316
+        },
+        {
+          "path": "public/images/hallafter.webp",
+          "bytes": 8346,
+          "width": 353,
+          "height": 235,
+          "sha256": "6a1b62dffb502263879b3b009cb67228f3130f885981940d5119432885c59dd3",
+          "identical": false,
+          "dhashDistance": 26,
+          "grayRmse": 50.65788862247913
+        },
+        {
+          "path": "public/images/grid/mold-hero.webp",
+          "bytes": 5055914,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "07003766ea38d3a86ca443b175c1eb128a097a3fa33d286a749bdc95008a8cd3",
+          "identical": false,
+          "dhashDistance": 25,
+          "grayRmse": 57.69308613256878
+        },
+        {
+          "path": "public/images/moldSigue.webp",
+          "bytes": 1190080,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d",
+          "identical": false,
+          "dhashDistance": 28,
+          "grayRmse": 61.68327303147102
+        },
+        {
+          "path": "public/images/water-min.webp",
+          "bytes": 1190080,
+          "width": 6000,
+          "height": 4000,
+          "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d",
+          "identical": false,
+          "dhashDistance": 28,
+          "grayRmse": 61.68327303147102
+        }
+      ]
+    }
+  ]
+}
