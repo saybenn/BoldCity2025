@@ -103,3 +103,11 @@ Implementation branch: codex/website-seo-revamp, based on main at 4b3c146d58fa75
 Final visual refinement was followed by a successful production build and targeted lint check. The five affected homepage/service browser checks passed on the final build, and the 37-route scanner again reported zero issues for the final evidence captures. Latest targeted details are in browser-results.json. Earlier ten-check and accepted-lead/attribution runs remain the functional evidence for unchanged paths. No tests are represented as live account validation.
 
 Remaining approval order: review the code and skyline trial; obtain authentic individual Google reviews; verify Turnstile/edge/Postmark and GTM/GA4/Ads on an approved preview; complete Search Console inspection; then separately approve merge and production launch. Perform the 7/30/60-day review relative to the actual launch date.
+
+## Phase 2 update — November 3, 2026
+
+The approved second handoff supersedes the remaining-review-content limitation above: all 23 supplied records are retained, with 22 genuine written excerpts displayed and no invented photos/dates/current total. Photography repetition, Netlify trusted IP and preview analytics have been corrected. Both real previews show the cards, noindex headers and zero Google tracking requests. Real invalid-request tests confirmed the selected preview's trusted-context retrieval, shared edge block, forged-header block and recovery; owner-only accepted-rule logs remain outstanding.
+
+The real Cloudflare failure is diagnosed as **110200 — unauthorized preview hostname**. Preview-only account changes were approved in chat, but available access could not complete them. No successful real Siteverify/Postmark submission or email delivery is claimed. The updated application passed 12 unit tests and all 17 Chrome checks, two build contexts, type checking, lint (0 errors / 9 advisory warnings), the 37-route / 26-image scan and lockfile dry-run. Form delivery tests are mocked; real preview network/edge tests are separately recorded.
+
+See [phase 2 launch review, six-ticket results and screenshots](h2-launch-review.md) and [exact owner account actions](h2-owner-actions.md). The recommendation remains **NO-GO for production**. Preserve the same branch and draft PR #1; no merge or production deployment is authorized.

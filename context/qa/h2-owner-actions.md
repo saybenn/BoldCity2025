@@ -10,6 +10,8 @@ The separate `boldcity2025` project is also connected to this PR but has no cust
 
 ## Cloudflare and Netlify — blocking
 
+**Confirmed live on the updated preview:** the widget reports `110200` with action `contact_standard`, and the challenge request returns HTTP 400. Cloudflare identifies this as an unauthorized domain in its [official error table](https://developers.cloudflare.com/turnstile/troubleshooting/client-side-errors/error-codes/). The script loads successfully; this observation identifies hostname authorization rather than a generic script-load failure. See [safe diagnostics](h2-live-turnstile.json). Secret pairing, server Siteverify acceptance and email delivery remain unverified because no legitimate token could be obtained.
+
 1. Open Cloudflare Turnstile for the correct account. Create/select a dedicated **preview** widget with the exact hostname `deploy-preview-1--sprightly-horse-c6240e.netlify.app`. Preserve the production widget and its `boldcityiaq.com` / `www.boldcityiaq.com` host authorization. Do not use wildcard hosts or test/dummy keys for real acceptance.
 2. In the selected Netlify project's environment variables, scope the following to **Deploy Previews**. Do not overwrite production values:
    - `NEXT_PUBLIC_TURNSTILE_SITE_KEY`: preview widget public key (build scope).
@@ -26,15 +28,19 @@ Account configuration could not be completed through available access: plugin se
 
 ## Netlify IP and edge verification — blocking
 
+**Verified live at application commit `2453899`:** a JSON request with no name/token reached validation and returned 400, so the deployed Netlify context helper supplied a valid client IP. A bounded mixed-path burst followed by the documented enforcement delay produced non-JSON 429 on **both** endpoints; forged forwarding headers remained blocked; an unrelated page returned 200. Both endpoints later recovered to the expected 415 for invalid content type. No challenge tokens or email were involved. [Raw request IDs and responses](h2-live-edge.json) retain the evidence. This qualifies the observed preview behavior from one real egress IP, not independent-client isolation or every alternate entry point.
+
 The API uses the official Netlify Functions `getContext().ip` helper, validates one IP address, and never falls back to arbitrary forwarded headers or a global unknown bucket on Netlify. Missing context returns 503 with a call alternative. The memory throttle is supplemental only. The legacy endpoint delegates to the same handler.
 
 The repository adds one free code-based Edge rule for POST `/api/contact` and `/api/lead`, via one URLPattern, per IP/domain: **20 requests per 60 seconds**. Confirm the deployed post-processing log accepted the rule, available plan rule capacity, selected adapter/runtime, URLPattern matching and method behavior. Invalid rules may not fail a deploy. Deployment success alone is insufficient.
 
-Run `scripts/h2-check-edge.cjs` only against the selected preview. It sends bounded invalid requests that cannot produce email. Record accepted rule/log output, trusted-context validation (400 validation response rather than 503), mixed-path limiting, forged-header behavior, unrelated-page availability and recovery after the window. The browser handles Netlify's non-JSON 429 safely. Leave visitor confirmations disabled until these checks pass; only then may the owner explicitly enable the production confirmation flags in a separately authorized production release.
+The preview-only script `scripts/h2-check-edge.cjs` sends invalid requests and accounts for Netlify's up-to-ten-second enforcement delay. Its live behavior checks passed as recorded above. **Still required:** inspect the owner-only post-processing log for accepted rule details and exact adapter/runtime versions; qualify GET-only counting exclusion and any alternative function entry paths before declaring protection fully accepted. The browser handles Netlify's non-JSON 429 safely. Leave visitor confirmations disabled until the full review passes; any production enablement requires a separately authorized release.
 
 ## Analytics and indexing
 
 Production GTM now requires **production build context plus the canonical public hostname**. Preview/local pages retain QA dataLayer events but load neither GTM script nor noscript iframe. Netlify context/provider is compiled into the application so runtime detection does not depend solely on build-only variables. Unknown context fails closed for analytics and email routing. Preview builds emit noindex headers and metadata; production public pages retain index/follow, and campaign/success pages remain noindex.
+
+Both rebuilt previews were checked in real Chrome with no tracking interception: 22 cards each, one initial QA page-view event, zero Google tracking requests, zero GTM elements, no page errors, and actual noindex response headers. See [live preview evidence](h2-live-preview.json). The separate local production build retained public index/follow and campaign noindex; its canonical-host GTM test explicitly mocked Google responses to avoid production analytics transmission ([test scope](h2-production-config.json)).
 
 In GTM/GA4/Google Ads accounts (not accessible/verified here):
 

@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-04T01:53:08.262Z",
+  "kind": "Real external browsers; no network mocks or submissions",
+  "results": [
+    {
+      "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+      "status": 200,
+      "noindex": "noindex, nofollow, noindex",
+      "buildId": "fxGceOzykRDyGLwOrDTgj",
+      "cards": 22,
+      "homePageViewEvents": 1,
+      "trackingRequests": [],
+      "pageErrors": [],
+      "gtmElements": 0,
+      "canonical": "https://boldcityiaq.com/contact"
+    },
+    {
+      "base": "https://deploy-preview-1--boldcity2025.netlify.app",
+      "status": 200,
+      "noindex": "noindex, nofollow, noindex",
+      "buildId": "pOf6kmgw8GpKn4pAGyjgD",
+      "cards": 22,
+      "homePageViewEvents": 1,
+      "trackingRequests": [],
+      "pageErrors": [],
+      "gtmElements": 0,
+      "canonical": "https://boldcityiaq.com/contact"
+    }
+  ]
+}
