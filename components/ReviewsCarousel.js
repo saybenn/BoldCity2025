@@ -1,7 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Star } from "lucide-react";
-import { GOOGLE_PROFILE_URL, writtenReviews, verifiedRating } from "@/lib/google-reviews";
-import { track } from "@/lib/analytics";
+import { writtenReviews, verifiedRating } from "@/lib/google-reviews";
 
 export default function ReviewsCarousel() {
   const headingId = useId();
@@ -51,7 +50,6 @@ export default function ReviewsCarousel() {
     return () => cancelAnimationFrame(frame);
   }, [desktop, reducedMotion, paused, hovered, focused, touching, visible]);
 
-  function sourceClick() { track("review_source_click", { review_source: "google", cta_location: "GoogleReviews", page_path: window.location.pathname }); }
   function move(direction, rowIndex = 0) {
     const target = desktop ? rows.current[rowIndex] : viewport.current;
     target?.scrollBy({ left: direction * Math.min(target.clientWidth * 0.85, 380), behavior: reducedMotion ? "auto" : "smooth" });
@@ -76,7 +74,6 @@ export default function ReviewsCarousel() {
         <div><p className="text-xs font-semibold uppercase tracking-widest text-navy">From our customers</p>
           <h2 id={headingId} className="mt-2 font-heading text-2xl font-bold sm:text-3xl">Google reviews</h2>
           <p className="mt-2 font-semibold text-navy"><span aria-hidden="true" className="mr-2 text-amber-500">★★★★★</span>{verifiedRating.value.toFixed(1)} out of 5 on Google</p>
-          <p className="mt-1 text-xs text-gray-600">Rating checked November 1, 2026 · <a href={GOOGLE_PROFILE_URL} onClick={sourceClick} className="underline" target="_blank" rel="noopener noreferrer">Google profile</a></p>
         </div>
       </div>
       <p id={instructionsId} className="sr-only">Reviews pause on hover, focus or touch. Use the left and right arrow keys to browse. Escape keeps motion paused; Space allows it again after focus leaves. Automatic motion is disabled when reduced motion is preferred.</p>
@@ -95,7 +92,6 @@ export default function ReviewsCarousel() {
           </figure>)}
         </div>)}
       </div>
-      <p className="mt-4 text-xs leading-5 text-gray-500">Selected customer reviews from Google. Excerpts shown; visit the profile above for current reviews.</p>
     </div>
   </section>;
 }

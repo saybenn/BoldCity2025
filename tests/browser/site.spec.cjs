@@ -28,12 +28,12 @@ for(const width of [375,430,768,1440]) {
   expect(errors).toEqual([]);
  });
 }
-test('phone, CTA, review and navigation events dispatch once without gtag duplication',async({page})=>{
+test('phone, CTA and navigation events dispatch once without gtag duplication',async({page})=>{
  await isolate(page);await page.goto('/');
  await expect.poll(async()=> (await events(page,'page_view')).length).toBe(1);
  await page.locator('header a[href^="tel:"]').click();expect((await events(page,'phone_click')).length).toBe(1);
  expect((await events(page,'generate_lead')).length).toBe(0);
- const reviewLink=page.locator('a[href*="google.com/maps?cid"]').first();await reviewLink.evaluate(el=>el.addEventListener('click',event=>event.preventDefault()));await reviewLink.click();expect((await events(page,'review_source_click')).length).toBe(1);
+ await expect(page.locator('[data-google-reviews] a')).toHaveCount(0);expect((await events(page,'review_source_click')).length).toBe(0);
  await page.locator('header a[href="/contact"]').click();await expect(page).toHaveURL(/\/contact$/);
  expect((await events(page,'cta_click')).length).toBe(1);expect((await events(page,'page_view')).length).toBe(2);
  await page.goto('/contact/success');expect((await events(page,'generate_lead')).length).toBe(0);

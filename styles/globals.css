@@ -19,6 +19,23 @@
   .review-quote { font-size:15px; line-height:26px; }
 }
 
+/* Native sticky backdrop: no scroll listeners or animation library. The static
+   fallback covers the entire section on touch/tablet and with reduced motion. */
+.services-overview { position:relative; isolation:isolate; overflow:clip; background:#0c2340; color:#f8fafc; }
+.services-photo-track { position:absolute; inset:0; z-index:-2; pointer-events:none; }
+.services-photo-panel { position:absolute; inset:0; }
+.services-photo { object-fit:cover; object-position:58% 48%; }
+.services-shade { position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg,rgba(6,23,40,.72),rgba(6,23,40,.70) 35%,rgba(6,23,40,.86)); }
+.services-intro { max-width:36rem; }
+@media (min-width:1024px) {
+  .services-intro { max-width:30rem; min-height:360px; }
+  .services-shade { background:linear-gradient(90deg,rgba(6,23,40,.86),rgba(6,23,40,.72) 44%,rgba(6,23,40,.18) 64%,rgba(6,23,40,.28)),linear-gradient(180deg,rgba(6,23,40,.50),rgba(6,23,40,.12) 42%,rgba(6,23,40,.22) 62%,rgba(6,23,40,.72)); }
+}
+@media (min-width:1024px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .services-photo-panel { position:sticky; inset:auto; top:0; height:100svh; max-height:100%; }
+  .services-photo { object-position:center 45%; }
+}
+
 /* 🌙 Dark Mode via media query */
 :root {
   --background: #ffffff;
