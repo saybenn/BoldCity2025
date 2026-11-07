@@ -1,0 +1,76 @@
+- generic: Summary >
+- generic: GA4 - view page
+- generic: Tag Details
+- generic: Properties
+- table:
+  - rowgroup:
+    - row "Name Value":
+      - columnheader "Name"
+      - columnheader "Value"
+  - rowgroup:
+    - 'row "Type Google Analytics: GA4 Event"':
+      - cell "Type":
+        - generic: Type
+      - 'cell "Google Analytics: GA4 Event"':
+        - generic: "Google Analytics: GA4 Event"
+    - row "Send Ecommerce data false":
+      - cell "Send Ecommerce data":
+        - generic: Send Ecommerce data
+      - cell "false":
+        - textbox
+        - generic: "false"
+    - 'row "eventSettingsTable [ {parameter: \"page_path\", parameterValue: \" DL - page_path \"}, { parameter: \"page_location\", parameterValue: \" DL - page_location \" }, {parameter: \"page_title\", parameterValue: \" DL - page_title \"}, {parameter: \"page_type\", parameterValue: \" DL - page_type \"} ]"':
+      - cell "eventSettingsTable":
+        - generic: eventSettingsTable
+      - 'cell "[ {parameter: \"page_path\", parameterValue: \" DL - page_path \"}, { parameter: \"page_location\", parameterValue: \" DL - page_location \" }, {parameter: \"page_title\", parameterValue: \" DL - page_title \"}, {parameter: \"page_type\", parameterValue: \" DL - page_type \"} ]"':
+        - textbox
+        - text: "[ {parameter: \"page_path\", parameterValue: \""
+        - generic: DL - page_path
+        - text: "\"}, { parameter: \"page_location\", parameterValue: \""
+        - generic: DL - page_location
+        - text: "\" }, {parameter: \"page_title\", parameterValue: \""
+        - generic: DL - page_title
+        - text: "\"}, {parameter: \"page_type\", parameterValue: \""
+        - generic: DL - page_type
+        - text: "\"} ]"
+    - row "Event Name \"page_view\"":
+      - cell "Event Name":
+        - generic: Event Name
+      - cell "\"page_view\"":
+        - textbox
+        - generic: "\"page_view\""
+    - row "Measurement ID \" GA4 - Measurement ID \"":
+      - cell "Measurement ID":
+        - generic: Measurement ID
+      - cell "\" GA4 - Measurement ID \"":
+        - textbox
+        - text: "\""
+        - generic: GA4 - Measurement ID
+        - text: "\""
+- generic: Messages Where This Tag Fired
+- button "3 History Change"
+- button "10 History Change"
+- button "11 History"
+- generic: Firing Triggers
+- generic: CE - view page
+- table:
+  - rowgroup:
+    - row "Filters":
+      - columnheader "Filters"
+  - rowgroup:
+    - row "_event equals page_view":
+      - cell "_event":
+        - generic: _event
+      - cell "equals":
+        - generic: equals
+      - cell "page_view":
+        - generic: page_view
+- generic: Blocking Triggers
+- generic: No blocking triggers
+- generic: Hits sent
+- generic: Page View
+- generic: G-9G03529W5P
+- generic: Page View
+- generic: G-9G03529W5P
+- generic: Page View
+- generic: G-9G03529W5P

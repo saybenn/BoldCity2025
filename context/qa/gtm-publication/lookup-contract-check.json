@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-11-07T19:06:23.996Z",
+  "kind": "Offline evaluation of exported native GTM lookup tables; no browser events, form submission or Google delivery",
+  "cases": [
+    {
+      "model": {
+        "form_id": "StandardContactForm",
+        "intent": "service request with financing interest"
+      },
+      "form_type": "standard",
+      "financing_interest": "yes",
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "StandardContactForm",
+        "intent": "service request"
+      },
+      "form_type": "standard",
+      "financing_interest": "no",
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "AdContactForm",
+        "intent": "ad service request with financing interest"
+      },
+      "form_type": "ad",
+      "financing_interest": "yes",
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "AdContactForm",
+        "intent": "ad service request"
+      },
+      "form_type": "ad",
+      "financing_interest": "no",
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "ContactRequestForm",
+        "intent": "request service"
+      },
+      "form_type": "standard",
+      "financing_interest": null,
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "LeadForm",
+        "intent": "service request with financing interest"
+      },
+      "form_type": "lead",
+      "financing_interest": null,
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "ModalContactForm",
+        "intent": "ad service request"
+      },
+      "form_type": "modal",
+      "financing_interest": null,
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "StandardContactForm"
+      },
+      "form_type": "standard",
+      "financing_interest": null,
+      "nullMeansOmitted": true,
+      "pass": true
+    },
+    {
+      "model": {
+        "form_id": "UnknownForm",
+        "intent": "service request with financing interest"
+      },
+      "form_type": null,
+      "financing_interest": null,
+      "nullMeansOmitted": true,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+- generic: 11 History >
+- text: GA4 - view page
+- generic: Fired
+- generic: Tag Details
+- text: Display Variables as
+- radio "Names"
+- text: Names
+- radio "Values" [checked]
+- text: Values
+- generic: Properties
+- table:
+  - rowgroup:
+    - row "Name Value":
+      - columnheader "Name"
+      - columnheader "Value"
+  - rowgroup:
+    - 'row "Type Google Analytics: GA4 Event"':
+      - cell "Type":
+        - generic: Type
+      - 'cell "Google Analytics: GA4 Event"':
+        - generic: "Google Analytics: GA4 Event"
+    - row "Firing Status Succeeded":
+      - cell "Firing Status":
+        - generic: Firing Status
+      - cell "Succeeded":
+        - generic: Succeeded
+    - row "Send Ecommerce data false":
+      - cell "Send Ecommerce data":
+        - generic: Send Ecommerce data
+      - cell "false":
+        - textbox
+        - generic: "false"
+    - 'row "eventSettingsTable [ {parameter: \"page_path\", parameterValue: \"/contact\"}, { parameter: \"page_location\", parameterValue: \"http://127.0.0.1:3100/contact\" }, { parameter: \"page_title\", parameterValue: \"Contact Bold City IAQ | 24/7 Emergency Restorati\" + \"on in Jacksonville\" }, {parameter: \"page_type\", parameterValue: \"contact\"} ]"':
+      - cell "eventSettingsTable":
+        - generic: eventSettingsTable
+      - 'cell "[ {parameter: \"page_path\", parameterValue: \"/contact\"}, { parameter: \"page_location\", parameterValue: \"http://127.0.0.1:3100/contact\" }, { parameter: \"page_title\", parameterValue: \"Contact Bold City IAQ | 24/7 Emergency Restorati\" + \"on in Jacksonville\" }, {parameter: \"page_type\", parameterValue: \"contact\"} ]"':
+        - textbox
+        - generic: "[ {parameter: \"page_path\", parameterValue: \"/contact\"}, { parameter: \"page_location\", parameterValue: \"http://127.0.0.1:3100/contact\" }, { parameter: \"page_title\", parameterValue: \"Contact Bold City IAQ | 24/7 Emergency Restorati\" + \"on in Jacksonville\" }, {parameter: \"page_type\", parameterValue: \"contact\"} ]"
+    - row "Event Name \"page_view\"":
+      - cell "Event Name":
+        - generic: Event Name
+      - cell "\"page_view\"":
+        - textbox
+        - generic: "\"page_view\""
+    - row "Measurement ID \"G-9G03529W5P\"":
+      - cell "Measurement ID":
+        - generic: Measurement ID
+      - cell "\"G-9G03529W5P\"":
+        - textbox
+        - generic: "\"G-9G03529W5P\""
+- generic: Firing Triggers
+- generic: CE - view page
+- table:
+  - rowgroup:
+    - row "Filters":
+      - columnheader "Filters"
+  - rowgroup:
+    - row "page_view equals page_view":
+      - cell
+      - cell "page_view":
+        - generic: page_view
+      - cell "equals":
+        - generic: equals
+      - cell "page_view":
+        - generic: page_view
+- generic: Blocking Triggers
+- generic: No blocking triggers
+- generic: Hits sent
+- generic: Page View
+- generic: G-9G03529W5P

@@ -1,0 +1,341 @@
+{
+  "checkedOn": "2026-11-07",
+  "testedWebsiteHead": "b566e149d43201a3d5ba44baa10825dfdca2340c",
+  "kind": "Actual Chrome Tag Assistant unpublished workspace preview; collectors blocked, not a mocked Tag Assistant",
+  "container": "GTM-55RZQMX7",
+  "workspace": "4 / Default Workspace",
+  "pageTagConfiguration": {
+    "tagId": "45",
+    "name": "GA4 - view page",
+    "type": "gaawe",
+    "fingerprint": "1794019538937",
+    "eventName": "page_view",
+    "destination": "G-9G03529W5P",
+    "tagFiringOption": "ONCE_PER_EVENT",
+    "firingTriggerId": [
+      "37"
+    ],
+    "trigger": {
+      "id": "37",
+      "name": "CE - view page",
+      "type": "CUSTOM_EVENT",
+      "customEventFilter": [
+        {
+          "type": "EQUALS",
+          "parameter": [
+            {
+              "type": "TEMPLATE",
+              "key": "arg0",
+              "value": "{{_event}}"
+            },
+            {
+              "type": "TEMPLATE",
+              "key": "arg1",
+              "value": "page_view"
+            }
+          ]
+        }
+      ]
+    },
+    "parameters": {
+      "sendEcommerceData": "false",
+      "eventSettingsTable": [
+        {
+          "type": "MAP",
+          "map": [
+            {
+              "type": "TEMPLATE",
+              "key": "parameter",
+              "value": "page_path"
+            },
+            {
+              "type": "TEMPLATE",
+              "key": "parameterValue",
+              "value": "{{DL - page_path}}"
+            }
+          ]
+        },
+        {
+          "type": "MAP",
+          "map": [
+            {
+              "type": "TEMPLATE",
+              "key": "parameter",
+              "value": "page_location"
+            },
+            {
+              "type": "TEMPLATE",
+              "key": "parameterValue",
+              "value": "{{DL - page_location}}"
+            }
+          ]
+        },
+        {
+          "type": "MAP",
+          "map": [
+            {
+              "type": "TEMPLATE",
+              "key": "parameter",
+              "value": "page_title"
+            },
+            {
+              "type": "TEMPLATE",
+              "key": "parameterValue",
+              "value": "{{DL - page_title}}"
+            }
+          ]
+        },
+        {
+          "type": "MAP",
+          "map": [
+            {
+              "type": "TEMPLATE",
+              "key": "parameter",
+              "value": "page_type"
+            },
+            {
+              "type": "TEMPLATE",
+              "key": "parameterValue",
+              "value": "{{DL - page_type}}"
+            }
+          ]
+        }
+      ],
+      "eventName": "page_view",
+      "measurementIdOverride": "{{GA4 - Measurement ID}}"
+    },
+    "consentSettings": {
+      "consentStatus": "NOT_SET"
+    }
+  },
+  "baseConfiguration": {
+    "id": "41",
+    "send_page_view": false,
+    "default_page_location": "https://{{Page Hostname}}{{Page Path}}",
+    "note": "QA inherited default is https://127.0.0.1/ without port; the explicit event parameters override it with the actual http localhost origin. No production URL mapping was changed."
+  },
+  "runs": [
+    {
+      "name": "baseline",
+      "initialTagFirings": {
+        "base": 1,
+        "page_view": 1,
+        "phone_click": 0,
+        "cta_click": 0,
+        "generate_lead": 0
+      },
+      "finalTagFirings": {
+        "base": 1,
+        "page_view": 3,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0
+      },
+      "events": [
+        {
+          "messageId": 3,
+          "uniqueEventId": 3,
+          "displayLabel": "History Change",
+          "rawApiEvent": "page_view",
+          "url": "http://127.0.0.1:3100/",
+          "page_path": "/",
+          "page_location": "http://127.0.0.1:3100/",
+          "page_title": "Water Damage Cleanup Jacksonville, FL | Bold City IAQ",
+          "page_type": "home",
+          "producer": "AnalyticsLifecycle explicit dataLayer push",
+          "tagId": "45",
+          "tagConfiguredEventName": "page_view",
+          "triggerReportedByDebugger": "CE - view page",
+          "dataLayerEvidence": "initial-event.txt"
+        },
+        {
+          "messageId": 8,
+          "uniqueEventId": 14,
+          "rawApiEvent": "phone_click",
+          "url": "http://127.0.0.1:3100/",
+          "page_path": "/",
+          "page_location": "http://127.0.0.1:3100/",
+          "cta_location": "NavbarDesktop",
+          "hero_variant": "skyline",
+          "phone_number": "+19044346318",
+          "tagId": "42",
+          "triggerId": "38",
+          "dataLayerEvidence": "phone-event.txt"
+        },
+        {
+          "messageId": 9,
+          "uniqueEventId": 15,
+          "rawApiEvent": "cta_click",
+          "url": "http://127.0.0.1:3100/",
+          "page_path": "/",
+          "page_location": "http://127.0.0.1:3100/",
+          "cta_location": "nav",
+          "hero_variant": "skyline",
+          "cta_label": "Contact",
+          "href": "/contact",
+          "tagId": "44",
+          "triggerId": "39",
+          "dataLayerEvidence": "cta-event.txt"
+        },
+        {
+          "messageId": 10,
+          "uniqueEventId": 16,
+          "displayLabel": "History Change",
+          "rawApiEvent": "page_view",
+          "url": "http://127.0.0.1:3100/contact",
+          "page_path": "/contact",
+          "page_location": "http://127.0.0.1:3100/contact",
+          "page_title": "Contact Bold City IAQ | 24/7 Emergency Restoration in Jacksonville",
+          "page_type": "contact",
+          "producer": "AnalyticsLifecycle explicit dataLayer push",
+          "tagId": "45",
+          "tagConfiguredEventName": "page_view",
+          "triggerReportedByDebugger": "CE - view page",
+          "dataLayerEvidence": "route-event.txt"
+        },
+        {
+          "messageId": 11,
+          "uniqueEventId": 17,
+          "displayLabel": "History",
+          "rawApiEvent": "gtm.historyChange-v2",
+          "url": "http://127.0.0.1:3100/contact",
+          "page_path": "/contact",
+          "page_location": "http://127.0.0.1:3100/contact",
+          "page_title": "Contact Bold City IAQ | 24/7 Emergency Restoration in Jacksonville",
+          "page_type": "contact",
+          "historyChangeSource": "pushState",
+          "oldUrl": "http://127.0.0.1:3100/?gtm_debug=1794075451830",
+          "newUrl": "http://127.0.0.1:3100/contact",
+          "producer": "Google browser-history auto measurement; no third application page_view push",
+          "tagId": "45",
+          "tagConfiguredEventName": "page_view",
+          "triggerReportedByDebugger": "CE - view page",
+          "debuggerTriggerDetails": "page_view equals page_view (internal measurement context); selected raw message and built-in Event variable are gtm.historyChange-v2",
+          "dataLayerEvidence": "history-event.txt"
+        }
+      ],
+      "firingIndexEvidence": "three-firing-index.txt"
+    },
+    {
+      "name": "final clean session",
+      "initialTagFirings": {
+        "base": 1,
+        "page_view": 1,
+        "adsDestination": 1,
+        "phone_click": 0,
+        "cta_click": 0,
+        "generate_lead": 0,
+        "adsAcceptedLead": 0
+      },
+      "finalTagFirings": {
+        "base": 1,
+        "page_view": 3,
+        "adsDestination": 1,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0,
+        "adsAcceptedLead": 0
+      },
+      "events": [
+        {
+          "messageId": 3,
+          "uniqueEventId": 3,
+          "displayLabel": "History Change",
+          "rawApiEvent": "page_view",
+          "url": "http://127.0.0.1:3100/",
+          "page_path": "/",
+          "page_location": "http://127.0.0.1:3100/",
+          "page_title": "Water Damage Cleanup Jacksonville, FL | Bold City IAQ",
+          "page_type": "home",
+          "producer": "AnalyticsLifecycle explicit dataLayer push",
+          "tagId": "45",
+          "tagConfiguredEventName": "page_view",
+          "triggerReportedByDebugger": "CE - view page",
+          "dataLayerEvidence": "final-initial-event.txt"
+        },
+        {
+          "messageId": 9,
+          "uniqueEventId": 16,
+          "rawApiEvent": "phone_click",
+          "url": "http://127.0.0.1:3100/",
+          "page_path": "/",
+          "page_location": "http://127.0.0.1:3100/",
+          "cta_location": "NavbarDesktop",
+          "hero_variant": "skyline",
+          "phone_number": "+19044346318",
+          "tagId": "42",
+          "triggerId": "38",
+          "dataLayerEvidence": "final-phone-event.txt"
+        },
+        {
+          "messageId": 10,
+          "uniqueEventId": 17,
+          "rawApiEvent": "cta_click",
+          "url": "http://127.0.0.1:3100/",
+          "page_path": "/",
+          "page_location": "http://127.0.0.1:3100/",
+          "cta_location": "nav",
+          "hero_variant": "skyline",
+          "cta_label": "Contact",
+          "href": "/contact",
+          "tagId": "44",
+          "triggerId": "39",
+          "dataLayerEvidence": "final-cta-event.txt"
+        },
+        {
+          "messageId": 11,
+          "uniqueEventId": 18,
+          "displayLabel": "History Change",
+          "rawApiEvent": "page_view",
+          "url": "http://127.0.0.1:3100/contact",
+          "page_path": "/contact",
+          "page_location": "http://127.0.0.1:3100/contact",
+          "page_title": "Contact Bold City IAQ | 24/7 Emergency Restoration in Jacksonville",
+          "page_type": "contact",
+          "producer": "AnalyticsLifecycle explicit dataLayer push",
+          "tagId": "45",
+          "tagConfiguredEventName": "page_view",
+          "triggerReportedByDebugger": "CE - view page",
+          "dataLayerEvidence": "final-route-event.txt"
+        },
+        {
+          "messageId": 12,
+          "uniqueEventId": 19,
+          "displayLabel": "History",
+          "rawApiEvent": "gtm.historyChange-v2",
+          "url": "http://127.0.0.1:3100/contact",
+          "page_path": "/contact",
+          "page_location": "http://127.0.0.1:3100/contact",
+          "page_title": "Contact Bold City IAQ | 24/7 Emergency Restoration in Jacksonville",
+          "page_type": "contact",
+          "historyChangeSource": "pushState",
+          "oldUrl": "http://127.0.0.1:3100/?gtm_debug=1794078116856",
+          "newUrl": "http://127.0.0.1:3100/contact",
+          "producer": "Google browser-history auto measurement; no third application page_view push",
+          "tagId": "45",
+          "tagConfiguredEventName": "page_view",
+          "triggerReportedByDebugger": "CE - view page",
+          "debuggerTriggerDetails": "page_view equals page_view (internal measurement context); selected raw message and built-in Event variable are gtm.historyChange-v2",
+          "dataLayerEvidence": "final-history-event.txt"
+        }
+      ],
+      "summaryEvidence": "final-summary.txt",
+      "acceptancePass": false
+    }
+  ],
+  "observations": {
+    "appPageViewPushesPerRun": 2,
+    "clientNavigationsPerRun": 1,
+    "phoneClicksPerRun": 1,
+    "ctaClicksPerRun": 1,
+    "formSubmissions": 0,
+    "sourceEditsOrHotRefreshDuringEachCleanRun": false,
+    "productionCollectors": "blocked by unchanged localhost QA response CSP; independent Chrome collector/probe check recorded zero requests past CSP",
+    "ga4ReceiptVerified": false,
+    "acceptedLeadCountingVerified": false,
+    "productionGtmPublished": false,
+    "liveGa4SettingsChanged": false
+  },
+  "rootCause": "Two pageview producers: explicit AnalyticsLifecycle events plus enabled Google/GA4 browser-history automatic measurement. The extra history-associated hit is attributed to tag 45 by Tag Assistant; it is not a third app page_view event. send_page_view:false suppresses the config-load pageview, not Enhanced Measurement history pageviews.",
+  "remainingValidation": "Disable/coordinate the live GA4 history setting (approval pending) and confirm its Google tag mirror, then rerun from a new preview connection. The final clean test currently FAILS the 1+1 pageview acceptance criterion."
+}
