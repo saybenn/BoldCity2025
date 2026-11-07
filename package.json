@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:gtm-qa": "node scripts/dev-gtm-qa.cjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

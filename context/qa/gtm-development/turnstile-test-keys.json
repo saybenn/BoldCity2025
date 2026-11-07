@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-07T06:29:02.339Z",
+  "kind": "Real Cloudflare dummy-key widget and Siteverify requests, separate from the application/GTM; no emails",
+  "cases": [
+    {
+      "kind": "pass",
+      "status": 200,
+      "success": true,
+      "hostname": "example.com",
+      "actionPresent": false,
+      "errorCodes": []
+    },
+    {
+      "kind": "fail",
+      "status": 200,
+      "success": false,
+      "hostname": null,
+      "actionPresent": false,
+      "errorCodes": [
+        "invalid-input-response"
+      ]
+    },
+    {
+      "kind": "spent",
+      "status": 200,
+      "success": false,
+      "hostname": null,
+      "actionPresent": false,
+      "errorCodes": [
+        "timeout-or-duplicate"
+      ]
+    }
+  ],
+  "applicationHostnameActionVerification": "Unchanged. Dummy success has example.com/no action and cannot qualify a real accepted application lead."
+}

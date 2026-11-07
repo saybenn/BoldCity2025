@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-07T06:42:13.492Z",
+  "container": "GTM-55RZQMX7",
+  "workspace": "4 / Default Workspace",
+  "connected": true,
+  "source": "Actual authenticated Tag Assistant UI in workspace Preview mode, on http://127.0.0.1:3100/",
+  "initial": {
+    "base": 1,
+    "pageViewTag": 1
+  },
+  "finalFiredCounts": {
+    "GA4 - Base": 1,
+    "GA4 - click call": 1,
+    "GA4 - click cta": 1,
+    "GA4 - view page": 3,
+    "GA4 - submit form": 0
+  },
+  "finding": "Page-view tag firing list included history messages, including gtm.historyChange-v2; cause not established. This does not pass once-per-navigation account qualification. Website-owned event counts are verified separately in local-browser.json.",
+  "measurementDelivery": "Intentionally blocked by localhost QA response CSP; tag firing is not GA4 delivery evidence.",
+  "acceptedLeadCounting": "Not tested; no form submissions.",
+  "accountPublished": false
+}

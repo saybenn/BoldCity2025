@@ -2,8 +2,8 @@
 
 import "@/styles/globals.css";
 import Script from "next/script";
-import { useSyncExternalStore } from "react";
-import { productionAnalyticsAllowed } from "@/lib/deployment.mjs";
+import { useEffect, useSyncExternalStore } from "react";
+import { localGtmQaAllowed, productionAnalyticsAllowed } from "@/lib/deployment.mjs";
 import AnalyticsLifecycle from "@/components/AnalyticsLifecycle";
 import { Inter, Poppins } from "next/font/google";
 
@@ -22,15 +22,27 @@ const poppins = Poppins({
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-55RZQMX7";
 const subscribeToHost = () => () => {};
-const analyticsSnapshot = () => productionAnalyticsAllowed(process.env.NEXT_PUBLIC_DEPLOY_CONTEXT, window.location.hostname);
-const serverAnalyticsSnapshot = () => false;
+const analyticsSnapshot = () => productionAnalyticsAllowed(process.env.NEXT_PUBLIC_DEPLOY_CONTEXT, window.location.hostname) ? "production"
+  : localGtmQaAllowed(process.env.NODE_ENV, process.env.NEXT_PUBLIC_GTM_QA_ENABLED,
+    process.env.NEXT_PUBLIC_DEPLOY_CONTEXT, process.env.NEXT_PUBLIC_DEPLOY_PROVIDER, window.location.hostname) ? "qa" : "off";
+const serverAnalyticsSnapshot = () => "off";
 
 export default function MyApp({ Component, pageProps }) {
-  const analyticsEnabled = useSyncExternalStore(subscribeToHost, analyticsSnapshot, serverAnalyticsSnapshot);
+  const analyticsMode = useSyncExternalStore(subscribeToHost, analyticsSnapshot, serverAnalyticsSnapshot);
+  useEffect(() => {
+    if (analyticsMode !== "qa") return;
+    // Diagnostic clicks still bubble to AnalyticsLifecycle; prevent an actual
+    // phone launch. This profile never sends leads, even by accidental submit.
+    const phone = (event: MouseEvent) => { if ((event.target as Element)?.closest?.('a[href^="tel:"]')) event.preventDefault(); };
+    const submit = (event: Event) => { event.preventDefault(); event.stopImmediatePropagation(); };
+    document.addEventListener("click", phone, true);
+    document.addEventListener("submit", submit, true);
+    return () => { document.removeEventListener("click", phone, true); document.removeEventListener("submit", submit, true); };
+  }, [analyticsMode]);
   return (
     <div className={`${inter.variable} ${poppins.variable} font-sans`}>
       <AnalyticsLifecycle />
-      {analyticsEnabled && GTM_ID ? (
+      {analyticsMode !== "off" && GTM_ID ? (
         <Script id="gtm-base" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

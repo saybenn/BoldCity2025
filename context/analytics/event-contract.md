@@ -2,6 +2,8 @@
 
 One transport: `lib/analytics.ts` pushes one object to `window.dataLayer`. GTM owns consent and GA4 delivery. There is no parallel `gtag` dispatch and no hardcoded Google Ads conversion label. `AnalyticsLifecycle` owns initial and client navigation page views, telephone clicks, meaningful service/financing CTA clicks and genuine first form focus. Individual accepted forms own `generate_lead`.
 
+November 7: [explicit localhost-only GTM QA and actual published-version audit](../qa/gtm-development/README.md) now provide collection-blocked Tag Assistant access. Website-owned page/phone/CTA events were verified independently of GTM. Additional history-associated page-view firing in the actual draft and an unreplaced published Ads-tag deletion remain publication gates. No GA4 delivery or new real accepted-lead count is claimed.
+
 | Event | Trigger | Non-sensitive parameters | Code verification | Account verification |
 | --- | --- | --- | --- | --- |
 | page_view | Initial page and pathname changes, once | page_path, query-free page_location, page_title, page_type | Browser regression | GTM draft saved/export verified; GA4 delivery pending |

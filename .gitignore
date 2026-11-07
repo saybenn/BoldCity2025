@@ -16,6 +16,8 @@
 # next.js
 /.next/
 /.next-qa-production/
+/.next-gtm-qa/
+/.next-gtm-control/
 /out/
 
 # production
