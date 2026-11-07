@@ -1,0 +1,139 @@
+{
+  "kind": "Actual rendered Chrome video, timing samples and native mobile swipe; no network mocks",
+  "observations": [
+    {
+      "width": 1440,
+      "kind": "Chrome desktop",
+      "samples": [
+        {
+          "elapsedMs": 0,
+          "left": 3
+        },
+        {
+          "elapsedMs": 250,
+          "left": 10
+        },
+        {
+          "elapsedMs": 500,
+          "left": 16
+        },
+        {
+          "elapsedMs": 750,
+          "left": 22
+        },
+        {
+          "elapsedMs": 1000,
+          "left": 29
+        },
+        {
+          "elapsedMs": 1250,
+          "left": 34
+        },
+        {
+          "elapsedMs": 1500,
+          "left": 41
+        },
+        {
+          "elapsedMs": 1750,
+          "left": 50
+        },
+        {
+          "elapsedMs": 2000,
+          "left": 56
+        },
+        {
+          "elapsedMs": 2250,
+          "left": 63
+        },
+        {
+          "elapsedMs": 2500,
+          "left": 69
+        },
+        {
+          "elapsedMs": 2750,
+          "left": 75
+        }
+      ],
+      "seam": {
+        "cycle": 4906,
+        "left": 148,
+        "wrapped": {
+          "position": 3,
+          "left": 143
+        }
+      },
+      "pauseVerified": true,
+      "reducedMotionVerified": true
+    },
+    {
+      "width": 375,
+      "kind": "Chrome mobile emulation, real native touch events",
+      "samples": [
+        {
+          "elapsedMs": 0,
+          "left": 2
+        },
+        {
+          "elapsedMs": 250,
+          "left": 8
+        },
+        {
+          "elapsedMs": 500,
+          "left": 14
+        },
+        {
+          "elapsedMs": 750,
+          "left": 20
+        },
+        {
+          "elapsedMs": 1000,
+          "left": 26
+        },
+        {
+          "elapsedMs": 1250,
+          "left": 32
+        },
+        {
+          "elapsedMs": 1500,
+          "left": 38
+        },
+        {
+          "elapsedMs": 1750,
+          "left": 44
+        },
+        {
+          "elapsedMs": 2000,
+          "left": 50
+        },
+        {
+          "elapsedMs": 2250,
+          "left": 56
+        },
+        {
+          "elapsedMs": 2500,
+          "left": 62
+        },
+        {
+          "elapsedMs": 2750,
+          "left": 68
+        }
+      ],
+      "touch": {
+        "before": 74,
+        "afterSwipe": 235,
+        "settled": 312,
+        "resumed": 321
+      },
+      "seam": {
+        "cycle": 7590,
+        "left": 24,
+        "wrapped": {
+          "position": 3,
+          "left": 19
+        }
+      },
+      "pauseVerified": true,
+      "reducedMotionVerified": true
+    }
+  ]
+}

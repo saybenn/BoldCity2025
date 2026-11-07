@@ -1,0 +1,82 @@
+{
+  "sourceCommit": "cdd87d292aa770ba59288d52ff6268171742d12e",
+  "checkedAt": "2026-11-07T03:09:40.785Z",
+  "kind": "Real external requests and real Chrome; no challenge, Siteverify, Postmark or analytics mocks",
+  "productionPublicKey": {
+    "base": "https://boldcityiaq.com",
+    "status": 200,
+    "suppliedPublicKeyFound": true,
+    "sourceFilesChecked": 12,
+    "sourceFetchFailures": 0,
+    "kind": "Public HTML/JavaScript GET only; production code is not executed"
+  },
+  "previews": [
+    {
+      "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+      "status": 200,
+      "robots": "noindex, nofollow, noindex",
+      "meta": "noindex, follow",
+      "publicKey": {
+        "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+        "status": 200,
+        "suppliedPublicKeyFound": true,
+        "sourceFilesChecked": 10,
+        "sourceFetchFailures": 0,
+        "kind": "Public HTML/JavaScript GET only; production code is not executed"
+      },
+      "views": [
+        {
+          "width": 1440,
+          "semanticReviews": 22,
+          "sectionHeight": 480,
+          "overflow": false,
+          "scrollbar": "hidden"
+        },
+        {
+          "width": 375,
+          "semanticReviews": 22,
+          "sectionHeight": 330,
+          "overflow": false,
+          "scrollbar": "hidden"
+        }
+      ],
+      "widgetSiteKeyMatched": true
+    },
+    {
+      "base": "https://deploy-preview-1--boldcity2025.netlify.app",
+      "status": 200,
+      "robots": "noindex, nofollow, noindex",
+      "meta": "noindex, follow",
+      "publicKey": {
+        "base": "https://deploy-preview-1--boldcity2025.netlify.app",
+        "status": 200,
+        "suppliedPublicKeyFound": false,
+        "sourceFilesChecked": 10,
+        "sourceFetchFailures": 0,
+        "kind": "Public HTML/JavaScript GET only; production code is not executed"
+      },
+      "views": [
+        {
+          "width": 1440,
+          "semanticReviews": 22,
+          "sectionHeight": 480,
+          "overflow": false,
+          "scrollbar": "hidden"
+        },
+        {
+          "width": 375,
+          "semanticReviews": 22,
+          "sectionHeight": 330,
+          "overflow": false,
+          "scrollbar": "hidden"
+        }
+      ],
+      "widgetSiteKeyMatched": false
+    }
+  ],
+  "submission": {
+    "requested": false,
+    "performed": false
+  },
+  "productionTrackingRequests": 0
+}

@@ -1,5 +1,7 @@
 # Phase 2 account actions and real acceptance gate
 
+> Historical report. The November 6 phase supersedes the old 110200/access blocker and preview-widget creation instructions below: the existing widget now permits the selected preview, and a real test notification was delivered. Do not recreate/rotate it. See [current account changes, exact unpublished GTM mappings and remaining launch gates](trust-final/owner-actions.md).
+
 Production merge/deploy is not authorized. The owner approved preview-only Cloudflare/Netlify configuration and one staging email to a supplied test inbox in chat. No production setting has been changed. Keep the actual approved recipient in the hosting secret/configuration interface, not this public repository.
 
 ## Selected project
