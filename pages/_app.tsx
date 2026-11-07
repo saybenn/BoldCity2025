@@ -1,9 +1,10 @@
 // /pages/_app.js
 
 import "@/styles/globals.css";
-import { useEffect } from "react";
 import Script from "next/script";
-import { captureUTMs } from "@/lib/utm";
+import { useSyncExternalStore } from "react";
+import { productionAnalyticsAllowed } from "@/lib/deployment.mjs";
+import AnalyticsLifecycle from "@/components/AnalyticsLifecycle";
 import { Inter, Poppins } from "next/font/google";
 
 const inter = Inter({
@@ -20,15 +21,16 @@ const poppins = Poppins({
 });
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-55RZQMX7";
+const subscribeToHost = () => () => {};
+const analyticsSnapshot = () => productionAnalyticsAllowed(process.env.NEXT_PUBLIC_DEPLOY_CONTEXT, window.location.hostname);
+const serverAnalyticsSnapshot = () => false;
 
 export default function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    captureUTMs?.();
-  }, []);
-
+  const analyticsEnabled = useSyncExternalStore(subscribeToHost, analyticsSnapshot, serverAnalyticsSnapshot);
   return (
-    <main className={`${inter.variable} ${poppins.variable} font-sans`}>
-      {GTM_ID ? (
+    <div className={`${inter.variable} ${poppins.variable} font-sans`}>
+      <AnalyticsLifecycle />
+      {analyticsEnabled && GTM_ID ? (
         <Script id="gtm-base" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -41,7 +43,7 @@ export default function MyApp({ Component, pageProps }) {
       ) : null}
 
       <Component {...pageProps} />
-    </main>
+    </div>
   );
 }
 

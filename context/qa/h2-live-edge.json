@@ -1,0 +1,244 @@
+{
+  "kind": "Real preview-only invalid requests; no challenge tokens, PII, accepted leads or email",
+  "startedAt": "2026-11-04T01:55:33.486Z",
+  "finishedAt": "2026-11-04T01:55:47.758Z",
+  "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+  "results": [
+    {
+      "path": "/api/contact",
+      "status": 400,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49MZ3H753Y88AN2S0C309",
+      "body": "{\"ok\":false,\"error\":\"Name is required.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49N6Z99Y2055TF3RMS6CN",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49N91M3XEY7Z1YVCMJ0C4",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NBDWQPQ76B5R36NYAC1",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49ND3NG071HP1RFECTHZZ",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NFFBJFP4ATFX5M3KF4A",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NHDFTZT3AMWKBD9DGMM",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NK7HWG63W89W5GM99WZ",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NNDXE61JX03GK26R068",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NQK60R4T9BR39Y060WJ",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NSF0W2N3SC8QKX7RHSF",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NVFBAX88VMC6NFFA8DB",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NXDXCH8MWJW3DZ3SC89",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49NZG2Y1F6PAHXV3KVHS1",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49P162FDB9Q43QH5WD25Q",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49P39XJBDF658YP7E2V6A",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49P5BABXQ574DV85RY4PF",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49P7XVAW1ZAMF8FGY141X",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49PA9TD2FFD46ZCFD1XCS",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49PCBB0PK5XNWY2RGJPE1",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49PEBFDZTAJ53YGGNPHYX",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49PGSNM0MHEYB2QKAAC3K",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49PJXCJ3TYS64M5JSCNNQ",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/lead",
+      "status": 415,
+      "type": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "requestId": "01M6J49PMKDGZN6F6KBCBDS244",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "path": "/api/contact",
+      "status": 429,
+      "type": null,
+      "retryAfter": null,
+      "requestId": "01M6J4A2FPN5W8KJVPDX89H2CH",
+      "body": "",
+      "phase": "after_enforcement_delay"
+    },
+    {
+      "path": "/api/lead",
+      "status": 429,
+      "type": null,
+      "retryAfter": null,
+      "requestId": "01M6J4A2KBJZCHNA4SJN6K3VSY",
+      "body": "",
+      "phase": "after_enforcement_delay"
+    },
+    {
+      "path": "/api/contact",
+      "status": 429,
+      "type": null,
+      "retryAfter": null,
+      "requestId": "01M6J4A2N01J7EZVMQSZF91Y28",
+      "body": ""
+    }
+  ],
+  "unrelatedPageStatus": 200,
+  "remaining": "Owner-only post-processing log acceptance, exact adapter/runtime versions, and GET-only counting exclusion still require inspection. The mixed-path POST block, forged-header block, unrelated page and recovery were verified live.",
+  "recovery": [
+    {
+      "checkedAt": "2026-11-04T01:57:51.868Z",
+      "path": "/api/contact",
+      "status": 415,
+      "requestId": "01M6J4DVGCQJRM1KA1DF99KCDV",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    },
+    {
+      "checkedAt": "2026-11-04T01:57:51.946Z",
+      "path": "/api/lead",
+      "status": 415,
+      "requestId": "01M6J4DW0AKW336ZM911VC7YJT",
+      "body": "{\"ok\":false,\"error\":\"Content type must be application/json.\"}"
+    }
+  ]
+}

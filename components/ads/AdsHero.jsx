@@ -15,7 +15,7 @@ export default function AdsHero() {
             <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
               Emergency Restoration
               <span className="block text-amber-400">
-                On Our Way in 2 Hours or Less
+                Call for Emergency Availability
               </span>
             </h1>
 
@@ -28,7 +28,7 @@ export default function AdsHero() {
             <div className="mt-5 rounded-2xl bg-zinc-800/90 px-4 py-3 ring-1 ring-zinc-700">
               <p className="text-sm text-zinc-100">
                 <span className="font-semibold text-white">
-                  No upfront cost for eligible financing paths.
+                  Financing options for qualified customers.
                 </span>{" "}
                 We can also help document covered losses for insurance.
               </p>
@@ -88,7 +88,7 @@ export default function AdsHero() {
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl ring-1 ring-zinc-700">
             <Image
-              src="/images/fireprocess.webp"
+              src="/images/fireProcess.webp"
               alt="Bold City IAQ emergency restoration technician"
               fill
               priority

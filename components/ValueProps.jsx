@@ -25,9 +25,9 @@ const valueProps = [
 
 export default function ValueProps() {
   return (
-    <section className="relative z-20 hidden h-0 sm:block">
-      <div className="mx-auto max-w-6xl px-4 -translate-y-1/2 lg:-translate-y-[58%]">
-        <div className="grid grid-cols-1 gap-5 sm:hidden lg:grid-cols-3 lg:grid">
+    <section className="bg-navy py-12">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {valueProps.map((item) => (
             <div
               key={item.title}

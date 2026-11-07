@@ -2,18 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { getUTMParams } from "@/lib/utm";
-import { trackFormSubmit } from "@/lib/analytics";
+import { trackFormSubmit, trackFormError } from "@/lib/analytics";
 import { TurnstileField } from "./contact/TurnstileField";
 
-const ALLOWED_SERVICES = new Set([
-  "Water Damage Restoration",
-  "Mold Remediation",
-  "Emergency Services",
-  "Fire & Smoke Restoration",
-  "Cleaning & Sanitization",
-  "Storm & Flood Cleanup",
-  "General Restoration Request",
-]);
+import { ALLOWED_SERVICES, CONTACT_SERVICES } from "@/lib/contact-services";
 
 const initialState = {
   formType: "standard",
@@ -97,8 +89,8 @@ export default function StandardContactForm() {
 
     const current = {
       ...utms,
-      referrer: document.referrer || stored.referrer || "",
-      landing_page_url: window.location.href || stored.landing_page_url || "",
+      referrer: getUTMParams().referrer || stored.referrer || document.referrer || "",
+      landing_page_url: getUTMParams().landing_page_url || stored.landing_page_url || window.location.href,
       page: window.location.pathname,
       device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
       timestamp: startedAt,
@@ -186,6 +178,7 @@ export default function StandardContactForm() {
       }
 
       const payload = {
+        ...getUTMParams(),
         ...formData,
         ...attributionFields,
 
@@ -216,12 +209,13 @@ export default function StandardContactForm() {
 
       const json = await response.json().catch(() => ({}));
 
-      if (!response.ok || json?.ok === false) {
-        throw new Error(json?.error || "Submission failed.");
+      if (!response.ok || json?.ok !== true || json?.accepted !== true) {
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "Submission failed."));
       }
 
-      if (json?.accepted !== false) {
+      if (json?.accepted === true) {
         trackFormSubmit({
+          service_requested: service,
           form_name: "Standard Contact Form",
           form_location: "StandardContactForm",
           page: window.location.pathname,
@@ -238,6 +232,7 @@ export default function StandardContactForm() {
         ...initialState,
       });
     } catch (err) {
+      trackFormError("StandardContactForm", requestStarted ? "submission_failed" : "validation");
       console.error("Standard contact form error:", err);
 
       if (requestStarted) {
@@ -268,6 +263,7 @@ export default function StandardContactForm() {
 
   return (
     <form
+          data-analytics-form="StandardContactForm"
       ref={formRef}
       onSubmit={handleSubmit}
       className="w-full rounded-2xl bg-white p-6 shadow-xl sm:p-8"
@@ -342,7 +338,6 @@ export default function StandardContactForm() {
             autoComplete="tel"
             inputMode="tel"
             maxLength={30}
-            pattern="[0-9()\+\-\.\s]{7,}"
           />
         </div>
 
@@ -384,29 +379,8 @@ export default function StandardContactForm() {
             className="w-full rounded-lg border border-gray-300 px-4 py-3 text-darkText outline-none transition focus:border-aqua focus:ring-2 focus:ring-aqua/20"
             required
           >
-            <option value="">Select one</option>
-
-            <option value="Water Damage Restoration">
-              Water Damage Restoration
-            </option>
-
-            <option value="Mold Remediation">Mold Remediation</option>
-
-            <option value="Emergency Services">Emergency Services</option>
-
-            <option value="Fire & Smoke Restoration">
-              Fire & Smoke Restoration
-            </option>
-
-            <option value="Cleaning & Sanitization">
-              Cleaning & Sanitization
-            </option>
-
-            <option value="Storm & Flood Cleanup">Storm & Flood Cleanup</option>
-
-            <option value="General Restoration Request">
-              General Restoration Request
-            </option>
+            <option value="">Select a service</option>
+            {CONTACT_SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </div>
 

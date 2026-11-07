@@ -1,0 +1,44 @@
+{
+  "sourceCommit": "cdd87d292aa770ba59288d52ff6268171742d12e",
+  "checkedDate": "2026-11-06 America/New_York",
+  "kind": "Real existing-widget verification, regular Chrome submission and authenticated Postmark UI; no integration mocks",
+  "submission": {
+    "performed": true,
+    "count": 1,
+    "testId": "BCIAQ-QA-1794020598758",
+    "host": "deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+    "recipient": "Approved preview-only test inbox",
+    "acceptedUI": true,
+    "httpStatus": "Not directly captured in the regular-browser UI session",
+    "siteverify": "Acceptance inferred from the unchanged deployed handler requiring successful hostname/action-bound Siteverify before notification and accepted UI",
+    "productionSubmission": false,
+    "customerData": "Clearly labeled QA name, reserved fictional phone, no customer email or message"
+  },
+  "postmark": {
+    "messageId": "9c7e0ecf-2385-486c-8c95-e9b7bb97bd7b",
+    "stream": "outbound",
+    "template": "bold-city-contact-lead",
+    "sender": "info@boldcityiaq.com",
+    "recipient": "saybencodes@gmail.com",
+    "processedLocal": "2026-11-06 22:05:51 America/New_York",
+    "deliveredLocal": "2026-11-06 22:05:53 America/New_York",
+    "smtpAccepted": true,
+    "qaIdMatchedInBody": true,
+    "oneMessageObserved": true,
+    "inboxRead": "Not verified; SMTP delivery does not prove reading"
+  },
+  "analytics": {
+    "liveGenerateLeadCount": "UNVERIFIED: read-only browser inspection returned zero accessible generate_lead events; main-page event state and the cause of this result were not established, so it is not a passing live count",
+    "mockedBrowserAcceptedLeadCount": 1,
+    "productionGoogleDelivery": "Not attempted; preview guard preserved"
+  },
+  "replay": {
+    "live": "UNVERIFIED: successful session did not capture its spent token; no second email was sent to obtain one",
+    "mockedSiteverify": "PASS: rejection/expiry cases tested, not equivalent to genuine token replay"
+  },
+  "limits": [
+    "Automated Chrome challenge failed despite the approved verification click; its blocked attempt sent no lead.",
+    "Regular Chrome subsequently became ready and the one approved lead was submitted successfully.",
+    "Production public key and masked secret presence were inspected separately; production secret pairing and delivery were not exercised."
+  ]
+}

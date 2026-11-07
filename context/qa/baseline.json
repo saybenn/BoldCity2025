@@ -1,0 +1,139 @@
+[
+  {
+    "url": "https://boldcityiaq.com/",
+    "title": "Bold City IAQ - Water Damage Restoration Jacksonville FL",
+    "h1": [
+      "24/7 Emergency Water Damage Cleanup & Mold Remediation in Jacksonville"
+    ],
+    "description": "Bold City Indoor Air Quality and Emergency Services is ready to respond to your water damage restoration & mold cleanup right away.",
+    "canonical": [
+      "https://boldcityiaq.com/",
+      "https://boldcityiaq.com/"
+    ],
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Bold City IAQ",
+        "image": "https://boldcityiaq.com/images/logo.webp",
+        "@id": "https://boldcityiaq.com",
+        "url": "https://boldcityiaq.com",
+        "telephone": "+19044346318",
+        "address": {
+          "streetAddress": "10066 103rd St #206",
+          "addressLocality": "Jacksonville",
+          "addressRegion": "FL",
+          "postalCode": "32210",
+          "addressCountry": "US"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 5,
+          "reviewCount": 48
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you offer 24/7 emergency service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! We are on-call 24/7 for any water, fire, or mold damage emergencies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I finance the restoration work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We provide flexible financing options for qualified customers."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Bold City IAQ",
+        "image": "https://boldcityiaq.com/images/logo.png",
+        "url": "https://boldcityiaq.com",
+        "telephone": "+19044346318",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10066 103rd St #206",
+          "addressLocality": "Jacksonville",
+          "addressRegion": "FL",
+          "postalCode": "32210",
+          "addressCountry": "US"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "priceRange": "$$",
+        "sameAs": []
+      }
+    ],
+    "links": [
+      "/",
+      "/services/mold-remediation",
+      "/services/water-damage-restoration",
+      "/services/fire-and-smoke-restoration",
+      "/services/cleaning-and-sanitization",
+      "/services/emergency-services",
+      "/service-areas/jacksonville",
+      "/service-areas/orange-park",
+      "/service-areas/ponte-vedra-beach",
+      "/service-areas/st-augustine",
+      "/service-areas/jacksonville-beach",
+      "/service-areas/neptune-beach",
+      "/service-areas/atlantic-beach",
+      "/about",
+      "/contact",
+      "/financing",
+      "/financing",
+      "/contact",
+      "/financing",
+      "/services/mold-remediation",
+      "/services/water-damage-restoration",
+      "/services/fire-and-smoke-restoration",
+      "/services/cleaning-and-sanitization",
+      "/services/emergency-services",
+      "/contact",
+      "/services/water-damage-restoration",
+      "/services/mold-remediation",
+      "/services/fire-and-smoke-restoration",
+      "/services/cleaning-and-sanitization",
+      "/services/emergency-services",
+      "/service-areas/jacksonville",
+      "/service-areas/ponte-vedra-beach",
+      "/service-areas/st-augustine",
+      "/service-areas/orange-park",
+      "/service-areas/jacksonville-beach",
+      "/service-areas/neptune-beach",
+      "/service-areas/atlantic-beach",
+      "/resources/emergency-checklist",
+      "/about",
+      "/contact",
+      "/financing"
+    ]
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "canonical": []
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "canonical": []
+  },
+  {
+    "path": "/?utm_source=gmb&utm_medium=organic",
+    "status": 200,
+    "canonical": [
+      "https://boldcityiaq.com/",
+      "https://boldcityiaq.com/"
+    ]
+  }
+]

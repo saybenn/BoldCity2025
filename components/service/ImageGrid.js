@@ -14,22 +14,22 @@ export default function ImageGrid({ heading, images = [], crop = true }) {
     typeof img === "string" ? { src: img, alt: "Project photo" } : img
   );
 
-  const slides = normalized.map(({ src }) => ({ src }));
+  const slides = normalized.map(({ src, alt }) => ({ src: `/_next/image?url=${encodeURIComponent(src)}&w=1920&q=75`, alt }));
 
   const breakpointColumnsObj = {
-    default: 3,
-    1100: 3,
-    700: 2,
+    default: Math.min(3, images.length),
+    1100: Math.min(3, images.length),
+    700: Math.min(2, images.length),
     500: 1,
   };
-  console.log(images);
+
   return (
-    images.length > 1 && (
+    images.length > 0 && (
       <section
         className="w-full bg-white dark:bg-dark border-t border-border py-16 px-4 sm:px-6 lg:px-8"
         aria-labelledby="imagegrid-heading"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className={`${images.length === 1 ? "max-w-3xl" : "max-w-6xl"} mx-auto`}>
           <h2
             id="imagegrid-heading"
             className="lg:text-5xl text-4xl font-bold text-darkText dark:text-grey-900 mb-10 text-center"
@@ -67,13 +67,13 @@ export default function ImageGrid({ heading, images = [], crop = true }) {
                     width={1200}
                     height={800}
                     quality={75}
-                    loading={i < 3 ? "eager" : "lazy"}
+                    loading="lazy"
                     className={
                       crop
                         ? "object-cover object-center"
                         : "w-full h-auto object-contain"
                     }
-                    sizes="(max-width: 500px) 100vw, (max-width: 700px) 50vw, (max-width: 1100px) 33vw, 33vw"
+                    sizes={images.length === 1 ? "(max-width: 768px) 100vw, 768px" : "(max-width: 500px) 100vw, (max-width: 700px) 50vw, 50vw"}
                   />
                 </div>
               </button>

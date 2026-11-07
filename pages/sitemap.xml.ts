@@ -11,6 +11,8 @@ const STATIC_ROUTES = [
   "/about",
   "/contact",
   "/financing",
+  "/services",
+  "/resources/emergency-checklist",
   "/services/water-damage-restoration",
   "/services/mold-remediation",
   "/services/fire-and-smoke-restoration",
@@ -59,8 +61,6 @@ function getServiceAreaServiceRoutes() {
 }
 
 function buildSitemapXml(routes: string[]) {
-  const now = new Date().toISOString();
-
   const urls = routes
     .map((route) => {
       const loc = `${SITE_URL}${route}`;
@@ -68,8 +68,6 @@ function buildSitemapXml(routes: string[]) {
       return `
   <url>
     <loc>${escapeXml(loc)}</loc>
-    <lastmod>${now}</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>${route === "/" ? "1.0" : "0.8"}</priority>
   </url>`;
     })

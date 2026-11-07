@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /admin/
+Disallow: /test/
+Disallow: /archive/
+Disallow: /ads/
+
+Sitemap: https://boldcityiaq.com/sitemap.xml

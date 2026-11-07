@@ -1,9 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import postmark from "postmark";
+import { ALLOWED_SERVICES, normalizeService } from "../../lib/contact-services";
+import { allowContactAttempt, contactClientIP, verifyContactToken } from "../../lib/contact-security";
+import { deploymentContext } from "../../lib/deployment.mjs";
 
 type ContactFormType = "standard" | "ad" | "modal" | "lead";
 
 type ContactPayload = {
+  turnstileToken?: string;
   formType?: ContactFormType;
 
   name?: string;
@@ -64,6 +68,8 @@ export const config = {
 const POSTMARK_SERVER_TOKEN = process.env.POSTMARK_SERVER_TOKEN;
 const CONTACT_EMAIL_FROM = process.env.CONTACT_EMAIL_FROM;
 const CONTACT_EMAIL_TO = process.env.CONTACT_EMAIL_TO;
+const IS_PRODUCTION = deploymentContext(process.env) === "production";
+const CONTACT_TEST_RECIPIENT = process.env.CONTACT_TEST_RECIPIENT;
 const CONTACT_RECEIVER_BACKUP =
   process.env.CONTACT_RECEIVER_BACKUP;
 
@@ -87,7 +93,7 @@ const VISITOR_CONFIRMATION_TEMPLATE_ALIAS =
  * verification have been enabled.
  */
 const SEND_VISITOR_CONFIRMATION =
-  process.env.SEND_VISITOR_CONFIRMATION === "true";
+  IS_PRODUCTION && process.env.CONTACT_EDGE_VERIFIED === "true" && process.env.SEND_VISITOR_CONFIRMATION === "true";
 
 const COMPANY_NAME =
   process.env.NEXT_PUBLIC_COMPANY_NAME || "Bold City IAQ";
@@ -101,15 +107,6 @@ const FORM_TYPES = new Set<ContactFormType>([
   "ad",
   "modal",
   "lead",
-]);
-
-const ALLOWED_SERVICES = new Set([
-  "Water Damage Restoration",
-  "Mold Remediation",
-  "Emergency Extraction",
-  "Storm & Flood Cleanup",
-  "Fire & Smoke Restoration",
-  "Cleaning & Sanitization",
 ]);
 
 const MIN_FORM_COMPLETION_MS = 1_000;
@@ -192,10 +189,13 @@ function isValidZip(value: string): boolean {
 }
 
 function assertEnv(): void {
+  if (!IS_PRODUCTION && (!CONTACT_TEST_RECIPIENT || !isValidEmail(CONTACT_TEST_RECIPIENT) || /[,;\s]/.test(CONTACT_TEST_RECIPIENT))) {
+    throw new Error("One valid CONTACT_TEST_RECIPIENT is required outside production.");
+  }
   const missing = [
     ["POSTMARK_SERVER_TOKEN", POSTMARK_SERVER_TOKEN],
     ["CONTACT_EMAIL_FROM", CONTACT_EMAIL_FROM],
-    ["CONTACT_EMAIL_TO", CONTACT_EMAIL_TO],
+    [IS_PRODUCTION ? "CONTACT_EMAIL_TO" : "CONTACT_TEST_RECIPIENT", IS_PRODUCTION ? CONTACT_EMAIL_TO : CONTACT_TEST_RECIPIENT],
   ].filter(([, value]) => !value);
 
   if (missing.length > 0) {
@@ -208,11 +208,23 @@ function assertEnv(): void {
 }
 
 function getRecipients(): string {
-  if (CONTACT_RECEIVER_BACKUP) {
-    return `${CONTACT_EMAIL_TO},${CONTACT_RECEIVER_BACKUP}`;
+  if (!IS_PRODUCTION) return CONTACT_TEST_RECIPIENT as string;
+  const recipients = [CONTACT_EMAIL_TO, CONTACT_RECEIVER_BACKUP]
+    .flatMap((value) => (value || "").split(/[,;]/))
+    .map((value) => value.trim().toLowerCase())
+    .filter(Boolean);
+  if (recipients.some((email) => !isValidEmail(email))) {
+    throw new Error("Invalid production notification recipient.");
   }
-
-  return CONTACT_EMAIL_TO as string;
+  const permitted = [...new Set(recipients)].filter((email) => {
+    const [local, domain] = email.split("@");
+    // Gmail treats dots, plus aliases and googlemail.com as the same inbox.
+    const developmentInbox = ["gmail.com", "googlemail.com"].includes(domain)
+      && local.split("+")[0].replace(/\./g, "") === "saybencodes";
+    return !developmentInbox;
+  });
+  if (!permitted.length) throw new Error("No permitted production notification recipient.");
+  return permitted.join(",");
 }
 
 function normalizePayload(body: ContactPayload) {
@@ -226,7 +238,7 @@ function normalizePayload(body: ContactPayload) {
     email: cleanString(body.email, 254).toLowerCase(),
     phone: cleanString(body.phone, 30),
     zip: cleanString(body.zip, 10),
-    service: cleanString(body.service, 100),
+    service: normalizeService(cleanString(body.service, 100)),
     message: message || notes,
     financing: cleanBoolean(body.financing),
     page: cleanString(body.page, 300),
@@ -561,10 +573,7 @@ async function sendVisitorConfirmation(
      * Do not fail the submission after the business has
      * already received the lead notification.
      */
-    console.error(
-      "Visitor confirmation email failed:",
-      error,
-    );
+    console.error("Visitor confirmation delivery failed.");
   }
 }
 
@@ -603,21 +612,33 @@ export default async function handler(
 
   const payload = normalizePayload(requestBody);
 
-  /**
-   * Silent bot rejection.
-   *
-   * The frontend shows the ordinary thank-you state, but
-   * accepted:false prevents ad conversion tracking.
-   */
+  const origin = req.headers.origin;
+  if (origin) {
+    try {
+      if (new URL(origin).host !== req.headers.host) {
+        return res.status(403).json({ ok: false, error: "Request origin is not allowed." });
+      }
+    } catch {
+      return res.status(403).json({ ok: false, error: "Invalid request origin." });
+    }
+  }
+  const ip = contactClientIP(req);
+  if (!ip) {
+    console.error("contact_security: trusted_client_context_unavailable");
+    return res.status(503).json({ ok: false, error: "Form protection is unavailable. Please call (904) 434-6318." });
+  }
+  if (!allowContactAttempt(ip)) {
+    res.setHeader("Retry-After", "600");
+    return res.status(429).json({ ok: false, error: "Too many attempts. Please call us directly." });
+  }
+
+  // Rejected submissions must never show a success state or count as a lead.
   if (
     payload.honeypot ||
     payload.companyWebsite ||
     wasSubmittedTooQuickly(payload.formStartedAt)
   ) {
-    return res.status(200).json({
-      ok: true,
-      accepted: false,
-    });
+    return res.status(400).json({ ok: false, error: "Unable to accept this request. Please retry or call us." });
   }
 
   const validationError = validatePayload(payload);
@@ -626,6 +647,16 @@ export default async function handler(
     return res.status(400).json({
       ok: false,
       error: validationError,
+    });
+  }
+
+  const verification = await verifyContactToken(requestBody.turnstileToken, payload.formType, req.headers.host);
+  if (!verification.ok) {
+    console.error(`contact_security: ${verification.reason || "verification_unavailable"}`);
+    return res.status(verification.unavailable ? 503 : 400).json({
+      ok: false,
+      error: verification.unavailable ? "Verification is unavailable. Please retry or call us directly."
+        : "Verification failed or expired. Please try again.",
     });
   }
 
@@ -644,10 +675,7 @@ export default async function handler(
       accepted: true,
     });
   } catch (error) {
-    console.error(
-      "Contact form Postmark template send failed:",
-      error,
-    );
+    console.error("Contact form delivery failed.");
 
     return res.status(500).json({
       ok: false,

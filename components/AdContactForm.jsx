@@ -1,16 +1,10 @@
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import { trackFormSubmit } from "@/lib/analytics";
+import { trackFormSubmit, trackFormError } from "@/lib/analytics";
 import { getUTMParams } from "@/lib/utm";
-import { TurnstileField } from "@/components/forms/TurnstileField";
+import { TurnstileField } from "@/components/contact/TurnstileField";
 
-const ALLOWED_SERVICES = new Set([
-  "Water Damage Restoration",
-  "Mold Remediation",
-  "Emergency Extraction",
-  "Storm & Flood Cleanup",
-  "Fire & Smoke Restoration",
-  "Cleaning & Sanitization",
-]);
+import { ALLOWED_SERVICES, CONTACT_SERVICES } from "@/lib/contact-services";
 
 function cleanString(value, maxLength) {
   return String(value || "")
@@ -33,7 +27,8 @@ function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-export default function AdContactForm() {
+export default function AdContactForm({ successPath }) {
+  const router = useRouter();
   const formRef = useRef(null);
   const turnstileRef = useRef(null);
 
@@ -84,8 +79,8 @@ export default function AdContactForm() {
 
     const current = {
       ...utmParams,
-      referrer: document.referrer || stored.referrer || "",
-      landing_page_url: window.location.href || stored.landing_page_url || "",
+      referrer: getUTMParams().referrer || stored.referrer || document.referrer || "",
+      landing_page_url: getUTMParams().landing_page_url || stored.landing_page_url || window.location.href,
       page: window.location.pathname,
       device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
       timestamp: startedAt,
@@ -168,6 +163,7 @@ export default function AdContactForm() {
       }
 
       const payload = {
+        ...getUTMParams(),
         ...formData,
         ...attributionFields,
 
@@ -201,12 +197,13 @@ export default function AdContactForm() {
 
       const json = await response.json().catch(() => ({}));
 
-      if (!response.ok || json?.ok === false) {
-        throw new Error(json?.error || "Submission failed.");
+      if (!response.ok || json?.ok !== true || json?.accepted !== true) {
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "Submission failed."));
       }
 
-      if (json?.accepted !== false) {
+      if (json?.accepted === true) {
         trackFormSubmit({
+          service_requested: service,
           form_name: "Ad Contact Form",
           form_location: "AdContactForm",
           page: window.location.pathname,
@@ -217,7 +214,9 @@ export default function AdContactForm() {
       }
 
       setSubmitted(true);
+      if (successPath) await router.push(`${successPath}?service=${encodeURIComponent(service)}`);
     } catch (err) {
+      trackFormError("AdContactForm", requestStarted ? "submission_failed" : "validation");
       console.error("Ad contact form error:", err);
 
       if (requestStarted) {
@@ -248,6 +247,7 @@ export default function AdContactForm() {
 
   return (
     <form
+          data-analytics-form="AdContactForm"
       ref={formRef}
       onSubmit={handleSubmit}
       className="space-y-6 rounded-2xl bg-white p-8 shadow-xl"
@@ -307,7 +307,6 @@ export default function AdContactForm() {
           autoComplete="tel"
           inputMode="tel"
           maxLength={30}
-          pattern="[0-9()\+\-\.\s]{7,}"
           className="w-full rounded-md border border-gray-300 p-2"
         />
       </div>
@@ -343,26 +342,9 @@ export default function AdContactForm() {
           onChange={handleChange}
           className="w-full rounded-md border border-gray-300 p-2"
         >
-          <option value="">Select One</option>
-
-          <option value="Water Damage Restoration">
-            Water Damage Restoration
-          </option>
-
-          <option value="Mold Remediation">Mold Remediation</option>
-
-          <option value="Emergency Extraction">Emergency Extraction</option>
-
-          <option value="Storm & Flood Cleanup">Storm & Flood Cleanup</option>
-
-          <option value="Fire & Smoke Restoration">
-            Fire & Smoke Restoration
-          </option>
-
-          <option value="Cleaning & Sanitization">
-            Cleaning & Sanitization
-          </option>
-        </select>
+          <option value="">Select a service</option>
+            {CONTACT_SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
+          </select>
       </div>
 
       <div>

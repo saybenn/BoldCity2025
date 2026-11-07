@@ -1,0 +1,77 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "scope": "Rendered homepage photographs; repeated brand marks excluded",
+  "photos": [
+    {
+      "source": "/images/jacksonville-skyline.webp",
+      "width": 1920,
+      "height": 1236,
+      "bytes": 454726,
+      "sha256": "e9fffa26cc60f964661a15faf0908e7c9d770bb69402795187ec309a1e3b8811"
+    },
+    {
+      "source": "/images/projects/worker-at-protected-kitchen.webp",
+      "width": 2048,
+      "height": 1365,
+      "bytes": 144808,
+      "sha256": "b2c06ac4fa26ed024fd95eccb2ffab4c78e669e7ac0af5dff92400d8bc77ac9a"
+    },
+    {
+      "source": "/images/hallbefore.webp",
+      "width": 353,
+      "height": 235,
+      "bytes": 2538,
+      "sha256": "a6a9390336fdab6fccbd88ebc6b30ab0e81c7e453c02dd54b521ad32b72de0b5"
+    },
+    {
+      "source": "/images/hallafter.webp",
+      "width": 353,
+      "height": 235,
+      "bytes": 8346,
+      "sha256": "6a1b62dffb502263879b3b009cb67228f3130f885981940d5119432885c59dd3"
+    },
+    {
+      "source": "/images/projects/equipment-beside-framing.webp",
+      "width": 2048,
+      "height": 1365,
+      "bytes": 133842,
+      "sha256": "91f7ff8c8c6cc661f9e2117535cf09ed084daab04f29783c59a156a057a1aea5"
+    },
+    {
+      "source": "/images/projects/protected-framing-work.webp",
+      "width": 2048,
+      "height": 1365,
+      "bytes": 109996,
+      "sha256": "7d20ba658667c7c73236553a6d27b10c26bedb5aa6890fa3b8225e97c2b9b2ef"
+    },
+    {
+      "source": "/images/moldSigue.webp",
+      "width": 6000,
+      "height": 4000,
+      "bytes": 1190080,
+      "sha256": "7c35ac2f4605e50f722307a59aef6079dc478969e2b30466f1b91fc30ad6c00d"
+    },
+    {
+      "source": "/images/grid/emergencyGrid.webp",
+      "width": 6000,
+      "height": 4000,
+      "bytes": 600924,
+      "sha256": "9e3deb8d4e34fcad0511d5bd5833467fcb9987795b9ad19ed6d0e579cf3a4a37"
+    },
+    {
+      "source": "/images/sanitizationHero.webp",
+      "width": 6000,
+      "height": 4000,
+      "bytes": 1052632,
+      "sha256": "22d23ce26113b55b07d08bc964c3cd1e36b732ef33675a334c5a85ecd0b3cf28"
+    }
+  ],
+  "potentialDuplicates": [],
+  "limits": "Low-resolution luminance fingerprints flag likely duplicates; visual inspection still assesses alternate crops and genuine different views of the same property.",
+  "replacement": {
+    "source": "/images/moldSigue.webp",
+    "title": "Air-handling equipment and protected cabinets",
+    "alt": "Air-handling equipment beside exposed lower wall framing beneath protected kitchen cabinets",
+    "jobClaims": "No separate job, mold species, measured air quality or completed-result claim."
+  }
+}

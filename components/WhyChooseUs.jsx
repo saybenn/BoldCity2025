@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
     <section className="relative w-full overflow-hidden py-20">
       <Image
         src="/images/why-us.png"
-        alt="Storm clouds over a Jacksonville skyline"
+        alt="Decorative dark landscape graphic"
         fill
         priority
         className="object-cover object-center"

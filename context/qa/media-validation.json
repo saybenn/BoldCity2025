@@ -1,0 +1,225 @@
+{
+  "count": 56,
+  "missing": [],
+  "duplicates": [
+    {
+      "path": "/images/ads/map.png",
+      "duplicateOf": "/images/ChatGPT Image Aug 23, 2025, 03_40_08 PM.png"
+    },
+    {
+      "path": "/images/badges/google5.png",
+      "duplicateOf": "/images/5-star-google.png"
+    },
+    {
+      "path": "/images/emergencyProcess.webp",
+      "duplicateOf": "/images/about-hero.webp"
+    },
+    {
+      "path": "/images/fireProcess.webp",
+      "duplicateOf": "/images/ads/emergencyHero.webp"
+    },
+    {
+      "path": "/images/grid/carousel2.webp",
+      "duplicateOf": "/images/carousel2-min.webp"
+    },
+    {
+      "path": "/images/grid/extra.webp",
+      "duplicateOf": "/images/extra-min.webp"
+    },
+    {
+      "path": "/images/iicrc-certified.webp",
+      "duplicateOf": "/images/badges/iicrc.webp"
+    },
+    {
+      "path": "/images/moldHero.webp",
+      "duplicateOf": "/images/grid/carousel1.webp"
+    },
+    {
+      "path": "/images/normilogo.png",
+      "duplicateOf": "/images/badges/normi.png"
+    },
+    {
+      "path": "/images/proof1.webp",
+      "duplicateOf": "/images/grid/carousel3.webp"
+    },
+    {
+      "path": "/images/sanitizationHero.webp",
+      "duplicateOf": "/images/grid/sanitizationHero.webp"
+    },
+    {
+      "path": "/images/water-min.webp",
+      "duplicateOf": "/images/moldSigue.webp"
+    },
+    {
+      "path": "/images/waterHero.webp",
+      "duplicateOf": "/images/waaterSigue-min.webp"
+    }
+  ],
+  "oversized": [
+    {
+      "path": "/images/ChatGPT Image Aug 23, 2025, 03_40_08 PM.png",
+      "bytes": 1308385
+    },
+    {
+      "path": "/images/about-hero.webp",
+      "bytes": 626598
+    },
+    {
+      "path": "/images/ads/emergencyHero.webp",
+      "bytes": 3603544
+    },
+    {
+      "path": "/images/ads/finance.png",
+      "bytes": 2298816
+    },
+    {
+      "path": "/images/ads/map.png",
+      "bytes": 1308385
+    },
+    {
+      "path": "/images/after.png",
+      "bytes": 1456016
+    },
+    {
+      "path": "/images/before.png",
+      "bytes": 1589201
+    },
+    {
+      "path": "/images/carousel2-min.webp",
+      "bytes": 1021830
+    },
+    {
+      "path": "/images/emergencyProcess.webp",
+      "bytes": 626598
+    },
+    {
+      "path": "/images/extra-min.webp",
+      "bytes": 913800
+    },
+    {
+      "path": "/images/fireHero.webp",
+      "bytes": 1286208
+    },
+    {
+      "path": "/images/fireProcess.webp",
+      "bytes": 3603544
+    },
+    {
+      "path": "/images/fireSigue-min.webp",
+      "bytes": 1182100
+    },
+    {
+      "path": "/images/grid/bathroom-after.webp",
+      "bytes": 1156324
+    },
+    {
+      "path": "/images/grid/bathroom-before.webp",
+      "bytes": 1080024
+    },
+    {
+      "path": "/images/grid/beforeSloan.webp",
+      "bytes": 6056220
+    },
+    {
+      "path": "/images/grid/carousel1.webp",
+      "bytes": 809496
+    },
+    {
+      "path": "/images/grid/carousel2.webp",
+      "bytes": 1021830
+    },
+    {
+      "path": "/images/grid/carousel3.webp",
+      "bytes": 1118350
+    },
+    {
+      "path": "/images/grid/emergencyGrid.webp",
+      "bytes": 600924
+    },
+    {
+      "path": "/images/grid/extra.webp",
+      "bytes": 913800
+    },
+    {
+      "path": "/images/grid/kitchenafter.webp",
+      "bytes": 1099484
+    },
+    {
+      "path": "/images/grid/kitchenbefore.webp",
+      "bytes": 959036
+    },
+    {
+      "path": "/images/grid/mold-hero.webp",
+      "bytes": 5055914
+    },
+    {
+      "path": "/images/grid/sanitizationHero.webp",
+      "bytes": 1052632
+    },
+    {
+      "path": "/images/hero-water-floor.png",
+      "bytes": 2575660
+    },
+    {
+      "path": "/images/hero.png",
+      "bytes": 1956930
+    },
+    {
+      "path": "/images/landing-min.webp",
+      "bytes": 1540022
+    },
+    {
+      "path": "/images/moldHero.webp",
+      "bytes": 809496
+    },
+    {
+      "path": "/images/moldMid.png",
+      "bytes": 2487009
+    },
+    {
+      "path": "/images/moldSigue.webp",
+      "bytes": 1190080
+    },
+    {
+      "path": "/images/moldprocess.webp",
+      "bytes": 1391374
+    },
+    {
+      "path": "/images/proof1.webp",
+      "bytes": 1118350
+    },
+    {
+      "path": "/images/sanitizationHero.webp",
+      "bytes": 1052632
+    },
+    {
+      "path": "/images/sanitizationProcess.webp",
+      "bytes": 910856
+    },
+    {
+      "path": "/images/waaterSigue-min.webp",
+      "bytes": 1148840
+    },
+    {
+      "path": "/images/water-min.webp",
+      "bytes": 1190080
+    },
+    {
+      "path": "/images/waterHero-min.webp",
+      "bytes": 1263734
+    },
+    {
+      "path": "/images/waterHero.webp",
+      "bytes": 1148840
+    },
+    {
+      "path": "/images/waterProcess.webp",
+      "bytes": 1435952
+    },
+    {
+      "path": "/images/why-us.png",
+      "bytes": 2016285
+    }
+  ],
+  "sheetFiles": []
+}

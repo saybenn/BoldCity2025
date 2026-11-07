@@ -1,0 +1,35 @@
+{
+  "source": "Read-only account UI inspection and one targeted Netlify recipient-context save",
+  "project": "sprightly-horse-c6240e",
+  "production": {
+    "CONTACT_EMAIL_TO": "Existing Bold City business recipient verified; address withheld from public evidence",
+    "CONTACT_RECEIVER_BACKUP": "Not present in the project variable list",
+    "CONTACT_TEST_RECIPIENT": "Empty (saved and verified)",
+    "publicSiteKey": "0x4AAAAAAD9ugfKlSGrNmQaa",
+    "secretPresent": true,
+    "secretRead": false
+  },
+  "preview": {
+    "CONTACT_TEST_RECIPIENT": "saybencodes@gmail.com (preserved and verified)",
+    "publicSiteKey": "0x4AAAAAAD9ugfKlSGrNmQaa",
+    "secretPresent": true,
+    "secretRead": false
+  },
+  "cloudflare": {
+    "mode": "Managed",
+    "preClearance": "No pre-clearance",
+    "hostnames": [
+      "boldcityiaq.com",
+      "www.boldcityiaq.com",
+      "deploy-preview-1--sprightly-horse-c6240e.netlify.app"
+    ],
+    "observedExistingSiteverifyRequests": 1,
+    "observedExistingValidTokens": 1,
+    "limits": "These counters predate our new end-to-end test and do not establish a new submission or production secret pairing."
+  },
+  "hostBinding": "Configured allowlist includes the same three hosts in both deploy contexts; server also requires result hostname equal request hostname and exact contact_<formType> action.",
+  "changes": [
+    "Only production CONTACT_TEST_RECIPIENT was emptied; all nonproduction values retained."
+  ],
+  "productionDeployment": false
+}

@@ -10,6 +10,7 @@ export type AreaSlug =
 export type ServiceSlug = "water-damage-restoration" | "mold-remediation";
 
 export type AreaData = {
+  source?: { url: string; label: string };
   slug: AreaSlug;
   name: string;
   state: "FL";

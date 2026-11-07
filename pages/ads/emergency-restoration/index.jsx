@@ -41,39 +41,23 @@ export default function EmergencyRestorationAdsPage() {
         description:
           "Emergency water damage, mold, fire, and storm cleanup in Jacksonville. Fast local response, financing available, and certified restoration support.",
         canonical: "https://boldcityiaq.com/ads/emergency-restoration",
-        image: "/images/andre-truck.webp",
+        image: "/images/about-hero.webp",
       }}
       schema={{
         schemaType: "LocalBusiness",
         schemaOverrides: {
           telephone: "+19044346318",
           address: {
-            streetAddress: "10066 103rd St #206",
+            streetAddress: "14440 Normandy Blvd",
             addressLocality: "Jacksonville",
             addressRegion: "FL",
-            postalCode: "32210",
+            postalCode: "32234",
             addressCountry: "US",
           },
           name: "Bold City IAQ",
           url: "https://boldcityiaq.com/ads/emergency-restoration",
         },
-        faq: [
-          {
-            question: "Do you offer 24/7 emergency restoration service?",
-            answer:
-              "Yes. Bold City IAQ responds to emergency water damage, mold, storm, fire, and cleanup-related situations across Jacksonville and nearby areas.",
-          },
-          {
-            question: "Can I finance emergency restoration work?",
-            answer:
-              "Yes. Financing options may be available for qualified customers so urgent mitigation does not have to wait.",
-          },
-          {
-            question: "What is the fastest way to get help?",
-            answer:
-              "Calling is the fastest option. You can also submit the emergency request form and a team member will follow up as quickly as possible.",
-          },
-        ],
+
       }}
       showNavbar={false}
       showFooter={false}

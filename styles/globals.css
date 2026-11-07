@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Decorative copies allow a seamless band; each authentic review has one
+   accessible copy. On mobile, flex ordering places all originals before repeats. */
+.reviews-section { padding-block:24px; }
+.review-heading { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
+.review-viewport { display:flex; gap:14px; overflow-x:auto; overflow-y:hidden; margin-top:20px; padding:4px 2px 6px; -webkit-mask-image:linear-gradient(to right,transparent,#000 10px,#000 calc(100% - 10px),transparent); mask-image:linear-gradient(to right,transparent,#000 10px,#000 calc(100% - 10px),transparent); }
+.review-row { display:contents; }
+.review-viewport, .review-row { scrollbar-width:none; -ms-overflow-style:none; }
+.review-viewport::-webkit-scrollbar, .review-row::-webkit-scrollbar { display:none; width:0; height:0; }
+.review-card { display:grid; grid-template-columns:minmax(0,1fr) auto; align-content:start; gap:10px; width:min(calc(100vw - 44px),380px); padding:16px; flex-shrink:0; }
+.review-card[data-review-copy] { order:1; }
+.review-avatar { width:32px; height:32px; }
+.review-stars { align-self:center; gap:1px; }
+.review-quote { grid-column:1/-1; font-size:14px; line-height:21px; }
+.review-viewport:focus-visible, .review-row:focus-visible { outline:2px solid #0f766e; outline-offset:-2px; }
+.review-motion-toggle { position:absolute; right:0; top:0; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.review-motion-toggle:focus-visible { width:auto; height:auto; overflow:visible; clip-path:none; padding:8px 12px; border:2px solid #0f766e; border-radius:6px; background:#fff; color:#0c2340; z-index:2; }
+@media (min-width:768px) {
+  .reviews-section { padding-block:32px; }
+  .review-heading { flex-direction:row; align-items:center; justify-content:space-between; gap:24px; padding-right:4px; min-height:40px; }
+  .review-viewport { display:grid; gap:12px; overflow:hidden; padding:0; }
+  .review-row { display:flex; gap:16px; overflow-x:auto; overflow-y:hidden; padding:4px 2px 6px; }
+  .review-card { width:clamp(360px,31vw,430px); min-height:158px; padding:18px; }
+}
+
+/* Native sticky backdrop: no scroll listeners or animation library. The static
+   fallback covers the entire section on touch/tablet and with reduced motion. */
+.services-overview { position:relative; isolation:isolate; overflow:clip; background:#0c2340; color:#f8fafc; }
+.services-photo-track { position:absolute; inset:0; z-index:-2; pointer-events:none; }
+.services-photo-panel { position:absolute; inset:0; }
+.services-photo { object-fit:cover; object-position:58% 48%; }
+.services-shade { position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg,rgba(6,23,40,.72),rgba(6,23,40,.70) 35%,rgba(6,23,40,.86)); }
+.services-intro { max-width:36rem; }
+@media (min-width:1024px) {
+  .services-intro { max-width:30rem; min-height:360px; }
+  .services-shade { background:linear-gradient(90deg,rgba(6,23,40,.86),rgba(6,23,40,.72) 44%,rgba(6,23,40,.18) 64%,rgba(6,23,40,.28)),linear-gradient(180deg,rgba(6,23,40,.50),rgba(6,23,40,.12) 42%,rgba(6,23,40,.22) 62%,rgba(6,23,40,.72)); }
+}
+@media (min-width:1024px) and (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .services-photo-panel { position:sticky; inset:auto; top:0; height:100svh; max-height:100%; }
+  .services-photo { object-position:center 45%; }
+}
+
 /* 🌙 Dark Mode via media query */
 :root {
   --background: #ffffff;

@@ -1,0 +1,261 @@
+{
+  "kind": "Browser DOM inventory; source URLs, not proof of distinct jobs",
+  "base": "http://127.0.0.1:3000",
+  "routesChecked": [
+    "/",
+    "/services/water-damage-restoration",
+    "/services/mold-remediation",
+    "/services/fire-and-smoke-restoration",
+    "/services/cleaning-and-sanitization",
+    "/services/emergency-services",
+    "/services/air-duct-cleaning",
+    "/service-areas/jacksonville",
+    "/service-areas/jacksonville/water-damage-restoration",
+    "/service-areas/jacksonville/mold-remediation",
+    "/service-areas/orange-park",
+    "/service-areas/orange-park/water-damage-restoration",
+    "/service-areas/orange-park/mold-remediation",
+    "/service-areas/ponte-vedra-beach",
+    "/service-areas/ponte-vedra-beach/water-damage-restoration",
+    "/service-areas/ponte-vedra-beach/mold-remediation",
+    "/service-areas/st-augustine",
+    "/service-areas/st-augustine/water-damage-restoration",
+    "/service-areas/st-augustine/mold-remediation",
+    "/service-areas/jacksonville-beach",
+    "/service-areas/jacksonville-beach/water-damage-restoration",
+    "/service-areas/jacksonville-beach/mold-remediation",
+    "/service-areas/neptune-beach",
+    "/service-areas/neptune-beach/water-damage-restoration",
+    "/service-areas/neptune-beach/mold-remediation",
+    "/service-areas/atlantic-beach",
+    "/service-areas/atlantic-beach/water-damage-restoration",
+    "/service-areas/atlantic-beach/mold-remediation",
+    "/ads/emergency-restoration"
+  ],
+  "routesWithPhotos": 22,
+  "rows": [
+    {
+      "route": "/",
+      "image": "/images/jacksonville-skyline.webp",
+      "alt": "Downtown Jacksonville and the Main Street Bridge above the St. Johns River",
+      "section": "Other main content"
+    },
+    {
+      "route": "/",
+      "image": "/images/hallbefore.webp",
+      "alt": "Hallway before preparation",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/",
+      "image": "/images/hallafter.webp",
+      "alt": "Hallway during restoration preparation",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/",
+      "image": "/images/projects/equipment-beside-framing.webp",
+      "alt": "Restoration equipment beside exposed wall framing and protection sheeting",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/",
+      "image": "/images/projects/protected-framing-work.webp",
+      "alt": "Worker holding a tool beside protected exposed wall framing",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/",
+      "image": "/images/projects/worker-at-protected-kitchen.webp",
+      "alt": "Worker beside protected kitchen cabinets and exposed lower walls",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/",
+      "image": "/images/grid/emergencyGrid.webp",
+      "alt": "Removed cabinets and building materials collected outdoors",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/",
+      "image": "/images/sanitizationHero.webp",
+      "alt": "Tiled floor and exposed wall framing during restoration preparation",
+      "section": "Real Work. Real Restoration."
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "image": "/images/waterHero.webp",
+      "alt": "Exposed lower kitchen wall framing beneath protected cabinets",
+      "section": "Water Damage Restoration in Jacksonville, FL"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "image": "/images/waterProcess.webp",
+      "alt": "Restoration equipment in a room with exposed block walls",
+      "section": "How water damage restoration is planned"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "image": "/images/projects/equipment-beside-framing.webp",
+      "alt": "Restoration equipment beside exposed wall framing and protection sheeting",
+      "section": "Work Gallery"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "image": "/images/projects/protected-framing-work.webp",
+      "alt": "Worker holding a tool beside protected exposed wall framing",
+      "section": "Work Gallery"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "image": "/images/moldprocess.webp",
+      "alt": "Air-handling equipment beside plastic containment and exposed framing",
+      "section": "Mold Remediation in Jacksonville, FL"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "image": "/images/grid/mold-hero.webp",
+      "alt": "Gloved hand holding removed building material with dark spotting",
+      "section": "Work Gallery"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "image": "/images/fireHero.webp",
+      "alt": "Removed building materials and demolition debris in a dumpster",
+      "section": "Fire & Smoke Restoration in Jacksonville, FL"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "image": "/images/grid/emergencyGrid.webp",
+      "alt": "Removed cabinets and building materials outdoors",
+      "section": "Work Gallery"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "image": "/images/sanitizationHero.webp",
+      "alt": "Tiled floor and exposed wall framing during restoration preparation",
+      "section": "Cleaning & Sanitization in Jacksonville, FL"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "image": "/images/projects/worker-at-protected-kitchen.webp",
+      "alt": "Worker beside protected kitchen cabinets and exposed lower walls",
+      "section": "Work Gallery"
+    },
+    {
+      "route": "/services/emergency-services",
+      "image": "/images/about-hero.webp",
+      "alt": "Bold City IAQ branded pickup and service trailer",
+      "section": "Emergency Restoration Services in Jacksonville, FL"
+    },
+    {
+      "route": "/services/emergency-services",
+      "image": "/images/projects/equipment-beside-framing.webp",
+      "alt": "Restoration equipment beside exposed wall framing and protection sheeting",
+      "section": "Work Gallery"
+    },
+    {
+      "route": "/services/air-duct-cleaning",
+      "image": "/images/about-hero.webp",
+      "alt": "Bold City IAQ branded pickup and trailer; company photo, not duct cleaning equipment",
+      "section": "Air Duct Cleaning in Jacksonville, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville/water-damage-restoration",
+      "image": "/images/waterHero.webp",
+      "alt": "Exposed kitchen wall framing beneath protected cabinets; company process photograph",
+      "section": "Water Damage Restoration in Jacksonville, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville/mold-remediation",
+      "image": "/images/moldprocess.webp",
+      "alt": "Air-handling equipment beside plastic containment; company process photograph",
+      "section": "Mold Remediation in Jacksonville, FL"
+    },
+    {
+      "route": "/service-areas/orange-park/water-damage-restoration",
+      "image": "/images/projects/equipment-beside-framing.webp",
+      "alt": "Restoration equipment beside exposed framing; company process photograph",
+      "section": "Water Damage Restoration in Orange Park, FL"
+    },
+    {
+      "route": "/service-areas/orange-park/mold-remediation",
+      "image": "/images/projects/protected-framing-work.webp",
+      "alt": "Worker beside protected exposed framing; company process photograph",
+      "section": "Mold Remediation in Orange Park, FL"
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach/water-damage-restoration",
+      "image": "/images/projects/worker-at-protected-kitchen.webp",
+      "alt": "Worker beside protected kitchen cabinets and exposed walls; company process photograph",
+      "section": "Water Damage Restoration in Ponte Vedra Beach, FL"
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach/mold-remediation",
+      "image": "/images/grid/mold-hero.webp",
+      "alt": "Gloved hand holding removed material with dark spotting; company process photograph",
+      "section": "Mold Remediation in Ponte Vedra Beach, FL"
+    },
+    {
+      "route": "/service-areas/st-augustine/water-damage-restoration",
+      "image": "/images/waterHero.webp",
+      "alt": "Exposed kitchen wall framing beneath protected cabinets; company process photograph",
+      "section": "Water Damage Restoration in St. Augustine, FL"
+    },
+    {
+      "route": "/service-areas/st-augustine/mold-remediation",
+      "image": "/images/moldprocess.webp",
+      "alt": "Air-handling equipment beside plastic containment; company process photograph",
+      "section": "Mold Remediation in St. Augustine, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville-beach/water-damage-restoration",
+      "image": "/images/projects/equipment-beside-framing.webp",
+      "alt": "Restoration equipment beside exposed framing; company process photograph",
+      "section": "Water Damage Restoration in Jacksonville Beach, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville-beach/mold-remediation",
+      "image": "/images/projects/protected-framing-work.webp",
+      "alt": "Worker beside protected exposed framing; company process photograph",
+      "section": "Mold Remediation in Jacksonville Beach, FL"
+    },
+    {
+      "route": "/service-areas/neptune-beach/water-damage-restoration",
+      "image": "/images/projects/worker-at-protected-kitchen.webp",
+      "alt": "Worker beside protected kitchen cabinets and exposed walls; company process photograph",
+      "section": "Water Damage Restoration in Neptune Beach, FL"
+    },
+    {
+      "route": "/service-areas/neptune-beach/mold-remediation",
+      "image": "/images/grid/mold-hero.webp",
+      "alt": "Gloved hand holding removed material with dark spotting; company process photograph",
+      "section": "Mold Remediation in Neptune Beach, FL"
+    },
+    {
+      "route": "/service-areas/atlantic-beach/water-damage-restoration",
+      "image": "/images/waterHero.webp",
+      "alt": "Exposed kitchen wall framing beneath protected cabinets; company process photograph",
+      "section": "Water Damage Restoration in Atlantic Beach, FL"
+    },
+    {
+      "route": "/service-areas/atlantic-beach/mold-remediation",
+      "image": "/images/moldprocess.webp",
+      "alt": "Air-handling equipment beside plastic containment; company process photograph",
+      "section": "Mold Remediation in Atlantic Beach, FL"
+    },
+    {
+      "route": "/ads/emergency-restoration",
+      "image": "/images/fireProcess.webp",
+      "alt": "Bold City IAQ emergency restoration technician",
+      "section": "Emergency RestorationCall for Emergency Availability"
+    },
+    {
+      "route": "/ads/emergency-restoration",
+      "image": "/images/ads/avatar.png",
+      "alt": "Charlotte Baker, Jacksonville",
+      "section": "Other main content"
+    }
+  ],
+  "withinRouteRepeats": []
+}

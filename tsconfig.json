@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "*"
+        "./*"
       ],
       "@/components/*": [
-        "components/*"
+        "./components/*"
       ],
       "@/styles/*": [
-        "styles/*"
+        "./styles/*"
       ],
       "@/pages/*": [
-        "pages/*"
+        "./pages/*"
       ]
     },
     "target": "ES2017",
@@ -37,9 +36,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/utm.js"
-, "components/TrackedPhoneLink.jsx"  ],
+    "lib/utm.js",
+    "components/TrackedPhoneLink.jsx"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next-qa-production"
   ]
 }

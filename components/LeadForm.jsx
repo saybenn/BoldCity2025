@@ -1,5 +1,7 @@
+import { trackFormSubmit, trackFormError } from "@/lib/analytics";
+import { getUTMParams } from "@/lib/utm";
 import { useEffect, useRef, useState } from "react";
-import { TurnstileField } from "@/components/forms/TurnstileField";
+import { TurnstileField } from "@/components/contact/TurnstileField";
 
 function cleanString(value, maxLength) {
   return String(value || "")
@@ -98,8 +100,8 @@ export default function LeadForm({ data, utm = {} }) {
       wbraid: resolveValue(wbraid, "wbraid"),
       gbraid: resolveValue(gbraid, "gbraid"),
 
-      referrer: document.referrer || stored.referrer || "",
-      landing_page_url: window.location.href || stored.landing_page_url || "",
+      referrer: getUTMParams().referrer || stored.referrer || document.referrer || "",
+      landing_page_url: getUTMParams().landing_page_url || stored.landing_page_url || window.location.href,
       page: window.location.pathname,
       device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
       page_variant: stored.page_variant || "A",
@@ -176,6 +178,7 @@ export default function LeadForm({ data, utm = {} }) {
 
       delete payload["cf-turnstile-response"];
 
+      Object.assign(payload, getUTMParams());
       payload.formType = "lead";
       payload.phone = phone;
       payload.email = email;
@@ -198,30 +201,16 @@ export default function LeadForm({ data, utm = {} }) {
 
       const json = await response.json().catch(() => ({}));
 
-      if (!response.ok || json?.ok === false) {
-        throw new Error(json?.error || "We couldn't submit the form.");
+      if (!response.ok || json?.ok !== true || json?.accepted !== true) {
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "We couldn't submit the form."));
       }
 
-      if (json?.accepted !== false) {
-        window.gtag?.("event", "conversion", {
-          send_to: "AW-10940863332/label",
-        });
-
-        window.gtag?.("event", "lead_submit", {
-          source: "ads_emergency",
-        });
-
-        window.dataLayer = window.dataLayer || [];
-
-        window.dataLayer.push({
-          event: "lead_submit",
-          form_name: "Ads Emergency Lead",
-        });
-      }
+      trackFormSubmit({ form_id: "LeadForm", form_location: "LeadForm", page: window.location.pathname, service_requested: payload.service });
 
       setDone(true);
       formElement.reset();
     } catch (err) {
+      trackFormError("LeadForm", requestStarted ? "submission_failed" : "validation");
       console.error("Lead form error:", err);
 
       if (requestStarted) {
@@ -262,6 +251,7 @@ export default function LeadForm({ data, utm = {} }) {
         </div>
       ) : (
         <form
+          data-analytics-form="LeadForm"
           ref={formRef}
           onSubmit={onSubmit}
           className="mt-6 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2"
@@ -402,7 +392,7 @@ export default function LeadForm({ data, utm = {} }) {
               field.name === "zip"
                 ? "\\d{5}(-\\d{4})?"
                 : field.name === "phone"
-                  ? "[0-9()\\+\\-\\.\\s]{7,}"
+                  ? undefined
                   : undefined;
 
             return (

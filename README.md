@@ -1,40 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Bold City IAQ website
 
-## Getting Started
+Next.js Pages Router website for Bold City Indoor Air Quality and Emergency Services in Jacksonville, Florida. Keep established service and area URLs and the shared Postmark contact endpoint.
 
-First, run the development server:
+Use Node 20.9 or newer. Run npm ci, npm run dev for local development, or npm run build followed by npm start for a production preview. The existing next/font Google fonts need internet during a clean build.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Checks: npm test, npm run typecheck, npm run lint, npm run validate:site and npm run test:browser. Browser/site checks need a running production server; default is http://127.0.0.1:3000, configurable through QA_BASE_URL. Playwright uses an installed Chrome channel. All automated form checks mock delivery.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Project contracts and handoff:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [Work tickets, evidence and launch dependencies](context/qa/work-ledger.md)
+- [Validation workflow](context/qa/site-validation.md)
+- [Visual review](context/qa/visual-review.md)
+- [SEO page matrix](context/seo/page-matrix.md)
+- [Metadata/schema contract](context/seo/schema-contract.md)
+- [Page quality](context/seo/page-quality-rules.md) and [local content](context/seo/local-content-standard.md)
+- [Analytics event contract and required GTM setup](context/analytics/event-contract.md)
+- [Media registry and skyline license](context/media/asset-registry.md)
+- [Google review verification status](context/seo/reviews-verification.md)
+- [UI patterns](ui-registry.md)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The skyline hero trial can be reversed at build time with NEXT_PUBLIC_HOME_HERO_VARIANT=original. Originals and established media paths are retained. Displayed Google aggregate data and individual review records are maintained separately and need direct source verification.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Required existing runtime configuration includes POSTMARK_SERVER_TOKEN, CONTACT_EMAIL_FROM, CONTACT_EMAIL_TO, NEXT_PUBLIC_TURNSTILE_SITE_KEY, TURNSTILE_SECRET_KEY and the actual TURNSTILE_ALLOWED_HOSTNAMES. Existing optional Postmark templates, backup recipient and GTM ID are preserved. Never put secret values in source control. See the work ledger before enabling visitor confirmations or changing GTM/GA4/Ads settings.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Work is prepared on codex/website-seo-revamp. Merge and production deployment require owner approval.
