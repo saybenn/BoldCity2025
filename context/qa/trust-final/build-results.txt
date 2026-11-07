@@ -12,9 +12,9 @@
 ✓ Compiled successfully in 3.6s
   Collecting page data using 7 workers ...
   Generating static pages using 7 workers (0/39) ...
-  Generating static pages using 7 workers (9/39) 
-  Generating static pages using 7 workers (19/39) 
-  Generating static pages using 7 workers (29/39) 
+  Generating static pages using 7 workers (9/39)
+  Generating static pages using 7 workers (19/39)
+  Generating static pages using 7 workers (29/39)
 ✓ Generating static pages using 7 workers (39/39) in 967ms
   Finalizing page optimization ...
 
@@ -63,4 +63,3 @@ Route (pages)
 ○  (Static)   prerendered as static content
 ●  (SSG)      prerendered as static HTML (uses getStaticProps)
 ƒ  (Dynamic)  server-rendered on demand
-
