@@ -204,6 +204,7 @@
     },
     "accountOwnershipAndPrimaryImportStatus": "UNVERIFIED; accessible manager has no client accounts and GA4 has no Ads links"
   },
+  "ownerDecision": "Keep live GA4 history measurement enabled; document the release blocker and defer the setting switch to a separately approved coordinated release.",
   "publicationRecommendation": "NO-GO; GA4 history duplicate persists and Ads account dependencies / accepted-lead delivery remain unqualified",
   "publishedContainerModified": false,
   "ga4LiveSettingsModified": false,

@@ -1,6 +1,6 @@
 # GTM publication investigation — November 7, 2026
 
-**NO-GO for publication.** The duplicate is reproducible, its additional producer is identified, and draft Ads/reporting corrections are saved. The final clean account test still fails the pageview acceptance criterion. The related live GA4 history-setting change needs a coordinated owner decision. No GTM publication, merge, production deployment, live GA4 setting change or form submission occurred.
+**NO-GO for publication.** The duplicate is reproducible, its additional producer is identified, and draft Ads/reporting corrections are saved. The final clean account test still fails the pageview acceptance criterion. The owner explicitly chose **“Keep live setting; document release blocker.”** The live GA4 history setting stays enabled; its change is deferred to a separately approved, coordinated release. No GTM publication, merge, production deployment, live GA4 setting change or form submission occurred.
 
 Website tested: `b566e149d43201a3d5ba44baa10825dfdca2340c`, branch `codex/website-seo-revamp`, [draft PR #1](https://github.com/saybenn/BoldCity2025/pull/1). This commit adds evidence/documentation only. The running website and all form, SEO, preview, security and analytics code remain identical to that head.
 
@@ -52,7 +52,7 @@ Google documents that Enhanced Measurement history pageviews continue even with 
 
 ![Google tag history detection currently enabled](google-tag-history-enabled.jpg)
 
-**Live GA4 remains unchanged.** A narrowly scoped approval question is pending because this setting takes effect immediately for production, independently of publishing GTM. Disabling it before the explicit application tracking is deployed could remove route tracking from the current production implementation. The preferred release sequence coordinates that switch with the eventual approved website/GTM cutover. This task grants no permission to perform that release.
+**Owner decision: keep the live setting enabled and document the release blocker.** The earlier approval question is resolved; no live change is authorized now. This setting takes effect immediately for production, independently of publishing GTM. Disabling it before the explicit application tracking is deployed could remove route tracking from the current production implementation. Defer the switch and the passing clean retest to the eventual, separately approved website/GTM cutover. This task grants no permission to perform that release.
 
 The new optimized Ads destination has its own draft automatic-history setting, now false. GTM shows that workspace setting applies to **one of two destinations**, Ads only; the existing GA4 destination is unoptimized and still uses the settings above. The final test confirms that changing the Ads draft setting does not cure the GA4 duplicate. No GA4 destination migration/optimization was attempted.
 
@@ -126,7 +126,7 @@ Earlier build/unit/form regressions are recorded in [the previous phase](../gtm-
 
 Before publication:
 
-1. Decide the coordinated live GA4 history switch, verify both relevant UI states, and rerun a new Preview session with exactly **1 initial + 1 route pageview, phone 1, CTA 1, GA4 lead 0 and Ads lead 0**. Current result is not a pass.
+1. Honor the owner's decision to keep live GA4 history measurement enabled now. At a separately approved, coordinated release, disable the history pageview source, verify both relevant UI states, and rerun a new Preview session with exactly **1 initial + 1 route pageview, phone 1, CTA 1, GA4 lead 0 and Ads lead 0**. The current result remains a failing release gate; it is not waived by deferring the setting change.
 2. Open the correct Ads conversion-owning account and verify tag 52's replacement decision, helper destination, linking/consent requirements, conversion goal/counting and any future GA4 import deduplication. Do not approve the old tag deletion solely because a new tag exists.
 3. Validate accepted-lead delivery/counting in an explicitly approved nonproduction delivery destination. The localhost collector-blocked profile cannot prove this. Use a separate test GA4 property (preferably QA-only container); debug_mode alone does not isolate production data.
 4. Review the full **49 pending workspace changes**, including prior deletions of Google Tag / 16, the legacy GA4 event named “GA4 - Config” / 17 (not a second actual base tag), `generate_lead` / 8 and custom pageview / 19. Their earlier audit remains relevant. No previously deleted production functionality was silently declared obsolete.

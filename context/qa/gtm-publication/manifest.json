@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "context/qa/gtm-publication/README.md",
-      "bytes": 17744,
-      "sha256": "2f031d7a1c0226f64b22d20fb04bb5229d2264869b57415f395d3d5515ea8a4b"
+      "bytes": 18119,
+      "sha256": "93f387ddd364a2d99dfc49fbdf4a5ce21d71822c5d6b2565e7e42d8f9de484b9"
     },
     {
       "path": "context/qa/gtm-publication/ads-draft-review.jpg",
@@ -33,8 +33,8 @@
     },
     {
       "path": "context/qa/gtm-publication/event-trace.json",
-      "bytes": 11938,
-      "sha256": "109a4aeaa26f55e492bd99c510f716ce044021ecc14d8b117c4edaa69cb0d161"
+      "bytes": 12133,
+      "sha256": "cfbda5d5280decc149c74809bedad94f16c17d9a76b578c5a87c87cdd8e12683"
     },
     {
       "path": "context/qa/gtm-publication/events-without-gtm.png",
@@ -163,8 +163,8 @@
     },
     {
       "path": "context/qa/gtm-publication/workspace-audit.json",
-      "bytes": 5670,
-      "sha256": "f5df121e0796ea9f92b4acb9c2da6debf9eeafacab6eb9f894a8805a949d6f43"
+      "bytes": 5839,
+      "sha256": "bb71e33521c4e41626d5a2788d110b04cd5cf1fda7c1162996a28022e68a8075"
     }
   ]
 }

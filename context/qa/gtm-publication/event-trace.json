@@ -337,5 +337,6 @@
     "liveGa4SettingsChanged": false
   },
   "rootCause": "Two pageview producers: explicit AnalyticsLifecycle events plus enabled Google/GA4 browser-history automatic measurement. The extra history-associated hit is attributed to tag 45 by Tag Assistant; it is not a third app page_view event. send_page_view:false suppresses the config-load pageview, not Enhanced Measurement history pageviews.",
-  "remainingValidation": "Disable/coordinate the live GA4 history setting (approval pending) and confirm its Google tag mirror, then rerun from a new preview connection. The final clean test currently FAILS the 1+1 pageview acceptance criterion."
+  "ownerDecision": "Keep live setting; document release blocker. The approval question is resolved; no live GA4 setting change is authorized now.",
+  "remainingValidation": "Defer the live GA4 history switch to a separately approved coordinated release, confirm its Google tag mirror, then rerun from a new preview connection. The existing final clean test still FAILS the 1+1 pageview acceptance criterion; this release gate is not waived."
 }
