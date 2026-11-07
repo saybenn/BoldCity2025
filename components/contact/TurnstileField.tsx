@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from "react";
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from "react";
 
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
@@ -37,9 +37,21 @@ export const TurnstileField = forwardRef<
   forwardedRef,
 ) {
   const turnstileRef = useRef<TurnstileInstance | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [size, setSize] = useState<"flexible" | "compact">("flexible");
   const [widgetError, setWidgetError] = useState("");
 
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    // Cloudflare's flexible widget has a 300px minimum. Use its official
+    // compact layout in narrower form columns, including the 320px viewport.
+    const observer = new ResizeObserver(([entry]) => setSize(entry.contentRect.width < 300 ? "compact" : "flexible"));
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   function clearToken() {
     onTokenChange("");
@@ -79,14 +91,14 @@ export const TurnstileField = forwardRef<
   }
 
   return (
-    <div className={className}>
+    <div ref={containerRef} className={`min-w-0 max-w-full overflow-hidden ${className}`}>
       <Turnstile
         ref={turnstileRef}
         siteKey={siteKey}
         options={{
           action,
           theme: "auto",
-          size: "flexible",
+          size,
 
           /*
            * The forms submit JSON and manually include

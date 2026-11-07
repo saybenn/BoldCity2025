@@ -209,11 +209,22 @@ function assertEnv(): void {
 
 function getRecipients(): string {
   if (!IS_PRODUCTION) return CONTACT_TEST_RECIPIENT as string;
-  if (CONTACT_RECEIVER_BACKUP) {
-    return `${CONTACT_EMAIL_TO},${CONTACT_RECEIVER_BACKUP}`;
+  const recipients = [CONTACT_EMAIL_TO, CONTACT_RECEIVER_BACKUP]
+    .flatMap((value) => (value || "").split(/[,;]/))
+    .map((value) => value.trim().toLowerCase())
+    .filter(Boolean);
+  if (recipients.some((email) => !isValidEmail(email))) {
+    throw new Error("Invalid production notification recipient.");
   }
-
-  return CONTACT_EMAIL_TO as string;
+  const permitted = [...new Set(recipients)].filter((email) => {
+    const [local, domain] = email.split("@");
+    // Gmail treats dots, plus aliases and googlemail.com as the same inbox.
+    const developmentInbox = ["gmail.com", "googlemail.com"].includes(domain)
+      && local.split("+")[0].replace(/\./g, "") === "saybencodes";
+    return !developmentInbox;
+  });
+  if (!permitted.length) throw new Error("No permitted production notification recipient.");
+  return permitted.join(",");
 }
 
 function normalizePayload(body: ContactPayload) {

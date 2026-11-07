@@ -107,3 +107,32 @@ test('nonproduction sends only to configured test recipient and never confirms t
   const unverified=app({envOverrides:{SEND_VISITOR_CONFIRMATION:'true'}});
   assert.equal((await unverified.submit({email:'visitor@example.test'})).code,200); assert.equal(unverified.sends(),1);
 });
+
+test('production notifications retain business recipients and exclude the development inbox in every configured list', async () => {
+  const a = app({envOverrides:{
+    CONTACT_EMAIL_TO:'business@example.test, SAYBENCODES@gmail.com',
+    CONTACT_RECEIVER_BACKUP:'say.ben.codes+leads@googlemail.com; backup@example.test; business@example.test',
+    CONTACT_TEST_RECIPIENT:'saybencodes@gmail.com',
+  }});
+  const response = await a.submit();
+  assert.equal(response.body.accepted,true);
+  assert.equal(a.messages.length,1);
+  assert.equal(a.messages[0].To,'business@example.test,backup@example.test');
+  assert.equal(a.messages[0].Cc,undefined);
+  assert.equal(a.messages[0].Bcc,undefined);
+  for(const envOverrides of [
+    {CONTACT_EMAIL_TO:'saybencodes@gmail.com'},
+    {CONTACT_RECEIVER_BACKUP:'invalid-address'},
+  ]) {
+    const invalid = app({envOverrides});
+    assert.equal((await invalid.submit()).code,500);
+    assert.equal(invalid.sends(),0);
+  }
+});
+
+test('preview keeps its explicitly configured test inbox even when it is excluded from production', async () => {
+  const a = app({envOverrides:{CONTACT_DEPLOY_CONTEXT:'deploy-preview',TURNSTILE_ALLOWED_HOSTNAMES:'boldcityiaq.com',CONTACT_TEST_RECIPIENT:'saybencodes@gmail.com',CONTACT_RECEIVER_BACKUP:'business-backup@example.test'}});
+  assert.equal((await a.submit()).body.accepted,true);
+  assert.equal(a.messages.length,1);
+  assert.equal(a.messages[0].To,'saybencodes@gmail.com');
+});

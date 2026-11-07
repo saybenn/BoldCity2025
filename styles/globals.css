@@ -2,21 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* One semantic copy per review; mobile merges both desktop rows into a swipe track. */
-.review-viewport { display:flex; gap:1rem; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; padding:4px 2px 6px; -webkit-mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent); mask-image:linear-gradient(to right,transparent,#000 12px,#000 calc(100% - 12px),transparent); }
+/* Decorative copies allow a seamless band; each authentic review has one
+   accessible copy. On mobile, flex ordering places all originals before repeats. */
+.reviews-section { padding-block:24px; }
+.review-heading { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
+.review-viewport { display:flex; gap:14px; overflow-x:auto; overflow-y:hidden; margin-top:20px; padding:4px 2px 6px; -webkit-mask-image:linear-gradient(to right,transparent,#000 10px,#000 calc(100% - 10px),transparent); mask-image:linear-gradient(to right,transparent,#000 10px,#000 calc(100% - 10px),transparent); }
 .review-row { display:contents; }
 .review-viewport, .review-row { scrollbar-width:none; -ms-overflow-style:none; }
 .review-viewport::-webkit-scrollbar, .review-row::-webkit-scrollbar { display:none; width:0; height:0; }
-.review-card { display:grid; grid-template-columns:minmax(0,1fr); align-content:start; gap:12px; width:min(calc(100vw - 48px),410px); padding:18px; flex-shrink:0; scroll-snap-align:start; }
-.review-stars { align-self:center; }
-.review-quote { grid-column:1/-1; font-size:14px; line-height:22px; }
+.review-card { display:grid; grid-template-columns:minmax(0,1fr) auto; align-content:start; gap:10px; width:min(calc(100vw - 44px),380px); padding:16px; flex-shrink:0; }
+.review-card[data-review-copy] { order:1; }
+.review-avatar { width:32px; height:32px; }
+.review-stars { align-self:center; gap:1px; }
+.review-quote { grid-column:1/-1; font-size:14px; line-height:21px; }
 .review-viewport:focus-visible, .review-row:focus-visible { outline:2px solid #0f766e; outline-offset:-2px; }
-@media (max-width:374px) { .review-card { width:calc(100vw - 40px); padding:14px; gap:8px; } }
+.review-motion-toggle { position:absolute; right:0; top:0; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.review-motion-toggle:focus-visible { width:auto; height:auto; overflow:visible; clip-path:none; padding:8px 12px; border:2px solid #0f766e; border-radius:6px; background:#fff; color:#0c2340; z-index:2; }
 @media (min-width:768px) {
-  .review-viewport { display:grid; gap:16px; overflow:hidden; padding:0; }
-  .review-row { display:flex; gap:20px; overflow-x:auto; overflow-y:hidden; padding:4px 2px 6px; }
-  .review-card { grid-template-columns:minmax(0,1fr) auto; gap:16px; width:clamp(420px,36vw,500px); min-height:208px; padding:24px; }
-  .review-quote { font-size:15px; line-height:26px; }
+  .reviews-section { padding-block:32px; }
+  .review-heading { flex-direction:row; align-items:center; justify-content:space-between; gap:24px; padding-right:4px; min-height:40px; }
+  .review-viewport { display:grid; gap:12px; overflow:hidden; padding:0; }
+  .review-row { display:flex; gap:16px; overflow-x:auto; overflow-y:hidden; padding:4px 2px 6px; }
+  .review-card { width:clamp(360px,31vw,430px); min-height:158px; padding:18px; }
 }
 
 /* Native sticky backdrop: no scroll listeners or animation library. The static

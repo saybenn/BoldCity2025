@@ -27,3 +27,14 @@ test('production analytics require both production context and canonical public 
   assert.equal(deploymentContext({NETLIFY:'true',CONTEXT:'production'}),'production');
   assert.equal(deploymentContext({NODE_ENV:'production'}),'local');
 });
+
+test('compact review presentation remains a verbatim contiguous excerpt with accurate omission markers',async()=>{
+  const {compactReviewExcerpt}=await import('../lib/review-presentation.js');
+  for(const review of require('../lib/review-records.json').filter(review=>review.text)) {
+    const excerpt=compactReviewExcerpt(review);
+    assert.ok(review.text.includes(excerpt.text),review.name);
+    assert.ok(excerpt.text.length<=128,review.name);
+    assert.equal(excerpt.omittedBefore,review.omittedBefore);
+    assert.equal(excerpt.omittedAfter,review.omittedAfter||excerpt.text.length<review.excerpt.trim().length);
+  }
+});

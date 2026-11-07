@@ -17,9 +17,9 @@ const proofImages = [
     title: "Work beside protected framing",
   },
   {
-    src: "/images/projects/worker-at-protected-kitchen.webp",
-    alt: "Worker beside protected kitchen cabinets and exposed lower walls",
-    title: "Protected kitchen work area",
+    src: "/images/moldSigue.webp",
+    alt: "Air-handling equipment beside exposed lower wall framing beneath protected kitchen cabinets",
+    title: "Air-handling equipment and protected cabinets",
   },
   {
     src: "/images/grid/emergencyGrid.webp",

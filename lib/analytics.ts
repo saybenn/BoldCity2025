@@ -22,8 +22,14 @@ export function track(eventName: string, payload: AnalyticsPayload = {}) {
       clean[key] = text.split(/[?#]/)[0];
     } else clean[key] = value;
   }
+  const event = LEGACY[eventName] || eventName;
+  // GTM's data-layer model retains earlier values. A later modal/lead form may
+  // omit these optional fields; null clears the preceding form's context.
+  if (event === "generate_lead") {
+    for (const key of ["service_requested", "form_name"]) if (!(key in clean)) clean[key] = null;
+  }
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ ...clean, event: LEGACY[eventName] || eventName });
+  window.dataLayer.push({ ...clean, event });
 }
 // Page navigation is owned by AnalyticsLifecycle, including initial load.
 export function trackPageView(page: string, payload: AnalyticsPayload = {}) {

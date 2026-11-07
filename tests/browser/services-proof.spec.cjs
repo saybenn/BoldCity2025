@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const fs = require('node:fs/promises');
 const sharp = require('sharp');
 
-const evidence = 'context/qa/services-proof';
+const evidence = process.env.QA_SERVICES_EVIDENCE || 'context/qa/services-proof';
 const destinations = ['water-damage-restoration', 'mold-remediation', 'fire-and-smoke-restoration', 'cleaning-and-sanitization', 'emergency-services', 'air-duct-cleaning'].map(slug => '/services/' + slug);
 
 function luminance(rgb) {
@@ -110,7 +110,8 @@ test('reduced motion is static, links work, and review boilerplate is absent', a
   await expect(reviews.locator('[data-review-id]')).toHaveCount(22);
   await expect(reviews).not.toContainText('Rating checked');
   await expect(reviews).not.toContainText('Selected customer reviews');
-  await expect(reviews.locator('a,button')).toHaveCount(0);
+  await expect(reviews.locator('a')).toHaveCount(0);
+  await expect(reviews.locator('button')).toHaveCount(1); // Focus-accessible pause.
   const first = section.locator('a').first();
   await first.focus();
   expect(await first.evaluate(node => getComputedStyle(node).outlineStyle)).toBe('solid');
