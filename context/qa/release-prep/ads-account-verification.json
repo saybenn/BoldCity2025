@@ -1,0 +1,51 @@
+{
+  "observedDate": "2026-11-08",
+  "method": "Read-only authenticated Chrome UI, via Windows computer-use. User supplied account link. No account settings saved.",
+  "customerAccount": "552-921-2374",
+  "accountStatus": "Cancelled; UI says ads in this account are not running",
+  "ownershipVerified": true,
+  "ownershipEvidence": "Goals > Conversions > All conversions > Lead Submit > Data sources > Manage > Use Google Tag Manager shows the exact ID and label below in this customer account",
+  "conversion": {
+    "name": "Lead Submit",
+    "conversionTypeId": "7266984429",
+    "conversionId": "10940863332",
+    "conversionLabel": "x_PWCO3DlYkbEOSmgeEo",
+    "source": "Website / Untitled tag / Manual event",
+    "created": "2025-08-18",
+    "status": "Enabled; Awaiting conversions",
+    "diagnostic": "UI says no conversions recorded in last 7 days; may be campaign inactivity",
+    "optimization": "Submit lead forms, Primary action",
+    "accountDefaultGoal": true,
+    "count": "One conversion",
+    "value": "Different values; default $1 if no value",
+    "clickThroughWindowDays": 30,
+    "engagedViewWindowDays": 3,
+    "viewThroughWindowDays": 1,
+    "attribution": "Data-driven; Google paid channels",
+    "enhancedConversions": "Setup issues detected. Managed through Google Tag."
+  },
+  "campaignDependencies": {
+    "summaryObserved": "Submit lead form account-default goal, Primary actions 1, Campaigns 0 of 0 campaigns, Needs attention",
+    "limit": "Account is cancelled. No claim that this validates future campaigns or a different active account. Owner must confirm intended advertising account and campaign goal adoption before release. Historical report date stayed Sep 17, 2025; displayed zero conversion metrics are not used as evidence of current delivery."
+  },
+  "otherConversionActions": {
+    "inventoryScope": "Status: All; 1-9 of 9 actions, inspected by scrolling",
+    "otherWebsiteActions": [
+      {"name": "Submit lead form (Page load boldcityiaq.com/ad/home)", "status": "Removed", "optimization": "Primary", "count": "One"},
+      {"name": "Add to cart (Page load boldcityia.com/as)", "status": "Removed", "optimization": "Primary", "count": "Every"}
+    ],
+    "otherEnabledActions": ["Calls from Smart Campaign Ads", "Smart campaign map clicks to call", "Smart campaign ad clicks to call", "Clicks to call", "Smart campaign map directions", "Local actions - Directions"],
+    "ga4ImportFound": false,
+    "deduplicationLimit": "No second enabled website/GA4-import action appeared in these nine actions. This does not prove the same native action cannot fire twice, or exclude other accounts/offline imports/future changes. Call/direction goals remain; do not delete them."
+  },
+  "linkerAndConsent": {
+    "accountInstructions": "Use Google Tag Manager panel explicitly requests a Conversion Linker on all webpages",
+    "draftEvidenceDate": "2026-11-07",
+    "draftTag52": "enableConversionLinker=true; ONCE_PER_EVENT; accepted generate_lead trigger 40; consentStatus NOT_SET",
+    "draftTag53": "Ads Google destination AW-10940863332, Initialization; automatic user-provided data capability disabled",
+    "pending": "Verify effective linker/click-ID persistence and actual consent signals under granted/denied states. NOT_SET is not a consent policy or passing test. Resolve Enhanced Conversions setup issue with owner; do not enable automatic customer-data collection as a shortcut."
+  },
+  "decision": "Preserve approved native accepted-lead strategy and exact ID/label. Ownership blocker resolved. Account operational readiness, consent/linking and actual accepted-lead delivery/counting remain NO-GO.",
+  "productionChanges": false,
+  "emailsOrLeadsSent": 0
+}

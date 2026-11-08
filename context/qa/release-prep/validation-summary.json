@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-08",
+  "baseline": "3679b06e849d8625572151b5c713facb2e860950",
+  "unit": {
+    "passed": 21,
+    "failed": 0,
+    "kind": "npm test, executed earlier in this pass; existing providers/Siteverify success and error paths are mocked"
+  },
+  "typecheck": {
+    "exitCode": 0
+  },
+  "lint": {
+    "exitCode": 0,
+    "errors": 0,
+    "existingWarnings": 9
+  },
+  "build": {
+    "pass": true,
+    "command": "npm run build",
+    "outputDirectory": ".next-release-prep (fresh, removed after QA)",
+    "noQaFixtureRoute": true,
+    "retries": [
+      "Initial sandbox fetch of unchanged Google Fonts failed",
+      "Turbopack cached CSS worker exited before connecting, including serialized retry",
+      "Fresh output directory, same config and network permission: PASS"
+    ]
+  },
+  "browser": {
+    "productionBuild": {
+      "passed": 10,
+      "failed": 0,
+      "report": "production-browser-results.json"
+    },
+    "developmentFixture": {
+      "passed": 1,
+      "failed": 0,
+      "report": "avatar-fixture-final-results.json",
+      "mockedImage": true
+    },
+    "initialDevelopmentRun": {
+      "passed": 10,
+      "failed": 1,
+      "reason": "Whole-page accessibility assertion included development tooling outside fixture main; scoped to main, focused retries passed",
+      "report": "browser-results.json"
+    }
+  },
+  "gtm": {
+    "report": "gtm/local-browser.json",
+    "realScript": true,
+    "unpublishedWorkspaceRetested": false,
+    "collectorRequestsPastCsp": 0,
+    "noLeadSubmission": true,
+    "initialSandboxOrLoopbackFailuresResolvedByNetworkPermission": true
+  },
+  "geometry": [
+    {
+      "width": 320,
+      "sectionHeight": 351,
+      "card": {
+        "width": 276,
+        "height": 181
+      },
+      "pageOverflow": false
+    },
+    {
+      "width": 375,
+      "sectionHeight": 330,
+      "card": {
+        "width": 331,
+        "height": 160
+      },
+      "pageOverflow": false
+    },
+    {
+      "width": 430,
+      "sectionHeight": 309,
+      "card": {
+        "width": 380,
+        "height": 139
+      },
+      "pageOverflow": false
+    },
+    {
+      "width": 768,
+      "sectionHeight": 486,
+      "card": {
+        "width": 360,
+        "height": 164
+      },
+      "pageOverflow": false
+    },
+    {
+      "width": 1024,
+      "sectionHeight": 486,
+      "card": {
+        "width": 360,
+        "height": 164
+      },
+      "pageOverflow": false
+    },
+    {
+      "width": 1440,
+      "sectionHeight": 480,
+      "card": {
+        "width": 430,
+        "height": 158
+      },
+      "pageOverflow": false
+    }
+  ],
+  "genuineAvatars": {
+    "verified": 0,
+    "rendered": 0,
+    "sourceBlocker": "Owner confirms no approved API connection/project or export"
+  },
+  "productionChanged": false,
+  "newEmailsOrLeads": 0,
+  "decision": "GO for preview review; NO-GO for production/GTM publication"
+}

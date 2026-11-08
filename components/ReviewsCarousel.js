@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import { writtenReviews, verifiedRating } from "@/lib/google-reviews";
 import { compactReviewExcerpt } from "@/lib/review-presentation";
+import { verifiedReviewerAvatar } from "@/lib/reviewer-avatars";
+import ReviewerAvatar from "@/components/ReviewerAvatar";
 
 function cycleLength(track) {
   const original = track?.querySelector("[data-review-id]");
@@ -10,19 +12,22 @@ function cycleLength(track) {
   return original && copy ? copy.getBoundingClientRect().left - original.getBoundingClientRect().left : 0;
 }
 
-function ReviewCard({ review, copy = false }) {
+function ReviewCard({ review, avatarSource, copy = false }) {
   const excerpt = compactReviewExcerpt(review);
+  const avatar = verifiedReviewerAvatar(review, avatarSource);
   return <figure data-review-id={copy ? undefined : review.id} data-review-copy={copy ? review.id : undefined} aria-hidden={copy ? true : undefined} inert={copy ? true : undefined} className="review-card rounded-2xl border border-slate-200/80 bg-white shadow-sm">
     <figcaption className="flex min-w-0 items-center gap-2.5">
-      <span aria-hidden="true" className="review-avatar flex shrink-0 items-center justify-center rounded-full bg-navy text-xs font-semibold text-white">{review.name.split(/\s+/).map((word) => word[0]).slice(0, 2).join("")}</span>
-      <p className="min-w-0 text-sm font-semibold leading-5">{review.name}</p>
+      <ReviewerAvatar key={avatar ? `${avatar.photoUrl}:${avatar.expiresAt}` : "initials"} name={review.name} avatar={avatar} copy={copy} />
+      <p className="min-w-0 text-sm font-semibold leading-5">{avatar?.reviewUrl && !copy ? <a href={avatar.reviewUrl} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="rounded-sm hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy" aria-label={`View ${review.name}'s review on Google`}>{review.name}</a> : review.name}</p>
     </figcaption>
     <div aria-label={`${review.rating} out of 5 stars`} className="review-stars flex gap-0.5 text-amber-500">{Array.from({ length: review.rating }, (_, i) => <Star key={i} aria-hidden="true" className="h-3.5 w-3.5 fill-current" />)}</div>
     <blockquote className="review-quote text-gray-700">“{excerpt.omittedBefore && "… "}{excerpt.text}{excerpt.omittedAfter && " …"}”</blockquote>
   </figure>;
 }
 
-export default function ReviewsCarousel() {
+// Empty until an authorized, fresh server-side delivery supplies verified
+// metadata. The approved 23 source records and 22-review order stay untouched.
+export default function ReviewsCarousel({ reviewerAvatars = {} }) {
   const headingId = useId(), instructionsId = useId();
   const viewport = useRef(null), rows = useRef([]), touchTimer = useRef(null);
   const pointerActive = useRef(false), interacting = useRef(false);
@@ -124,8 +129,8 @@ export default function ReviewsCarousel() {
         onScrollCapture={() => { if (interacting.current) releaseInteraction(); }}
         onWheel={() => { interacting.current = true; setTouching(true); releaseInteraction(); }}>
         {groups.map((reviews, rowIndex) => <div key={rowIndex} ref={(node) => { rows.current[rowIndex] = node; }} className="review-row" tabIndex={desktop ? 0 : -1} role="group" aria-label={`Review row ${rowIndex + 1}`} aria-describedby={instructionsId} onKeyDown={(event) => keyboard(event, rowIndex)}>
-          {reviews.map((review) => <ReviewCard review={review} key={review.id} />)}
-          {reviews.map((review) => <ReviewCard review={review} copy key={`copy-${review.id}`} />)}
+          {reviews.map((review) => <ReviewCard review={review} avatarSource={reviewerAvatars[review.id]} key={review.id} />)}
+          {reviews.map((review) => <ReviewCard review={review} avatarSource={reviewerAvatars[review.id]} copy key={`copy-${review.id}`} />)}
         </div>)}
       </div>
     </div>

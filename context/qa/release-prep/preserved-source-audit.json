@@ -1,0 +1,272 @@
+{
+  "baseline": "3679b06e849d8625572151b5c713facb2e860950",
+  "date": "2026-11-08",
+  "kind": "Read-only normalized-LF SHA-256 comparison of tracked architecture/form/analytics/schema/deployment/review-source files. New avatar helper is excluded because it did not exist at baseline.",
+  "files": [
+    {
+      "path": "components/AdContactForm.jsx",
+      "sha256": "c76645cda15c3172b715a0179b56bdc3554bde70dbcb6b075a220a395b62e9e4",
+      "unchanged": true
+    },
+    {
+      "path": "components/AnalyticsLifecycle.tsx",
+      "sha256": "5e617ecb0261558c2189af9cdd4c1ccba88fd735ef78799b16bfc8b52f6a6c66",
+      "unchanged": true
+    },
+    {
+      "path": "components/LeadForm.jsx",
+      "sha256": "38dae5d6905ce1765ff974b852cc850a0bccdf6c8f12c3f38649c4e46bba6afb",
+      "unchanged": true
+    },
+    {
+      "path": "components/StandardContactForm.jsx",
+      "sha256": "b5453e382233d2a6c714b5028c1e6e9bb457e60c9535b30f6fc6a6bf4c7a237e",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactFaqGrid.jsx",
+      "sha256": "8882e424999879888ab440f78aa25f00ffc9987ca4202c9c901e8dcd76b00616",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactFinalCta.jsx",
+      "sha256": "5a89b841152be4603b99a4e512ea48d73e3e2c1bc539bcac144f508d2c72a2b6",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactHero.jsx",
+      "sha256": "3d17d3ba9801657833fcd7237f889fa1c54e1c991bcb84968ca67108188ed0bd",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactOfficeMapSection.jsx",
+      "sha256": "c4794255e5cdd5a0dd920b860ca8e2510dd3ad152810ee80dd1f1c2d93f97615",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactRequestForm.jsx",
+      "sha256": "d8c2738b3d8069122f1ecc4e9ad35be152c5604f94bdfc66ed59908def66c5ed",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactRequestSection.jsx",
+      "sha256": "95294074046f9c4c8dbfb986b927cfff13f439441dceeb220d6807d0630c116a",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/ContactTrustStrip.jsx",
+      "sha256": "91b8e0023b0eca0484be863fce251cd9fe320ce2ee943efce44588fce5f05ae8",
+      "unchanged": true
+    },
+    {
+      "path": "components/contact/TurnstileField.tsx",
+      "sha256": "8f144b5a981c9249ba6050346a74c1d1354351d4d3cb8c70f1d3d1ee47fc5aa6",
+      "unchanged": true
+    },
+    {
+      "path": "lib/adLandingPage.js",
+      "sha256": "e7d81f1cc27994261755262ea611d053bbf7aea71662fe067f3ee153b32df16d",
+      "unchanged": true
+    },
+    {
+      "path": "lib/analytics.ts",
+      "sha256": "e930dda5e767ceb511c99b057ea252fce94a67b89d737f6993ecbddb83e74bcf",
+      "unchanged": true
+    },
+    {
+      "path": "lib/contact-security.js",
+      "sha256": "674eb0b904c926a4eb1a5533aa807bfa5b72ca0aaaf0049d3d72e1ba78d505c2",
+      "unchanged": true
+    },
+    {
+      "path": "lib/contact-services.js",
+      "sha256": "1d90c931ddcbfbb35d01e0234641cb546753f04d340b6ea01ae21321a2cd1169",
+      "unchanged": true
+    },
+    {
+      "path": "lib/deployment.mjs",
+      "sha256": "7a62b99dca570a64932a9012373a58e736fc5bfe362e32d8a8bc9ce5587ef3a5",
+      "unchanged": true
+    },
+    {
+      "path": "lib/google-reviews.js",
+      "sha256": "e0eb24ba4b091c8fc4556f835c9039008f8c69397e4ec0a2a909008b2a9ab58e",
+      "unchanged": true
+    },
+    {
+      "path": "lib/gtm-qa.mjs",
+      "sha256": "73b3b1395d2ccd8d14e9930704f548aa9d94290cccf69e8d60f24dd0c8308220",
+      "unchanged": true
+    },
+    {
+      "path": "lib/gtm.js",
+      "sha256": "ad1ce08ed20128260c944f511f02f4e3fc0e6dc9c3feba2d932345faa815e7bb",
+      "unchanged": true
+    },
+    {
+      "path": "lib/review-presentation.js",
+      "sha256": "850e448451e2b386c3737ea6399d915ca9b3bc9112e1dff717c2208e52ba5535",
+      "unchanged": true
+    },
+    {
+      "path": "lib/review-records.json",
+      "sha256": "96a53e45eb8795299e4f7741f6a4f68c17ebf2f61c4bac52ad36da7d39860989",
+      "unchanged": true
+    },
+    {
+      "path": "lib/reviewsData.js",
+      "sha256": "12702d82848142183a0d8a266500b91e2b3bbe35886dab0550d0f2968b33606a",
+      "unchanged": true
+    },
+    {
+      "path": "lib/seo.js",
+      "sha256": "6d05eb62bab62b2baee56d7c8c7cbc8ae45b99276410bafb8c5368c18bc13a7e",
+      "unchanged": true
+    },
+    {
+      "path": "lib/service-area-pages/buildServiceAreaHubPageData.ts",
+      "sha256": "2e3bce6cbac834dcf78805254bd3701c3f0139f31026f150c9b7311073e38696",
+      "unchanged": true
+    },
+    {
+      "path": "lib/service-area-pages/buildServiceAreaPageData.ts",
+      "sha256": "44f06652d138a44efd0e28044484a05cdfe216f28924208cd82b3be55d7dc1ff",
+      "unchanged": true
+    },
+    {
+      "path": "lib/service-area-pages/getServiceAreaHubPaths.ts",
+      "sha256": "708fda4885bddc990996e54fdf24c732adff8efd268fb405e50c5193061e91e4",
+      "unchanged": true
+    },
+    {
+      "path": "lib/service-area-pages/getServiceAreaPaths.ts",
+      "sha256": "4d0ea1b91b8ca8802f587a8b9659d385b8cc02c54bdb3ac1066738da48f61be0",
+      "unchanged": true
+    },
+    {
+      "path": "lib/service-area-pages/types.ts",
+      "sha256": "03f596586d49aa6bcfd07cfeb2ad1253da787cf6af8e3961b1b2181f153ef26e",
+      "unchanged": true
+    },
+    {
+      "path": "lib/serviceData.js",
+      "sha256": "717a29e0e3137dadd9d92d7e47eb48c220a42ae310e8f748fc548b2955fb7fae",
+      "unchanged": true
+    },
+    {
+      "path": "lib/trackPhoneClick.ts",
+      "sha256": "d386d311e6275d85dee8230fe8652dfdb7a632a4559fd9c149e97517cf2cd6f2",
+      "unchanged": true
+    },
+    {
+      "path": "lib/utm.js",
+      "sha256": "67bcf6742490c45f02ab046d314b38e0d3e330efea44c9efcd58e13756211f4e",
+      "unchanged": true
+    },
+    {
+      "path": "netlify/edge-functions/contact-protection.ts",
+      "sha256": "55cc28a59576d60b1b928b8d640e7bbf9bed4feaed5c7ab585fbfd32cae623c0",
+      "unchanged": true
+    },
+    {
+      "path": "next.config.mjs",
+      "sha256": "f2b8394eb5c3a840755457da97a7c474d8af1cc9a2b8b3749fcee9c7bc87d6ac",
+      "unchanged": true
+    },
+    {
+      "path": "pages/_app.tsx",
+      "sha256": "d87f35c07e10b99185e7cdb6be897cf2a7b8686987ae466653c7d6db5e46db35",
+      "unchanged": true
+    },
+    {
+      "path": "pages/_document.js",
+      "sha256": "195e89ff9601fad83807c05dea0c749bff2a197cb758ffdf51e964cca28b1b6e",
+      "unchanged": true
+    },
+    {
+      "path": "pages/about/index.js",
+      "sha256": "c0695fe4079469429736694d85a05b5771d340599aecc46c06378fc1a02f7a90",
+      "unchanged": true
+    },
+    {
+      "path": "pages/ads/emergency-restoration/index.jsx",
+      "sha256": "f12d01d4a920dc724bf52a2ac4ee2d73652399d42908965d35207e8bc86ba30b",
+      "unchanged": true
+    },
+    {
+      "path": "pages/ads/emergency-restoration/success.jsx",
+      "sha256": "c215f22783baa6c6a67ad3be74655177c65d21d3b0b04a5812e647b6d53785b0",
+      "unchanged": true
+    },
+    {
+      "path": "pages/api/contact.ts",
+      "sha256": "aaf5be975569c61a64127e1f33bcb6f9c0d04acd49d58fd59127c0e232c0763f",
+      "unchanged": true
+    },
+    {
+      "path": "pages/api/hello.js",
+      "sha256": "02dc990f97314784430cbcd3c045af151de1de922f8c28f2e6fbb1d0e416e2ea",
+      "unchanged": true
+    },
+    {
+      "path": "pages/api/lead.js",
+      "sha256": "6b78c947eb077ffc9a6c918b03f883306e69259c47bdfd528fde11dba5599a03",
+      "unchanged": true
+    },
+    {
+      "path": "pages/contact/index.js",
+      "sha256": "a98704b83f0f560b70e30abc388e1cd79758f649e8bb2404720a9ef66863d981",
+      "unchanged": true
+    },
+    {
+      "path": "pages/contact/success.js",
+      "sha256": "bb024f3b6a4d7e01300d311e6df2e5fdbd2ef337c6dc9b9fcf33de4d8044aa03",
+      "unchanged": true
+    },
+    {
+      "path": "pages/financing.js",
+      "sha256": "8a73d9025c2e7f525cf62b0b4ec3bc5b9fdf4c87226148e626dff3a3dff8afcd",
+      "unchanged": true
+    },
+    {
+      "path": "pages/index.js",
+      "sha256": "e3842d90bca842037ffa56e6db310d34495e1891f14e09086b8247b37ab82ecc",
+      "unchanged": true
+    },
+    {
+      "path": "pages/resources/emergency-checklist.js",
+      "sha256": "993150adbe672a37d63db9231c7bc89262d23e2112a3844aae72f6b92a167202",
+      "unchanged": true
+    },
+    {
+      "path": "pages/service-areas/[areaSlug].tsx",
+      "sha256": "3d4ae9832fc4e378db9e7c9346b6cb0b493110e85132cfff2a3e8aee8ccf5701",
+      "unchanged": true
+    },
+    {
+      "path": "pages/service-areas/[areaSlug]/[serviceSlug].tsx",
+      "sha256": "4454b8622d90cededebf4abfd91e97344a928a884e2d2a8025fd60c049a3bef7",
+      "unchanged": true
+    },
+    {
+      "path": "pages/service-areas/index.tsx",
+      "sha256": "a9986aebcbbc280bf49a4bc510e41798646a8aea7335bef5aab6a62c1297860c",
+      "unchanged": true
+    },
+    {
+      "path": "pages/services/[slug].js",
+      "sha256": "f56af50d06aa7a726c1b06b6222aa046269ca3864ba4277fa68df8cbf3b591d8",
+      "unchanged": true
+    },
+    {
+      "path": "pages/services/index.js",
+      "sha256": "b5f3da330f1ab97a2621fc48839e3d74aa80e4443501c2bd75430784ada7606b",
+      "unchanged": true
+    },
+    {
+      "path": "pages/sitemap.xml.ts",
+      "sha256": "cae52cc294eb712b2777ed43d050f482b8cd38f6e57de20a7b97759948a9bfd5",
+      "unchanged": true
+    }
+  ]
+}
