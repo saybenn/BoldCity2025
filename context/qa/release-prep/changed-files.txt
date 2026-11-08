@@ -13,6 +13,11 @@ context/qa/release-prep/changed-files.txt
 context/qa/release-prep/gtm/events-without-gtm.png
 context/qa/release-prep/gtm/gtm-qa-loaded.png
 context/qa/release-prep/gtm/local-browser.json
+context/qa/release-prep/hosted/hosted-secondary-1440.webp
+context/qa/release-prep/hosted/hosted-secondary-375.webp
+context/qa/release-prep/hosted/hosted-selected-1440.webp
+context/qa/release-prep/hosted/hosted-selected-375.webp
+context/qa/release-prep/hosted/live-previews.json
 context/qa/release-prep/launch-runbook.md
 context/qa/release-prep/preserved-source-audit.json
 context/qa/release-prep/production-browser-results.json

@@ -115,5 +115,20 @@
   },
   "productionChanged": false,
   "newEmailsOrLeads": 0,
-  "decision": "GO for preview review; NO-GO for production/GTM publication"
+  "decision": "GO for preview review; NO-GO for production/GTM publication",
+  "hosted": {
+    "applicationCommit": "94c1d42789091d3f580528e4887817841f3dd737",
+    "previewBuildChecks": "Both PASS",
+    "report": "hosted/live-previews.json",
+    "actualChrome": true,
+    "mocked": false,
+    "views": [
+      1440,
+      375
+    ],
+    "noindex": true,
+    "productionTrackingRequests": 0,
+    "newLeadsOrEmails": 0,
+    "secondaryFormConfig": "Different expected public key; not qualified for submissions"
+  }
 }
