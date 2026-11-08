@@ -2,18 +2,6 @@ import Image from "next/image";
 
 const logos = [
   {
-    src: "/images/iicrc-certified.webp",
-    alt: "IICRC Certified",
-    width: 110,
-    height: 42,
-  },
-  {
-    src: "/images/normilogo.png",
-    alt: "NORMI Certified",
-    width: 120,
-    height: 42,
-  },
-  {
     src: "/images/5-star-google.png",
     alt: "Google Reviews",
     width: 90,
@@ -35,7 +23,7 @@ export default function ContactTrustStrip({ data }) {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr_1.1fr] lg:items-center">
           <div className="text-center lg:text-left">
             <h2 className="text-2xl font-semibold text-zinc-900">
-              Certified & Trusted
+              Google Reviews
             </h2>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
               {logos.map((logo) => (

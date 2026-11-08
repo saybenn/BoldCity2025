@@ -2,6 +2,7 @@ import { trackFormSubmit, trackFormError } from "@/lib/analytics";
 import { getUTMParams } from "@/lib/utm";
 import { useEffect, useRef, useState } from "react";
 import { TurnstileField } from "@/components/contact/TurnstileField";
+import FormCertifications from "@/components/contact/FormCertifications";
 
 function cleanString(value, maxLength) {
   return String(value || "")
@@ -443,6 +444,7 @@ export default function LeadForm({ data, utm = {} }) {
           ) : null}
 
           <div className="md:col-span-2">
+            <FormCertifications className="mb-4" />
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="submit"

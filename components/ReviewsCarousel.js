@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
-import { Star } from "lucide-react";
-import { writtenReviews, verifiedRating } from "@/lib/google-reviews";
+import { ArrowUpRight, Star } from "lucide-react";
+import { GOOGLE_PROFILE_URL, writtenReviews, verifiedRating } from "@/lib/google-reviews";
 import { compactReviewExcerpt } from "@/lib/review-presentation";
 import { verifiedReviewerAvatar } from "@/lib/reviewer-avatars";
 import ReviewerAvatar from "@/components/ReviewerAvatar";
@@ -133,6 +133,13 @@ export default function ReviewsCarousel({ reviewerAvatars = {} }) {
           {reviews.map((review) => <ReviewCard review={review} avatarSource={reviewerAvatars[review.id]} copy key={`copy-${review.id}`} />)}
         </div>)}
       </div>
+      <p className="mt-2 text-center">
+        <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer"
+          aria-label="See for yourself: Bold City IAQ reviews on Google (opens in a new tab)"
+          className="inline-flex items-center gap-1.5 rounded-sm py-1 text-sm font-semibold text-navy underline decoration-slate-300 underline-offset-4 hover:decoration-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy">
+          See for yourself <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+        </a>
+      </p>
     </div>
   </section>;
 }

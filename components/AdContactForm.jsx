@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { trackFormSubmit, trackFormError } from "@/lib/analytics";
 import { getUTMParams } from "@/lib/utm";
 import { TurnstileField } from "@/components/contact/TurnstileField";
+import FormCertifications from "@/components/contact/FormCertifications";
 
 import { ALLOWED_SERVICES, CONTACT_SERVICES } from "@/lib/contact-services";
 
@@ -393,6 +394,8 @@ export default function AdContactForm({ successPath }) {
           </p>
         ) : null}
       </div>
+
+      <FormCertifications />
 
       <button
         type="submit"

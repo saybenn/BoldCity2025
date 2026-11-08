@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { getUTMParams } from "@/lib/utm";
 import { trackFormSubmit, trackFormError, trackCta, trackCallClick } from "@/lib/analytics";
 import { TurnstileField } from "./TurnstileField";
+import FormCertifications from "./FormCertifications";
 
 import { ALLOWED_SERVICES, CONTACT_SERVICES } from "@/lib/contact-services";
 
@@ -450,6 +451,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
         ) : null}
 
         <div className="md:col-span-2">
+          <FormCertifications className="mb-4" />
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <button
               type="submit"
