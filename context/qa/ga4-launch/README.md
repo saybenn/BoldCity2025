@@ -31,15 +31,25 @@ Full browser form flows mock Turnstile/API success/error responses. The local-on
 
 ### Screenshots
 
-Actual local Chrome form-and-band captures; disabled buttons reflect the blank-widget visual QA profile, not a production behavior change.
+Actual selected-preview Chrome form-and-band captures from application commit `d0c8aaf`. No human challenge or form submission was performed; disabled buttons reflect the uncompleted widget, not a behavior change. Local reusable-form captures remain in `mini-bands`.
 
 | Desktop | Mobile |
 | --- | --- |
-| ![Homepage external mini-band](mini-bands/home-1440.webp) | ![Homepage external mini-band mobile](mini-bands/home-375.webp) |
-| ![Contact external mini-band](mini-bands/contact-1440.webp) | ![Contact external mini-band mobile](mini-bands/contact-375.webp) |
-| ![Emergency external mini-band](mini-bands/emergency-1440.webp) | ![Emergency external mini-band mobile](mini-bands/emergency-375.webp) |
+| ![Homepage external mini-band](hosted-mini-bands/home-1440.webp) | ![Homepage external mini-band mobile](hosted-mini-bands/home-375.webp) |
+| ![Contact external mini-band](hosted-mini-bands/contact-1440.webp) | ![Contact external mini-band mobile](hosted-mini-bands/contact-375.webp) |
+| ![Emergency external mini-band](hosted-mini-bands/emergency-1440.webp) | ![Emergency external mini-band mobile](hosted-mini-bands/emergency-375.webp) |
 
-Final-head Netlify build statuses and selected-preview browser checks are reported in the PR/final handoff once deployed; they are not assumed from the earlier head. [Exact changed files](changed-files.txt).
+Both Netlify checks **PASS at application head `d0c8aaf`**. [CI evidence](ci-application-head.json). Selected-preview checks: **24 route/width cases PASS** (home, Contact, emergency, all six services, representative areas and privacy), **18/18 active-form/six-width cases PASS**, six-width consent UI/persistence checks PASS, **37 existing routes / 28 assets / zero SEO issues**. Gallery, mobile navigation, Google link/reviews, preview noindex and no overflow pass. Even a saved Allow produces **zero GTM/GA4 requests** on the preview. No application form submissions occurred. Production was only read using HTML/JavaScript GET; both production and preview expose the previously approved public widget key, which does not establish private secret pairing.
+
+[Hosted route/navigation/review report](hosted/browser-results.json) · [Mini-band matrix](hosted-mini-bands/browser-results.json) · [Consent report](hosted-consent/browser-results.json) · [Hosted SEO scan](site-hosted/site-validation.json) · [Exact changed files](changed-files.txt).
+
+Netlify's injected Drawer intercepted the initial pointer click on the bottom Analytics choices button in the hosted preview. Normal **keyboard focus + Enter** verified that control; local tests exercise pointer activation, and no site code was changed to work around the toolbar. The initial hosted obstruction report is retained. This is a preview qualification limit, not a diagnosed production form failure. [Netlify deploy/Drawer context](https://docs.netlify.com/deploy/deploy-overview/).
+
+| Consent desktop | Consent mobile |
+| --- | --- |
+| ![Desktop opt-in](hosted-consent/choice-1440.webp) | ![Mobile opt-in](hosted-consent/choice-375.webp) |
+
+Final evidence-only head statuses are reported in the PR/final handoff; the application source is unchanged from the tested application head.
 
 ## C. Remaining actual launch requirements
 

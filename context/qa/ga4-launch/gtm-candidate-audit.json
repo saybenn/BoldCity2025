@@ -232,5 +232,12 @@
     "Inspect actual consent state/default/update behavior against owner policy. NOT_SET is not proof of a policy.",
     "Fresh clean unpublished Tag Assistant connection; history duplicate remains until approved cutover switch."
   ],
-  "productionOrAccountChanges": false
+  "productionOrAccountChanges": false,
+  "websiteConsent": {
+    "ownerChoice": "Explicit simple opt-in, November 9, 2026",
+    "implementedIn": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6",
+    "behavior": "Basic opt-in; no loader/events before Allow; no backlog replay; ads denied; forms independent",
+    "localVerified": true,
+    "actualUnpublishedTagAssistantConsentStillPending": true
+  }
 }

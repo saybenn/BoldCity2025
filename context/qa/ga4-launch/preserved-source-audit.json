@@ -1,6 +1,6 @@
 {
   "baseline": "ab2d20429c49ea028860f104522802a503741688",
-  "checkedAt": "2026-11-10T01:32:59.215Z",
+  "checkedAt": "2026-11-10T01:44:48.463Z",
   "scope": "Read-only normalized-LF hash comparison and TypeScript AST extraction. Server, existing page/schema architecture, deployment restrictions and submission callbacks unchanged. Owner-approved consent intentionally changes analytics loading/event gating, including AnalyticsLifecycle outside this file set, and adds a privacy route.",
   "intentionalConsentChanges": [
     "pages/_app.tsx",

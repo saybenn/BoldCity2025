@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-11-10T01:38:36.931Z",
+  "preparedAt": "2026-11-10T01:45:41.469Z",
   "branch": "codex/website-seo-revamp",
   "baseline": "ab2d20429c49ea028860f104522802a503741688",
   "decision": "Website GO for preview; production/GTM publication NO-GO until account preparation and approved cutover acceptance.",
@@ -73,5 +73,19 @@
     "historyDuplicate": "Known release switch, not fixed live during preparation"
   },
   "realLeadSent": false,
-  "productionDeployed": false
+  "productionDeployed": false,
+  "hosted": {
+    "applicationCommit": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6",
+    "bothApplicationHeadNetlifyChecks": "PASS",
+    "routeWidthCases": 24,
+    "activeFormWidthCases": 18,
+    "consentWidths": 6,
+    "siteRoutes": 37,
+    "assets": 28,
+    "trackingRequests": [],
+    "applicationFormPosts": [],
+    "knownPublicWidgetKeyFound": true,
+    "privatePairingProven": false,
+    "toolbarLimit": "Keyboard on hosted preview. Initial pointer attempt was intercepted by injected Netlify Drawer; local QA exercises normal pointer activation."
+  }
 }

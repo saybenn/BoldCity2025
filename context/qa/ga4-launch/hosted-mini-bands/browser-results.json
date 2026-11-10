@@ -1,0 +1,571 @@
+{
+  "checkedAt": "2026-11-10T01:41:23.454Z",
+  "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+  "scope": "Actual selected public preview, three active form implementations at six widths. No integration mocks or submissions. Consent saved as denied for clean visual capture.",
+  "cases": [
+    {
+      "route": "home",
+      "width": 320,
+      "form": "StandardContactForm",
+      "cardBottom": 454.71875,
+      "bandTop": 466.71875,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 288,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 109,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 109,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "contact",
+      "width": 320,
+      "form": "ContactRequestForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 288,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 109,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 109,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "emergency",
+      "width": 320,
+      "form": "AdContactForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 288,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 109,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 109,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "home",
+      "width": 375,
+      "form": "StandardContactForm",
+      "cardBottom": 454.578125,
+      "bandTop": 466.578125,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 343,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 136.5,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 136.5,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "contact",
+      "width": 375,
+      "form": "ContactRequestForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 343,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 136.5,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 136.5,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "emergency",
+      "width": 375,
+      "form": "AdContactForm",
+      "cardBottom": 455.25,
+      "bandTop": 467.25,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 343,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 136.5,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 136.5,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "home",
+      "width": 430,
+      "form": "StandardContactForm",
+      "cardBottom": 454.90625,
+      "bandTop": 466.90625,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 398,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "contact",
+      "width": 430,
+      "form": "ContactRequestForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 398,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "emergency",
+      "width": 430,
+      "form": "AdContactForm",
+      "cardBottom": 454.5,
+      "bandTop": 466.5,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 398,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "form": "StandardContactForm",
+      "cardBottom": 455.28125,
+      "bandTop": 467.28125,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 344,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 137,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 137,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "contact",
+      "width": 768,
+      "form": "ContactRequestForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 720,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "emergency",
+      "width": 768,
+      "form": "AdContactForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 720,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "home",
+      "width": 1024,
+      "form": "StandardContactForm",
+      "cardBottom": 454.765625,
+      "bandTop": 466.765625,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 464,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "contact",
+      "width": 1024,
+      "form": "ContactRequestForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 960,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "emergency",
+      "width": 1024,
+      "form": "AdContactForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 976,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "form": "StandardContactForm",
+      "cardBottom": 454.78125,
+      "bandTop": 466.78125,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 528,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "contact",
+      "width": 1440,
+      "form": "ContactRequestForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 1152,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    },
+    {
+      "route": "emergency",
+      "width": 1440,
+      "form": "AdContactForm",
+      "cardBottom": 455,
+      "bandTop": 467,
+      "gap": 12,
+      "bandHeight": 66,
+      "bandWidth": 1104,
+      "logos": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(12, 35, 64)",
+          "width": 138,
+          "height": 36
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "backing": "rgb(255, 255, 255)",
+          "width": 138,
+          "height": 36
+        }
+      ],
+      "pageOverflow": false,
+      "outsideFormAndCard": true,
+      "duplicateLogos": false
+    }
+  ],
+  "formPosts": [],
+  "tracking": [],
+  "pageErrors": [],
+  "collectorAbortSafety": "Fail-safe only; passing tracking request list must be empty.",
+  "pass": true,
+  "sourceCommit": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6"
+}
