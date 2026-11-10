@@ -1,0 +1,148 @@
+{
+  "errors": 0,
+  "warnings": 9,
+  "files": [
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\AdContactForm.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 1,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\n  56 |     const startedAt = new Date().toISOString();\n  57 |\n> 58 |     setFormStartedAt(startedAt);\n     |     ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  59 |\n  60 |     let stored = {};\n  61 |",
+          "line": 58,
+          "column": 5,
+          "nodeType": null,
+          "endLine": 58,
+          "endColumn": 21
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\LeadForm.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 1,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\n  120 |     }\n  121 |\n> 122 |     setHiddenFields(attribution);\n      |     ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  123 |   }, [\n  124 |     utmSource,\n  125 |     utmMedium,",
+          "line": 122,
+          "column": 5,
+          "nodeType": null,
+          "endLine": 122,
+          "endColumn": 20
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\MobileStickyCallButton.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 1,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\n  11 |\n  12 |   useEffect(() => {\n> 13 |     setIsClient(true);\n     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  14 |     let stored;\n  15 |     try { stored = localStorage.getItem(\"callButtonHidden\"); } catch {}\n  16 |     if (stored === \"true\") {",
+          "line": 13,
+          "column": 5,
+          "nodeType": null,
+          "endLine": 13,
+          "endColumn": 16
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\ModalContactForm.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 1,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\n  32 |\n  33 |   useEffect(() => {\n> 34 |     setFormStartedAt(new Date().toISOString());\n     |     ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  35 |\n  36 |     function handleKeyDown(event) {\n  37 |       if (event.key === \"Escape\" && !submitting) {",
+          "line": 34,
+          "column": 5,
+          "nodeType": null,
+          "endLine": 34,
+          "endColumn": 21
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\StandardContactForm.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 1,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\n  66 |     const startedAt = new Date().toISOString();\n  67 |\n> 68 |     setFormStartedAt(startedAt);\n     |     ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  69 |\n  70 |     let stored = {};\n  71 |",
+          "line": 68,
+          "column": 5,
+          "nodeType": null,
+          "endLine": 68,
+          "endColumn": 21
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\contact\\ContactRequestForm.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/set-state-in-effect",
+          "severity": 1,
+          "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\n  116 |     }\n  117 |\n> 118 |     setHiddenFields(attribution);\n      |     ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect\n  119 |   }, [\n  120 |     utmSource,\n  121 |     utmMedium,",
+          "line": 118,
+          "column": 5,
+          "nodeType": null,
+          "endLine": 118,
+          "endColumn": 20
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\components\\financing\\AcornFinanceBanner.tsx",
+      "messages": [
+        {
+          "ruleId": "@next/next/no-img-element",
+          "severity": 1,
+          "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+          "line": 79,
+          "column": 19,
+          "nodeType": "JSXOpeningElement",
+          "endLine": 84,
+          "endColumn": 21
+        },
+        {
+          "ruleId": "@next/next/no-img-element",
+          "severity": 1,
+          "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+          "line": 94,
+          "column": 19,
+          "nodeType": "JSXOpeningElement",
+          "endLine": 99,
+          "endColumn": 21
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\pages\\ads\\emergency-restoration\\index.jsx",
+      "messages": [
+        {
+          "ruleId": "react-hooks/exhaustive-deps",
+          "severity": 1,
+          "message": "React Hook useMemo has an unnecessary dependency: 'router.asPath'. Either exclude it or remove the dependency array.",
+          "line": 35,
+          "column": 46,
+          "nodeType": "ArrayExpression",
+          "endLine": 35,
+          "endColumn": 61,
+          "suggestions": [
+            {
+              "desc": "Update the dependencies array to be: []",
+              "fix": {
+                "range": [
+                  1261,
+                  1276
+                ],
+                "text": "[]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

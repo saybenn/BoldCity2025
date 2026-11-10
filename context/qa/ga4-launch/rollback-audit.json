@@ -1,0 +1,8 @@
+{
+  "status": "Offline reference only; not account-saved or published",
+  "tags": 10,
+  "activeTags": 0,
+  "preservesAllParametersAndDependencies": true,
+  "sha256": "6b0ab747a101559751e74bec756fe733323fb8b78f65f4f2feda1fc281d55a6b",
+  "reason": "Consent-safe measurement halt; previous live version contains legacy Ads and has different consent/lead behavior. See runbook."
+}

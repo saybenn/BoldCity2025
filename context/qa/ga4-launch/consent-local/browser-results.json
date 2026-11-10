@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-10T01:32:03.692Z",
+  "base": "http://127.0.0.1:3100",
+  "scope": "Actual Chrome. Public GTM in local CSP QA only, not unpublished candidate. No form submissions. No GA4 delivery claimed.",
+  "widths": [
+    {
+      "width": 320,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 375,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 430,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 1024,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "panelFits": true
+    }
+  ],
+  "tracking": [],
+  "formPosts": [],
+  "persistedAllowOneCurrentView": true,
+  "withdrawal": {
+    "unloaded": true,
+    "noFurtherGtm": true,
+    "analyticsCookiesRemoved": true,
+    "essentialCookiePreserved": true
+  },
+  "crossTabWithdrawal": {
+    "bothTabsUnloaded": true
+  },
+  "pass": true
+}

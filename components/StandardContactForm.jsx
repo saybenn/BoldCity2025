@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { getUTMParams } from "@/lib/utm";
 import { trackFormSubmit, trackFormError } from "@/lib/analytics";
 import { TurnstileField } from "./contact/TurnstileField";
-import FormCertifications from "./contact/FormCertifications";
 
 import { ALLOWED_SERVICES, CONTACT_SERVICES } from "@/lib/contact-services";
 
@@ -454,8 +453,6 @@ export default function StandardContactForm() {
             {error}
           </div>
         ) : null}
-
-        <FormCertifications />
 
         <button
           type="submit"

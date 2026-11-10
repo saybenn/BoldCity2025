@@ -1,5 +1,7 @@
 # Final release preparation — November 8, 2026
 
+**Historical preparation report. Follow [the newer GA4-only readiness report](../ga4-launch/README.md) and [runbook](../ga4-launch/launch-runbook.md). Ads activation/configuration and reviewer photos are no longer launch requirements.**
+
 **GO for draft/preview review; NO-GO for production or GTM publication.** Continued from fetched remote/local head `3679b06e849d8625572151b5c713facb2e860950`, on `codex/website-seo-revamp`, [existing draft PR #1](https://github.com/saybenn/BoldCity2025/pull/1). No production deployment, merge, GTM publication, live GA4 setting change, account reactivation, new lead or email occurred.
 
 [Exact changed-file manifest](changed-files.txt) · [Validation summary](validation-summary.json) · [53 preserved source files, normalized-LF SHA-256 audit](preserved-source-audit.json). The audit confirms the existing pages, analytics, deployment/preview controls, review records, schema/config and form/edge code remain unchanged from the fetched baseline. Only the carousel/avatar presentation and focused tests/docs are edited.

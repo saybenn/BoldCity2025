@@ -1,0 +1,1183 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\playwright.config.cjs",
+    "rootDir": "C:/Users/elijr/OneDrive/Desktop/Coding/Personal Projects/boldcityiaq/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/elijr/OneDrive/Desktop/Coding/Personal Projects/boldcityiaq/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/elijr/OneDrive/Desktop/Coding/Personal Projects/boldcityiaq/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser",
+        "snapshotDir": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3200",
+          "channel": "chrome",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--renderer-process-limit=2",
+              "--disable-gpu"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "context/qa/ga4-launch/full-browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "phase2.spec.cjs",
+      "file": "phase2.spec.cjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real local network keeps QA dataLayer but never loads production tracking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:17.778Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-e6f05389306585372ccc",
+          "file": "phase2.spec.cjs",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "compact review panels and keyboard browsing at 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3172,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:22.883Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-492f72c32b7245e61175",
+          "file": "phase2.spec.cjs",
+          "line": 18,
+          "column": 48
+        },
+        {
+          "title": "compact review panels and keyboard browsing at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2621,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:26.097Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-dc7108b272bcc470ae2d",
+          "file": "phase2.spec.cjs",
+          "line": 18,
+          "column": 48
+        },
+        {
+          "title": "compact review panels and keyboard browsing at 430",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2944,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:28.745Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-7f93ade3a769136c8661",
+          "file": "phase2.spec.cjs",
+          "line": 18,
+          "column": 48
+        },
+        {
+          "title": "compact review panels and keyboard browsing at 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3267,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:31.711Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-985c9dd8e06118ee5325",
+          "file": "phase2.spec.cjs",
+          "line": 18,
+          "column": 48
+        },
+        {
+          "title": "compact review panels and keyboard browsing at 1024",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3190,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:35.005Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-a846f6ab9449026c6461",
+          "file": "phase2.spec.cjs",
+          "line": 18,
+          "column": 48
+        },
+        {
+          "title": "compact review panels and keyboard browsing at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3033,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:38.233Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-6062efd13d64817e9c93",
+          "file": "phase2.spec.cjs",
+          "line": 18,
+          "column": 48
+        },
+        {
+          "title": "desktop review motion continues on hover, pauses on focus/touch, and respects reduced motion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6284,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:41.287Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-7eae24de40dadd30a714",
+          "file": "phase2.spec.cjs",
+          "line": 70,
+          "column": 1
+        },
+        {
+          "title": "mobile reviews autoplay, yield to touch momentum, and expose a keyboard pause",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:47.589Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-40e5249a5d9c5c5d9456",
+          "file": "phase2.spec.cjs",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "restrained service imagery and photo-free processes render without repeated scenes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6350,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:52.189Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-c8b9fc0aaef6ddd5b760",
+          "file": "phase2.spec.cjs",
+          "line": 109,
+          "column": 1
+        },
+        {
+          "title": "mocked challenge error has a call alternative; retry and non-JSON edge rejection never count as a lead",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:32:58.563Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d0ec94e5b0cc823a490-1d34b544e75d93ba405b",
+          "file": "phase2.spec.cjs",
+          "line": 126,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "reviewer-avatars.spec.cjs",
+      "file": "reviewer-avatars.spec.cjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "isolated avatar fixture reserves geometry and falls back for missing, failed and rejected images",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Requires the explicitly enabled, temporary development-only avatar fixture; never installed in production.",
+                  "location": {
+                    "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\reviewer-avatars.spec.cjs",
+                    "line": 7,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:00.826Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Requires the explicitly enabled, temporary development-only avatar fixture; never installed in production.",
+                      "location": {
+                        "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\reviewer-avatars.spec.cjs",
+                        "line": 7,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "8658f352685033408012-7921f8a75486a5a0b519",
+          "file": "reviewer-avatars.spec.cjs",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "current homepage keeps all real records, no unverified portrait requests and no accessible repeats",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1339,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:01.135Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8658f352685033408012-1fde7cfa020935032972",
+          "file": "reviewer-avatars.spec.cjs",
+          "line": 40,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "services-proof.spec.cjs",
+      "file": "services-proof.spec.cjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "restoration photo composition and coverage at 375",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4462,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:02.537Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "300af01d9069743f9513-9478fe1782b15e384595",
+          "file": "services-proof.spec.cjs",
+          "line": 49,
+          "column": 44
+        },
+        {
+          "title": "restoration photo composition and coverage at 430",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:07.037Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "300af01d9069743f9513-ab90ff8cf8b45afc2643",
+          "file": "services-proof.spec.cjs",
+          "line": 49,
+          "column": 44
+        },
+        {
+          "title": "restoration photo composition and coverage at 768",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4680,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:11.034Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "300af01d9069743f9513-31d75b282f4bc27ba67d",
+          "file": "services-proof.spec.cjs",
+          "line": 49,
+          "column": 44
+        },
+        {
+          "title": "restoration photo composition and coverage at 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7731,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:15.740Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "300af01d9069743f9513-37b0b1e7e8969982de45",
+          "file": "services-proof.spec.cjs",
+          "line": 49,
+          "column": 44
+        },
+        {
+          "title": "reduced motion is static, links work, and review boilerplate is absent",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6911,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-google-reviews]').first().locator('a')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('[data-google-reviews]').first().locator('a') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-google-reviews]').first().locator('a')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-google-reviews]').first().locator('a')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('[data-google-reviews]').first().locator('a') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-google-reviews]').first().locator('a')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\services-proof.spec.cjs:113:38",
+                    "location": {
+                      "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\services-proof.spec.cjs",
+                      "column": 38,
+                      "line": 113
+                    },
+                    "snippet": "  111 |   await expect(reviews).not.toContainText('Rating checked');\n  112 |   await expect(reviews).not.toContainText('Selected customer reviews');\n> 113 |   await expect(reviews.locator('a')).toHaveCount(0);\n      |                                      ^\n  114 |   await expect(reviews.locator('button')).toHaveCount(1); // Focus-accessible pause.\n  115 |   const first = section.locator('a').first();\n  116 |   await first.focus();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\services-proof.spec.cjs",
+                        "column": 38,
+                        "line": 113
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-google-reviews]').first().locator('a')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('[data-google-reviews]').first().locator('a') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-google-reviews]').first().locator('a')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  111 |   await expect(reviews).not.toContainText('Rating checked');\n  112 |   await expect(reviews).not.toContainText('Selected customer reviews');\n> 113 |   await expect(reviews.locator('a')).toHaveCount(0);\n      |                                      ^\n  114 |   await expect(reviews.locator('button')).toHaveCount(1); // Focus-accessible pause.\n  115 |   const first = section.locator('a').first();\n  116 |   await first.focus();\n    at C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\services-proof.spec.cjs:113:38"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:23.498Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\test-results\\services-proof-reduced-mot-ce9d4-eview-boilerplate-is-absent\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\test-results\\services-proof-reduced-mot-ce9d4-eview-boilerplate-is-absent\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser\\services-proof.spec.cjs",
+                    "column": 38,
+                    "line": 113
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "300af01d9069743f9513-06b29a70680d61811a89",
+          "file": "services-proof.spec.cjs",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "touch desktop also uses the static fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:31.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "300af01d9069743f9513-2aedac15054f4391e1c0",
+          "file": "services-proof.spec.cjs",
+          "line": 132,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "site.spec.cjs",
+      "file": "site.spec.cjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "homepage layout and gallery at 375px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3012,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:33.415Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-723af811a9646e111c68",
+          "file": "site.spec.cjs",
+          "line": 12,
+          "column": 2
+        },
+        {
+          "title": "homepage layout and gallery at 430px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2954,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:36.456Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-23146e32b1d3d0b99cae",
+          "file": "site.spec.cjs",
+          "line": 12,
+          "column": 2
+        },
+        {
+          "title": "homepage layout and gallery at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3483,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:39.455Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-7d9f0be9ecc108818363",
+          "file": "site.spec.cjs",
+          "line": 12,
+          "column": 2
+        },
+        {
+          "title": "homepage layout and gallery at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:42.974Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-4c9aa798613314fc4ea0",
+          "file": "site.spec.cjs",
+          "line": 12,
+          "column": 2
+        },
+        {
+          "title": "phone, CTA and navigation events dispatch once without gtag duplication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:47.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-03b0edf8826b4c123b5e",
+          "file": "site.spec.cjs",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "home form rejects accepted:false then sends one accepted lead without PII",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:50.350Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-b74174ddb648feb5f802",
+          "file": "site.spec.cjs",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "attribution survives navigation and contact success requires accepted lead",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2508,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:52.710Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-bbd00544b8113c558f48",
+          "file": "site.spec.cjs",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "campaign form keeps Postmark contract and confirmation redirect",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2456,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:55.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-4faeebdad2dd58e913a0",
+          "file": "site.spec.cjs",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "representative service and area pages have no overflow or runtime errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10886,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:33:57.768Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-4ff6f3caa8d7c79ddf43",
+          "file": "site.spec.cjs",
+          "line": 72,
+          "column": 1
+        },
+        {
+          "title": "navigation menus and mobile call controls remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1899,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T01:34:08.723Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e14a11516c0a10425841-240fdff2b2acf656753c",
+          "file": "site.spec.cjs",
+          "line": 80,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T01:32:15.669Z",
+    "duration": 115574.037,
+    "expected": 27,
+    "skipped": 1,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

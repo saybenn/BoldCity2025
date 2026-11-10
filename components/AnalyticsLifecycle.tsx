@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { track } from "@/lib/analytics";
 import { captureUTMs } from "@/lib/utm";
+import { getAnalyticsConsent, subscribeAnalyticsConsent } from "@/lib/analytics-consent";
 
 export default function AnalyticsLifecycle() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function AnalyticsLifecycle() {
     function pageView() {
       const path = window.location.pathname;
       captureUTMs();
+      if (getAnalyticsConsent() !== "granted") { lastPath.current = ""; return; }
       if (path === lastPath.current) return;
       lastPath.current = path;
       track("page_view", { page_path: path, page_location: `${window.location.origin}${path}`,
@@ -38,11 +40,13 @@ export default function AnalyticsLifecycle() {
     }
     function invalid() { track("form_error", { error_category: "validation", page_path: window.location.pathname }); }
     pageView();
+    const unsubscribe = subscribeAnalyticsConsent(pageView);
     router.events.on("routeChangeComplete", pageView);
     document.addEventListener("click", click);
     document.addEventListener("focusin", start);
     document.addEventListener("invalid", invalid, true);
     return () => {
+      unsubscribe();
       router.events.off("routeChangeComplete", pageView);
       document.removeEventListener("click", click);
       document.removeEventListener("focusin", start);

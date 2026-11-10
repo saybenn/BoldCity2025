@@ -158,7 +158,8 @@ export default function ModalContactForm({ onClose }) {
       aria-labelledby="modal-contact-heading"
       onMouseDown={handleBackdropClick}
     >
-      <div className="max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto rounded bg-white p-6 shadow-lg">
+      <div data-form-trust-group className="max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto">
+      <div className="rounded bg-white p-6 shadow-lg">
         {submitted ? (
           <div>
             <h2
@@ -285,8 +286,6 @@ export default function ModalContactForm({ onClose }) {
                 ) : null}
               </div>
 
-              <FormCertifications />
-
               <div className="flex justify-end space-x-2">
                 <button
                   type="button"
@@ -309,6 +308,8 @@ export default function ModalContactForm({ onClose }) {
             </form>
           </>
         )}
+      </div>
+      <FormCertifications className="mt-3" />
       </div>
     </div>
   );

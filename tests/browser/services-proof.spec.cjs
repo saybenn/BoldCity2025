@@ -110,7 +110,9 @@ test('reduced motion is static, links work, and review boilerplate is absent', a
   await expect(reviews.locator('[data-review-id]')).toHaveCount(22);
   await expect(reviews).not.toContainText('Rating checked');
   await expect(reviews).not.toContainText('Selected customer reviews');
-  await expect(reviews.locator('a')).toHaveCount(0);
+  await expect(reviews.locator('a')).toHaveCount(1);
+  await expect(reviews.getByRole('link', { name: /See for yourself:/ })).toHaveAttribute('href', 'https://www.google.com/maps?cid=13860030253406824266');
+  await expect(reviews.locator('[data-review-id] a')).toHaveCount(0);
   await expect(reviews.locator('button')).toHaveCount(1); // Focus-accessible pause.
   const first = section.locator('a').first();
   await first.focus();

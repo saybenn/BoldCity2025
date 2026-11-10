@@ -4,10 +4,12 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const ts = require('typescript');
 
-function analytics() {
+function analytics(choice = 'granted') {
   const window = { dataLayer: [], gtag: () => { throw Error('Parallel transport'); } }, testModule = { exports: {} };
   const code = ts.transpileModule(fs.readFileSync('lib/analytics.ts','utf8'), { compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022} }).outputText;
-  vm.runInNewContext(`(function(require,module,exports){${code}\n})`, { window })(() => ({ ALLOWED_SERVICES:new Set(['Water Damage Restoration']) }),testModule,testModule.exports);
+  vm.runInNewContext(`(function(require,module,exports){${code}\n})`, { window })(name => name === './analytics-consent'
+    ? {getAnalyticsConsent:()=>choice,applyGoogleConsent:()=>{window.bcGoogleConsentInitialized=true;}}
+    : { ALLOWED_SERVICES:new Set(['Water Damage Restoration']) },testModule,testModule.exports);
   return { ...testModule.exports, events:window.dataLayer };
 }
 
@@ -20,6 +22,16 @@ test('analytics uses one data-layer transport and excludes contact details and U
   assert.equal(a.events[0].page_location,'https://boldcityiaq.com/contact');
   assert.equal(a.events[0].phone_number,'+19044346318');
   for (const key of ['name','email','phone','message','href']) assert.equal(key in a.events[0],false);
+});
+
+test('unknown and declined analytics drop activity instead of queuing it for a later consent', () => {
+  for (const choice of ['unknown','denied']) {
+    const a=analytics(choice);
+    a.track('page_view',{page_path:'/contact'});
+    a.track('phone_click');
+    a.trackFormSubmit({form_id:'StandardContactForm'});
+    assert.equal(a.events.length,0);
+  }
 });
 
 test('a later accepted form clears optional context from an earlier accepted form', () => {

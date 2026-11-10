@@ -1,4 +1,5 @@
 import { ALLOWED_SERVICES } from "./contact-services";
+import { applyGoogleConsent, getAnalyticsConsent } from "./analytics-consent";
 
 declare global {
   interface Window {
@@ -11,7 +12,9 @@ export type AnalyticsPayload = Record<string, unknown>;
 const KEYS = new Set(["page", "page_path", "page_location", "page_type", "page_title", "cta_label", "cta_location", "href", "intent", "phone_number", "form_id", "form_name", "form_location", "service_requested", "error_category", "hero_variant", "review_source"]);
 const LEGACY = { "click cta": "cta_click", "click call": "phone_click", "submit form": "generate_lead", "view page": "page_view", "lead success view": "lead_success_view" };
 export function track(eventName: string, payload: AnalyticsPayload = {}) {
-  if (typeof window === "undefined" || !eventName) return;
+  // Drop pre-consent activity rather than queueing it for a later GTM load.
+  if (typeof window === "undefined" || !eventName || getAnalyticsConsent() !== "granted") return;
+  if (!window.bcGoogleConsentInitialized) applyGoogleConsent("granted");
   const clean: AnalyticsPayload = {};
   for (const [key, value] of Object.entries(payload)) {
     if (!KEYS.has(key) || !["string", "number", "boolean"].includes(typeof value)) continue;

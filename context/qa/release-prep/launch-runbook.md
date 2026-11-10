@@ -1,5 +1,7 @@
 # Controlled production cutover — preparation only
 
+**Historical scope: superseded by [the GA4-only launch runbook](../ga4-launch/launch-runbook.md). The owner's latest decision removes Google Ads readiness and reviewer photos as launch requirements. Retain this file as dated evidence, not the current release checklist.**
+
 **November 8, 2026 — NO-GO until the gates below pass and the owner separately authorizes release.** This document authorizes no merge, production deployment, GTM publication, live GA4 setting change, account reactivation or additional lead/email. The owner approved the GA4 history strategy at cutover and native accepted-lead Ads strategy; those are not release permission.
 
 ## 1. Preflight and final PR review

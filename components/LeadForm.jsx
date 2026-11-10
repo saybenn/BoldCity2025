@@ -229,7 +229,8 @@ export default function LeadForm({ data, utm = {} }) {
   }
 
   return (
-    <div className="w-full max-w-xl bg-white p-6 shadow-lg ring-1 ring-zinc-200 sm:p-8 md:max-w-none lg:rounded-3xl">
+    <div data-form-trust-group className="w-full max-w-xl md:max-w-none">
+    <div className="bg-white p-6 shadow-lg ring-1 ring-zinc-200 sm:p-8 lg:rounded-3xl">
       <h2 className="text-4xl font-semibold text-zinc-900 lg:text-5xl">
         {data.heading}
       </h2>
@@ -444,7 +445,6 @@ export default function LeadForm({ data, utm = {} }) {
           ) : null}
 
           <div className="md:col-span-2">
-            <FormCertifications className="mb-4" />
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="submit"
@@ -474,6 +474,8 @@ export default function LeadForm({ data, utm = {} }) {
           </div>
         </form>
       )}
+    </div>
+    <FormCertifications className="mt-3" />
     </div>
   );
 }

@@ -1,0 +1,49 @@
+
+> boldcityiaq@0.1.0 test
+> node --test tests/*.test.cjs
+
+✔ only a valid unexpired saved choice grants analytics; bad or unavailable storage fails closed (242.1553ms)
+✔ cross-tab withdrawal reloads once even when several components subscribe (13.479ms)
+✔ consent initializes denied, keeps advertising denied, and withdrawal disables/unloads an existing container (12.1158ms)
+✔ analytics uses one data-layer transport and excludes contact details and URL queries (109.4107ms)
+✔ unknown and declined analytics drop activity instead of queuing it for a later consent (48.13ms)
+✔ a later accepted form clears optional context from an earlier accepted form (23.8164ms)
+✔ every advertised service and legacy selection reaches mocked Postmark once (236.7939ms)
+✔ all form actions are verified, including modal and emergency ZIP validation (228.8754ms)
+✔ bad, expired, wrong-host and wrong-action tokens never deliver (184.5432ms)
+✔ verification outage and missing configuration fail closed (72.3949ms)
+✔ validation, honeypot, timing, content-type and origin rejection never deliver (254.4335ms)
+✔ mail failure never returns accepted and throttled requests have Retry-After (60.5649ms)
+✔ Netlify uses validated request context; forged forwarding headers cannot evade the shared handler limit (267.0753ms)
+✔ preview requires explicit hostname and binds Siteverify host/action to the request (251.6165ms)
+✔ nonproduction sends only to configured test recipient and never confirms to the visitor (109.4974ms)
+✔ production notifications retain business recipients and exclude the development inbox in every configured list (176.2713ms)
+✔ preview keeps its explicitly configured test inbox even when it is excluded from production (32.3651ms)
+✔ GTM QA requires explicit local development, local deployment/provider and exact loopback host (6.5251ms)
+(node:6344) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/elijr/OneDrive/Desktop/Coding/Personal%20Projects/boldcityiaq/lib/review-presentation.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all 23 genuine records are retained and 22 written excerpts are exact contiguous source text (12.1614ms)
+✔ production analytics require both production context and canonical public hostname (3.8213ms)
+✔ compact review presentation remains a verbatim contiguous excerpt with accurate omission markers (3.5952ms)
+(node:35984) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/elijr/OneDrive/Desktop/Coding/Personal%20Projects/boldcityiaq/lib/reviewer-avatars.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ reviewer portraits require the complete authorized identity association (10.2991ms)
+✔ portrait URLs, validation and source attribution fail closed (1.9913ms)
+✔ stale, future and excessive retention windows never enable portraits (2.0013ms)
+(node:18556) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/elijr/OneDrive/Desktop/Coding/Personal%20Projects/boldcityiaq/lib/seo.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ canonical entity and schema cover every page and local service type (10.1609ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2416.5873

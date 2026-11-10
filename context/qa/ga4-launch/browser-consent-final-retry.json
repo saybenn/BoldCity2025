@@ -1,0 +1,201 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "consent.spec.cjs"
+    ],
+    "configFile": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\playwright.config.cjs",
+    "rootDir": "C:/Users/elijr/OneDrive/Desktop/Coding/Personal Projects/boldcityiaq/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/elijr/OneDrive/Desktop/Coding/Personal Projects/boldcityiaq/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/elijr/OneDrive/Desktop/Coding/Personal Projects/boldcityiaq/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser",
+        "snapshotDir": "C:\\Users\\elijr\\OneDrive\\Desktop\\Coding\\Personal Projects\\boldcityiaq\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3200",
+          "storageState": {
+            "cookies": [],
+            "origins": [
+              {
+                "origin": "http://127.0.0.1:3200",
+                "localStorage": [
+                  {
+                    "name": "bc_analytics_choice_v1",
+                    "value": "{\"choice\":\"granted\",\"at\":1794274193232}"
+                  }
+                ]
+              }
+            ]
+          },
+          "channel": "chrome",
+          "headless": true,
+          "trace": "retain-on-failure",
+          "launchOptions": {
+            "args": [
+              "--renderer-process-limit=2",
+              "--disable-gpu"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "context/qa/ga4-launch/browser-consent-final-retry.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "consent.spec.cjs",
+      "file": "consent.spec.cjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a fresh visitor can decline analytics and still submit a service enquiry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T01:29:53.821Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1c859cb5ad23580ae1d-f385b2fe7f645cd9f59f",
+          "file": "consent.spec.cjs",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "allowing on the current route emits one current view and no earlier activity",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T01:29:56.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1c859cb5ad23580ae1d-9906c1b2ddc3a531d1c4",
+          "file": "consent.spec.cjs",
+          "line": 23,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T01:29:53.235Z",
+    "duration": 5749.613,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

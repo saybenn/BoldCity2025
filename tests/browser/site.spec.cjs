@@ -33,7 +33,9 @@ test('phone, CTA and navigation events dispatch once without gtag duplication',a
  await expect.poll(async()=> (await events(page,'page_view')).length).toBe(1);
  await page.locator('header a[href^="tel:"]').click();expect((await events(page,'phone_click')).length).toBe(1);
  expect((await events(page,'generate_lead')).length).toBe(0);
- await expect(page.locator('[data-google-reviews] a')).toHaveCount(0);expect((await events(page,'review_source_click')).length).toBe(0);
+ await expect(page.locator('[data-google-reviews] a')).toHaveCount(1);
+ await expect(page.getByRole('link',{name:/See for yourself:/})).toHaveAttribute('href','https://www.google.com/maps?cid=13860030253406824266');
+ await expect(page.locator('[data-google-reviews] [data-review-id] a')).toHaveCount(0);expect((await events(page,'review_source_click')).length).toBe(0);
  await page.locator('header a[href="/contact"]').click();await expect(page).toHaveURL(/\/contact$/);
  expect((await events(page,'cta_click')).length).toBe(1);expect((await events(page,'page_view')).length).toBe(2);
  await page.goto('/contact/success');expect((await events(page,'generate_lead')).length).toBe(0);

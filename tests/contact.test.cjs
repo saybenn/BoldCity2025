@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const ts = require('typescript');
 
-function app({ result = { success: true, hostname: 'boldcityiaq.com', action: 'contact_standard' }, outage = false, mailFailure = false, secret = 'test-secret', envOverrides = {}, contextIP = '203.0.113.10' } = {}) {
+function app({ result = { success: true, hostname: 'boldcityiaq.com', action: 'contact_standard' }, outage = false, mailFailure = false, secret = 'test-secret', envOverrides = {}, contextIP = '203.0.113.10', now } = {}) {
   let sends = 0;
   const messages = [];
   let trustedIP = contextIP;
@@ -20,7 +20,8 @@ function app({ result = { success: true, hostname: 'boldcityiaq.com', action: 'c
     const requireMock = (id) => id === 'postmark' ? { ServerClient: class { async sendEmailWithTemplate(message) { if (mailFailure) throw Error('mock failure'); sends++; messages.push(message); } } }
       : id === '@netlify/functions' ? { getContext: () => { if (trustedIP === null) throw Error('missing context'); return {ip:trustedIP}; } }
       : id.startsWith('.') ? load(path.resolve(path.dirname(file), id)) : require(id);
-    vm.runInNewContext(`(function(require,module,exports){${code}\n})`, { process: { env }, console: { error() {} }, URL, URLSearchParams, AbortSignal, Date, fetch: async () => { if (outage) throw Error('offline'); return { ok: true, json: async () => result }; } })(requireMock, mod, mod.exports);
+    const Clock = now === undefined ? Date : class extends Date { static now() { return now; } };
+    vm.runInNewContext(`(function(require,module,exports){${code}\n})`, { process: { env }, console: { error() {} }, URL, URLSearchParams, AbortSignal, Date:Clock, fetch: async () => { if (outage) throw Error('offline'); return { ok: true, json: async () => result }; } })(requireMock, mod, mod.exports);
     return mod.exports;
   }
   const handler = load('pages/api/contact.ts').default;
@@ -58,9 +59,11 @@ test('verification outage and missing configuration fail closed', async () => {
   for (const opts of [{outage:true}, {secret:''}]) { const a=app(opts); assert.equal((await a.submit()).code,503); assert.equal(a.sends(),0); }
 });
 test('validation, honeypot, timing, content-type and origin rejection never deliver', async () => {
-  for (const body of [{ service:'Not a service' },{name:'A'},{phone:'bad'},{email:'invalid'}, {companyWebsite:'spam'}, {formStartedAt:new Date().toISOString()}]) {
+  for (const body of [{ service:'Not a service' },{name:'A'},{phone:'bad'},{email:'invalid'}, {companyWebsite:'spam'}]) {
     const a=app(); const res=await a.submit(body); assert.equal(res.code,400); assert.notEqual(res.body.accepted,true); assert.equal(a.sends(),0);
   }
+  const now=Date.now(), fast=app({now});
+  assert.equal((await fast.submit({formStartedAt:new Date(now-500).toISOString()})).code,400);assert.equal(fast.sends(),0);
   const a=app(); assert.equal((await a.submit({}, {origin:'https://attacker.test'})).code,403);
   assert.equal((await a.submit({}, {'content-type':'text/plain'})).code,415);
   assert.equal((await a.submit({}, {}, 'test','GET')).code,405); assert.equal(a.sends(),0);

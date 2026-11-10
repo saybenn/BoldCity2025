@@ -1,5 +1,7 @@
 # Revamp work and evidence ledger
 
+**Current direction, November 8–9, 2026:** [GA4-only launch readiness](ga4-launch/README.md) supersedes historical Ads/photo blockers below. Working contact handling is preserved; certification mini-bands sit outside/beneath form cards. The owner additionally approved simple analytics opt-in: load GA4 only after Allow, keep declined forms usable. No merge, production deployment, GTM publication, live GA4 setting change or fresh real lead is authorized during preparation.
+
 Approved scope: final addendum takes precedence over the original master specification. Work is on `codex/website-seo-revamp`; no merge, deployment, GBP edit or paid-account change is authorized by this branch. The owner confirmed the public Normandy Blvd address during this work and requested direct Google-profile review sourcing.
 
 ## Baseline and source confidence

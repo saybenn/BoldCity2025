@@ -1,10 +1,11 @@
 // /pages/_app.js
 
 import "@/styles/globals.css";
-import Script from "next/script";
 import { useEffect, useSyncExternalStore } from "react";
 import { localGtmQaAllowed, productionAnalyticsAllowed } from "@/lib/deployment.mjs";
 import AnalyticsLifecycle from "@/components/AnalyticsLifecycle";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
+import { applyGoogleConsent, getAnalyticsConsent, serverAnalyticsConsent, subscribeAnalyticsConsent } from "@/lib/analytics-consent";
 import { Inter, Poppins } from "next/font/google";
 
 const inter = Inter({
@@ -29,6 +30,20 @@ const serverAnalyticsSnapshot = () => "off";
 
 export default function MyApp({ Component, pageProps }) {
   const analyticsMode = useSyncExternalStore(subscribeToHost, analyticsSnapshot, serverAnalyticsSnapshot);
+  const consent = useSyncExternalStore(subscribeAnalyticsConsent, getAnalyticsConsent, serverAnalyticsConsent);
+  useEffect(() => {
+    // Ignore the server's conservative hydration snapshot when a saved choice
+    // is already available; never overwrite it with a transient denial.
+    if (consent !== getAnalyticsConsent()) return;
+    applyGoogleConsent(consent);
+    if (consent !== "granted" || analyticsMode === "off" || !GTM_ID || window.bcGtmLoaded) return;
+    window.bcGtmLoaded = true;
+    window.dataLayer!.push({ "gtm.start": Date.now(), event: "gtm.js" });
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(GTM_ID)}`;
+    document.head.appendChild(script);
+  }, [analyticsMode, consent]);
   useEffect(() => {
     if (analyticsMode !== "qa") return;
     // Diagnostic clicks still bubble to AnalyticsLifecycle; prevent an actual
@@ -42,19 +57,8 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <div className={`${inter.variable} ${poppins.variable} font-sans`}>
       <AnalyticsLifecycle />
-      {analyticsMode !== "off" && GTM_ID ? (
-        <Script id="gtm-base" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-        </Script>
-      ) : null}
-
       <Component {...pageProps} />
+      <AnalyticsConsent />
     </div>
   );
 }
