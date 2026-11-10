@@ -1,0 +1,679 @@
+{
+  "checkedAt": "2026-11-07T02:20:26.779Z",
+  "base": "http://127.0.0.1:3000",
+  "routes": 37,
+  "assets": 28,
+  "issues": [],
+  "pages": [
+    {
+      "route": "/",
+      "title": "Water Damage Cleanup Jacksonville, FL | Bold City IAQ",
+      "h1": "Water Damage Cleanup in Jacksonville, FL",
+      "description": "Need emergency water damage cleanup in Jacksonville, FL? Bold City IAQ provides 24/7 water removal, structural drying, mold remediation, and restoration. Call now.",
+      "canonical": "https://boldcityiaq.com/",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Cleanup Jacksonville"
+    },
+    {
+      "route": "/about",
+      "title": "About Bold City IAQ | Jacksonville Restoration Experts (IICRC & NORMI Certified)",
+      "h1": "About Bold City IAQ — Jacksonville’s 24/7 Certified Restoration Pros",
+      "description": "Locally owned restoration company serving Jacksonville & NE Florida. IICRC & NORMI certified technicians. 24/7 emergency response for water, fire, smoke, mold, and sanitization.",
+      "canonical": "https://boldcityiaq.com/about",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "AboutPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "About Bold City IAQ — Jacksonville’s 24/7 Certified Restoration Pros"
+    },
+    {
+      "route": "/contact",
+      "title": "Contact Bold City IAQ | 24/7 Emergency Restoration in Jacksonville",
+      "h1": "Contact Bold City IAQ",
+      "description": "Call now for 24/7 emergency restoration in Jacksonville or request service online. Water damage, mold, storm, and cleanup support.",
+      "canonical": "https://boldcityiaq.com/contact",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "ContactPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Contact Bold City IAQ"
+    },
+    {
+      "route": "/financing",
+      "title": "Financing Options for Qualifying Projects | Bold City IAQ",
+      "h1": "Practical financing options for qualifying projects",
+      "description": "Learn about Bold City IAQ financing options for qualifying projects, including third-party, in-house, and hybrid paths. Talk with our team to review what may fit your situation.",
+      "canonical": "https://boldcityiaq.com/financing",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Practical financing options for qualifying projects"
+    },
+    {
+      "route": "/services",
+      "title": "Restoration & Air Duct Cleaning Services | Bold City IAQ",
+      "h1": "Restoration and cleaning services",
+      "description": "Explore water damage restoration, mold remediation, fire and smoke cleanup, contents cleaning, emergency response and air duct cleaning in Jacksonville.",
+      "canonical": "https://boldcityiaq.com/services",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration and cleaning services"
+    },
+    {
+      "route": "/resources/emergency-checklist",
+      "title": "Emergency Restoration Call Checklist | Bold City IAQ",
+      "h1": "Emergency restoration call checklist",
+      "description": "Prepare the address, damage details and access information for an emergency water damage or restoration call in Jacksonville.",
+      "canonical": "https://boldcityiaq.com/resources/emergency-checklist",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Emergency restoration call checklist"
+    },
+    {
+      "route": "/services/water-damage-restoration",
+      "title": "Water Damage Restoration Jacksonville, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Jacksonville, FL",
+      "description": "Water extraction, structural drying and restoration for Jacksonville homes and businesses after pipe leaks, storms and flooding. Call Bold City IAQ 24/7.",
+      "canonical": "https://boldcityiaq.com/services/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration"
+    },
+    {
+      "route": "/services/mold-remediation",
+      "title": "Mold Remediation Jacksonville, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Jacksonville, FL",
+      "description": "Mold remediation in Jacksonville, FL: containment, affected-material removal, HEPA air scrubbing and cleanup after moisture damage. Contact Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/services/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation"
+    },
+    {
+      "route": "/services/fire-and-smoke-restoration",
+      "title": "Fire & Smoke Restoration Jacksonville, FL | Bold City IAQ",
+      "h1": "Fire & Smoke Restoration in Jacksonville, FL",
+      "description": "Fire, smoke and soot cleanup in Jacksonville, FL. Bold City IAQ helps homes and businesses plan contents cleaning, material removal and restoration.",
+      "canonical": "https://boldcityiaq.com/services/fire-and-smoke-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Fire & Smoke Restoration"
+    },
+    {
+      "route": "/services/cleaning-and-sanitization",
+      "title": "Cleaning & Sanitization Jacksonville, FL | Bold City IAQ",
+      "h1": "Cleaning & Sanitization in Jacksonville, FL",
+      "description": "Contents cleaning and restoration cleanup in Jacksonville, FL. Discuss affected surfaces, belongings and cleanup needs with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/services/cleaning-and-sanitization",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Cleaning & Sanitization"
+    },
+    {
+      "route": "/services/emergency-services",
+      "title": "Emergency Restoration Services Jacksonville, FL | Bold City IAQ",
+      "h1": "Emergency Restoration Services in Jacksonville, FL",
+      "description": "Call Bold City IAQ 24/7 for emergency water removal and property cleanup in Jacksonville. Discuss leaks, storm water, sewage, mold and fire damage.",
+      "canonical": "https://boldcityiaq.com/services/emergency-services",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Emergency Services"
+    },
+    {
+      "route": "/service-areas",
+      "title": "Jacksonville Area Restoration Service Areas | Bold City IAQ",
+      "h1": "Restoration service areas",
+      "description": "Find water damage restoration and mold remediation information for Jacksonville, Orange Park and five other Northeast Florida communities.",
+      "canonical": "https://boldcityiaq.com/service-areas",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration service areas"
+    },
+    {
+      "route": "/services/air-duct-cleaning",
+      "title": "Air Duct Cleaning Jacksonville, FL | Bold City IAQ",
+      "h1": "Air Duct Cleaning in Jacksonville, FL",
+      "description": "Air duct cleaning in Jacksonville, FL for homes and businesses. Discuss visible dust, debris, access and the cleaning scope with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/services/air-duct-cleaning",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Air Duct Cleaning"
+    },
+    {
+      "route": "/service-areas/jacksonville",
+      "title": "Restoration Services in Jacksonville, FL | Bold City IAQ",
+      "h1": "Restoration Services in Jacksonville, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in Jacksonville, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/jacksonville",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in Jacksonville, FL"
+    },
+    {
+      "route": "/service-areas/orange-park",
+      "title": "Restoration Services in Orange Park, FL | Bold City IAQ",
+      "h1": "Restoration Services in Orange Park, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in Orange Park, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/orange-park",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in Orange Park, FL"
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach",
+      "title": "Restoration Services in Ponte Vedra Beach, FL | Bold City IAQ",
+      "h1": "Restoration Services in Ponte Vedra Beach, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in Ponte Vedra Beach, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/ponte-vedra-beach",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in Ponte Vedra Beach, FL"
+    },
+    {
+      "route": "/service-areas/st-augustine",
+      "title": "Restoration Services in St. Augustine, FL | Bold City IAQ",
+      "h1": "Restoration Services in St. Augustine, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in St. Augustine, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/st-augustine",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in St. Augustine, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville-beach",
+      "title": "Restoration Services in Jacksonville Beach, FL | Bold City IAQ",
+      "h1": "Restoration Services in Jacksonville Beach, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in Jacksonville Beach, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/jacksonville-beach",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in Jacksonville Beach, FL"
+    },
+    {
+      "route": "/service-areas/neptune-beach",
+      "title": "Restoration Services in Neptune Beach, FL | Bold City IAQ",
+      "h1": "Restoration Services in Neptune Beach, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in Neptune Beach, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/neptune-beach",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in Neptune Beach, FL"
+    },
+    {
+      "route": "/service-areas/atlantic-beach",
+      "title": "Restoration Services in Atlantic Beach, FL | Bold City IAQ",
+      "h1": "Restoration Services in Atlantic Beach, FL",
+      "description": "Bold City IAQ provides water damage restoration, mold remediation, and emergency property restoration support in Atlantic Beach, FL.",
+      "canonical": "https://boldcityiaq.com/service-areas/atlantic-beach",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Restoration Services in Atlantic Beach, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville/water-damage-restoration",
+      "title": "Water Damage Restoration in Jacksonville, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Jacksonville, FL",
+      "description": "Water extraction, structural drying and restoration in Jacksonville, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/jacksonville/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in Jacksonville, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville/mold-remediation",
+      "title": "Mold Remediation in Jacksonville, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Jacksonville, FL",
+      "description": "Mold remediation in Jacksonville, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/jacksonville/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in Jacksonville, FL"
+    },
+    {
+      "route": "/service-areas/orange-park/water-damage-restoration",
+      "title": "Water Damage Restoration in Orange Park, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Orange Park, FL",
+      "description": "Water extraction, structural drying and restoration in Orange Park, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/orange-park/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in Orange Park, FL"
+    },
+    {
+      "route": "/service-areas/orange-park/mold-remediation",
+      "title": "Mold Remediation in Orange Park, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Orange Park, FL",
+      "description": "Mold remediation in Orange Park, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/orange-park/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in Orange Park, FL"
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach/water-damage-restoration",
+      "title": "Water Damage Restoration in Ponte Vedra Beach, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Ponte Vedra Beach, FL",
+      "description": "Water extraction, structural drying and restoration in Ponte Vedra Beach, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/ponte-vedra-beach/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in Ponte Vedra Beach, FL"
+    },
+    {
+      "route": "/service-areas/ponte-vedra-beach/mold-remediation",
+      "title": "Mold Remediation in Ponte Vedra Beach, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Ponte Vedra Beach, FL",
+      "description": "Mold remediation in Ponte Vedra Beach, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/ponte-vedra-beach/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in Ponte Vedra Beach, FL"
+    },
+    {
+      "route": "/service-areas/st-augustine/water-damage-restoration",
+      "title": "Water Damage Restoration in St. Augustine, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in St. Augustine, FL",
+      "description": "Water extraction, structural drying and restoration in St. Augustine, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/st-augustine/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in St. Augustine, FL"
+    },
+    {
+      "route": "/service-areas/st-augustine/mold-remediation",
+      "title": "Mold Remediation in St. Augustine, FL | Bold City IAQ",
+      "h1": "Mold Remediation in St. Augustine, FL",
+      "description": "Mold remediation in St. Augustine, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/st-augustine/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in St. Augustine, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville-beach/water-damage-restoration",
+      "title": "Water Damage Restoration in Jacksonville Beach, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Jacksonville Beach, FL",
+      "description": "Water extraction, structural drying and restoration in Jacksonville Beach, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/jacksonville-beach/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in Jacksonville Beach, FL"
+    },
+    {
+      "route": "/service-areas/jacksonville-beach/mold-remediation",
+      "title": "Mold Remediation in Jacksonville Beach, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Jacksonville Beach, FL",
+      "description": "Mold remediation in Jacksonville Beach, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/jacksonville-beach/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in Jacksonville Beach, FL"
+    },
+    {
+      "route": "/service-areas/neptune-beach/water-damage-restoration",
+      "title": "Water Damage Restoration in Neptune Beach, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Neptune Beach, FL",
+      "description": "Water extraction, structural drying and restoration in Neptune Beach, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/neptune-beach/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in Neptune Beach, FL"
+    },
+    {
+      "route": "/service-areas/neptune-beach/mold-remediation",
+      "title": "Mold Remediation in Neptune Beach, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Neptune Beach, FL",
+      "description": "Mold remediation in Neptune Beach, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/neptune-beach/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in Neptune Beach, FL"
+    },
+    {
+      "route": "/service-areas/atlantic-beach/water-damage-restoration",
+      "title": "Water Damage Restoration in Atlantic Beach, FL | Bold City IAQ",
+      "h1": "Water Damage Restoration in Atlantic Beach, FL",
+      "description": "Water extraction, structural drying and restoration in Atlantic Beach, FL. Discuss leaks, storm damage and affected materials with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/atlantic-beach/water-damage-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Water Damage Restoration in Atlantic Beach, FL"
+    },
+    {
+      "route": "/service-areas/atlantic-beach/mold-remediation",
+      "title": "Mold Remediation in Atlantic Beach, FL | Bold City IAQ",
+      "h1": "Mold Remediation in Atlantic Beach, FL",
+      "description": "Mold remediation in Atlantic Beach, FL. Discuss moisture sources, containment, HEPA cleanup and affected-material removal with Bold City IAQ.",
+      "canonical": "https://boldcityiaq.com/service-areas/atlantic-beach/mold-remediation",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Explicit local data and primary source; no case studies",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Mold Remediation in Atlantic Beach, FL"
+    },
+    {
+      "route": "/contact/success",
+      "title": "Request Received | Bold City IAQ",
+      "h1": "We got your request.",
+      "description": "Your contact request was received. Call now for faster response.",
+      "canonical": "https://boldcityiaq.com/contact/success",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "We got your request."
+    },
+    {
+      "route": "/ads/emergency-restoration",
+      "title": "24/7 Emergency Restoration in Jacksonville | Bold City IAQ",
+      "h1": "Emergency RestorationCall for Emergency Availability",
+      "description": "Emergency water damage, mold, fire, and storm cleanup in Jacksonville. Fast local response, financing available, and certified restoration support.",
+      "canonical": "https://boldcityiaq.com/ads/emergency-restoration",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "Emergency RestorationCall for Emergency Availability"
+    },
+    {
+      "route": "/ads/emergency-restoration/success",
+      "title": "Request Received | Bold City IAQ",
+      "h1": "We got your emergency service request.",
+      "description": "Your emergency restoration request was received. Call now for faster response or review financing options.",
+      "canonical": "https://boldcityiaq.com/ads/emergency-restoration/success",
+      "schemaTypes": [
+        "LocalBusiness",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "indexing": "noindex, follow",
+      "localContent": "Service-specific or informational",
+      "imageStatus": "Referenced assets checked",
+      "targetIntent": "We got your emergency service request."
+    }
+  ]
+}

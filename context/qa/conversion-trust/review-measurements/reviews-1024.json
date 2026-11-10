@@ -1,0 +1,97 @@
+{
+  "width": 1024,
+  "sectionHeight": 522,
+  "cards": [
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 164
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    },
+    {
+      "width": 360,
+      "height": 158
+    }
+  ],
+  "semanticReviews": 22,
+  "decorativeCopies": 22,
+  "pageOverflow": false
+}

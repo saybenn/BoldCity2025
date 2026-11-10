@@ -1,0 +1,212 @@
+{
+  "checkedAt": "2026-11-07T19:06:24.009Z",
+  "exportTime": "2026-11-07 19:03:45",
+  "container": "GTM-55RZQMX7",
+  "workspace": "4 / Default Workspace",
+  "publishedVersion": "3",
+  "publishedVersionName": "Version 2",
+  "exportHashes": {
+    "published": "cd701581c9c85a5c4a0db4a6b8d264a072b5714e4a4ce1adc693774c7586c5ed",
+    "before": "90b43d6d63edc03825211d8b8e7e43171c17717c432db183a978603adef85c17",
+    "after": "44b42319ae917c1c43546bf0526fa9af54c8bfd45001fbb6766bd89addab17b8"
+  },
+  "preserved": {
+    "existingTriggers": true,
+    "existingVariables": true,
+    "existingBuiltIns": true,
+    "unchangedTags": [
+      "41",
+      "42",
+      "44",
+      "45"
+    ],
+    "existingLeadParameters": true,
+    "leadTriggerAndDestination": true,
+    "websiteFiles": true
+  },
+  "updatedLeadTag": {
+    "id": "46",
+    "eventName": "generate_lead",
+    "parameters": {
+      "page_path": "{{DL - page}}",
+      "page_location": "{{DL - page_location}}",
+      "form_id": "{{DL - form_id}}",
+      "form_location": "{{DL - form_location}}",
+      "form_name": "{{DL - form_name}}",
+      "service_requested": "{{DL - service_requested}}",
+      "form_type": "{{Compat - form_type}}",
+      "financing_interest": "{{Compat - financing_interest}}"
+    }
+  },
+  "newTags": [
+    {
+      "id": "52",
+      "name": "Google Ads - accepted lead (owner review)",
+      "type": "awct",
+      "parameters": {
+        "enableNewCustomerReporting": "false",
+        "enableConversionLinker": "true",
+        "enableProductReporting": "false",
+        "enableShippingData": "false",
+        "conversionId": "10940863332",
+        "conversionLabel": "x_PWCO3DlYkbEOSmgeEo",
+        "rdp": "false"
+      },
+      "firingTriggerId": [
+        "40"
+      ],
+      "consentSettings": {
+        "consentStatus": "NOT_SET"
+      },
+      "tagFiringOption": "ONCE_PER_EVENT"
+    },
+    {
+      "id": "53",
+      "name": "Google Ads AW-10940863332",
+      "type": "dest_aw",
+      "parameters": {
+        "ignoreDupeGtagConfigCalls": "false",
+        "destinationId": "AW-10940863332"
+      },
+      "firingTriggerId": [
+        "2147479573"
+      ],
+      "consentSettings": {
+        "consentStatus": "NOT_SET"
+      }
+    }
+  ],
+  "newVariables": [
+    {
+      "id": "56",
+      "name": "Compat - form_type",
+      "type": "smm",
+      "input": "{{DL - form_id}}",
+      "map": [
+        {
+          "key": "StandardContactForm",
+          "value": "standard"
+        },
+        {
+          "key": "ContactRequestForm",
+          "value": "standard"
+        },
+        {
+          "key": "AdContactForm",
+          "value": "ad"
+        },
+        {
+          "key": "LeadForm",
+          "value": "lead"
+        },
+        {
+          "key": "ModalContactForm",
+          "value": "modal"
+        }
+      ],
+      "defaultValue": "undefined (no match)"
+    },
+    {
+      "id": "57",
+      "name": "Compat - financing intent",
+      "type": "smm",
+      "input": "{{DL - intent}}",
+      "map": [
+        {
+          "key": "service request with financing interest",
+          "value": "yes"
+        },
+        {
+          "key": "service request",
+          "value": "no"
+        },
+        {
+          "key": "ad service request with financing interest",
+          "value": "yes"
+        },
+        {
+          "key": "ad service request",
+          "value": "no"
+        }
+      ],
+      "defaultValue": "undefined (no match)"
+    },
+    {
+      "id": "58",
+      "name": "Compat - financing_interest",
+      "type": "smm",
+      "input": "{{DL - form_id}}",
+      "map": [
+        {
+          "key": "StandardContactForm",
+          "value": "{{Compat - financing intent}}"
+        },
+        {
+          "key": "AdContactForm",
+          "value": "{{Compat - financing intent}}"
+        }
+      ],
+      "defaultValue": "undefined (no match)"
+    }
+  ],
+  "newSettings": [
+    {
+      "id": "54",
+      "type": "ogt_auto_events",
+      "parameters": {
+        "enableOutboundClick": "true",
+        "enableScroll": "true",
+        "enableDownload": "true",
+        "enableHistoryEvents": "false",
+        "enableForm": "true",
+        "enableVideo": "true"
+      },
+      "appliesTo": "Optimized Ads destination only; GA4 destination remains unoptimized and uses its existing settings"
+    },
+    {
+      "id": "55",
+      "type": "ogt_1p_data_v2",
+      "parameters": {
+        "isEnabled": "false"
+      },
+      "appliesTo": "Optimized Ads destination only; GA4 destination remains unoptimized and uses its existing settings"
+    }
+  ],
+  "publishedAds": {
+    "id": "10",
+    "type": "awct",
+    "parameters": {
+      "enableNewCustomerReporting": "false",
+      "enableConversionLinker": "true",
+      "enableProductReporting": "false",
+      "enableShippingData": "false",
+      "conversionId": "10940863332",
+      "conversionLabel": "x_PWCO3DlYkbEOSmgeEo",
+      "rdp": "false"
+    },
+    "trigger": {
+      "id": "7",
+      "name": "Form Submit",
+      "event": "form_submit"
+    },
+    "consentSettings": {
+      "consentStatus": "NOT_SET"
+    }
+  },
+  "draftAds": {
+    "replacementTagId": "52",
+    "sameConversionIdAndLabel": true,
+    "allPublishedParametersPreserved": true,
+    "trigger": {
+      "id": "40",
+      "name": "CE - submit form",
+      "event": "generate_lead"
+    },
+    "accountOwnershipAndPrimaryImportStatus": "UNVERIFIED; accessible manager has no client accounts and GA4 has no Ads links"
+  },
+  "ownerDecision": "Keep live GA4 history measurement enabled; document the release blocker and defer the setting switch to a separately approved coordinated release.",
+  "publicationRecommendation": "NO-GO; GA4 history duplicate persists and Ads account dependencies / accepted-lead delivery remain unqualified",
+  "publishedContainerModified": false,
+  "ga4LiveSettingsModified": false,
+  "websiteModified": false
+}

@@ -1,14 +1,11 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
-
-export default eslintConfig;
+import nextVitals from "eslint-config-next/core-web-vitals";
+const config = [
+  ...nextVitals,
+  { ignores: [".next/**", ".next-qa-production/**", ".next-gtm-qa/**", ".next-gtm-control/**", "node_modules/**", "context/media/**", "context/qa/**", "playwright-report/**", "test-results/**", ".qa-lock/**"] },
+  { files:["components/**/*.{js,jsx}","pages/**/*.{js,jsx}","lib/**/*.js"], rules:{"no-undef":"error"} },
+  { files:["components/StandardContactForm.jsx","components/AdContactForm.jsx","components/LeadForm.jsx","components/ModalContactForm.jsx","components/contact/ContactRequestForm.jsx","components/MobileStickyCallButton.jsx"],
+    // These forms deliberately hydrate browser storage/timestamps after SSR.
+    // React Compiler is not enabled; keep this new optimization rule advisory.
+    rules:{"react-hooks/set-state-in-effect":"warn"} },
+];
+export default config;

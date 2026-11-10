@@ -1,0 +1,308 @@
+{
+  "at": "2026-11-10T01:41:31.602Z",
+  "sourceCommit": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6",
+  "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+  "scope": "Real public selected-preview Chrome and GET requests, clean profile, no integration mocks, challenge interactions or form submissions. Consented preview remains tracking-isolated.",
+  "cases": [
+    {
+      "path": "/",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/contact",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/ads/emergency-restoration",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/water-damage-restoration",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/mold-remediation",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/fire-and-smoke-restoration",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/cleaning-and-sanitization",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/emergency-services",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/air-duct-cleaning",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/service-areas/jacksonville",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/service-areas/orange-park/water-damage-restoration",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/privacy",
+      "width": 375,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/contact",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/ads/emergency-restoration",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/water-damage-restoration",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/mold-remediation",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/fire-and-smoke-restoration",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/cleaning-and-sanitization",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/emergency-services",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/services/air-duct-cleaning",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/service-areas/jacksonville",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/service-areas/orange-park/water-damage-restoration",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    },
+    {
+      "path": "/privacy",
+      "width": 1440,
+      "status": 200,
+      "noindex": true,
+      "oneH1": true,
+      "canonical": true,
+      "schema": true,
+      "noOverflow": true,
+      "gtmSuppressed": true
+    }
+  ],
+  "tracking": [],
+  "formPosts": [],
+  "errors": [],
+  "collectorAbortSafety": "Installed as fail-safe; a passing run observes no attempted tracking requests. No form/provider mocking.",
+  "apiMethods": [
+    {
+      "path": "/api/contact",
+      "status": 405,
+      "allow": "POST"
+    },
+    {
+      "path": "/api/lead",
+      "status": 405,
+      "allow": "POST"
+    }
+  ],
+  "publicKeys": [
+    {
+      "url": "https://boldcityiaq.com",
+      "status": 200,
+      "knownPublicKeyFound": true,
+      "scriptsRead": 12,
+      "failures": 0,
+      "limit": "Public HTML/JS GET only, production code not executed. Does not prove private key/secret pairing."
+    },
+    {
+      "url": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+      "status": 200,
+      "knownPublicKeyFound": true,
+      "scriptsRead": 10,
+      "failures": 0,
+      "limit": "Public HTML/JS GET only, production code not executed. Does not prove private key/secret pairing."
+    }
+  ],
+  "galleryAndMobileNavigation": true,
+  "pass": true
+}

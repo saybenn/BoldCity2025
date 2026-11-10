@@ -1,0 +1,164 @@
+
+Running 10 tests using 1 worker
+
+(node:32184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 375px (4.3s)
+  ok  2 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 430px (5.4s)
+  ok  3 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 768px (3.7s)
+  ok  4 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 1440px (5.9s)
+  ok  5 tests\browser\site.spec.cjs:31:1 › phone, CTA and navigation events dispatch once without gtag duplication (1.8s)
+  x   6 tests\browser\site.spec.cjs:41:1 › home form rejects accepted:false then sends one accepted lead without PII (6.5s)
+(node:30624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   7 tests\browser\site.spec.cjs:55:1 › attribution survives navigation and contact success requires accepted lead (1.0m)
+(node:21928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   8 tests\browser\site.spec.cjs:64:1 › campaign form keeps Postmark contract and confirmation redirect (1.3h)
+(node:8024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 tests\browser\site.spec.cjs:70:1 › representative service and area pages have no overflow or runtime errors (39.8s)
+  x  10 tests\browser\site.spec.cjs:78:1 › navigation menus and mobile call controls remain usable (2.5h)
+
+
+  1) tests\browser\site.spec.cjs:41:1 › home form rejects accepted:false then sends one accepted lead without PII
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  locator('form[data-analytics-form="StandardContactForm"] button[type="submit"]')
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" locator('form[data-analytics-form="StandardContactForm"] button[type="submit"]') with timeout 5000ms
+      - waiting for locator('form[data-analytics-form="StandardContactForm"] button[type="submit"]')
+        14 × locator resolved to <button disabled type="submit" aria-busy="false" class="w-full rounded-lg bg-navy px-6 py-3 font-semibold text-white transition hover:bg-navy-dark disabled:cursor-not-allowed disabled:opacity-70">Request Service</button>
+           - unexpected value "disabled"
+
+
+      46 |  await page.locator('#standard-service').selectOption('Air Duct Cleaning');
+      47 |  const submit=page.locator('form[data-analytics-form="StandardContactForm"] button[type="submit"]');
+    > 48 |  await expect(submit).toBeEnabled();await submit.click();await expect(page.getByRole('alert').filter({hasText:'Submission failed'})).toBeVisible();
+         |                       ^
+      49 |  expect((await events(page,'generate_lead')).length).toBe(0);accepted=true;await expect(submit).toBeEnabled();await submit.click();
+      50 |  await expect(page.getByRole('heading',{name:'Request received'})).toBeVisible();
+      51 |  expect((await events(page,'generate_lead')).length).toBe(1);expect((await events(page,'form_start')).length).toBe(1);
+        at C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\tests\browser\site.spec.cjs:48:23
+
+    Error Context: test-results\site-home-form-rejects-acc-eb32d-e-accepted-lead-without-PII\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-home-form-rejects-acc-eb32d-e-accepted-lead-without-PII\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-home-form-rejects-acc-eb32d-e-accepted-lead-without-PII\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\browser\site.spec.cjs:55:1 › attribution survives navigation and contact success requires accepted lead
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Send Request' })
+        - locator resolved to <button disabled type="submit" aria-busy="false" class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold transition-colors cursor-not-allowed bg-blue-300 text-white">Send Request</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        105 × waiting for element to be visible, enabled and stable
+            - element is not enabled
+          - retrying click action
+            - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      59 |  await page.locator('#contact-request-name').fill('Test Person');await page.locator('#contact-request-phone').fill('9045551234');
+      60 |  await page.locator('#contact-request-service').selectOption('General Restoration Request');
+    > 61 |  await page.getByRole('button',{name:'Send Request'}).click();await expect(page).toHaveURL(/\/contact\/success/);
+         |                                                       ^
+      62 |  expect((await events(page,'generate_lead')).length).toBe(1);expect(payload.landing_page_url).toContain('/?utm_source=gmb');expect(payload.gbraid).toBe('test-braid');expect(payload.page).toBe('/contact');
+      63 | });
+      64 | test('campaign form keeps Postmark contract and confirmation redirect',async({page})=>{
+        at C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\tests\browser\site.spec.cjs:61:55
+
+    Error Context: test-results\site-attribution-survives--50a1b-cess-requires-accepted-lead\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-attribution-survives--50a1b-cess-requires-accepted-lead\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-attribution-survives--50a1b-cess-requires-accepted-lead\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests\browser\site.spec.cjs:64:1 › campaign form keeps Postmark contract and confirmation redirect
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('form button[type="submit"]')
+        - locator resolved to <button disabled type="submit" aria-busy="false" class="w-full rounded-md bg-green px-4 py-2 text-white transition hover:bg-green-dark disabled:cursor-not-allowed disabled:opacity-70">Request My Free Estimate</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        11 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      66 |  await page.route('**/api/contact',async route=>{payload=route.request().postDataJSON();await route.fulfill({json:{ok:true,accepted:true}});});
+      67 |  await page.goto('/ads/emergency-restoration');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:'context/qa/screenshots/ads-emergency.png',fullPage:true});await page.locator('#ad-name').fill('Test Person');await page.locator('#ad-phone').fill('9045551234');await page.locator('#ad-service').selectOption('General Emergency Request');
+    > 68 |  await page.locator('form button[type="submit"]').click();await expect(page).toHaveURL(/\/ads\/emergency-restoration\/success/);expect(payload.formType).toBe('ad');expect((await events(page,'generate_lead')).length).toBe(1);
+         |                                                   ^
+      69 | });
+      70 | test('representative service and area pages have no overflow or runtime errors',async({page})=>{
+      71 |  await isolate(page);const errors=[];page.on('pageerror',e=>errors.push(e.message));
+        at C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\tests\browser\site.spec.cjs:68:51
+
+    Error Context: test-results\site-campaign-form-keeps-P-bd4ef-t-and-confirmation-redirect\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-campaign-form-keeps-P-bd4ef-t-and-confirmation-redirect\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-campaign-form-keeps-P-bd4ef-t-and-confirmation-redirect\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests\browser\site.spec.cjs:78:1 › navigation menus and mobile call controls remain usable ────
+
+    Test timeout of 60000ms exceeded.
+
+    Error Context: test-results\site-navigation-menus-and-mobile-call-controls-remain-usable\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-navigation-menus-and-mobile-call-controls-remain-usable\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-navigation-menus-and-mobile-call-controls-remain-usable\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests\browser\site.spec.cjs:41:1 › home form rejects accepted:false then sends one accepted lead without PII
+    tests\browser\site.spec.cjs:55:1 › attribution survives navigation and contact success requires accepted lead
+    tests\browser\site.spec.cjs:64:1 › campaign form keeps Postmark contract and confirmation redirect
+    tests\browser\site.spec.cjs:78:1 › navigation menus and mobile call controls remain usable ─────
+  6 passed (3.8h)

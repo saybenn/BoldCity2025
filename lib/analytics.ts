@@ -1,184 +1,55 @@
-// /lib/analytics.ts
+import { ALLOWED_SERVICES } from "./contact-services";
+import { applyGoogleConsent, getAnalyticsConsent } from "./analytics-consent";
 
 declare global {
   interface Window {
     dataLayer?: Array<Record<string, unknown>>;
     gtag?: (...args: unknown[]) => void;
+    bcDelegatedTracking?: boolean;
   }
 }
-
-export type AnalyticsPrimitive = string | number | boolean | null | undefined;
-export type AnalyticsValue =
-  | AnalyticsPrimitive
-  | AnalyticsPrimitive[]
-  | Record<string, AnalyticsPrimitive>;
-
-export type AnalyticsPayload = Record<string, AnalyticsValue>;
-
-type TrackOptions = {
-  /**
-   * Whether to also emit a gtag event if gtag is present.
-   * Defaults to true.
-   */
-  sendToGtag?: boolean;
-
-  /**
-   * Whether to emit to window.dataLayer.
-   * Defaults to true.
-   */
-  sendToDataLayer?: boolean;
-
-  /**
-   * Optional callback after dispatch.
-   */
-  onDispatched?: () => void;
-};
-
-const DEFAULT_OPTIONS: Required<Omit<TrackOptions, "onDispatched">> = {
-  sendToGtag: true,
-  sendToDataLayer: true,
-};
-
-function isBrowser() {
-  return typeof window !== "undefined";
-}
-
-function sanitizeValue(value: AnalyticsValue): AnalyticsValue {
-  if (Array.isArray(value)) {
-    return value.filter((item) => item !== undefined);
+export type AnalyticsPayload = Record<string, unknown>;
+const KEYS = new Set(["page", "page_path", "page_location", "page_type", "page_title", "cta_label", "cta_location", "href", "intent", "phone_number", "form_id", "form_name", "form_location", "service_requested", "error_category", "hero_variant", "review_source"]);
+const LEGACY = { "click cta": "cta_click", "click call": "phone_click", "submit form": "generate_lead", "view page": "page_view", "lead success view": "lead_success_view" };
+export function track(eventName: string, payload: AnalyticsPayload = {}) {
+  // Drop pre-consent activity rather than queueing it for a later GTM load.
+  if (typeof window === "undefined" || !eventName || getAnalyticsConsent() !== "granted") return;
+  if (!window.bcGoogleConsentInitialized) applyGoogleConsent("granted");
+  const clean: AnalyticsPayload = {};
+  for (const [key, value] of Object.entries(payload)) {
+    if (!KEYS.has(key) || !["string", "number", "boolean"].includes(typeof value)) continue;
+    if (key === "service_requested" && !ALLOWED_SERVICES.has(String(value))) continue;
+    if (["page", "page_path", "href", "page_location"].includes(key)) {
+      const text = String(value);
+      if (text.startsWith("mailto:")) continue;
+      clean[key] = text.split(/[?#]/)[0];
+    } else clean[key] = value;
   }
-
-  if (
-    value &&
-    typeof value === "object" &&
-    !Array.isArray(value)
-  ) {
-    return Object.fromEntries(
-      Object.entries(value).filter(([, nestedValue]) => nestedValue !== undefined)
-    );
+  const event = LEGACY[eventName] || eventName;
+  // GTM's data-layer model retains earlier values. A later modal/lead form may
+  // omit these optional fields; null clears the preceding form's context.
+  if (event === "generate_lead") {
+    for (const key of ["service_requested", "form_name"]) if (!(key in clean)) clean[key] = null;
   }
-
-  return value;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ ...clean, event });
 }
-
-function sanitizePayload(payload: AnalyticsPayload = {}): AnalyticsPayload {
-  return Object.fromEntries(
-    Object.entries(payload)
-      .filter(([, value]) => value !== undefined)
-      .map(([key, value]) => [key, sanitizeValue(value)])
-  );
+// Page navigation is owned by AnalyticsLifecycle, including initial load.
+export function trackPageView(page: string, payload: AnalyticsPayload = {}) {
+  if (typeof window !== "undefined" && !window.bcDelegatedTracking) track("page_view", { ...payload, page });
 }
-
-/**
- * Generic event tracker for GTM dataLayer and optional gtag support.
- *
- * Example:
- * track("click cta", {
- *   cta_label: "Discuss Your Options",
- *   cta_location: "FinancingHero",
- *   intent: "financing inquiry",
- *   page: "/financing",
- * });
- */
-export function track(
-  eventName: string,
-  payload: AnalyticsPayload = {},
-  options: TrackOptions = {}
-) {
-  if (!eventName) return;
-  if (!isBrowser()) return;
-
-  const mergedOptions = { ...DEFAULT_OPTIONS, ...options };
-  const cleanPayload = sanitizePayload(payload);
-
-  if (mergedOptions.sendToDataLayer) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: eventName,
-      ...cleanPayload,
-    });
-  }
-
-  if (mergedOptions.sendToGtag && typeof window.gtag === "function") {
-    window.gtag("event", eventName, cleanPayload);
-  }
-
-  options.onDispatched?.();
+export function trackCta(payload: AnalyticsPayload) {
+  if (typeof window !== "undefined" && window.bcDelegatedTracking) return;
+  if (String(payload.href || "").startsWith("tel:")) return;
+  track("cta_click", payload);
 }
-
-/**
- * SPA pageview helper.
- *
- * Example:
- * trackPageView("/financing", {
- *   page_title: "Financing Options for Qualifying Projects",
- * });
- */
-export function trackPageView(
-  pagePath: string,
-  payload: AnalyticsPayload = {},
-  options: TrackOptions = {}
-) {
-  track(
-    "view page",
-    {
-      page: pagePath,
-      ...payload,
-    },
-    options
-  );
+export function trackCallClick(payload: AnalyticsPayload) {
+  if (typeof window !== "undefined" && !window.bcDelegatedTracking) track("phone_click", payload);
 }
-
-/**
- * CTA helper for consistency across the app.
- *
- * Example:
- * trackCta({
- *   cta_label: "Discuss Your Options",
- *   cta_location: "FinancingHero",
- *   intent: "financing inquiry",
- *   page: "/financing",
- * });
- */
-export function trackCta(payload: {
-  cta_label: string;
-  cta_location: string;
-  intent?: string;
-  page?: string;
-  href?: string;
-}) {
-  track("click cta", payload);
+// Call only after the API explicitly returns ok:true AND accepted:true.
+export function trackFormSubmit(payload: AnalyticsPayload) {
+  track("generate_lead", { ...payload, form_id: payload.form_id || payload.form_location });
 }
-
-/**
- * Click-to-call helper.
- *
- * Example:
- * trackCallClick({
- *   cta_location: "FinancingCTA",
- *   page: "/financing",
- *   phone_number: "+19044346318",
- *   intent: "financing inquiry",
- * });
- */
-export function trackCallClick(payload: {
-  cta_location: string;
-  page?: string;
-  phone_number?: string;
-  intent?: string;
-  cta_label?: string;
-}) {
-  track("click call", payload);
-}
-
-/**
- * Form submit helper.
- */
-export function trackFormSubmit(payload: {
-  form_name?: string;
-  form_location: string;
-  page?: string;
-  intent?: string;
-}) {
-  track("submit form", payload);
+export function trackFormError(form_location: string, error_category: string) {
+  track("form_error", { form_id: form_location, form_location, error_category });
 }

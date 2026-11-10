@@ -1,0 +1,41 @@
+{
+  "kind": "Separate local production-context build; no production deployment. Canonical browser host and GTM responses are simulated, not live analytics integration.",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "robotsHeader": null,
+      "robotsMeta": "index, follow"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "robotsHeader": null,
+      "robotsMeta": "index, follow"
+    },
+    {
+      "path": "/services/water-damage-restoration",
+      "status": 200,
+      "robotsHeader": null,
+      "robotsMeta": "index, follow"
+    },
+    {
+      "path": "/ads/emergency-restoration",
+      "status": 200,
+      "robotsHeader": null,
+      "robotsMeta": "noindex, follow"
+    }
+  ],
+  "analytics": [
+    {
+      "canonicalHostSimulated": false,
+      "gtmNetworkMocked": true,
+      "gtmRequests": 0
+    },
+    {
+      "canonicalHostSimulated": true,
+      "gtmNetworkMocked": true,
+      "gtmRequests": 1
+    }
+  ]
+}

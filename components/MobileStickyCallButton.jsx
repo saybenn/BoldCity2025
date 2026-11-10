@@ -11,7 +11,8 @@ export default function MobileStickyCallButton() {
 
   useEffect(() => {
     setIsClient(true);
-    const stored = localStorage.getItem("callButtonHidden");
+    let stored;
+    try { stored = localStorage.getItem("callButtonHidden"); } catch {}
     if (stored === "true") {
       setVisible(false);
       setHide(true);
@@ -20,14 +21,14 @@ export default function MobileStickyCallButton() {
 
   const handleDismiss = () => {
     setHide(true);
-    localStorage.setItem("callButtonHidden", "true");
+    try { localStorage.setItem("callButtonHidden", "true"); } catch {}
     setTimeout(() => setVisible(false), 300);
   };
 
   const handleRecall = () => {
     setVisible(true);
     setHide(false);
-    localStorage.removeItem("callButtonHidden");
+    try { localStorage.removeItem("callButtonHidden"); } catch {}
   };
 
   if (!isClient) return null;

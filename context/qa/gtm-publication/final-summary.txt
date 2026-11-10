@@ -1,0 +1,53 @@
+- generic "Summary"
+- generic: Container Details
+- generic: Container Name
+- link "www.boldcityiaq.com":
+  - /url: https://tagmanager.google.com#/container/accounts/6306261658/containers/226220500
+  - text: www.boldcityiaq.com
+- generic: Source
+- list:
+  - listitem: On-page gtm.js snippet
+- generic: Container ID
+- generic: GTM-55RZQMX7
+- generic: Destination ID
+- generic: AW-10940863332
+- generic: Container Version
+- button "Change container environment or version": Preview
+- text: Output of GTM-55RZQMX7
+- button "More information about output": help_outline
+- button "Tags"
+- button "Hits Sent":
+  - generic: Hits Sent
+- button "Variables"
+- button "Data Layer"
+- button "Consent"
+- button "Console": Console
+- generic: Tags Fired
+- button "GA4 - Base Google Tag - Fired 1 time":
+  - generic: GA4 - Base
+  - generic: Google Tag - Fired 1 time
+- 'button "GA4 - click call Google Analytics: GA4 Event - Fired 1 time"':
+  - generic: GA4 - click call
+  - generic: "Google Analytics: GA4 Event - Fired 1 time"
+- 'button "GA4 - click cta Google Analytics: GA4 Event - Fired 1 time"':
+  - generic: GA4 - click cta
+  - generic: "Google Analytics: GA4 Event - Fired 1 time"
+- 'button "GA4 - view page Google Analytics: GA4 Event - Fired 3 times"':
+  - generic: GA4 - view page
+  - generic: "Google Analytics: GA4 Event - Fired 3 times"
+- button "Google Ads AW-10940863332 Google Ads - Fired 1 time":
+  - generic: Google Ads AW-10940863332
+  - generic: Google Ads - Fired 1 time
+- generic: Tag Settings
+- button "Manage automatic event detection":
+  - generic: Manage automatic event detection
+- button "Allow user-provided data capabilities":
+  - generic: Allow user-provided data capabilities
+- text: Tags Not Fired
+- button "Hide"
+- 'button "GA4 - submit form Google Analytics: GA4 Event"':
+  - generic: GA4 - submit form
+  - generic: "Google Analytics: GA4 Event"
+- button "Google Ads - accepted lead (owner review) Google Ads Conversion Tracking":
+  - generic: Google Ads - accepted lead (owner review)
+  - generic: Google Ads Conversion Tracking

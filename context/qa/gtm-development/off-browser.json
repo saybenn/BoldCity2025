@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-07T06:38:10.244Z",
+  "mode": "off",
+  "kind": "Real Chrome, no form submissions. GTM script is real except the explicitly blocked independent-event case.",
+  "cases": [
+    {
+      "gtmExplicitlyBlocked": false,
+      "gtmResponses": [],
+      "events": {
+        "page_view": 2,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0
+      },
+      "collectorRequestsPastCsp": [],
+      "violations": []
+    }
+  ]
+}

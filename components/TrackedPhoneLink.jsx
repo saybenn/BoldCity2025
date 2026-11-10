@@ -34,6 +34,7 @@ export default function TrackedPhoneLink({
       href={href}
       className={className}
       aria-label={ariaLabel || ctaLabel}
+      data-cta-location={ctaLocation}
       onClick={handleClick}
       {...props}
     >

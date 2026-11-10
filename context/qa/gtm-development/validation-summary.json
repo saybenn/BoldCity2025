@@ -1,0 +1,21 @@
+{
+  "build": "PASS; NODE_ENV production with QA flag deliberately true; isolated browser-test artifact uses official public dummy widget key",
+  "typecheck": "PASS",
+  "unitTests": 18,
+  "lint": {
+    "errors": 0,
+    "warnings": 9
+  },
+  "browser": {
+    "totalUniqueCasesVerified": 10,
+    "mainRunPassed": 9,
+    "mainRunStartupConnectionRefused": 1,
+    "focusedRetryPassed": 1,
+    "formProvidersAndApiMocked": true,
+    "emailsSent": 0
+  },
+  "localEvents": "PASS independently of GTM, with real GTM, flag off and production-mode QA flag",
+  "tagAssistant": "CONNECTED; Base/call/CTA/page tags fired; extra history-associated page firing unresolved",
+  "turnstile": "3 real official dummy-key responses as expected; no real accepted lead/replay claim",
+  "publication": "NO-GO: unreplaced Ads deletion and history-related firing/measurement qualification"
+}

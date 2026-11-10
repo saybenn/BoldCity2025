@@ -1,0 +1,19 @@
+{
+  "kind": "Isolated actual Chrome component test; synthetic colored PNG response and failed request are mocked. Zero genuine reviewer photos.",
+  "before": {
+    "x": 32,
+    "y": 80,
+    "width": 40,
+    "height": 40
+  },
+  "after": {
+    "x": 32,
+    "y": 80,
+    "width": 40,
+    "height": 40
+  },
+  "uniqueMockRequests": 2,
+  "rejectedRequests": 0,
+  "fixturePngBytes": 237,
+  "pass": true
+}

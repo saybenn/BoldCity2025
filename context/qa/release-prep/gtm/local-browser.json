@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-11-08T15:57:01.483Z",
+  "mode": "qa",
+  "kind": "Real Chrome, no form submissions. GTM script is real except the explicitly blocked independent-event case.",
+  "cases": [
+    {
+      "gtmExplicitlyBlocked": true,
+      "gtmResponses": [],
+      "events": {
+        "page_view": 2,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0
+      },
+      "collectorRequestsPastCsp": [],
+      "violations": [
+        {
+          "directive": "frame-src",
+          "blocked": "https://www.google.com"
+        }
+      ]
+    },
+    {
+      "gtmExplicitlyBlocked": false,
+      "gtmResponses": [
+        200
+      ],
+      "events": {
+        "page_view": 2,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0
+      },
+      "collectorRequestsPastCsp": [],
+      "violations": [
+        {
+          "directive": "connect-src",
+          "blocked": "https://www.google-analytics.com/g/collect"
+        },
+        {
+          "directive": "connect-src",
+          "blocked": "https://www.google.com/g/collect"
+        },
+        {
+          "directive": "frame-src",
+          "blocked": "https://www.google.com"
+        },
+        {
+          "directive": "connect-src",
+          "blocked": "https://www.google-analytics.com/g/collect"
+        },
+        {
+          "directive": "connect-src",
+          "blocked": "https://www.googleadservices.com/pagead/conversion/"
+        },
+        {
+          "directive": "img-src",
+          "blocked": "https://www.google-analytics.com/g/collect"
+        },
+        {
+          "directive": "frame-src",
+          "blocked": "https://www.googletagmanager.com"
+        }
+      ]
+    }
+  ]
+}

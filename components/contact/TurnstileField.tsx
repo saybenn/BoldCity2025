@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, useImperativeHandle, useRef } from "react";
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from "react";
 
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
@@ -23,27 +23,45 @@ type TurnstileFieldProps = {
   className?: string;
 };
 
-const VERIFICATION_ERROR = "Verification failed. Please try again.";
+function verificationMessage(code: string) {
+  if (["110100", "110110", "110200", "400020"].includes(code)) return "Verification is unavailable on this website. Please call us directly.";
+  if (["200500", "200100"].includes(code)) return "The verification check could not load. Check your connection, then retry or call us.";
+  return "Verification did not complete. Please retry or call us directly.";
+}
 
 export const TurnstileField = forwardRef<
   TurnstileFieldHandle,
   TurnstileFieldProps
 >(function TurnstileField(
-  { action, onTokenChange, onVerificationError, className = "" },
+  { action, onTokenChange, className = "" },
   forwardedRef,
 ) {
   const turnstileRef = useRef<TurnstileInstance | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [size, setSize] = useState<"flexible" | "compact">("flexible");
+  const [widgetError, setWidgetError] = useState("");
 
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    // Cloudflare's flexible widget has a 300px minimum. Use its official
+    // compact layout in narrower form columns, including the 320px viewport.
+    const observer = new ResizeObserver(([entry]) => setSize(entry.contentRect.width < 300 ? "compact" : "flexible"));
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   function clearToken() {
     onTokenChange("");
   }
 
-  function reset() {
-    clearToken();
+  const reset = useCallback(() => {
+    onTokenChange("");
+    setWidgetError("");
     turnstileRef.current?.reset();
-  }
+  }, [onTokenChange]);
 
   useImperativeHandle(
     forwardedRef,
@@ -58,7 +76,7 @@ export const TurnstileField = forwardRef<
         return turnstileRef.current?.isExpired() ?? true;
       },
     }),
-    [onTokenChange],
+    [reset],
   );
 
   if (!siteKey) {
@@ -67,20 +85,20 @@ export const TurnstileField = forwardRef<
         role="alert"
         className={`rounded-md bg-red-50 p-3 text-sm text-red-700 ${className}`}
       >
-        Form verification is unavailable.
+        Form verification is unavailable. <a href="tel:+19044346318" className="underline">Call (904) 434-6318</a>.
       </div>
     );
   }
 
   return (
-    <div className={className}>
+    <div ref={containerRef} className={`min-w-0 max-w-full overflow-hidden ${className}`}>
       <Turnstile
         ref={turnstileRef}
         siteKey={siteKey}
         options={{
           action,
           theme: "auto",
-          size: "flexible",
+          size,
 
           /*
            * The forms submit JSON and manually include
@@ -96,17 +114,26 @@ export const TurnstileField = forwardRef<
           refreshExpired: "auto",
         }}
         onSuccess={(token) => {
+          setWidgetError("");
           onTokenChange(token);
-          onVerificationError?.("");
         }}
         onExpire={() => {
           clearToken();
         }}
-        onError={() => {
+        onError={(code) => {
           clearToken();
-          onVerificationError?.(VERIFICATION_ERROR);
+          setWidgetError(verificationMessage(String(code)));
+          // Only a public error category and form action; never a token or key.
+          console.warn("contact_verification", { code: String(code).replace(/[^0-9]/g, "").slice(0, 6), action });
         }}
       />
+      {widgetError && <div role="alert" className="mt-2 rounded-md bg-red-50 p-3 text-sm text-red-800">
+        <p>{widgetError}</p>
+        <div className="mt-2 flex flex-wrap gap-4">
+          <button type="button" onClick={reset} className="min-h-11 underline">Retry verification</button>
+          <a href="tel:+19044346318" className="inline-flex min-h-11 items-center underline">Call (904) 434-6318</a>
+        </div>
+      </div>}
     </div>
   );
 });

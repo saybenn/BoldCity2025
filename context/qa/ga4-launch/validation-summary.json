@@ -1,0 +1,91 @@
+{
+  "preparedAt": "2026-11-10T01:45:41.469Z",
+  "branch": "codex/website-seo-revamp",
+  "baseline": "ab2d20429c49ea028860f104522802a503741688",
+  "decision": "Website GO for preview; production/GTM publication NO-GO until account preparation and approved cutover acceptance.",
+  "build": {
+    "pass": true,
+    "pages": 40,
+    "output": "build-consent-results.txt"
+  },
+  "standaloneTypecheck": {
+    "pass": true,
+    "output": "typecheck-consent-results.txt"
+  },
+  "unit": {
+    "pass": 25,
+    "fail": 0,
+    "output": "unit-consent-results.txt",
+    "formIntegrations": "Mocked Siteverify and Postmark; no real email"
+  },
+  "browser": {
+    "pass": 30,
+    "fail": 0,
+    "skip": 1,
+    "optionalSkip": "Reviewer avatar fixture",
+    "report": "browser-final-results.json",
+    "formIntegrations": "Mocked Turnstile and API; declined consent still accepts enquiry"
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 9,
+    "existingWarningsOnly": true
+  },
+  "consent": {
+    "sixWidths": true,
+    "noPreconsentGtm": true,
+    "noPreconsentEventReplay": true,
+    "persistedAllowOneCurrentView": true,
+    "crossTabWithdrawal": true,
+    "unrelatedCookiePreserved": true,
+    "realGa4ReceiptClaimed": false
+  },
+  "gtmLocal": [
+    {
+      "gtmExplicitlyBlocked": true,
+      "gtmResponses": [],
+      "events": {
+        "page_view": 2,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0
+      },
+      "collectorRequestsPastCsp": []
+    },
+    {
+      "gtmExplicitlyBlocked": false,
+      "gtmResponses": [
+        200
+      ],
+      "events": {
+        "page_view": 2,
+        "phone_click": 1,
+        "cta_click": 1,
+        "generate_lead": 0
+      },
+      "collectorRequestsPastCsp": []
+    }
+  ],
+  "account": {
+    "candidate": "Offline reference only, not saved/applied/published",
+    "tagAssistant": "No fresh unpublished candidate connection; prior dated session remains evidence only",
+    "liveGa4Changed": false,
+    "historyDuplicate": "Known release switch, not fixed live during preparation"
+  },
+  "realLeadSent": false,
+  "productionDeployed": false,
+  "hosted": {
+    "applicationCommit": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6",
+    "bothApplicationHeadNetlifyChecks": "PASS",
+    "routeWidthCases": 24,
+    "activeFormWidthCases": 18,
+    "consentWidths": 6,
+    "siteRoutes": 37,
+    "assets": 28,
+    "trackingRequests": [],
+    "applicationFormPosts": [],
+    "knownPublicWidgetKeyFound": true,
+    "privatePairingProven": false,
+    "toolbarLimit": "Keyboard on hosted preview. Initial pointer attempt was intercepted by injected Netlify Drawer; local QA exercises normal pointer activation."
+  }
+}

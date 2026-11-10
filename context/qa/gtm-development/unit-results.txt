@@ -1,0 +1,38 @@
+
+> boldcityiaq@0.1.0 test
+> node --test tests/*.test.cjs
+
+✔ analytics uses one data-layer transport and excludes contact details and URL queries (142.805ms)
+✔ a later accepted form clears optional context from an earlier accepted form (50.3214ms)
+✔ every advertised service and legacy selection reaches mocked Postmark once (259.8386ms)
+✔ all form actions are verified, including modal and emergency ZIP validation (254.5932ms)
+✔ bad, expired, wrong-host and wrong-action tokens never deliver (198.2859ms)
+✔ verification outage and missing configuration fail closed (133.4388ms)
+✔ validation, honeypot, timing, content-type and origin rejection never deliver (474.5884ms)
+✔ mail failure never returns accepted and throttled requests have Retry-After (67.466ms)
+✔ Netlify uses validated request context; forged forwarding headers cannot evade the shared handler limit (201.0398ms)
+✔ preview requires explicit hostname and binds Siteverify host/action to the request (223.314ms)
+✔ nonproduction sends only to configured test recipient and never confirms to the visitor (139.7832ms)
+✔ production notifications retain business recipients and exclude the development inbox in every configured list (127.5227ms)
+✔ preview keeps its explicitly configured test inbox even when it is excluded from production (42.4216ms)
+✔ GTM QA requires explicit local development, local deployment/provider and exact loopback host (7.0939ms)
+(node:18860) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/elijr/OneDrive/Desktop/Coding/Personal%20Projects/boldcityiaq/lib/review-presentation.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ all 23 genuine records are retained and 22 written excerpts are exact contiguous source text (50.3389ms)
+✔ production analytics require both production context and canonical public hostname (4.2143ms)
+✔ compact review presentation remains a verbatim contiguous excerpt with accurate omission markers (3.345ms)
+(node:33236) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/elijr/OneDrive/Desktop/Coding/Personal%20Projects/boldcityiaq/lib/seo.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ canonical entity and schema cover every page and local service type (26.7743ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3079.5833

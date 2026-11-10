@@ -1,0 +1,170 @@
+{
+  "kind": "Evidence hashes; manifest excludes itself",
+  "files": [
+    {
+      "path": "context/qa/gtm-publication/README.md",
+      "bytes": 18119,
+      "sha256": "93f387ddd364a2d99dfc49fbdf4a5ce21d71822c5d6b2565e7e42d8f9de484b9"
+    },
+    {
+      "path": "context/qa/gtm-publication/ads-draft-review.jpg",
+      "bytes": 52991,
+      "sha256": "8602cb97275da5a28b145d1263cf767cf2ad878c29b0bbde5106d36204e276e1"
+    },
+    {
+      "path": "context/qa/gtm-publication/baseline-summary.jpg",
+      "bytes": 57492,
+      "sha256": "46e3680ab4e4dee1d23ca7dfaac1ff9f6cb4009d59e1f107f5b405f679c38444"
+    },
+    {
+      "path": "context/qa/gtm-publication/changed-files.txt",
+      "bytes": 1630,
+      "sha256": "d14610f616dee51bfe4a48a6e4881296373e958aaffe53146076d9cfd65e2f51"
+    },
+    {
+      "path": "context/qa/gtm-publication/cta-event.txt",
+      "bytes": 1705,
+      "sha256": "693d74f10282018aafe99c9547d2eb7ecc4f786c8d54ec14c6ab20f22e3edf3b"
+    },
+    {
+      "path": "context/qa/gtm-publication/custom-dimensions.jpg",
+      "bytes": 62736,
+      "sha256": "0348208ca8a758f46b432180f3f8197d5a3814c515b62f94cc1ed5fb904fafc1"
+    },
+    {
+      "path": "context/qa/gtm-publication/event-trace.json",
+      "bytes": 12133,
+      "sha256": "cfbda5d5280decc149c74809bedad94f16c17d9a76b578c5a87c87cdd8e12683"
+    },
+    {
+      "path": "context/qa/gtm-publication/events-without-gtm.png",
+      "bytes": 121792,
+      "sha256": "7fcd58aedc1785438d0273f137e08a939a0df4cd0add807b429dd9f246032354"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-cta-event.txt",
+      "bytes": 1696,
+      "sha256": "28a83b388b849d28bb394e0780155f014789e2e390865b04d5e2bd355a065fef"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-history-event.txt",
+      "bytes": 2829,
+      "sha256": "9301c4a21a478837b79e2df7679ebac3a6f67ddcd6fba361903b935eb82778b4"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-initial-event.txt",
+      "bytes": 1396,
+      "sha256": "bc87834bd11c88beb924b869dedc54889ab46a53809d616083a5aa7dea8b1c31"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-initial-summary.jpg",
+      "bytes": 57848,
+      "sha256": "650646abccf84a0168997f0f7b09357af54792c0e74a90672911f69f171dfef8"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-phone-event.txt",
+      "bytes": 1616,
+      "sha256": "2c48af3d391df63cfe0cd17cf90bef06b16bb0f70d68adab582a2c2588c810a6"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-route-event.txt",
+      "bytes": 1764,
+      "sha256": "306ffd8c57a960bbe673ec5d6e0fa8c8f054a089aa0bc4aee318acf4a84579de"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-summary.jpg",
+      "bytes": 49981,
+      "sha256": "33ea68d6641d6dba500f244ad1c28e85bcb105f929c3c6c403dd005e5f3da8ea"
+    },
+    {
+      "path": "context/qa/gtm-publication/final-summary.txt",
+      "bytes": 2048,
+      "sha256": "7ac19ba6a5ee246057b9114ea1b02b77d3f63687001f8247c929012891bfe79a"
+    },
+    {
+      "path": "context/qa/gtm-publication/ga4-history-enabled.jpg",
+      "bytes": 124180,
+      "sha256": "c0d46ca8210464397613ca07c0c7f9c748a86b1f938bcc99bed25197f955a42d"
+    },
+    {
+      "path": "context/qa/gtm-publication/ga4-no-ads-links.jpg",
+      "bytes": 68043,
+      "sha256": "4064801dc23d1a218a7ac04677aec8f56b4c7e4c7f28c30668f9b7763a067545"
+    },
+    {
+      "path": "context/qa/gtm-publication/google-tag-history-enabled.jpg",
+      "bytes": 93526,
+      "sha256": "6cdd5f0c0f831b9b9430e7a33e94487f6e8a53cad013af857f1385a9925a9910"
+    },
+    {
+      "path": "context/qa/gtm-publication/gtm-qa-loaded.png",
+      "bytes": 121792,
+      "sha256": "7fcd58aedc1785438d0273f137e08a939a0df4cd0add807b429dd9f246032354"
+    },
+    {
+      "path": "context/qa/gtm-publication/history-event.txt",
+      "bytes": 2820,
+      "sha256": "de6fd88fe31370ab50e79f59776dccd89e93ac646058531a993274af5677dbcf"
+    },
+    {
+      "path": "context/qa/gtm-publication/history-tag-details.txt",
+      "bytes": 2861,
+      "sha256": "f8cea138878c9901a6880087c63dad091d4b0d6b86683f3bd2b135248a9857b0"
+    },
+    {
+      "path": "context/qa/gtm-publication/history-tag-firing.jpg",
+      "bytes": 58180,
+      "sha256": "086e9ada468e57bbc1f2a6c018bc8a86f724e3bf4784d79bbea112844e995056"
+    },
+    {
+      "path": "context/qa/gtm-publication/initial-event.txt",
+      "bytes": 1405,
+      "sha256": "7d7b92d5d84ac63952d12a93f92592c5939f6dd8327b78c65f599d86ec6551a4"
+    },
+    {
+      "path": "context/qa/gtm-publication/initial-page-view.jpg",
+      "bytes": 57860,
+      "sha256": "e409efb902eda663589f6270e16bc987cc9a02fde168028de86ed0d4f0ad5d04"
+    },
+    {
+      "path": "context/qa/gtm-publication/lead-reporting-saved.jpg",
+      "bytes": 67837,
+      "sha256": "8ec367589e46c4e11be2e4fac32e4046042745381077d8894783ae33e24e1aa5"
+    },
+    {
+      "path": "context/qa/gtm-publication/local-browser.json",
+      "bytes": 1698,
+      "sha256": "568b44afcebbee87949b3f0a14e019d4ec574c83f7ff1388de68b854ad9f2670"
+    },
+    {
+      "path": "context/qa/gtm-publication/lookup-contract-check.json",
+      "bytes": 2294,
+      "sha256": "afd2c3aa2796ba627955f7ed31db5978c80e60ab9d9f332aa10154d06480a6b9"
+    },
+    {
+      "path": "context/qa/gtm-publication/phone-event.txt",
+      "bytes": 1616,
+      "sha256": "7037dc1ff657137613120190c79e8da478ac932bdd32fe6922898c8ec504721b"
+    },
+    {
+      "path": "context/qa/gtm-publication/published-version-unchanged.jpg",
+      "bytes": 53218,
+      "sha256": "704a5f63b1593985a436682997ac4d2988586d2ec0b6afb01a1e75d1005087aa"
+    },
+    {
+      "path": "context/qa/gtm-publication/route-event.txt",
+      "bytes": 1764,
+      "sha256": "bddb59d4f03d5cef02070420e185dbe4adee937f9d3838ccb63aa79022b8ba8a"
+    },
+    {
+      "path": "context/qa/gtm-publication/three-firing-index.txt",
+      "bytes": 2835,
+      "sha256": "be5669f63ac589d876c8acd4265035cbf64f2b55a7130ccd5ff4f9fb0e986112"
+    },
+    {
+      "path": "context/qa/gtm-publication/workspace-audit.json",
+      "bytes": 5839,
+      "sha256": "bb71e33521c4e41626d5a2788d110b04cd5cf1fda7c1162996a28022e68a8075"
+    }
+  ]
+}

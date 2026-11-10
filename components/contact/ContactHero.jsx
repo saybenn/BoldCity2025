@@ -67,7 +67,7 @@ export default function ContactHero({ data }) {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/75">
-            <span>On our way in 2 hours or less</span>
+            <span>Call for current response availability</span>
             <span>Jacksonville-based</span>
             <span>Certified restoration support</span>
           </div>

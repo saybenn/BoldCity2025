@@ -1,0 +1,57 @@
+- 'generic "Event: History Change"'
+- generic: API Call
+- textbox
+- generic: "dataLayer.push({event: \"page_view\", ...})"
+- text: Output of GTM-55RZQMX7
+- button "More information about output": help_outline
+- button "Tags"
+- button "Hits Sent":
+  - generic: Hits Sent
+- button "Variables"
+- button "Data Layer" [active]
+- button "Consent"
+- button "Console": Console
+- generic: "Data Layer values after this Message:"
+- textbox
+- generic: "1"
+- text: "{"
+- generic: "2"
+- text: "event: \"page_view\","
+- generic: "3"
+- text: "gtm: {"
+- generic: "4"
+- text: "configContainerId: \"G-9G03529W5P\","
+- generic: "5"
+- text: "configParameters: {"
+- generic: "6"
+- text: "page_location: \"https://127.0.0.1/\","
+- generic: "7"
+- text: "send_page_view: false"
+- generic: "8"
+- text: "},"
+- generic: "9"
+- text: "eventMetadata: {"
+- generic: "10"
+- text: "no_target_group: true,"
+- generic: "11"
+- text: "source_canonical_id: \"226220500\""
+- generic: "12"
+- text: "},"
+- generic: "13"
+- text: "priorityId: 1,"
+- generic: "14"
+- text: "priorityQueue: [1],"
+- generic: "15"
+- text: "uniqueEventId: 3"
+- generic: "16"
+- text: "},"
+- generic: "17"
+- text: "page_location: \"http://127.0.0.1:3100/\","
+- generic: "18"
+- text: "page_path: \"/\","
+- generic: "19"
+- text: "page_title: \"Water Damage Cleanup Jacksonville, FL | Bold City IAQ\","
+- generic: "20"
+- text: "page_type: \"home\""
+- generic: "21"
+- text: "}"

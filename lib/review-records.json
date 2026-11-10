@@ -1,0 +1,606 @@
+[
+  {
+    "id": "google-snapshot-steve-sierra",
+    "name": "Steve Sierra",
+    "rating": 5,
+    "text": "Andre is professional and knowledgeable of all proper water restoration procedures. I highly recommend BCIAQ.",
+    "excerpt": "Andre is professional and knowledgeable of all proper water restoration procedures. I highly recommend BCIAQ.",
+    "sourceDateLabel": "19 weeks ago",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Services",
+      "Water damage-related cleanup & repair"
+    ],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 0,
+    "editorialServiceContext": "water-damage-restoration"
+  },
+  {
+    "id": "google-snapshot-rachel",
+    "name": "Rachel",
+    "rating": 5,
+    "text": "We had an outstanding experience with our mold removal and remediation specialist and couldn’t be happier with the results. From start to finish, they were incredibly knowledgeable, professional, and thorough, making sure every detail was handled with care. What really set them apart was their ability to coordinate seamlessly with multiple trusted vendors to ensure the job was completed with the highest quality workmanship. They communicated clearly throughout the entire process, answered all of our questions, and made what could have been a stressful situation feel manageable and under control. The final results exceeded our expectations, and we highly recommend them to anyone needing reliable, high-quality mold remediation services. ⭐⭐⭐⭐⭐",
+    "excerpt": "They communicated clearly throughout the entire process, answered all of our questions, and made what could have been a stressful situation feel manageable and under control.",
+    "sourceDateLabel": "34 weeks ago",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": true,
+    "omittedAfter": true,
+    "displayPriority": 4,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-denise-yarbrough",
+    "name": "Denise Yarbrough",
+    "rating": 5,
+    "text": "Andre did an awesome job repairing an area where mold was growing. He was very professional and considerate during the repair process. His price was reasonable and you can't tell there was even a repair done. Thank you again!",
+    "excerpt": "Andre did an awesome job repairing an area where mold was growing. He was very professional and considerate during the repair process. His price was reasonable and you can't tell there was even a repair done.",
+    "sourceDateLabel": "43 weeks ago",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourcePriceTag": "Reasonable price",
+    "sourceMetadata": [
+      "Services",
+      "Water damage-related cleanup & repair"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 5,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-jon-mroz",
+    "name": "Jon Mroz",
+    "rating": 5,
+    "text": "I’ve been struggling with health issues for nearly three years before finally testing positive for mycotoxins. Finding the source was incredibly challenging, but after some positive results from my office and lots of research (plus a recommendation from a mold detective), I chose Bold City Remediation—and I’m so glad I did.\nThey went above and beyond: tearing out drywall, replacing it, adding in-wall AC, and doing a thorough, detailed cleaning. The owner truly cared and made sure everything was done right. If you need mold remediation, I highly recommend Bold City!",
+    "excerpt": "They went above and beyond: tearing out drywall, replacing it, adding in-wall AC, and doing a thorough, detailed cleaning. The owner truly cared and made sure everything was done right. If you need mold remediation, I highly recommend Bold City!",
+    "sourceDateLabel": "Aug 8, 2025",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": true,
+    "omittedAfter": false,
+    "displayPriority": 6,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-rebecca-bbrewer",
+    "name": "Rebecca BBrewer",
+    "rating": 5,
+    "text": "I would highly recommend Bold City IAQ for mold remediation. Andre is very knowledgeable and professional. He kept me informed and ran on schedule even as the scope of the project was larger than expected. Should I need further help, I will definitely call Andre.",
+    "excerpt": "I would highly recommend Bold City IAQ for mold remediation. Andre is very knowledgeable and professional. He kept me informed and ran on schedule even as the scope of the project was larger than expected.",
+    "sourceDateLabel": "Jun 6, 2025",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [
+      "display_name_spelling_requires_confirmation"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 9,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-ryan-patton",
+    "name": "ryan patton",
+    "rating": 5,
+    "text": "Andre and his company was awesome. They were quick to come over and diagnose the issue and remediate the mold. Will definitely use them again if I have more issues.",
+    "excerpt": "Andre and his company was awesome. They were quick to come over and diagnose the issue and remediate the mold. Will definitely use them again if I have more issues.",
+    "sourceDateLabel": "Jan 11, 2025",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 12,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-sierra-gibson",
+    "name": "Sierra Gibson",
+    "rating": 5,
+    "text": "So sweet! We noticed some issues with our siding and Andre made sure to fit us in that day and helped calm our fears! Even gave us recommendations on how to fix it. Definitely saving their number for the future if we ever have issues again!",
+    "excerpt": "So sweet! We noticed some issues with our siding and Andre made sure to fit us in that day and helped calm our fears! Even gave us recommendations on how to fix it.",
+    "sourceDateLabel": "Aug 21, 2024",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 14,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-chavis-gill",
+    "name": "Chavis Gill",
+    "rating": 5,
+    "text": "Andre went out of his way to ensure we had an appointment and calmed my fears with sound knowledge and a game plan to clear and prevent mold. I absolutely would recommend.",
+    "excerpt": "Andre went out of his way to ensure we had an appointment and calmed my fears with sound knowledge and a game plan to clear and prevent mold. I absolutely would recommend.",
+    "sourceDateLabel": "Jun 6, 2024",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 7,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-alvaro-zuluaga",
+    "name": "Alvaro Zuluaga",
+    "rating": 5,
+    "text": "I can't recommend Andre and his team enough. Andre is extremely knowlegable and caring in his approach. I really appreciate a professional that takes the time to listen and cares enough to explain the entire process patiently. If you want to be in good hands, don't hesitate to count on Bold City IAQ!!",
+    "excerpt": "I really appreciate a professional that takes the time to listen and cares enough to explain the entire process patiently. If you want to be in good hands, don't hesitate to count on Bold City IAQ!!",
+    "sourceDateLabel": "Dec 16, 2023",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": true,
+    "omittedAfter": false,
+    "displayPriority": 10,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-alexandria-cole",
+    "name": "Alexandria Cole",
+    "rating": 5,
+    "text": "Andre was amazing. Very professional and takes pride in his job. He’s a true gem",
+    "excerpt": "Andre was amazing. Very professional and takes pride in his job. He’s a true gem",
+    "sourceDateLabel": "Sep 22, 2023",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Quality, Professionalism, Value"
+    ],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 21,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-nate-hill",
+    "name": "Nate Hill",
+    "rating": 5,
+    "text": "Andre was great help on a particular difficult project we encountered. He was willing to give a lot of great advice and suggestions in order to get the home in working order. Would highly recommend reaching out to Andre if you have questions or concerns regarding mold in your home.",
+    "excerpt": "Andre was great help on a particular difficult project we encountered. He was willing to give a lot of great advice and suggestions in order to get the home in working order.",
+    "sourceDateLabel": "Aug 10, 2023",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Professionalism, Value",
+      "Services",
+      "Mold inspection"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 15,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-tyler-sather",
+    "name": "Tyler Sather",
+    "rating": 5,
+    "text": "They did a great job! I had them clean and fog my air ducts. My appointment was today at 1000 and they showed up early. All the staff was quick and polite and Andre even let me pick his brain on some other items I needed to fix and ran through some brief information for me (I’m a new home owner so I had a ton of questions). Great communication and fair pricing from some of the other places I called. They were in and out in under 2 hours.",
+    "excerpt": "Great communication and fair pricing from some of the other places I called.",
+    "sourceDateLabel": "Aug 31, 2022",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Quality, Professionalism, Value",
+      "Services",
+      "Mold cleaning, Mold mitigation, Service not listed"
+    ],
+    "excerpted": true,
+    "omittedBefore": true,
+    "omittedAfter": true,
+    "displayPriority": 8,
+    "editorialServiceContext": "air-duct-cleaning"
+  },
+  {
+    "id": "google-snapshot-justin-andrade",
+    "name": "Justin Andrade",
+    "rating": 5,
+    "text": "Andre was one of the nicest people I've ever dealt with. When we had a washer installed, the delivery company broke a valve and caused water damage to the laundry closet. I was given Andre's name to help with remediation of the area to stop any further damage or mold. I called him that day, and he kindly walked me through his process, which I had no knowledge of, explaining that he would carefully inspect for water damage and dry out the area before mold could grow. He was able to come out immediately the next morning to begin the cleaning and drying process.\n\nTo my surprise, he offered to repair the area as well, dry wall, floor, baseboards, and fresh paint. This was very important since we needed the washer/dryer installed as soon as possible but wouldn't be able to do that until the area was repaired and waiting for insurance can take months or years.\n\nAndre took care of the entire repair in less than a week, and the quality quality of his work was great, as you can see in the pictures. He was even willing to work over the weekend if we needed him to, which was nice to hear.\n\nFor any emergency water damage, Andre and his company are the #1 choice for quality work and customer support. He won't hold your repair hostage over money and is only in it to make sure his customers are safe and satisfied.\n\nI hope we'll never need Andre's services again, but in the unfortunate event we do, I know I can call him and receive a quick response, with fair and honest pricing for quality services.",
+    "excerpt": "When we had a washer installed, the delivery company broke a valve and caused water damage to the laundry closet. I was given Andre's name to help with remediation of the area to stop any further damage or mold.",
+    "sourceDateLabel": "Mar 15, 2022",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": true,
+    "omittedAfter": true,
+    "displayPriority": 1,
+    "editorialServiceContext": "water-damage-restoration"
+  },
+  {
+    "id": "google-snapshot-charles-miller",
+    "name": "Charles Miller",
+    "rating": 5,
+    "text": "If I could give 6 stars I would. Andre was super knowledgeable and professional and I could immediately tell how much cleaner our air was. Thank you so much for the filter recommendations!",
+    "excerpt": "If I could give 6 stars I would. Andre was super knowledgeable and professional and I could immediately tell how much cleaner our air was. Thank you so much for the filter recommendations!",
+    "sourceDateLabel": "Nov 15, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Quality, Professionalism, Value",
+      "Services",
+      "Mold inspection, Water damage-related mold removal"
+    ],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 19,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-h-c",
+    "name": "H C",
+    "rating": 5,
+    "text": "We used Bold City for mold mitigation and we were very pleased with their work. Andre took a lot of time answering our questions and making suggestions on the best approach to cleaning up the mold and ideas on hope to prevent it in the future. He was very responsive, professional, and reasonable priced.",
+    "excerpt": "We used Bold City for mold mitigation and we were very pleased with their work. Andre took a lot of time answering our questions and making suggestions on the best approach to cleaning up the mold and ideas on hope to prevent it in the future.",
+    "sourceDateLabel": "Nov 12, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Quality, Professionalism",
+      "Services",
+      "Mold inspection, Water damage-related mold removal"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 11,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-michael-armstrong",
+    "name": "Michael Armstrong",
+    "rating": 5,
+    "text": "Andre is great, very knowledgeable, helpful and gets the job done right. If you have weird smells in your home or office, are getting frequent headaches or even suspect you have mold definitely give them a call",
+    "excerpt": "Andre is great, very knowledgeable, helpful and gets the job done right.",
+    "sourceDateLabel": "Jun 26, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 20,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-betina-davids",
+    "name": "Betina Davids",
+    "rating": 5,
+    "text": "Andre and his team at BCIAQ were professional from the moment I first called, to the moment the project was finished. We hired them for mold remediation in one of our bedrooms, after discovering mold and having it test positive for being toxic. After calling several different companies offering the same services, Andre was the ONLY one that was able to pinpoint the cause of the mold. Him and his team were on time, communicated throughout the entire process and went above and beyond on the job itself. We were so pleased they were able to start immediately.To top it all off, their prices are competitive and very reasonable. Which was great because we were unable to go through our home owners insurance and had to pay for the remediation out of pocket. Andre at BCIAQ was one of the best experiences I've had with a company. I challenge you to find a remediation company that has better customer service or better quality work. Don't second guess and give them a call today!",
+    "excerpt": "Him and his team were on time, communicated throughout the entire process and went above and beyond on the job itself.",
+    "sourceDateLabel": "Jun 25, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "excerpted": true,
+    "omittedBefore": true,
+    "omittedAfter": true,
+    "displayPriority": 13,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-richard-wilcox",
+    "name": "Richard Wilcox",
+    "rating": 5,
+    "text": "Needed to improve in home air quality. Bold City evaluated the problem and determined the best course of action. Very happy with the experience and highly recommend them.",
+    "excerpt": "Needed to improve in home air quality. Bold City evaluated the problem and determined the best course of action. Very happy with the experience and highly recommend them.",
+    "sourceDateLabel": "Jun 18, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Quality, Professionalism, Value",
+      "Services",
+      "Service not listed"
+    ],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 18,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-n-j",
+    "name": "N. J.",
+    "rating": 5,
+    "text": "The Restoration of our garage is outstanding!!!\nWe are extremely satisfied with the service,the courtesy, the helpfulness and professionalism that\nwas done. We can truly say Mr. Morehead and his\nCrew went above and beyond. If we were to rate them on a scale 1 to 5, we would easily give them a\n\"10\" for a job Well Done.\nWe Are Very Grateful",
+    "excerpt": "The Restoration of our garage is outstanding!!!\nWe are extremely satisfied with the service,the courtesy, the helpfulness and professionalism that\nwas done.",
+    "sourceDateLabel": "May 12, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Quality, Professionalism, Value",
+      "Services",
+      "Mold inspection, Water damage-related mold removal"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 17,
+    "editorialServiceContext": "mold-remediation"
+  },
+  {
+    "id": "google-snapshot-kelly-rosensweet",
+    "name": "Kelly Rosensweet",
+    "rating": 5,
+    "text": "Andre’s company was so helpful and professional. They remediated a stained wall in my garage quickly and affordably. Andre came out to inspect the job on Friday and job was completed by noon on the following Monday. Highly recommend for his expertise and responsiveness.",
+    "excerpt": "Andre’s company was so helpful and professional. They remediated a stained wall in my garage quickly and affordably.",
+    "sourceDateLabel": "Apr 13, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Quality, Professionalism",
+      "Services",
+      "Mold inspection, Painting"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 16,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-christine-lee",
+    "name": "Christine Lee",
+    "rating": 5,
+    "text": "",
+    "excerpt": "",
+    "sourceDateLabel": "Mar 30, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Quality, Professionalism, Value",
+      "Services",
+      "Mold inspection"
+    ],
+    "excerpted": false,
+    "omittedBefore": false,
+    "omittedAfter": false,
+    "displayPriority": 22,
+    "editorialServiceContext": "customer-service"
+  },
+  {
+    "id": "google-snapshot-susan-dubow",
+    "name": "Susan DuBow",
+    "rating": 5,
+    "text": "I was extremely impressed with the job Bold City did for us. From the first phone call we placed, they were reliable, punctual and thorough. I highly recommend them to take care of any situation that requires their help. Andre and his team are rock stars! Five stars all the way!",
+    "excerpt": "I was extremely impressed with the job Bold City did for us. From the first phone call we placed, they were reliable, punctual and thorough. I highly recommend them to take care of any situation that requires their help.",
+    "sourceDateLabel": "Mar 24, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Quality, Professionalism, Value",
+      "Services",
+      "Water damage-related cleanup & repair, Flooring, Water damage-related mold removal"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 2,
+    "editorialServiceContext": "water-damage-restoration"
+  },
+  {
+    "id": "google-snapshot-kim-perry",
+    "name": "Kim Perry",
+    "rating": 5,
+    "text": "During the holiday season I had a leak in my bathroom which created about 12 feet of mold as well a significant amount of water damage. Andre provided me with a very detailed list of the repairs needed to ensure that my home was back to normal. The company did an excellent job in ensuring that the air quality was restored to a clean and safe level.\nThe team was professional and always on time. I would highly recommend them if you have had water damage, mold, or simply wanted to ensure that your air quality is safe.",
+    "excerpt": "During the holiday season I had a leak in my bathroom which created about 12 feet of mold as well a significant amount of water damage. Andre provided me with a very detailed list of the repairs needed to ensure that my home was back to normal.",
+    "sourceDateLabel": "Feb 5, 2021",
+    "publicationDate": null,
+    "photoUrl": null,
+    "individualReviewUrl": null,
+    "provenance": {
+      "type": "owner_supplied_google_snapshot",
+      "sourceFile": "Google-reviews-user-supplied.txt",
+      "liveVerified": false,
+      "captureDate": null
+    },
+    "sourceFlags": [],
+    "sourceMetadata": [
+      "Positive",
+      "Responsiveness, Punctuality, Professionalism",
+      "Services",
+      "Water damage-related cleanup & repair, Water damage-related mold removal"
+    ],
+    "excerpted": true,
+    "omittedBefore": false,
+    "omittedAfter": true,
+    "displayPriority": 3,
+    "editorialServiceContext": "water-damage-restoration"
+  }
+]

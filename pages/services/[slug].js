@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import TrustBar from "@/components/service/TrustBar";
 import Intro from "@/components/service/Intro";
@@ -75,7 +76,9 @@ export default function ServicePage({ data }) {
       }}
     >
       <ServiceHero
-        title={data.title}
+        title={data.content?.hero?.heading || data.title}
+        slug={data.slug}
+        imageAlt={data.content?.hero?.imageAlt}
         subtitle={
           data.content?.hero?.subtitle || data.content?.hero?.subheading
         }
@@ -102,6 +105,7 @@ export default function ServicePage({ data }) {
         steps={data.content?.process?.steps}
         note={data.content?.process?.note}
         image={data.content?.process?.image}
+        imageAlt={data.content?.process?.imageAlt}
       />
 
       <Services
@@ -115,6 +119,13 @@ export default function ServicePage({ data }) {
       />
 
       <ImageGrid images={data.content?.imageGrid} />
+      <nav aria-label="Related restoration services" className="bg-white px-5 py-10 text-navy">
+        <div className="mx-auto max-w-6xl"><h2 className="mb-4 text-2xl font-bold">Related services and local help</h2>
+          <div className="flex flex-wrap gap-5">{serviceData.filter((service) => service.slug !== data.slug).map((service) => <Link className="underline" key={service.slug} href={`/services/${service.slug}`}>{service.title}</Link>)}
+          <Link className="underline" href="/service-areas/jacksonville">Jacksonville</Link><Link className="underline" href="/service-areas/orange-park">Orange Park</Link></div>
+          {data.source && <p className="mt-5 text-sm"><a className="underline" href={data.source.url}>{data.source.label}</a></p>}
+        </div>
+      </nav>
 
       <StaticTestimonials />
 

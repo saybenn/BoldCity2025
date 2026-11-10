@@ -59,7 +59,7 @@ export default function ServiceAreaServicePage({
         title: pageData.seo.title,
         description: pageData.seo.description,
         canonical,
-        image: pageData.seo.image || "/images/social-preview.jpg",
+        image: pageData.seo.image || "/images/about-hero.webp",
       }}
       schema={{
         title: pageData.seo.title,

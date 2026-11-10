@@ -1,0 +1,267 @@
+{
+  "baseline": "ab2d20429c49ea028860f104522802a503741688",
+  "checkedAt": "2026-11-10T01:44:48.463Z",
+  "scope": "Read-only normalized-LF hash comparison and TypeScript AST extraction. Server, existing page/schema architecture, deployment restrictions and submission callbacks unchanged. Owner-approved consent intentionally changes analytics loading/event gating, including AnalyticsLifecycle outside this file set, and adds a privacy route.",
+  "intentionalConsentChanges": [
+    "pages/_app.tsx",
+    "lib/analytics.ts",
+    "components/AnalyticsLifecycle.tsx"
+  ],
+  "files": [
+    {
+      "file": "lib/adLandingPage.js",
+      "sha256": "1bd3e0d972188ee1f22871540f28c695bbef45c32378b8518c182f380f2c6a63",
+      "unchanged": true
+    },
+    {
+      "file": "lib/contact-security.js",
+      "sha256": "674eb0b904c926a4eb1a5533aa807bfa5b72ca0aaaf0049d3d72e1ba78d505c2",
+      "unchanged": true
+    },
+    {
+      "file": "lib/contact-services.js",
+      "sha256": "1d90c931ddcbfbb35d01e0234641cb546753f04d340b6ea01ae21321a2cd1169",
+      "unchanged": true
+    },
+    {
+      "file": "lib/deployment.mjs",
+      "sha256": "7a62b99dca570a64932a9012373a58e736fc5bfe362e32d8a8bc9ce5587ef3a5",
+      "unchanged": true
+    },
+    {
+      "file": "lib/google-reviews.js",
+      "sha256": "e0eb24ba4b091c8fc4556f835c9039008f8c69397e4ec0a2a909008b2a9ab58e",
+      "unchanged": true
+    },
+    {
+      "file": "lib/gtm-qa.mjs",
+      "sha256": "73b3b1395d2ccd8d14e9930704f548aa9d94290cccf69e8d60f24dd0c8308220",
+      "unchanged": true
+    },
+    {
+      "file": "lib/gtm.js",
+      "sha256": "ad1ce08ed20128260c944f511f02f4e3fc0e6dc9c3feba2d932345faa815e7bb",
+      "unchanged": true
+    },
+    {
+      "file": "lib/review-presentation.js",
+      "sha256": "850e448451e2b386c3737ea6399d915ca9b3bc9112e1dff717c2208e52ba5535",
+      "unchanged": true
+    },
+    {
+      "file": "lib/review-records.json",
+      "sha256": "96a53e45eb8795299e4f7741f6a4f68c17ebf2f61c4bac52ad36da7d39860989",
+      "unchanged": true
+    },
+    {
+      "file": "lib/reviewer-avatars.js",
+      "sha256": "ed900820376f67737a786478975e910fdd5b1c4155f6772a07f132fe7c030d2d",
+      "unchanged": true
+    },
+    {
+      "file": "lib/reviewsData.js",
+      "sha256": "12702d82848142183a0d8a266500b91e2b3bbe35886dab0550d0f2968b33606a",
+      "unchanged": true
+    },
+    {
+      "file": "lib/seo.js",
+      "sha256": "6d05eb62bab62b2baee56d7c8c7cbc8ae45b99276410bafb8c5368c18bc13a7e",
+      "unchanged": true
+    },
+    {
+      "file": "lib/service-area-pages/buildServiceAreaHubPageData.ts",
+      "sha256": "2e3bce6cbac834dcf78805254bd3701c3f0139f31026f150c9b7311073e38696",
+      "unchanged": true
+    },
+    {
+      "file": "lib/service-area-pages/buildServiceAreaPageData.ts",
+      "sha256": "44f06652d138a44efd0e28044484a05cdfe216f28924208cd82b3be55d7dc1ff",
+      "unchanged": true
+    },
+    {
+      "file": "lib/service-area-pages/getServiceAreaHubPaths.ts",
+      "sha256": "708fda4885bddc990996e54fdf24c732adff8efd268fb405e50c5193061e91e4",
+      "unchanged": true
+    },
+    {
+      "file": "lib/service-area-pages/getServiceAreaPaths.ts",
+      "sha256": "4d0ea1b91b8ca8802f587a8b9659d385b8cc02c54bdb3ac1066738da48f61be0",
+      "unchanged": true
+    },
+    {
+      "file": "lib/service-area-pages/types.ts",
+      "sha256": "03f596586d49aa6bcfd07cfeb2ad1253da787cf6af8e3961b1b2181f153ef26e",
+      "unchanged": true
+    },
+    {
+      "file": "lib/serviceData.js",
+      "sha256": "717a29e0e3137dadd9d92d7e47eb48c220a42ae310e8f748fc548b2955fb7fae",
+      "unchanged": true
+    },
+    {
+      "file": "lib/trackPhoneClick.ts",
+      "sha256": "d386d311e6275d85dee8230fe8652dfdb7a632a4559fd9c149e97517cf2cd6f2",
+      "unchanged": true
+    },
+    {
+      "file": "lib/utm.js",
+      "sha256": "67bcf6742490c45f02ab046d314b38e0d3e330efea44c9efcd58e13756211f4e",
+      "unchanged": true
+    },
+    {
+      "file": "netlify/edge-functions/contact-protection.ts",
+      "sha256": "55cc28a59576d60b1b928b8d640e7bbf9bed4feaed5c7ab585fbfd32cae623c0",
+      "unchanged": true
+    },
+    {
+      "file": "next.config.mjs",
+      "sha256": "f2b8394eb5c3a840755457da97a7c474d8af1cc9a2b8b3749fcee9c7bc87d6ac",
+      "unchanged": true
+    },
+    {
+      "file": "pages/_document.js",
+      "sha256": "195e89ff9601fad83807c05dea0c749bff2a197cb758ffdf51e964cca28b1b6e",
+      "unchanged": true
+    },
+    {
+      "file": "pages/about/index.js",
+      "sha256": "c0695fe4079469429736694d85a05b5771d340599aecc46c06378fc1a02f7a90",
+      "unchanged": true
+    },
+    {
+      "file": "pages/ads/emergency-restoration/index.jsx",
+      "sha256": "f12d01d4a920dc724bf52a2ac4ee2d73652399d42908965d35207e8bc86ba30b",
+      "unchanged": true
+    },
+    {
+      "file": "pages/ads/emergency-restoration/success.jsx",
+      "sha256": "c215f22783baa6c6a67ad3be74655177c65d21d3b0b04a5812e647b6d53785b0",
+      "unchanged": true
+    },
+    {
+      "file": "pages/api/contact.ts",
+      "sha256": "aaf5be975569c61a64127e1f33bcb6f9c0d04acd49d58fd59127c0e232c0763f",
+      "unchanged": true
+    },
+    {
+      "file": "pages/api/hello.js",
+      "sha256": "02dc990f97314784430cbcd3c045af151de1de922f8c28f2e6fbb1d0e416e2ea",
+      "unchanged": true
+    },
+    {
+      "file": "pages/api/lead.js",
+      "sha256": "6b78c947eb077ffc9a6c918b03f883306e69259c47bdfd528fde11dba5599a03",
+      "unchanged": true
+    },
+    {
+      "file": "pages/contact/index.js",
+      "sha256": "a98704b83f0f560b70e30abc388e1cd79758f649e8bb2404720a9ef66863d981",
+      "unchanged": true
+    },
+    {
+      "file": "pages/contact/success.js",
+      "sha256": "bb024f3b6a4d7e01300d311e6df2e5fdbd2ef337c6dc9b9fcf33de4d8044aa03",
+      "unchanged": true
+    },
+    {
+      "file": "pages/financing.js",
+      "sha256": "8a73d9025c2e7f525cf62b0b4ec3bc5b9fdf4c87226148e626dff3a3dff8afcd",
+      "unchanged": true
+    },
+    {
+      "file": "pages/index.js",
+      "sha256": "e3842d90bca842037ffa56e6db310d34495e1891f14e09086b8247b37ab82ecc",
+      "unchanged": true
+    },
+    {
+      "file": "pages/resources/emergency-checklist.js",
+      "sha256": "993150adbe672a37d63db9231c7bc89262d23e2112a3844aae72f6b92a167202",
+      "unchanged": true
+    },
+    {
+      "file": "pages/service-areas/[areaSlug].tsx",
+      "sha256": "3d4ae9832fc4e378db9e7c9346b6cb0b493110e85132cfff2a3e8aee8ccf5701",
+      "unchanged": true
+    },
+    {
+      "file": "pages/service-areas/[areaSlug]/[serviceSlug].tsx",
+      "sha256": "4454b8622d90cededebf4abfd91e97344a928a884e2d2a8025fd60c049a3bef7",
+      "unchanged": true
+    },
+    {
+      "file": "pages/service-areas/index.tsx",
+      "sha256": "a9986aebcbbc280bf49a4bc510e41798646a8aea7335bef5aab6a62c1297860c",
+      "unchanged": true
+    },
+    {
+      "file": "pages/services/[slug].js",
+      "sha256": "f56af50d06aa7a726c1b06b6222aa046269ca3864ba4277fa68df8cbf3b591d8",
+      "unchanged": true
+    },
+    {
+      "file": "pages/services/index.js",
+      "sha256": "b5f3da330f1ab97a2621fc48839e3d74aa80e4443501c2bd75430784ada7606b",
+      "unchanged": true
+    },
+    {
+      "file": "pages/sitemap.xml.ts",
+      "sha256": "cae52cc294eb712b2777ed43d050f482b8cd38f6e57de20a7b97759948a9bfd5",
+      "unchanged": true
+    },
+    {
+      "file": "public/robots.txt",
+      "sha256": "738017e656b4e2be23b2270286efd55f8c4b7ca24b2718632d7705d4f478d5f9",
+      "unchanged": true
+    }
+  ],
+  "submitCallbacks": [
+    {
+      "file": "components/StandardContactForm.jsx",
+      "names": [
+        "handleSubmit"
+      ],
+      "unchanged": true
+    },
+    {
+      "file": "components/AdContactForm.jsx",
+      "names": [
+        "handleSubmit"
+      ],
+      "unchanged": true
+    },
+    {
+      "file": "components/contact/ContactRequestForm.jsx",
+      "names": [
+        "handleSubmit"
+      ],
+      "unchanged": true
+    },
+    {
+      "file": "components/LeadForm.jsx",
+      "names": [
+        "onSubmit"
+      ],
+      "unchanged": true
+    },
+    {
+      "file": "components/ModalContactForm.jsx",
+      "names": [
+        "handleSubmit"
+      ],
+      "unchanged": true
+    }
+  ],
+  "certificationAssets": [
+    {
+      "file": "public/images/iicrc-certified.webp",
+      "sha256": "30e3755634bebfc53af2cb00dc2002b1f1b4968733296e8b215ca1cbe65e856e",
+      "unchanged": true
+    },
+    {
+      "file": "public/images/normilogo.png",
+      "sha256": "0283e4a2d152359329b8b725e65522b7096238dbc7faef2b3af34c8b57a5bc8d",
+      "unchanged": true
+    }
+  ],
+  "matchesPreviouslyDeliveredHandler": true
+}

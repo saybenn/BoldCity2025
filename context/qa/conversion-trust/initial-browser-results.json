@@ -1,0 +1,795 @@
+{
+  "kind": "Actual local Chrome UI checks. No provider/API success mocks and no form submission. Public widget key blank locally. Reusable Lead/Modal are mounted only in temporary development fixtures.",
+  "checkedAt": "2026-11-08T19:47:58.565Z",
+  "cases": [
+    {
+      "route": "home",
+      "width": 320,
+      "form": "StandardContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 90,
+          "height": 37.96875
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 88,
+          "height": 29.5625
+        }
+      ],
+      "submitGap": 20,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "contact",
+      "width": 320,
+      "form": "ContactRequestForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 90,
+          "height": 37.96875
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 88,
+          "height": 29.5625
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "ads",
+      "width": 320,
+      "form": "AdContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 58,
+          "height": 24.46875
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 56,
+          "height": 18.8125
+        }
+      ],
+      "submitGap": 24,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "lead-fixture",
+      "width": 320,
+      "form": "LeadForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 90,
+          "height": 37.96875
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 88,
+          "height": 29.5625
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "modal-fixture",
+      "width": 320,
+      "form": "ModalContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 90,
+          "height": 37.96875
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 88,
+          "height": 29.5625
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "home",
+      "width": 375,
+      "form": "StandardContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 117.5,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 115.5,
+          "height": 38.796875
+        }
+      ],
+      "submitGap": 20,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "contact",
+      "width": 375,
+      "form": "ContactRequestForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 117.5,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 115.5,
+          "height": 38.796875
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "ads",
+      "width": 375,
+      "form": "AdContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 85.5,
+          "height": 36.0625
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 83.5,
+          "height": 28.046875
+        }
+      ],
+      "submitGap": 24,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "lead-fixture",
+      "width": 375,
+      "form": "LeadForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 117.5,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 115.5,
+          "height": 38.796875
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "modal-fixture",
+      "width": 375,
+      "form": "ModalContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 117.5,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 115.5,
+          "height": 38.796875
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "home",
+      "width": 430,
+      "form": "StandardContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 145,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 143,
+          "height": 48
+        }
+      ],
+      "submitGap": 20,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "contact",
+      "width": 430,
+      "form": "ContactRequestForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 145,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 143,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "ads",
+      "width": 430,
+      "form": "AdContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 113,
+          "height": 47.671875
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 111,
+          "height": 37.28125
+        }
+      ],
+      "submitGap": 24,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "lead-fixture",
+      "width": 430,
+      "form": "LeadForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 145,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 143,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "modal-fixture",
+      "width": 430,
+      "form": "ModalContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 145,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 143,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "form": "StandardContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 110,
+          "height": 46.40625
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 108,
+          "height": 36.28125
+        }
+      ],
+      "submitGap": 20,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "contact",
+      "width": 768,
+      "form": "ContactRequestForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "ads",
+      "width": 768,
+      "form": "AdContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 24,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "lead-fixture",
+      "width": 768,
+      "form": "LeadForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "modal-fixture",
+      "width": 768,
+      "form": "ModalContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "home",
+      "width": 1024,
+      "form": "StandardContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 20,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "contact",
+      "width": 1024,
+      "form": "ContactRequestForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "ads",
+      "width": 1024,
+      "form": "AdContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 24,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "lead-fixture",
+      "width": 1024,
+      "form": "LeadForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "modal-fixture",
+      "width": 1024,
+      "form": "ModalContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "form": "StandardContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 20,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "contact",
+      "width": 1440,
+      "form": "ContactRequestForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "ads",
+      "width": 1440,
+      "form": "AdContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 24,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "lead-fixture",
+      "width": 1440,
+      "form": "LeadForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    },
+    {
+      "route": "modal-fixture",
+      "width": 1440,
+      "form": "ModalContactForm",
+      "certifications": [
+        {
+          "alt": "IICRC Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(12, 35, 64)",
+          "width": 162,
+          "height": 48
+        },
+        {
+          "alt": "NORMI Certified",
+          "loaded": true,
+          "fit": "contain",
+          "background": "rgb(255, 255, 255)",
+          "width": 160,
+          "height": 48
+        }
+      ],
+      "submitGap": 16,
+      "pageOverflow": false,
+      "leadEvents": 0
+    }
+  ],
+  "requestsPosted": [
+    "/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+    "/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/InitMapsJwt",
+    "/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetPlaceWidgetMetadata",
+    "/$rpc/google.maps.places.v1.Places/GetPlace",
+    "/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo"
+  ],
+  "tracking": [],
+  "pageErrors": []
+}

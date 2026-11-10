@@ -1,0 +1,48 @@
+
+Running 10 tests using 1 worker
+
+(node:23100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   1 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 375px (1.1s)
+(node:32608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 430px (13.3s)
+  ok  3 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 768px (8.5s)
+  ok  4 tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 1440px (10.9s)
+  ok  5 tests\browser\site.spec.cjs:31:1 › phone, CTA and navigation events dispatch once without gtag duplication (2.8s)
+  ok  6 tests\browser\site.spec.cjs:41:1 › home form rejects accepted:false then sends one accepted lead without PII (2.7s)
+  ok  7 tests\browser\site.spec.cjs:55:1 › attribution survives navigation and contact success requires accepted lead (2.0s)
+  ok  8 tests\browser\site.spec.cjs:64:1 › campaign form keeps Postmark contract and confirmation redirect (1.9s)
+  ok  9 tests\browser\site.spec.cjs:70:1 › representative service and area pages have no overflow or runtime errors (10.2s)
+  ok 10 tests\browser\site.spec.cjs:78:1 › navigation menus and mobile call controls remain usable (4.3s)
+
+
+  1) tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 375px ───────────────────────
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3103/
+    Call log:
+      - navigating to "http://127.0.0.1:3103/", waiting until "load"
+
+
+      13 |   await isolate(page);await page.setViewportSize({width,height:width<500?812:1000});
+      14 |   const errors=[];page.on('pageerror',e=>errors.push(e.message));
+    > 15 |   await page.goto('/');await expect(page.locator('h1')).toHaveText('Water Damage Cleanup in Jacksonville, FL');
+         |              ^
+      16 |   await expect(page.locator('h1')).toHaveCount(1);
+      17 |   await expect(page.locator('[data-google-reviews] h2').first()).toBeVisible();
+      18 |   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+        at C:\Users\elijr\OneDrive\Desktop\Coding\Personal Projects\boldcityiaq\tests\browser\site.spec.cjs:15:14
+
+    Error Context: test-results\site-homepage-layout-and-gallery-at-375px\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-homepage-layout-and-gallery-at-375px\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-homepage-layout-and-gallery-at-375px\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\browser\site.spec.cjs:12:2 › homepage layout and gallery at 375px ────────────────────────
+  9 passed (1.3m)

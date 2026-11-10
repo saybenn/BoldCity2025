@@ -1,0 +1,161 @@
+{
+  "container": "GTM-55RZQMX7",
+  "workspace": "4 / Default Workspace",
+  "status": "Manually saved and verified in workspace export; NOT published",
+  "newDataLayerVariables": [
+    "page_path",
+    "page_location",
+    "form_id",
+    "service_requested",
+    "hero_variant"
+  ],
+  "tagChanges": [
+    {
+      "id": "42",
+      "tag": "GA4 - click call",
+      "oldEvent": "click_call",
+      "newEvent": "phone_click",
+      "parameters": {
+        "page_path": "DL - page_path",
+        "page_location": "DL - page_location",
+        "cta_location": "DL - cta_location",
+        "phone_number": "DL - phone_number",
+        "hero_variant": "DL - hero_variant"
+      }
+    },
+    {
+      "id": "44",
+      "tag": "GA4 - click cta",
+      "oldEvent": "click_cta",
+      "newEvent": "cta_click",
+      "parameters": {
+        "page_path": "DL - page_path",
+        "page_location": "DL - page_location",
+        "cta_location": "DL - cta_location",
+        "cta_label": "DL - cta_label",
+        "href": "DL - href",
+        "hero_variant": "DL - hero_variant"
+      }
+    },
+    {
+      "id": "45",
+      "tag": "GA4 - view page",
+      "oldEvent": "view_page",
+      "newEvent": "page_view",
+      "parameters": {
+        "page_path": "DL - page_path",
+        "page_location": "DL - page_location",
+        "page_title": "DL - page_title",
+        "page_type": "DL - page_type"
+      }
+    },
+    {
+      "id": "46",
+      "tag": "GA4 - submit form",
+      "oldEvent": "submit_form",
+      "newEvent": "generate_lead",
+      "parameters": {
+        "page_path": "DL - page",
+        "page_location": "DL - page_location",
+        "form_id": "DL - form_id",
+        "form_location": "DL - form_location",
+        "form_name": "DL - form_name",
+        "service_requested": "DL - service_requested"
+      }
+    }
+  ],
+  "base": {
+    "id": "41",
+    "send_page_view": false,
+    "page_location": "https://{{Page Hostname}}{{Page Path}}"
+  },
+  "preserved": {
+    "existingWorkspaceItems": true,
+    "triggerIds": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "measurementDestination": "G-9G03529W5P",
+    "consentSettings": [
+      {
+        "tag": "GA4 - Base",
+        "settings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "tag": "GA4 - click call",
+        "settings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "tag": "GA4 - click cta",
+        "settings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "tag": "GA4 - view page",
+        "settings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "tag": "GA4 - submit form",
+        "settings": {
+          "consentStatus": "NOT_SET"
+        }
+      }
+    ],
+    "scope": "Existing unpublished workspace items only; this does not mean parity with the published container."
+  },
+  "verifiedExportTime": "2026-11-07 02:52:37",
+  "verification": {
+    "tags": 5,
+    "customVariables": 20,
+    "builtInVariables": 10,
+    "triggers": 4,
+    "allIntendedParametersMatch": true,
+    "firingConsentDestinationsPreserved": true,
+    "imported": false,
+    "published": false
+  },
+  "productionParityVerified": false,
+  "publishedComparison": {
+    "checkedAt": "2026-11-07T06:31:23.776Z",
+    "publishedVersion": "3",
+    "source": "Actual published container export, compared with a fresh workspace export",
+    "report": "../gtm-development/published-comparison.json",
+    "deletedTags": [
+      {
+        "id": "8",
+        "name": "generate_lead",
+        "risk": "Replacement GA4 - submit form / 46 changes the trigger from generic form_submit to accepted generate_lead. Existing form_type and financing_interest dimensions are not migrated; review reporting consumers."
+      },
+      {
+        "id": "10",
+        "name": "Google Ads Conversion Tracking",
+        "risk": "HIGH: direct Google Ads conversion is deleted with no Ads tag replacement in the draft. Decide whether to retain a retargeted accepted-lead Ads conversion or use a verified GA4 import, with one chosen primary counting path. Do not publish this deletion by assumption."
+      },
+      {
+        "id": "16",
+        "name": "Google Tag G-9G03529W5P",
+        "risk": "Old Google base replaced by GA4 - Base / 41 on Initialization-All Pages and same destination, with send_page_view:false. Audit destination-linked settings/consent and duplicate automatic pageviews."
+      },
+      {
+        "id": "17",
+        "name": "GA4 - Config",
+        "risk": "Despite the Config name, published type is GA4 event, eventName GA4 - Config on All Pages; not a second true base tag. Deletion removes that custom event. New Base / 41 handles initialization; confirm any reports using the legacy custom event."
+      },
+      {
+        "id": "19",
+        "name": "GA4 - page_view (custom)",
+        "risk": "Legacy pageview custom-event trigger replaced by page_view / 45. Raw Page URL/referrer mappings replaced by query-free app page context; audit history/enhanced measurement duplication."
+      }
+    ],
+    "publicationGate": "Do not publish until the unreplaced Google Ads conversion deletion and changed reporting parameters are explicitly resolved."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-10T01:41:24.463Z",
+  "base": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app",
+  "scope": "Actual Chrome. Public GTM in local CSP QA only, not unpublished candidate. No form submissions. No GA4 delivery claimed.",
+  "widths": [
+    {
+      "width": 320,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 375,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 430,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 768,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 1024,
+      "noOverflow": true,
+      "panelFits": true
+    },
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "panelFits": true
+    }
+  ],
+  "tracking": [],
+  "formPosts": [],
+  "persistedAllowOneCurrentView": true
+}

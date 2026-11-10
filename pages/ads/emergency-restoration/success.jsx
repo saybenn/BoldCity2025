@@ -81,34 +81,23 @@ export default function EmergencyRestorationSuccessPage() {
         description:
           "Your emergency restoration request was received. Call now for faster response or review financing options.",
         canonical: "https://boldcityiaq.com/ads/emergency-restoration/success",
-        image: "/images/andre-truck.webp",
+        image: "/images/about-hero.webp",
       }}
       schema={{
         schemaType: "LocalBusiness",
         schemaOverrides: {
           telephone: "+19044346318",
           address: {
-            streetAddress: "10066 103rd St #206",
+            streetAddress: "14440 Normandy Blvd",
             addressLocality: "Jacksonville",
             addressRegion: "FL",
-            postalCode: "32210",
+            postalCode: "32234",
             addressCountry: "US",
           },
           name: "Bold City IAQ",
           url: "https://boldcityiaq.com/ads/emergency-restoration/success",
         },
-        faq: [
-          {
-            question: "What happens after I submit the request form?",
-            answer:
-              "Your request is received for review and the team follows up as quickly as possible based on the information submitted.",
-          },
-          {
-            question: "What should I do if the situation is urgent?",
-            answer:
-              "If the situation is active or worsening, calling right away is the fastest option.",
-          },
-        ],
+
       }}
       showNavbar={false}
       showFooter={false}

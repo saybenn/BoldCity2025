@@ -1,0 +1,336 @@
+{
+  "width": 1440,
+  "sectionHeight": 1244,
+  "imageBytes": 157423,
+  "source": {
+    "url": "http://127.0.0.1:3200/_next/image?url=%2Fimages%2Fprojects%2Fworker-at-protected-kitchen.webp&w=1920&q=75",
+    "naturalWidth": 1440,
+    "complete": true
+  },
+  "observations": [
+    {
+      "tag": "top",
+      "sectionTop": 83.78125,
+      "sectionBottom": 1327.78125,
+      "panelTop": 83.78125,
+      "panelBottom": 1083.78125,
+      "viewport": 1000,
+      "contrast": [
+        {
+          "tag": "H2",
+          "text": "Full-Service Emergency Restoration",
+          "ratio": 10.57,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Restoration services for Jacksonville homes and businesses facing water damage, mold issues, smoke damage, or urgent cleanup needs.",
+          "ratio": 9.51,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Water Damage Restoration",
+          "ratio": 13.34,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Emergency extraction, structural drying, moisture control, and restoration support for floods, leaks, burst pipes, and storm damage.",
+          "ratio": 12.51,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.48,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Mold Remediation",
+          "ratio": 12.24,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Identify the affected areas, contain the spread, remove unsafe materials, and treat impacted spaces to help restore a healthier environment.",
+          "ratio": 11.45,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 6.94,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Fire & Smoke Restoration",
+          "ratio": 12.1,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Remove smoke residue, address affected materials, and begin restoration work after fire-related damage to the property.",
+          "ratio": 11.28,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 6.85,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "tag": "middle",
+      "sectionTop": -122.21875,
+      "sectionBottom": 1121.78125,
+      "panelTop": 0,
+      "panelBottom": 1000,
+      "viewport": 1000,
+      "contrast": [
+        {
+          "tag": "H2",
+          "text": "Full-Service Emergency Restoration",
+          "ratio": 10.41,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Restoration services for Jacksonville homes and businesses facing water damage, mold issues, smoke damage, or urgent cleanup needs.",
+          "ratio": 8.83,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Water Damage Restoration",
+          "ratio": 13.34,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Emergency extraction, structural drying, moisture control, and restoration support for floods, leaks, burst pipes, and storm damage.",
+          "ratio": 12.66,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.76,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Mold Remediation",
+          "ratio": 12.42,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Identify the affected areas, contain the spread, remove unsafe materials, and treat impacted spaces to help restore a healthier environment.",
+          "ratio": 11.05,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.29,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Fire & Smoke Restoration",
+          "ratio": 12.04,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Remove smoke residue, address affected materials, and begin restoration work after fire-related damage to the property.",
+          "ratio": 10.88,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 6.92,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Cleaning & Sanitization",
+          "ratio": 13.08,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Targeted cleaning, odor reduction, and sanitization support after water damage, contamination events, or difficult property conditions.",
+          "ratio": 12.55,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.69,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Emergency Services",
+          "ratio": 12.4,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "24/7 response for urgent restoration needs across Jacksonville and Northeast Florida when immediate action is needed to reduce damage.",
+          "ratio": 11.93,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.48,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Air Duct Cleaning",
+          "ratio": 12.26,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Discuss dust, debris, access and the cleaning scope for residential or commercial ductwork.",
+          "ratio": 11.77,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.4,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "tag": "bottom",
+      "sectionTop": -328.21875,
+      "sectionBottom": 915.78125,
+      "panelTop": -84.21875,
+      "panelBottom": 915.78125,
+      "viewport": 1000,
+      "contrast": [
+        {
+          "tag": "H3",
+          "text": "Water Damage Restoration",
+          "ratio": 13.46,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Emergency extraction, structural drying, moisture control, and restoration support for floods, leaks, burst pipes, and storm damage.",
+          "ratio": 12.51,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.67,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Mold Remediation",
+          "ratio": 12.06,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Identify the affected areas, contain the spread, remove unsafe materials, and treat impacted spaces to help restore a healthier environment.",
+          "ratio": 11.93,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.13,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Fire & Smoke Restoration",
+          "ratio": 11.44,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Remove smoke residue, address affected materials, and begin restoration work after fire-related damage to the property.",
+          "ratio": 11.16,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.11,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Cleaning & Sanitization",
+          "ratio": 13.37,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Targeted cleaning, odor reduction, and sanitization support after water damage, contamination events, or difficult property conditions.",
+          "ratio": 12.55,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.69,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Emergency Services",
+          "ratio": 12.54,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "24/7 response for urgent restoration needs across Jacksonville and Northeast Florida when immediate action is needed to reduce damage.",
+          "ratio": 11.93,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.39,
+          "required": 4.5
+        },
+        {
+          "tag": "H3",
+          "text": "Air Duct Cleaning",
+          "ratio": 12.72,
+          "required": 3
+        },
+        {
+          "tag": "P",
+          "text": "Discuss dust, debris, access and the cleaning scope for residential or commercial ductwork.",
+          "ratio": 11.77,
+          "required": 4.5
+        },
+        {
+          "tag": "SPAN",
+          "text": "Learn More",
+          "ratio": 7.31,
+          "required": 4.5
+        }
+      ]
+    }
+  ]
+}

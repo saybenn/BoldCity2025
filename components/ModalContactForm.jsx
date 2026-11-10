@@ -1,5 +1,8 @@
+import { trackFormSubmit, trackFormError } from "@/lib/analytics";
+import { getUTMParams } from "@/lib/utm";
 import { useEffect, useRef, useState } from "react";
-import { TurnstileField } from "@/components/forms/TurnstileField";
+import { TurnstileField } from "@/components/contact/TurnstileField";
+import FormCertifications from "@/components/contact/FormCertifications";
 
 function cleanString(value, maxLength) {
   return String(value || "")
@@ -88,6 +91,9 @@ export default function ModalContactForm({ onClose }) {
       }
 
       const payload = {
+        ...getUTMParams(),
+        ...getUTMParams(),
+        page: window.location.pathname,
         formType: "modal",
         name,
         email,
@@ -113,13 +119,15 @@ export default function ModalContactForm({ onClose }) {
 
       const json = await response.json().catch(() => ({}));
 
-      if (!response.ok || json?.ok === false) {
-        throw new Error(json?.error || "We couldn't submit the form.");
+      if (!response.ok || json?.ok !== true || json?.accepted !== true) {
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "We couldn't submit the form."));
       }
 
+      trackFormSubmit({ form_id: "ModalContactForm", form_location: "ModalContactForm", page: window.location.pathname });
       setSubmitted(true);
       formElement.reset();
     } catch (err) {
+      trackFormError("ModalContactForm", requestStarted ? "submission_failed" : "validation");
       console.error("Modal contact form error:", err);
 
       if (requestStarted) {
@@ -150,7 +158,8 @@ export default function ModalContactForm({ onClose }) {
       aria-labelledby="modal-contact-heading"
       onMouseDown={handleBackdropClick}
     >
-      <div className="w-full max-w-md rounded bg-white p-6 shadow-lg">
+      <div data-form-trust-group className="max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto">
+      <div className="rounded bg-white p-6 shadow-lg">
         {submitted ? (
           <div>
             <h2
@@ -184,6 +193,7 @@ export default function ModalContactForm({ onClose }) {
             </h2>
 
             <form
+          data-analytics-form="ModalContactForm"
               ref={formRef}
               onSubmit={handleSubmit}
               className="space-y-4"
@@ -298,6 +308,8 @@ export default function ModalContactForm({ onClose }) {
             </form>
           </>
         )}
+      </div>
+      <FormCertifications className="mt-3" />
       </div>
     </div>
   );

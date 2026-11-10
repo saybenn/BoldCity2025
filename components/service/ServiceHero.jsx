@@ -34,19 +34,20 @@ export default function ServiceHero({
   badge,
   slug,
   serviceTitle,
+  imageAlt,
 }) {
-  const cleanService = serviceTitle || (title ? slugToTitle(title) : undefined);
+  const cleanService = serviceTitle || title;
   const pagePath = slug ? `/services/${slug}` : "/services";
   const phoneHref = normalizePhoneHref(ctaPhone);
   const phoneNumber = normalizePhoneNumber(ctaPhone);
 
   function handleScheduleClick() {
     trackCta({
-      cta_label: "Schedule Free Inspection",
+      cta_label: "Request Service",
       cta_location: "ServiceHero",
       intent: "schedule inspection",
       page: pagePath,
-      href: "#contact",
+      href: "/contact",
     });
   }
 
@@ -55,11 +56,10 @@ export default function ServiceHero({
       <div className="absolute inset-0 z-0">
         <Image
           src={image}
-          alt={
-            cleanService ? `${cleanService} background` : "Service background"
-          }
+          alt={imageAlt || "Bold City IAQ restoration work"}
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-navy-dark/90" />
@@ -80,8 +80,7 @@ export default function ServiceHero({
 
         {cleanService && (
           <h1 className="mb-2 text-3xl text-white/90 lg:text-4xl">
-            <strong className="text-white/70"> {cleanService} </strong>{" "}
-            <span>with Bold City IAQ</span>
+            {cleanService}
           </h1>
         )}
 
@@ -104,12 +103,12 @@ export default function ServiceHero({
           </TrackedPhoneLink>
 
           <Link
-            href="#contact"
+            href="/contact"
             onClick={handleScheduleClick}
             className="rounded-full border border-white px-6 py-3 text-lg text-white transition hover:bg-white hover:text-navy"
-            aria-label="Schedule a free inspection"
+            aria-label="Request service"
           >
-            Schedule Free Inspection
+            Request Service
           </Link>
         </div>
       </div>

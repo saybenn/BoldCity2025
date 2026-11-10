@@ -1,0 +1,65 @@
+
+> boldcityiaq@0.1.0 build
+> next build
+
+▲ Next.js 16.4.3 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.mjs took 101ms
+
+  Running TypeScript ...
+  Finished TypeScript in 11.2s ...
+  Creating an optimized production build ...
+✓ Compiled successfully in 9.3s
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/39) ...
+  Generating static pages using 7 workers (9/39)
+  Generating static pages using 7 workers (19/39)
+  Generating static pages using 7 workers (29/39)
+✓ Generating static pages using 7 workers (39/39) in 1218ms
+  Finalizing page optimization ...
+
+Route (pages)
+┌ ○ / (472 ms)
+├   /_app
+├ ○ /404
+├ ○ /about (406 ms)
+├ ○ /ads/emergency-restoration (415 ms)
+├ ○ /ads/emergency-restoration/success (409 ms)
+├ ƒ /api/contact
+├ ƒ /api/hello
+├ ƒ /api/lead
+├ ○ /contact (415 ms)
+├ ○ /contact/success (406 ms)
+├ ○ /financing (455 ms)
+├ ○ /resources/emergency-checklist (407 ms)
+├ ○ /service-areas (407 ms)
+├   /service-areas/[areaSlug] (3131 ms)
+│ ├ ● /service-areas/jacksonville (472 ms)
+│ ├ ● /service-areas/orange-park (471 ms)
+│ ├ ● /service-areas/ponte-vedra-beach (470 ms)
+│ ├ ● /service-areas/st-augustine (470 ms)
+│ ├ ● /service-areas/jacksonville-beach (470 ms)
+│ ├ ● /service-areas/neptune-beach (470 ms)
+│ └ ● /service-areas/atlantic-beach (308 ms)
+├   /service-areas/[areaSlug]/[serviceSlug] (4824 ms)
+│ ├ ● /service-areas/neptune-beach/mold-remediation (701 ms)
+│ ├ ● /service-areas/atlantic-beach/water-damage-restoration (700 ms)
+│ ├ ● /service-areas/atlantic-beach/mold-remediation (699 ms)
+│ ├ ● /service-areas/jacksonville/mold-remediation (324 ms)
+│ ├ ● /service-areas/orange-park/water-damage-restoration (306 ms)
+│ ├ ● /service-areas/jacksonville/water-damage-restoration
+│ ├ ● /service-areas/orange-park/mold-remediation
+│ └ ● [+7 more paths]
+├ ○ /services (407 ms)
+├   /services/[slug] (3725 ms)
+│ ├ ● /services/mold-remediation (705 ms)
+│ ├ ● /services/cleaning-and-sanitization (705 ms)
+│ ├ ● /services/emergency-services (704 ms)
+│ ├ ● /services/water-damage-restoration (700 ms)
+│ ├ ● /services/fire-and-smoke-restoration (700 ms)
+│ └ ● /services/air-duct-cleaning
+└ ƒ /sitemap.xml
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand

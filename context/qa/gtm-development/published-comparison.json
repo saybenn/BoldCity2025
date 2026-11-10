@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-11-07T06:31:23.776Z",
+  "container": "GTM-55RZQMX7",
+  "published": {
+    "version": "3",
+    "name": "Version 2",
+    "publishedDateObserved": "2025-08-28",
+    "exportTime": "2026-11-07 06:25:31",
+    "sha256": "cd701581c9c85a5c4a0db4a6b8d264a072b5714e4a4ce1adc693774c7586c5ed"
+  },
+  "draft": {
+    "workspace": "4 / Default Workspace",
+    "exportTime": "2026-11-07 06:30:04",
+    "sha256": "90b43d6d63edc03825211d8b8e7e43171c17717c432db183a978603adef85c17",
+    "unchangedFromPreviousVerifiedExport": true
+  },
+  "deletedTags": [
+    {
+      "id": "8",
+      "name": "generate_lead",
+      "type": "gaawe",
+      "event": "generate_lead",
+      "triggers": [
+        "Form Submit"
+      ],
+      "risk": "Replacement GA4 - submit form / 46 changes the trigger from generic form_submit to accepted generate_lead. Existing form_type and financing_interest dimensions are not migrated; review reporting consumers."
+    },
+    {
+      "id": "10",
+      "name": "Google Ads Conversion Tracking",
+      "type": "awct",
+      "event": null,
+      "triggers": [
+        "Form Submit"
+      ],
+      "risk": "HIGH: direct Google Ads conversion is deleted with no Ads tag replacement in the draft. Decide whether to retain a retargeted accepted-lead Ads conversion or use a verified GA4 import, with one chosen primary counting path. Do not publish this deletion by assumption."
+    },
+    {
+      "id": "16",
+      "name": "Google Tag G-9G03529W5P",
+      "type": "googtag",
+      "event": null,
+      "triggers": [
+        "2147479573"
+      ],
+      "risk": "Old Google base replaced by GA4 - Base / 41 on Initialization-All Pages and same destination, with send_page_view:false. Audit destination-linked settings/consent and duplicate automatic pageviews."
+    },
+    {
+      "id": "17",
+      "name": "GA4 - Config",
+      "type": "gaawe",
+      "event": "GA4 - Config",
+      "triggers": [
+        "2147479553"
+      ],
+      "risk": "Despite the Config name, published type is GA4 event, eventName GA4 - Config on All Pages; not a second true base tag. Deletion removes that custom event. New Base / 41 handles initialization; confirm any reports using the legacy custom event."
+    },
+    {
+      "id": "19",
+      "name": "GA4 - page_view (custom)",
+      "type": "gaawe",
+      "event": "page_view",
+      "triggers": [
+        "Pageview (custom)"
+      ],
+      "risk": "Legacy pageview custom-event trigger replaced by page_view / 45. Raw Page URL/referrer mappings replaced by query-free app page context; audit history/enhanced measurement duplication."
+    }
+  ],
+  "deletedTriggers": [
+    {
+      "id": "4",
+      "name": "History Change",
+      "type": "HISTORY_CHANGE",
+      "referencedByPublishedTags": []
+    },
+    {
+      "id": "7",
+      "name": "Form Submit",
+      "type": "CUSTOM_EVENT",
+      "referencedByPublishedTags": [
+        "generate_lead",
+        "Google Ads Conversion Tracking"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Page View",
+      "type": "PAGEVIEW",
+      "referencedByPublishedTags": []
+    },
+    {
+      "id": "18",
+      "name": "Pageview (custom)",
+      "type": "CUSTOM_EVENT",
+      "referencedByPublishedTags": [
+        "GA4 - page_view (custom)"
+      ]
+    }
+  ],
+  "deletedVariables": [
+    {
+      "id": "13",
+      "name": "page_view variables",
+      "type": "gtes"
+    },
+    {
+      "id": "20",
+      "name": "formType",
+      "type": "v"
+    },
+    {
+      "id": "21",
+      "name": "financingInterest",
+      "type": "v"
+    },
+    {
+      "id": "22",
+      "name": "phone_number",
+      "type": "v"
+    }
+  ],
+  "draftTagNames": [
+    "GA4 - Base",
+    "GA4 - click call",
+    "GA4 - click cta",
+    "GA4 - view page",
+    "GA4 - submit form"
+  ],
+  "decision": "NO-GO for publication: unreplaced Ads deletion, reporting dimension changes, consent and automatic measurement need explicit owner review.",
+  "accountChangesThisPass": false
+}

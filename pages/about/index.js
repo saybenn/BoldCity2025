@@ -1,3 +1,4 @@
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 // pages/about/index.js
 import Layout from "@/components/Layout";
 import MapEmbed from "@/components/MapEmbed";
@@ -23,7 +24,7 @@ export default function AboutPage() {
         title: "About Bold City IAQ",
         description:
           "Jacksonville’s 24/7 certified restoration pros. IICRC & NORMI certified. Locally owned & operated.",
-        image: "https://boldcityiaq.com/images/team-or-vehicle-hero.webp",
+        image: "https://boldcityiaq.com/images/about-hero.webp",
       },
     },
     schema: {
@@ -36,10 +37,10 @@ export default function AboutPage() {
       telephone: "+19044346318",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "10066 103rd St. Unit #206",
+        streetAddress: "14440 Normandy Blvd",
         addressLocality: "Jacksonville",
         addressRegion: "FL",
-        postalCode: "32210",
+        postalCode: "32234",
         addressCountry: "US",
       },
       areaServed: [
@@ -67,11 +68,9 @@ export default function AboutPage() {
   };
 
   return (
-    <Layout>
-      <MetaHead meta={data.meta} />
-      <SchemaMarkup schema={data.schema} />
+    <Layout meta={data.meta}>
 
-      <main>
+      <div>
         {/* HERO */}
         <section className=" pt-24 bg-navy relative text-white">
           {/* Brand gradient + subtle texture */}
@@ -90,9 +89,7 @@ export default function AboutPage() {
                 </h1>
 
                 <p className="mb-5 max-w-[42ch] text-[#EAF6FF]">
-                  <strong>Locally owned &amp; operated.</strong> On our way in{" "}
-                  <strong>2 hours or less</strong>. Insurance‑ready
-                  documentation.
+                  <strong>Locally owned &amp; operated.</strong> Call for current availability. Documentation to help explain the restoration work.
                 </p>
 
                 {/* badges */}
@@ -124,15 +121,7 @@ export default function AboutPage() {
                         height={88}
                       />
                     </div>
-                    <div className="grid place-items-center gap-1 text-white/90">
-                      <Image
-                        src="/images/badges/since.webp"
-                        alt={`Serving NE Florida since ${FOUNDING_YEAR}`}
-                        width={88}
-                        height={88}
-                      />
-                      <span className="text-xs">Since {FOUNDING_YEAR}</span>
-                    </div>
+
                   </div>
                 </div>
 
@@ -146,7 +135,7 @@ export default function AboutPage() {
                   </a>
                   <Link
                     className="inline-flex items-center justify-center rounded-[14px] border-2 border-white px-5 py-3 font-bold text-white transition hover:bg-white hover:text-navy"
-                    href="/contact#lead-form"
+                    href="/contact#request-service"
                   >
                     Request Service
                   </Link>
@@ -158,7 +147,7 @@ export default function AboutPage() {
                 <div className="relative h-[340px] w-full overflow-hidden rounded-2xl  shadow-[0_20px_60px_rgba(0,0,0,.30),inset_0_0_0_1px_rgba(255,255,255,.2)]">
                   <Image
                     src="/images/about-hero.webp"
-                    alt="Bold City IAQ team and service vehicle"
+                    alt="Bold City IAQ branded pickup and trailer"
                     fill
                     priority
                     sizes="(min-width:1024px) 560px, 100vw"
@@ -235,7 +224,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href="/services/fire-smoke-restoration"
+                href="/services/fire-and-smoke-restoration"
                 className="text-navy hover:underline"
               >
                 <strong>Fire &amp; Smoke Restoration</strong>
@@ -257,7 +246,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href="/services/cleaning-sanitization"
+                href="/services/cleaning-and-sanitization"
                 className="text-navy hover:underline"
               >
                 <strong>Cleaning &amp; Sanitization</strong>
@@ -329,65 +318,12 @@ export default function AboutPage() {
               <li>Insurance‑ready documentation &amp; photo logs</li>
               <li>Clean work zones: barriers &amp; negative air</li>
               <li>Transparent estimates &amp; daily updates</li>
-              <li>Financing options available ($0 down / low monthly)</li>
+              <li>Financing options for qualified customers</li>
             </ul>
           </div>
         </section>
 
-        {/* Reviews */}
-        <section className="border-y border-[#E6EDF5] bg-[#EEF6FB]">
-          <div className="mx-auto max-w-[1120px] px-5 py-8">
-            <h2 className="mb-4 lg:text-5xl text-4xl ] text-darkText">
-              What Our Customers Say
-            </h2>
-            <div className="grid gap-4">
-              <blockquote className="relative rounded-lg border border-[#e6edf5] bg-white p-4 pl-10 shadow-[0_8px_24px_rgba(12,35,64,0.06)]">
-                <span className="absolute left-3 top-1 text-3xl text-aqua-dark/70">
-                  “
-                </span>
-                <p className="text-[15px] text-darkText font-semibold">
-                  I’d been struggling with health issues for nearly three years
-                  before finally finding the source of mold. Bold City IAQ
-                  identified the problem, remediated it thoroughly, and gave me
-                  peace of mind. Professional, caring, and highly recommended.
-                </p>
-                <cite className="mt-2 block text-[13px] text-[#4a4a4a] not-italic">
-                  — Jon M., Jacksonville
-                </cite>
-              </blockquote>
-
-              <blockquote className="relative rounded-lg border border-[#e6edf5] bg-white p-4 pl-10 shadow-[0_8px_24px_rgba(12,35,64,0.06)]">
-                <span className="absolute left-3 top-1 text-3xl text-aqua-dark/70">
-                  “
-                </span>
-                <p className="text-[15px] text-darkText font-semibold">
-                  I would highly recommend Bold City IAQ for mold remediation.
-                  Andre was very knowledgeable and professional, kept me
-                  informed, and stayed on schedule even as the project grew
-                  larger than expected.
-                </p>
-                <cite className="mt-2 block text-[13px] text-[#4a4a4a] not-italic">
-                  — Rebecca B., Jacksonville
-                </cite>
-              </blockquote>
-
-              <blockquote className="relative rounded-lg border border-[#e6edf5] bg-white p-4 pl-10 shadow-[0_8px_24px_rgba(12,35,64,0.06)]">
-                <span className="absolute left-3 top-1 text-3xl text-aqua-dark/70">
-                  “
-                </span>
-                <p className="text-[15px] text-darkText font-semibold">
-                  Andre was one of the nicest people I’ve ever dealt with. After
-                  water damage from a broken valve, he came recommended—and I
-                  couldn’t be more grateful. Honest, professional, and went
-                  above and beyond to help.
-                </p>
-                <cite className="mt-2 block text-[13px] text-[#4a4a4a] not-italic">
-                  — Justin A., Jacksonville
-                </cite>
-              </blockquote>
-            </div>
-          </div>
-        </section>
+        <ReviewsCarousel />
 
         {/* Meet the Team */}
         {/* <section className="mx-auto max-w-[1120px] px-5 py-8">
@@ -427,20 +363,20 @@ export default function AboutPage() {
               </a>
               <Link
                 className="inline-flex items-center justify-center rounded-[14px] border-2 border-navy px-5 py-3 font-bold text-navy transition hover:bg-navy hover:text-white"
-                href="/contact#lead-form"
+                href="/contact#request-service"
               >
                 Request Service
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[14px] px-5 py-3 font-bold text-navy transition hover:text-aqua-dark"
-                href="/ads/finance#lead-form"
+                href="/financing"
               >
                 Check Financing Options
               </Link>
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </Layout>
   );
 }

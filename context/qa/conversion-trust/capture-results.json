@@ -1,0 +1,58 @@
+{
+  "base": "http://127.0.0.1:3200",
+  "checkedAt": "2026-11-08T19:54:26.342Z",
+  "kind": "Actual Chrome, read-only rendered UI. Screenshots capture the certification-to-submit region. No form submit or provider/analytics response mocks.",
+  "cases": [
+    {
+      "route": "home",
+      "width": 375,
+      "certifications": 2,
+      "noOverflow": true,
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "route": "contact",
+      "width": 375,
+      "certifications": 2,
+      "noOverflow": true,
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "route": "ads",
+      "width": 375,
+      "certifications": 2,
+      "noOverflow": true,
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "certifications": 2,
+      "noOverflow": true,
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "route": "contact",
+      "width": 1440,
+      "certifications": 2,
+      "noOverflow": true,
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "route": "ads",
+      "width": 1440,
+      "certifications": 2,
+      "noOverflow": true,
+      "status": 200,
+      "noindex": true
+    }
+  ],
+  "formPosts": [],
+  "tracking": [],
+  "pass": true
+}

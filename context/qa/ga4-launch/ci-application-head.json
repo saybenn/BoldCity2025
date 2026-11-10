@@ -1,0 +1,16 @@
+{
+  "commit": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6",
+  "source": "GitHub combined status connector; both statuses observed after push",
+  "statuses": [
+    {
+      "context": "netlify/sprightly-horse-c6240e/deploy-preview",
+      "state": "success",
+      "target_url": "https://deploy-preview-1--sprightly-horse-c6240e.netlify.app"
+    },
+    {
+      "context": "netlify/boldcity2025/deploy-preview",
+      "state": "success",
+      "target_url": "https://deploy-preview-1--boldcity2025.netlify.app"
+    }
+  ]
+}

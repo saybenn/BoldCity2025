@@ -1,0 +1,243 @@
+{
+  "preparedAt": "2026-11-09T01:28:00.314Z",
+  "status": "OFFLINE REVIEWED CANDIDATE ONLY. Not imported, saved to an account, connected in Tag Assistant or published.",
+  "accountUi": {
+    "publishedVersion": "3",
+    "publishedName": "Version 2",
+    "publicationDate": "2025-08-28",
+    "freshPublishedExportDownloaded": true,
+    "freshWorkspaceExportDownloaded": true,
+    "workspace": "4 / Default Workspace",
+    "workspaceChanges": 49,
+    "beforeMatchesPriorConfigurationExceptFingerprint": true,
+    "computerUseStopped": "Windows URL-confidence guard after Chrome Find panel opened. No draft changes saved; no retry/bypass."
+  },
+  "hashes": {
+    "publishedFresh": "4cc3dbfdc0afa06b2a5c769cd3c4b24e87dae68784db11917eb9c7e897810176",
+    "workspaceBefore": "bc140f0d1f31547fa3021175306e724e41528d3174d40afda243d2e9b9693d15",
+    "candidate": "218ecc536dde03a87728b489663f49c406023f54609ba1969e9d405de71c527e"
+  },
+  "counts": {
+    "activeGa4Tags": 5,
+    "pausedPublishedTags": 5,
+    "activeAdsTags": 0,
+    "allTags": 10,
+    "triggers": 8,
+    "customVariables": 23,
+    "builtInVariables": 10
+  },
+  "activeTags": [
+    {
+      "id": "41",
+      "name": "GA4 - Base",
+      "type": "googtag",
+      "firingTriggerId": [
+        "2147479573"
+      ]
+    },
+    {
+      "id": "42",
+      "name": "GA4 - click call",
+      "type": "gaawe",
+      "firingTriggerId": [
+        "38"
+      ]
+    },
+    {
+      "id": "44",
+      "name": "GA4 - click cta",
+      "type": "gaawe",
+      "firingTriggerId": [
+        "39"
+      ]
+    },
+    {
+      "id": "45",
+      "name": "GA4 - view page",
+      "type": "gaawe",
+      "firingTriggerId": [
+        "37"
+      ]
+    },
+    {
+      "id": "46",
+      "name": "GA4 - submit form",
+      "type": "gaawe",
+      "firingTriggerId": [
+        "40"
+      ]
+    }
+  ],
+  "preservedPausedPublishedTags": [
+    {
+      "id": "8",
+      "name": "generate_lead",
+      "type": "gaawe",
+      "reason": "Archive original settings; superseded by explicit app-owned GA4 events/Base, avoid duplicate/legacy event producers"
+    },
+    {
+      "id": "10",
+      "name": "Google Ads Conversion Tracking",
+      "type": "awct",
+      "reason": "Preserve inactive published Ads configuration without firing or requiring an Ads account"
+    },
+    {
+      "id": "16",
+      "name": "Google Tag G-9G03529W5P",
+      "type": "googtag",
+      "reason": "Archive original settings; superseded by explicit app-owned GA4 events/Base, avoid duplicate/legacy event producers"
+    },
+    {
+      "id": "17",
+      "name": "GA4 - Config",
+      "type": "gaawe",
+      "reason": "Archive original settings; superseded by explicit app-owned GA4 events/Base, avoid duplicate/legacy event producers"
+    },
+    {
+      "id": "19",
+      "name": "GA4 - page_view (custom)",
+      "type": "gaawe",
+      "reason": "Archive original settings; superseded by explicit app-owned GA4 events/Base, avoid duplicate/legacy event producers"
+    }
+  ],
+  "excludedProvisionalItems": [
+    {
+      "id": "52",
+      "name": "Google Ads - accepted lead (owner review)",
+      "type": "tag"
+    },
+    {
+      "id": "53",
+      "name": "Google Ads AW-10940863332",
+      "type": "tag"
+    },
+    {
+      "id": "54",
+      "name": "Manage automatic event detection",
+      "type": "Ads destination setting"
+    },
+    {
+      "id": "55",
+      "name": "Allow user-provided data capabilities",
+      "type": "Ads destination setting"
+    }
+  ],
+  "omittedUnusedDraftVariables": [
+    {
+      "id": "31",
+      "name": "DL - service_area"
+    },
+    {
+      "id": "32",
+      "name": "DL - service_area_name"
+    },
+    {
+      "id": "33",
+      "name": "DL - service_name"
+    },
+    {
+      "id": "34",
+      "name": "DL - service_label"
+    }
+  ],
+  "preservedLegacyDependencies": {
+    "triggers": [
+      {
+        "id": "4",
+        "name": "History Change"
+      },
+      {
+        "id": "7",
+        "name": "Form Submit"
+      },
+      {
+        "id": "14",
+        "name": "Page View"
+      },
+      {
+        "id": "18",
+        "name": "Pageview (custom)"
+      }
+    ],
+    "variables": [
+      {
+        "id": "13",
+        "name": "page_view variables"
+      },
+      {
+        "id": "20",
+        "name": "formType"
+      },
+      {
+        "id": "21",
+        "name": "financingInterest"
+      },
+      {
+        "id": "22",
+        "name": "phone_number"
+      }
+    ]
+  },
+  "offlineChecks": {
+    "activeTagParametersPreserved": true,
+    "publishedTagParametersPreservedWithPauseOnly": true,
+    "noDanglingReferences": true,
+    "strictFourCustomEventFilters": true,
+    "baseInitCount": 1,
+    "noLeadFromGenericFormOrHistory": true,
+    "model": [
+      {
+        "event": "page_view",
+        "matchingActiveTags": [
+          "45"
+        ]
+      },
+      {
+        "event": "phone_click",
+        "matchingActiveTags": [
+          "42"
+        ]
+      },
+      {
+        "event": "cta_click",
+        "matchingActiveTags": [
+          "44"
+        ]
+      },
+      {
+        "event": "page_view",
+        "matchingActiveTags": [
+          "45"
+        ]
+      },
+      {
+        "event": "form_start",
+        "matchingActiveTags": []
+      },
+      {
+        "event": "form_submit",
+        "matchingActiveTags": []
+      },
+      {
+        "event": "gtm.historyChange-v2",
+        "matchingActiveTags": []
+      }
+    ],
+    "limits": "Model evaluates explicit GTM trigger configuration only. It cannot suppress remote Enhanced Measurement, prove real tag execution/Tag Assistant connection, GA4 receipt or genuine accepted-lead counting."
+  },
+  "outstandingAccountChecks": [
+    "Apply/reconcile reviewed GA4-only configuration in a separate unpublished release workspace using the manual editor; preserve Default Workspace 4 backup. No blind publication of its 49 historical changes.",
+    "Re-export saved account draft; compare active parameter maps, actual assigned IDs/dependencies and paused legacy state. Import-format reference is not an actual account validation.",
+    "Read GA4 stream/key-event/create-event/modify-event settings. generate_lead key event counting once per event; never convert form_start/form_submit/success views into leads. Any live GA4 setting change waits for explicit cutover authorization.",
+    "Inspect actual consent state/default/update behavior against owner policy. NOT_SET is not proof of a policy.",
+    "Fresh clean unpublished Tag Assistant connection; history duplicate remains until approved cutover switch."
+  ],
+  "productionOrAccountChanges": false,
+  "websiteConsent": {
+    "ownerChoice": "Explicit simple opt-in, November 9, 2026",
+    "implementedIn": "d0c8aaf1e2e0d8b06b101557bf2e50a47d07cbc6",
+    "behavior": "Basic opt-in; no loader/events before Allow; no backlog replay; ads denied; forms independent",
+    "localVerified": true,
+    "actualUnpublishedTagAssistantConsentStillPending": true
+  }
+}

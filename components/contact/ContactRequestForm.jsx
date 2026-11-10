@@ -1,17 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { trackFormSubmit, trackCta, trackCallClick } from "@/lib/analytics";
+import { getUTMParams } from "@/lib/utm";
+import { trackFormSubmit, trackFormError, trackCta, trackCallClick } from "@/lib/analytics";
 import { TurnstileField } from "./TurnstileField";
 
-const ALLOWED_SERVICES = new Set([
-  "Water Damage Restoration",
-  "Fire & Smoke Restoration",
-  "Mold Remediation",
-  "Cleaning & Sanitization",
-  "Emergency Services",
-  "Storm & Flood Cleanup",
-  "General Restoration Request",
-]);
+import { ALLOWED_SERVICES, CONTACT_SERVICES } from "@/lib/contact-services";
 
 function cleanString(value, maxLength) {
   return String(value || "")
@@ -98,9 +91,9 @@ export default function ContactRequestForm({ data, utm = {} }) {
       wbraid: resolveValue(wbraid, "wbraid"),
       gbraid: resolveValue(gbraid, "gbraid"),
 
-      referrer: document.referrer || stored.referrer || "",
+      referrer: getUTMParams().referrer || stored.referrer || document.referrer || "",
 
-      landing_page_url: window.location.href || stored.landing_page_url || "",
+      landing_page_url: getUTMParams().landing_page_url || stored.landing_page_url || window.location.href,
 
       page: window.location.pathname,
 
@@ -187,6 +180,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
       }
 
       const payload = {
+        ...getUTMParams(),
         ...Object.fromEntries(formData.entries()),
         ...hiddenFields,
 
@@ -224,16 +218,17 @@ export default function ContactRequestForm({ data, utm = {} }) {
 
       const json = await response.json().catch(() => ({}));
 
-      if (!response.ok || json?.ok === false) {
-        throw new Error(json?.error || "We couldn't submit the form.");
+      if (!response.ok || json?.ok !== true || json?.accepted !== true) {
+        throw new Error(json?.error || (response.status === 429 ? "Too many attempts. Please call (904) 434-6318." : "We couldn't submit the form."));
       }
 
       /*
        * Do not count silently discarded honeypot or
        * spam submissions as conversions.
        */
-      if (json?.accepted !== false) {
+      if (json?.accepted === true) {
         trackFormSubmit({
+          service_requested: service,
           form_name: "Contact Request Form",
           form_location: "ContactRequestForm",
           page: String(payload.page || "/contact"),
@@ -247,6 +242,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
         )}`,
       );
     } catch (err) {
+      trackFormError("ContactRequestForm", requestStarted ? "submission_failed" : "validation");
       console.error("Contact request form error:", err);
 
       /*
@@ -305,6 +301,7 @@ export default function ContactRequestForm({ data, utm = {} }) {
       </p>
 
       <form
+          data-analytics-form="ContactRequestForm"
         ref={formRef}
         onSubmit={handleSubmit}
         className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
@@ -374,7 +371,6 @@ export default function ContactRequestForm({ data, utm = {} }) {
             autoComplete="tel"
             inputMode="tel"
             maxLength={30}
-            pattern="[0-9()\+\-\.\s]{7,}"
             className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-blue-600"
           />
         </div>
@@ -394,31 +390,8 @@ export default function ContactRequestForm({ data, utm = {} }) {
             defaultValue=""
             className="mt-1 w-full rounded-xl border border-zinc-300 px-3 py-2 text-sm text-zinc-800 outline-none focus:border-blue-600"
           >
-            <option value="" disabled>
-              Select...
-            </option>
-
-            <option value="Water Damage Restoration">
-              Water Damage Restoration
-            </option>
-
-            <option value="Fire & Smoke Restoration">
-              Fire & Smoke Restoration
-            </option>
-
-            <option value="Mold Remediation">Mold Remediation</option>
-
-            <option value="Cleaning & Sanitization">
-              Cleaning & Sanitization
-            </option>
-
-            <option value="Emergency Services">Emergency Services</option>
-
-            <option value="Storm & Flood Cleanup">Storm & Flood Cleanup</option>
-
-            <option value="General Restoration Request">
-              General Restoration Request
-            </option>
+            <option value="">Select a service</option>
+            {CONTACT_SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </div>
 
